@@ -1,0 +1,115 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+	
+	<modelVersion>4.0.0</modelVersion>
+	
+	<parent>
+		<groupId>org.iglooproject</groupId>
+		<artifactId>igloo-maven</artifactId>
+		<version>4.0.0-SNAPSHOT</version>
+	</parent>
+	
+	<artifactId>plugins-processor</artifactId>
+	<packaging>pom</packaging>
+	
+	<name>Processor plugin configuration</name>
+	<description>
+		This module configures common maven plugins (compiler, ...).
+	</description>
+	
+	<properties>
+		<!-- maven plugins versions -->
+		<igloo.maven-processor-plugin.version>5.0-rc3</igloo.maven-processor-plugin.version>
+		
+		<!-- local properties -->
+		<maven.install.skip>false</maven.install.skip>
+		<maven.deploy.skip>false</maven.deploy.skip>
+	</properties>
+	
+	<build>
+		<pluginManagement>
+			<plugins>
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-compiler-plugin</artifactId>
+					<configuration>
+						<compilerArgs>
+							<compilerArg>-proc:none</compilerArg>
+						</compilerArgs>
+					</configuration>
+				</plugin>
+				<plugin>
+					<groupId>org.bsc.maven</groupId>
+					<artifactId>maven-processor-plugin</artifactId>
+					<version>${igloo.maven-processor-plugin.version}</version>
+					<dependencies>
+						<dependency>
+							<groupId>org.bindgen</groupId>
+							<artifactId>bindgen</artifactId>
+							<version>${igloo.bindgen.version}</version>
+						</dependency>
+						<dependency>
+							<groupId>com.querydsl</groupId>
+							<artifactId>querydsl-apt</artifactId>
+							<classifier>jpa</classifier>
+							<version>${igloo.querydsl.version}</version>
+						</dependency>
+						<dependency>
+							<groupId>org.immutables</groupId>
+							<artifactId>value</artifactId>
+							<version>${igloo.immutables.version}</version>
+						</dependency>
+						<!-- for bindings, we can encounter guava types that uses check-time annotations -->
+						<dependency>
+							<groupId>com.google.errorprone</groupId>
+							<artifactId>error_prone_annotations</artifactId>
+							<version>${igloo.errorprone.version}</version>
+						</dependency>
+						<dependency>
+							<groupId>com.google.code.findbugs</groupId>
+							<artifactId>annotations</artifactId>
+							<version>${igloo.findbugs-annotations.version}</version>
+						</dependency>
+						<dependency>
+							<groupId>com.google.code.findbugs</groupId>
+							<artifactId>jsr305</artifactId>
+							<version>${igloo.findbugs-jsr305.version}</version>
+						</dependency>
+					</dependencies>
+					<configuration>
+						<processors>
+							<processor>org.immutables.processor.ProxyProcessor</processor>
+							<processor>com.querydsl.apt.jpa.JPAAnnotationProcessor</processor>
+							<processor>org.bindgen.processor.Processor</processor>
+						</processors>
+						<systemProperties>
+							<querydsl.generatedAnnotationClass>javax.annotation.processing.Generated</querydsl.generatedAnnotationClass>
+						</systemProperties>
+						<releaseVersion>${jdk.release.version}</releaseVersion>
+					</configuration>
+					<executions>
+						<execution>
+							<id>maven-processor-plugin-default</id>
+							<phase>generate-sources</phase>
+							<goals>
+								<goal>process</goal>
+							</goals>
+							<configuration>
+								<skip>${processor.skip}</skip>
+							</configuration>
+						</execution>
+						<execution>
+							<id>maven-processor-plugin-default-test</id>
+							<phase>generate-test-sources</phase>
+							<goals>
+								<goal>process-test</goal>
+							</goals>
+							<configuration>
+								<skip>${processor.test.skip}</skip>
+							</configuration>
+						</execution>
+					</executions>
+				</plugin>
+			</plugins>
+		</pluginManagement>
+	</build>
+</project>

@@ -1,0 +1,151 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+	
+	<modelVersion>4.0.0</modelVersion>
+	
+	<parent>
+		<groupId>org.iglooproject</groupId>
+		<artifactId>igloo-maven</artifactId>
+		<version>4.0.0-SNAPSHOT</version>
+	</parent>
+	
+	<artifactId>plugins-common</artifactId>
+	<packaging>pom</packaging>
+	
+	<name>Common maven plugins configuration</name>
+	<description>
+		This module configures common maven plugins (compiler, ...).
+	</description>
+	
+	<properties>
+		<!-- maven plugins versions -->
+		<igloo.maven-compiler-plugin.version>3.8.1</igloo.maven-compiler-plugin.version>
+		<igloo.maven-resources-plugin.version>3.2.0</igloo.maven-resources-plugin.version>
+		<igloo.maven-surefire-plugin.version>3.0.0-M5</igloo.maven-surefire-plugin.version>
+		<igloo.maven-war-plugin.version>3.3.2</igloo.maven-war-plugin.version>
+		<igloo.maven-assembly-plugin.version>3.3.0</igloo.maven-assembly-plugin.version>
+		<igloo.maven-jar-plugin.version>3.2.0</igloo.maven-jar-plugin.version>
+		<igloo.maven-source-plugin.version>3.2.1</igloo.maven-source-plugin.version>
+		<igloo.maven-javadoc-plugin.version>3.3.1</igloo.maven-javadoc-plugin.version>
+		<igloo.maven-dependency-plugin.version>3.2.0</igloo.maven-dependency-plugin.version>
+		<igloo.maven-antrun-plugin.version>3.0.0</igloo.maven-antrun-plugin.version>
+		<igloo.exec-maven-plugin.version>3.0.0</igloo.exec-maven-plugin.version>
+		<igloo.maven-failsafe-plugin.version>3.0.0-M5</igloo.maven-failsafe-plugin.version>
+		<igloo.jacoco-maven-plugin.version>0.8.7</igloo.jacoco-maven-plugin.version>
+		<igloo.buildnumber-maven-plugin.version>1.4</igloo.buildnumber-maven-plugin.version>
+		
+		<!-- local properties -->
+		<maven.install.skip>false</maven.install.skip>
+		<maven.deploy.skip>false</maven.deploy.skip>
+	</properties>
+	
+	<build>
+		<pluginManagement>
+			<plugins>
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-compiler-plugin</artifactId>
+					<version>${igloo.maven-compiler-plugin.version}</version>
+				</plugin>
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-resources-plugin</artifactId>
+					<version>${igloo.maven-resources-plugin.version}</version>
+					<configuration>
+						<!--
+						Default delimiter includes '@' and it is not possible to escape it. We disable it as
+						we do not uses this delimiter.
+						See MRESOURCES-141
+						-->
+						<delimiters>
+							<delimiter>${*}</delimiter>
+						</delimiters>
+						<useDefaultDelimiters>false</useDefaultDelimiters>
+						<!-- exclude from filtering common binary extensions -->
+						<nonFilteredFileExtensions>
+							<nonFilteredFileExtension>zip</nonFilteredFileExtension>
+							<nonFilteredFileExtension>gz</nonFilteredFileExtension>
+							<nonFilteredFileExtension>pdf</nonFilteredFileExtension>
+							<nonFilteredFileExtension>xls</nonFilteredFileExtension>
+							<nonFilteredFileExtension>xlsx</nonFilteredFileExtension>
+							<nonFilteredFileExtension>doc</nonFilteredFileExtension>
+							<nonFilteredFileExtension>docx</nonFilteredFileExtension>
+							<nonFilteredFileExtension>jpg</nonFilteredFileExtension>
+							<nonFilteredFileExtension>jpeg</nonFilteredFileExtension>
+							<nonFilteredFileExtension>gif</nonFilteredFileExtension>
+							<nonFilteredFileExtension>png</nonFilteredFileExtension>
+							<nonFilteredFileExtension>svg</nonFilteredFileExtension>
+							<nonFilteredFileExtension>psd</nonFilteredFileExtension>
+							<nonFilteredFileExtension>ftl</nonFilteredFileExtension>
+							<!-- License file -->
+							<nonFilteredFileExtension>lic</nonFilteredFileExtension>
+						</nonFilteredFileExtensions>
+					</configuration>
+				</plugin>
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-surefire-plugin</artifactId>
+					<version>${igloo.maven-surefire-plugin.version}</version>
+				</plugin>
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-jar-plugin</artifactId>
+					<version>${igloo.maven-jar-plugin.version}</version>
+					<configuration>
+						<archive>
+							<!-- configure manifest file; it is used to lookup component version -->
+							<manifest>
+								<addDefaultImplementationEntries>true</addDefaultImplementationEntries>
+							</manifest>
+							<manifestEntries>
+								<Implementation-Build>${buildNumber}</Implementation-Build>
+								<Built-Date>${timestamp}</Built-Date>
+								<Built-By>${user.name}</Built-By>
+							</manifestEntries>
+						</archive>
+					</configuration>
+				</plugin>
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-war-plugin</artifactId>
+					<version>${igloo.maven-war-plugin.version}</version>
+				</plugin>
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-assembly-plugin</artifactId>
+					<version>${igloo.maven-assembly-plugin.version}</version>
+				</plugin>
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-source-plugin</artifactId>
+					<version>${igloo.maven-source-plugin.version}</version>
+				</plugin>
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-javadoc-plugin</artifactId>
+					<version>${igloo.maven-javadoc-plugin.version}</version>
+					<!-- TODO: doclint issue -->
+				</plugin>
+				<plugin>
+					<!--
+						This plugin allows to use ${buildNumber} and ${timestamp} property for manifest generation
+					-->
+					<groupId>org.codehaus.mojo</groupId>
+					<artifactId>buildnumber-maven-plugin</artifactId>
+					<version>${igloo.buildnumber-maven-plugin.version}</version>
+					<executions>
+						<execution>
+							<phase>validate</phase>
+							<goals>
+								<goal>create</goal>
+							</goals>
+						</execution>
+					</executions>
+					<configuration>
+						<doCheck>false</doCheck>
+						<doUpdate>false</doUpdate>
+					</configuration>
+				</plugin>
+			</plugins>
+		</pluginManagement>
+	</build>
+</project>
