@@ -67,5 +67,10 @@
 		<!-- 5.3.4: https://github.com/spring-projects/spring-security/releases/tag/5.3.4.RELEASE -->
 		<!-- https://github.com/spring-projects/spring-security/releases -->
 		<igloo.spring-security.version>5.6.1</igloo.spring-security.version>
+		
+		<!-- https://www.slf4j.org/news.html -->
+		<igloo.slf4j.version>1.7.36</igloo.slf4j.version>
+		<igloo.reload4j.version>1.2.18.0</igloo.reload4j.version>
+		<igloo.log4j2.version>2.17.1</igloo.log4j2.version>
 	</properties>
 </project>
