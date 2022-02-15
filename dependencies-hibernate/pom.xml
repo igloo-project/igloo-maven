@@ -75,6 +75,45 @@
 				<artifactId>ehcache</artifactId>
 				<version>${igloo.ehcache3.version}</version>
 			</dependency>
+
+			<dependency>
+				<groupId>com.zaxxer</groupId>
+				<artifactId>HikariCP</artifactId>
+				<version>${igloo.hikaricp.version}</version>
+				<exclusions>
+					<!-- from 5.0.0, hikaricp activates slf4j 2.0.0 alpha1 if java 11 enabled -->
+					<!-- surely needed for hikari tests, we can keep our own version -->
+					<exclusion>
+						<groupId>org.slf4j</groupId>
+						<artifactId>slf4j-api</artifactId>
+					</exclusion>
+				</exclusions>
+			</dependency>
+
+			<dependency>
+				<groupId>org.postgresql</groupId>
+				<artifactId>postgresql</artifactId>
+				<version>${igloo.postgresql.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>com.querydsl</groupId>
+				<artifactId>querydsl-jpa</artifactId>
+				<version>${igloo.querydsl.version}</version>
+				<exclusions>
+					<exclusion>
+						<groupId>org.codehaus.mojo</groupId>
+						<artifactId>animal-sniffer-parent</artifactId>
+					</exclusion>
+				</exclusions>
+			</dependency>
+			
+			<!-- TODO: how to handle flyway 7 case ? -->
+			<dependency>
+				<groupId>org.flywaydb</groupId>
+				<artifactId>flyway-core</artifactId>
+				<version>${igloo.flywaydb.version}</version>
+			</dependency>
 		</dependencies>
 	</dependencyManagement>
 	

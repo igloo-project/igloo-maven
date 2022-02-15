@@ -34,8 +34,16 @@
 		<!-- https://in.relation.to/2019/09/19/hibernate-search-5-11-3-Final/ -->
 		<!-- https://in.relation.to/2019/11/22/hibernate-search-5-11-4-Final-and-5-10-8-Final/ -->
 		<igloo.hibernate-search.version>5.11.8.Final</igloo.hibernate-search.version>
+		<igloo.flywaydb.version>8.4.1</igloo.flywaydb.version>
+		<igloo.flywaydb7.version>7.15.0</igloo.flywaydb7.version>
+		<!-- https://github.com/brettwooldridge/HikariCP/blob/dev/CHANGES -->
+		<igloo.hikaricp.version>5.0.1</igloo.hikaricp.version>
+		<!-- https://github.com/querydsl/querydsl/issues?utf8=%E2%9C%93&q=milestone%3A4.2.1 -->
+		<igloo.querydsl.version>5.0.0</igloo.querydsl.version>
+		<!-- https://jdbc.postgresql.org/documentation/changelog.html -->
+		<igloo.postgresql.version>42.3.2</igloo.postgresql.version>
 		
-				<!-- https://spring.io/blog/2018/04/03/spring-framework-5-0-5-and-4-3-15-available-now -->
+		<!-- https://spring.io/blog/2018/04/03/spring-framework-5-0-5-and-4-3-15-available-now -->
 		<!-- 5.0.5: https://jira.spring.io/secure/ReleaseNote.jspa?projectId=10000&version=16634 -->
 		<!-- 5.0.6: https://jira.spring.io/secure/ReleaseNote.jspa?projectId=10000&version=16720 -->
 		<!-- 5.0.7: https://jira.spring.io/jira/secure/ReleaseNote.jspa?projectId=10000&version=16753 -->
