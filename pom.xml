@@ -35,8 +35,7 @@
 		<module>dependencies-logging</module>
 		<module>dependencies-hibernate</module>
 		<module>dependencies-spring</module>
-		<module>dependencies-spring-security</module>
-		<module>dependencies-logging</module>
+		<module>dependencies-jersey2</module>
 	</modules>
 	
 	<properties>

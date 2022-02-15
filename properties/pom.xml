@@ -72,5 +72,8 @@
 		<igloo.slf4j.version>1.7.36</igloo.slf4j.version>
 		<igloo.reload4j.version>1.2.18.0</igloo.reload4j.version>
 		<igloo.log4j2.version>2.17.1</igloo.log4j2.version>
+		
+		<igloo.jersey2.version>2.35</igloo.jersey2.version>
+		<igloo.grizzly.version>1.9.65</igloo.grizzly.version>
 	</properties>
 </project>
