@@ -42,6 +42,7 @@
 		<module>dependencies-testing</module>
 		<module>dependencies-quality-annotations</module>
 		<module>dependencies-html</module>
+		<module>dependencies-tools</module>
 	</modules>
 	
 	<properties>

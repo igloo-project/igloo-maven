@@ -108,7 +108,6 @@
 		<!-- https://github.com/l0rdn1kk0n/wicket-webjars (0.5.x -> wicket 7, 2.0.x -> wicket 8) -->
 		<igloo.wicket-webjars.version>2.0.20</igloo.wicket-webjars.version>
 		<igloo.webjars-locator-core.version>0.48</igloo.webjars-locator-core.version>
-		<igloo.wqplot.version>7.1.0.owsi1</igloo.wqplot.version>
 		<igloo.webjars.bootstrap.version>4.6.0</igloo.webjars.bootstrap.version>
 		<igloo.webjars.popper.version>1.16.1-lts</igloo.webjars.popper.version>
 		<igloo.webjars.clipboard.version>2.0.8</igloo.webjars.clipboard.version>
@@ -142,5 +141,12 @@
 		<igloo.rhino.version>1.7.11</igloo.rhino.version>
 		<!-- https://github.com/jhy/jsoup/blob/master/CHANGES -->
 		<igloo.jsoup.version>1.14.3</igloo.jsoup.version>
+		
+		<igloo.poi.version>5.1.0</igloo.poi.version>
+		<igloo.truevfs.version>0.14.0</igloo.truevfs.version>
+		<!-- https://github.com/vt-middleware/passay/commits/master -->
+		<igloo.passay.version>1.6.1</igloo.passay.version>
+		<!-- TODO: to remove - used for email notifications -->
+		<igloo.freemarker.version>2.3.31</igloo.freemarker.version>
 	</properties>
 </project>
