@@ -21,9 +21,7 @@
 		<!-- maven plugins versions -->
 		<igloo.maven-jacoco-plugin.version>0.8.7</igloo.maven-jacoco-plugin.version>
 		
-		<!-- local properties -->
-		<maven.install.skip>true</maven.install.skip>
-		<maven.deploy.skip>true</maven.deploy.skip>
+		<igloo.jacoco.include>org.iglooproject.*</igloo.jacoco.include>
 	</properties>
 	
 	<build>
@@ -38,7 +36,7 @@
 						<dataFile>${project.build.directory}/coverage-reports/jacoco-unit.exec</dataFile>
 						<includes>
 							<!-- this allows better performance and memory usage for coverage computation -->
-							<include>org.iglooproject.*</include>
+							<include>${igloo.jacoco.include}</include>
 						</includes>
 					</configuration>
 					<executions>
