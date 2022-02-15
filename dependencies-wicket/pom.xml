@@ -144,18 +144,6 @@
 				<artifactId>jquery-mask-plugin</artifactId>
 				<version>${igloo.webjars.jquery-mask-plugin.version}</version>
 			</dependency>
-
-			<dependency>
-				<groupId>io.bit3</groupId>
-				<artifactId>jsass</artifactId>
-				<version>${igloo.jsass.version}</version>
-			</dependency>
-
-			<dependency>
-				<groupId>org.mozilla</groupId>
-				<artifactId>rhino</artifactId>
-				<version>${igloo.rhino.version}</version>
-			</dependency>
 		</dependencies>
 	</dependencyManagement>
 	

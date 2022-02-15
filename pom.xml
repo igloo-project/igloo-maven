@@ -41,6 +41,7 @@
 		<module>dependencies-jersey2</module>
 		<module>dependencies-testing</module>
 		<module>dependencies-quality-annotations</module>
+		<module>dependencies-html</module>
 	</modules>
 	
 	<properties>

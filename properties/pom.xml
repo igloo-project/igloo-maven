@@ -113,10 +113,6 @@
 		<igloo.webjars.popper.version>1.16.1-lts</igloo.webjars.popper.version>
 		<igloo.webjars.clipboard.version>2.0.8</igloo.webjars.clipboard.version>
 		<igloo.webjars.jquery-mask-plugin.version>1.14.16</igloo.webjars.jquery-mask-plugin.version>
-		<!-- http://jsass.readthedocs.io/en/latest/changelog.html -->
-		<igloo.jsass.version>5.10.4</igloo.jsass.version>
-		<!-- autoprefixer plugin; experimental, do not reuse without notice -->
-		<igloo.rhino.version>1.7.11</igloo.rhino.version>
 		
 		<!-- https://www.slf4j.org/news.html -->
 		<igloo.slf4j.version>1.7.36</igloo.slf4j.version>
@@ -137,5 +133,14 @@
 		<igloo.findbugs-annotations.version>3.0.1u2</igloo.findbugs-annotations.version>
 		<igloo.findbugs-jsr305.version>3.0.2</igloo.findbugs-jsr305.version>
 		<igloo.errorprone.version>2.10.0</igloo.errorprone.version>
+		
+		<!-- https://github.com/phax/ph-css/releases -->
+		<igloo.ph-css.version>6.4.3</igloo.ph-css.version>
+		<!-- http://jsass.readthedocs.io/en/latest/changelog.html -->
+		<igloo.jsass.version>5.10.4</igloo.jsass.version>
+		<!-- autoprefixer plugin; experimental, do not reuse without notice -->
+		<igloo.rhino.version>1.7.11</igloo.rhino.version>
+		<!-- https://github.com/jhy/jsoup/blob/master/CHANGES -->
+		<igloo.jsoup.version>1.14.3</igloo.jsoup.version>
 	</properties>
 </project>

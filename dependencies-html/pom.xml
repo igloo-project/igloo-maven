@@ -1,0 +1,67 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+	
+	<modelVersion>4.0.0</modelVersion>
+	
+	<parent>
+		<groupId>org.iglooproject</groupId>
+		<artifactId>properties</artifactId>
+		<version>4.0.0-SNAPSHOT</version>
+		<relativePath>../properties</relativePath>
+	</parent>
+	
+	<artifactId>dependencies-html</artifactId>
+	<packaging>pom</packaging>
+	
+	<name>Managed dependencies - HTML manipulation tools</name>
+	<description>
+		This module provides managed HTML manipulation tools dependencies.
+	</description>
+	
+	<dependencyManagement>
+		<dependencies>
+			<dependency>
+				<groupId>io.bit3</groupId>
+				<artifactId>jsass</artifactId>
+				<version>${igloo.jsass.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>org.mozilla</groupId>
+				<artifactId>rhino</artifactId>
+				<version>${igloo.rhino.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>org.jsoup</groupId>
+				<artifactId>jsoup</artifactId>
+				<version>${igloo.jsoup.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>com.helger</groupId>
+				<artifactId>ph-css</artifactId>
+				<version>${igloo.ph-css.version}</version>
+				<exclusions>
+					<!-- code analysis annotation -->
+					<exclusion>
+						<groupId>com.google.code.findbugs</groupId>
+						<artifactId>*</artifactId>
+					</exclusion>
+				</exclusions>
+			</dependency>
+		</dependencies>
+	</dependencyManagement>
+	
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.codehaus.mojo</groupId>
+				<artifactId>flatten-maven-plugin</artifactId>
+				<configuration>
+					<updatePomFile>true</updatePomFile>
+					<flattenMode>bom</flattenMode>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+</project>
