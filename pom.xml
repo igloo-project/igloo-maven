@@ -46,6 +46,11 @@
 		<igloo.versions-maven-plugin.version>2.9.0</igloo.versions-maven-plugin.version>
 		<igloo.maven-enforcer-plugin.version>3.0.0</igloo.maven-enforcer-plugin.version>
 		
+		<!-- processor dependencies; for bindgen and immutables, added here to keep it in sync -->
+		<igloo.bindgen.version>5.0.0</igloo.bindgen.version>
+		<igloo.querydsl.version>5.0.0</igloo.querydsl.version>
+		<igloo.immutables.version>2.8.2</igloo.immutables.version>
+		
 		<!-- very general project/java configurations -->
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>

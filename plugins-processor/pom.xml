@@ -20,11 +20,8 @@
 	<properties>
 		<!-- maven plugins versions -->
 		<igloo.maven-processor-plugin.version>5.0-rc3</igloo.maven-processor-plugin.version>
-		<!-- processor dependencies; for bindgen and immutables, keep it in sync with imported dependencies -->
-		<!-- TODO: push to igloo-maven ? -->
-		<igloo.bindgen.version>5.0.0</igloo.bindgen.version>
-		<igloo.querydsl.version>5.0.0</igloo.querydsl.version>
-		<igloo.immutables.version>2.8.2</igloo.immutables.version>
+		
+		<!-- processor dependencies' version kept in igloo-maven for centralization -->
 	</properties>
 	
 	<build>
