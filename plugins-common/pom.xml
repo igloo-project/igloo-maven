@@ -32,7 +32,6 @@
 		<igloo.maven-failsafe-plugin.version>3.0.0-M5</igloo.maven-failsafe-plugin.version>
 		<igloo.jacoco-maven-plugin.version>0.8.7</igloo.jacoco-maven-plugin.version>
 		<igloo.buildnumber-maven-plugin.version>1.4</igloo.buildnumber-maven-plugin.version>
-		<igloo.flatten-maven-plugin.version>1.2.7</igloo.flatten-maven-plugin.version>
 	</properties>
 	
 	<build>

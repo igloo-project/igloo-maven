@@ -23,13 +23,17 @@
 	</description>
 	
 	<modules>
-		<module>properties</module>
 		<module>plugins-common</module>
 		<module>plugins-enforcer</module>
 		<module>plugins-processor</module>
 		<module>plugins-jacoco</module>
 		<module>plugins-misc</module>
 		<module>plugins-all</module>
+		
+		<module>properties</module>
+		
+		<module>dependencies-hibernate</module>		
+		<module>dependencies-spring</module>
 	</modules>
 	
 	<properties>
@@ -45,6 +49,7 @@
 		<igloo.owasp-maven-plugin.version>6.5.3</igloo.owasp-maven-plugin.version>
 		<igloo.versions-maven-plugin.version>2.9.0</igloo.versions-maven-plugin.version>
 		<igloo.maven-enforcer-plugin.version>3.0.0</igloo.maven-enforcer-plugin.version>
+		<igloo.flatten-maven-plugin.version>1.2.7</igloo.flatten-maven-plugin.version>
 		
 		<!-- processor dependencies; for bindgen and immutables, added here to keep it in sync -->
 		<igloo.bindgen.version>5.0.0</igloo.bindgen.version>
@@ -130,6 +135,9 @@
 					<groupId>org.codehaus.mojo</groupId>
 					<artifactId>flatten-maven-plugin</artifactId>
 					<version>${igloo.flatten-maven-plugin.version}</version>
+					<configuration>
+						<outputDirectory>${project.build.directory}</outputDirectory>
+					</configuration>
 					<executions>
 						<execution>
 							<id>flatten</id>

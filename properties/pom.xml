@@ -15,4 +15,39 @@
 	<description>
 		This module is intended to expose maven properties used as dependency versions.
 	</description>
+	
+	<properties>
+		<!-- http://hibernate.org/orm/releases/5.3/ -->
+		<!-- https://hibernate.atlassian.net/browse/HHH-12932?jql=project%20%3D%20HHH%20AND%20fixVersion%20in%20(5.3.6)%20ORDER%20BY%20updated -->
+		<!-- https://hibernate.atlassian.net/browse/HHH-12784?jql=project%20%3D%20HHH%20AND%20fixVersion%20%3D%205.3.7%20ORDER%20BY%20updated -->
+		<!-- http://hibernate.org/orm/releases/5.4/ -->
+		<igloo.hibernate.version>5.4.33.Final</igloo.hibernate.version>
+		<igloo.ehcache3.version>3.9.6</igloo.ehcache3.version>
+		<!-- https://jira.terracotta.org/jira/browse/EHC/fixforversion/13000/?selectedTab=com.atlassian.jira.jira-projects-plugin:version-summary-panel -->
+		<!-- terracotta maven repository cannot be managed efficiently; use central dependency -->
+		<igloo.ehcache.version>2.10.9.2</igloo.ehcache.version>
+		
+				<!-- https://spring.io/blog/2018/04/03/spring-framework-5-0-5-and-4-3-15-available-now -->
+		<!-- 5.0.5: https://jira.spring.io/secure/ReleaseNote.jspa?projectId=10000&version=16634 -->
+		<!-- 5.0.6: https://jira.spring.io/secure/ReleaseNote.jspa?projectId=10000&version=16720 -->
+		<!-- 5.0.7: https://jira.spring.io/jira/secure/ReleaseNote.jspa?projectId=10000&version=16753 -->
+		<!-- Minor update from 5.0.4, improvements for Java 10 support -->
+		<!-- 5.0.8: https://spring.io/blog/2018/07/26/spring-framework-5-0-8-available-now -->
+		<!-- 5.0.9: https://spring.io/blog/2018/09/07/spring-framework-5-1-rc3-5-0-9-and-4-3-19-available-now -->
+		<!-- 5.0.10: https://spring.io/blog/2018/10/15/spring-framework-5-1-1-5-0-10-and-4-3-20-available-now -->
+		<!-- 5.1: https://spring.io/blog/2018/09/21/spring-framework-5-1-goes-ga -->
+		<!-- 5.1.1: https://spring.io/blog/2018/10/15/spring-framework-5-1-1-5-0-10-and-4-3-20-available-now -->
+		<!-- 5.1.2: https://spring.io/blog/2018/10/29/spring-framework-5-1-2-available-now -->
+		<!-- 5.1.3: https://spring.io/blog/2018/11/27/spring-framework-5-1-3-5-0-11-and-4-3-21-available-now -->
+		<!-- 5.1.4: https://spring.io/blog/2019/01/09/spring-framework-5-1-4-5-0-12-and-4-3-22-available-now -->
+		<!-- 5.1.5: https://spring.io/blog/2019/02/13/spring-framework-5-1-5-available-now -->
+		<!-- 5.1.6: https://spring.io/blog/2019/04/01/spring-framework-5-1-6-5-0-13-and-4-3-23-available-now -->
+		<!-- 5.2.0: https://github.com/spring-projects/spring-framework/wiki/What's-New-in-Spring-Framework-5.x#whats-new-in-version-52 -->
+		<!-- 5.2.2: https://github.com/spring-projects/spring-framework/releases/tag/v5.2.2.RELEASE -->
+		<!-- 5.2.6: https://github.com/spring-projects/spring-framework/releases/tag/v5.2.6.RELEASE -->
+		<!-- 5.2.8: https://github.com/spring-projects/spring-framework/releases/tag/v5.2.8.RELEASE -->
+		<!-- https://github.com/spring-projects/spring-framework/releases/tag/v5.3.15 -->
+		<igloo.spring.version>5.3.15</igloo.spring.version>
+		<igloo.spring-boot.version>2.6.2</igloo.spring-boot.version>
+	</properties>
 </project>
