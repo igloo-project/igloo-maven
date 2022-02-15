@@ -26,6 +26,14 @@
 		<!-- https://jira.terracotta.org/jira/browse/EHC/fixforversion/13000/?selectedTab=com.atlassian.jira.jira-projects-plugin:version-summary-panel -->
 		<!-- terracotta maven repository cannot be managed efficiently; use central dependency -->
 		<igloo.ehcache.version>2.10.9.2</igloo.ehcache.version>
+
+		<!-- http://in.relation.to/2018/09/13/hibernate-search-5-10-4-Final-5-9-3-Final-5-6-6-Final/ -->
+		<!-- http://in.relation.to/2018/12/20/hibernate-search-5-11-0-Final/ -->
+		<!-- http://in.relation.to/2019/02/01/hibernate-search-6-0-0-Alpha2-and-5-11-1-Final/ -->
+		<!-- https://in.relation.to/2019/06/18/hibernate-search-5-11-2-Final-and-5-10-6-Final/ -->
+		<!-- https://in.relation.to/2019/09/19/hibernate-search-5-11-3-Final/ -->
+		<!-- https://in.relation.to/2019/11/22/hibernate-search-5-11-4-Final-and-5-10-8-Final/ -->
+		<igloo.hibernate-search.version>5.11.8.Final</igloo.hibernate-search.version>
 		
 				<!-- https://spring.io/blog/2018/04/03/spring-framework-5-0-5-and-4-3-15-available-now -->
 		<!-- 5.0.5: https://jira.spring.io/secure/ReleaseNote.jspa?projectId=10000&version=16634 -->
@@ -68,6 +76,18 @@
 		<!-- https://github.com/spring-projects/spring-security/releases -->
 		<igloo.spring-security.version>5.6.1</igloo.spring-security.version>
 		
+		<igloo.wicket.version>8.13.0</igloo.wicket.version>
+		<igloo.wiquery.version>8.2.0</igloo.wiquery.version>
+		<igloo.wicketstuff-select2.version>8.13.0</igloo.wicketstuff-select2.version>
+		<!-- https://github.com/l0rdn1kk0n/wicket-webjars (0.5.x -> wicket 7, 2.0.x -> wicket 8) -->
+		<igloo.wicket-webjars.version>2.0.20</igloo.wicket-webjars.version>
+		<igloo.webjars-locator-core.version>0.48</igloo.webjars-locator-core.version>
+		<igloo.wqplot.version>7.1.0.owsi1</igloo.wqplot.version>
+		<igloo.webjars.bootstrap.version>4.6.0</igloo.webjars.bootstrap.version>
+		<igloo.webjars.popper.version>1.16.1-lts</igloo.webjars.popper.version>
+		<igloo.webjars.clipboard.version>2.0.8</igloo.webjars.clipboard.version>
+		<igloo.webjars.jquery-mask-plugin.version>1.14.16</igloo.webjars.jquery-mask-plugin.version>
+		
 		<!-- https://www.slf4j.org/news.html -->
 		<igloo.slf4j.version>1.7.36</igloo.slf4j.version>
 		<igloo.reload4j.version>1.2.18.0</igloo.reload4j.version>
@@ -75,5 +95,17 @@
 		
 		<igloo.jersey2.version>2.35</igloo.jersey2.version>
 		<igloo.grizzly.version>1.9.65</igloo.grizzly.version>
+		
+		<igloo.junit.version>4.13.2</igloo.junit.version>
+		<igloo.junit5.version>5.8.0</igloo.junit5.version>
+		<igloo.h2.version>2.1.210</igloo.h2.version>
+		<igloo.mockito.version>4.1.0</igloo.mockito.version>
+		<igloo.assertj.version>3.22.0</igloo.assertj.version>
+		<igloo.assertj-guava.version>3.4.0</igloo.assertj-guava.version>
+		<igloo.grizzly.version>1.9.65</igloo.grizzly.version>
+		
+		<igloo.findbugs-annotations.version>3.0.1u2</igloo.findbugs-annotations.version>
+		<igloo.findbugs-jsr305.version>3.0.2</igloo.findbugs-jsr305.version>
+		<igloo.errorprone.version>2.10.0</igloo.errorprone.version>
 	</properties>
 </project>

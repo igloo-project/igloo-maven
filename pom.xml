@@ -34,8 +34,12 @@
 		
 		<module>dependencies-logging</module>
 		<module>dependencies-hibernate</module>
+		<module>dependencies-hibernate-search</module>
 		<module>dependencies-spring</module>
+		<module>dependencies-wicket</module>
 		<module>dependencies-jersey2</module>
+		<module>dependencies-testing</module>
+		<module>dependencies-quality-annotations</module>
 	</modules>
 	
 	<properties>

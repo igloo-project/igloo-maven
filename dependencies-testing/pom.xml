@@ -9,43 +9,51 @@
 		<relativePath>../properties</relativePath>
 	</parent>
 	
-	<artifactId>dependencies-jersey2</artifactId>
+	<artifactId>dependencies-testing</artifactId>
 	<packaging>pom</packaging>
 	
-	<name>Managed dependencies - Jersey stack</name>
+	<name>Managed dependencies - Testing</name>
 	<description>
-		This module provides managed jersey dependencies.
+		This module provides managed testing dependencies.
 	</description>
 	
 	<dependencyManagement>
 		<dependencies>
 			<dependency>
-				<groupId>org.glassfish.jersey.core</groupId>
-				<artifactId>jersey-server</artifactId>
-				<version>${igloo.jersey2.version}</version>
-			</dependency>
-			
-			<dependency>
-				<groupId>org.glassfish.jersey.core</groupId>
-				<artifactId>jersey-client</artifactId>
-				<version>${igloo.jersey2.version}</version>
-			</dependency>
-			
-			<dependency>
-				<groupId>org.glassfish.jersey.media</groupId>
-				<artifactId>jersey-media-multipart</artifactId>
-				<version>${igloo.jersey2.version}</version>
-			</dependency>
-			
-			<dependency>
-				<groupId>org.glassfish.jersey.ext</groupId>
-				<artifactId>jersey-spring5</artifactId>
-				<version>${igloo.jersey2.version}</version>
+				<groupId>junit</groupId>
+				<artifactId>junit</artifactId>
+				<version>${igloo.junit.version}</version>
 			</dependency>
 
+			<dependency>
+				<groupId>org.junit.jupiter</groupId>
+				<artifactId>junit-jupiter-api</artifactId>
+				<version>${igloo.junit5.version}</version>
+			</dependency>
 
-			<!-- For testing purpose (embedded web-server) -->
+			<dependency>
+				<groupId>com.h2database</groupId>
+				<artifactId>h2</artifactId>
+				<version>${igloo.h2.version}</version>
+			</dependency>
 
+			<dependency>
+				<groupId>org.mockito</groupId>
+				<artifactId>mockito-core</artifactId>
+				<version>${igloo.mockito.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>org.assertj</groupId>
+				<artifactId>assertj-core</artifactId>
+				<version>${igloo.assertj.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>org.assertj</groupId>
+				<artifactId>assertj-guava</artifactId>
+				<version>${igloo.assertj-guava.version}</version>
+			</dependency>
 
 			<dependency>
 				<groupId>com.sun.grizzly</groupId>

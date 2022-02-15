@@ -1,0 +1,53 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+	
+	<modelVersion>4.0.0</modelVersion>
+	
+	<parent>
+		<groupId>org.iglooproject</groupId>
+		<artifactId>properties</artifactId>
+		<version>4.0.0-SNAPSHOT</version>
+		<relativePath>../properties</relativePath>
+	</parent>
+	
+	<artifactId>dependencies-quality-annotations</artifactId>
+	<packaging>pom</packaging>
+	
+	<name>Managed dependencies - Quality annotations</name>
+	<description>
+		This module provides managed quality annotations (code analysis annotation). This annotations may be added
+		with a provided scope (useless for runtime scope).
+	</description>
+	
+	<dependencyManagement>
+		<dependencies>
+			<dependency>
+				<groupId>com.google.code.findbugs</groupId>
+				<artifactId>annotations</artifactId>
+				<version>${igloo.findbugs-annotations.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>com.google.code.findbugs</groupId>
+				<artifactId>jsr305</artifactId>
+				<version>${igloo.findbugs-jsr305.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>com.google.errorprone</groupId>
+				<artifactId>error_prone_annotations</artifactId>
+				<version>${igloo.errorprone.version}</version>
+			</dependency>
+		</dependencies>
+	</dependencyManagement>
+	
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.codehaus.mojo</groupId>
+				<artifactId>flatten-maven-plugin</artifactId>
+				<configuration>
+					<updatePomFile>true</updatePomFile>
+					<flattenMode>bom</flattenMode>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+</project>

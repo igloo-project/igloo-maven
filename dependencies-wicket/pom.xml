@@ -1,0 +1,150 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+	
+	<modelVersion>4.0.0</modelVersion>
+	
+	<parent>
+		<groupId>org.iglooproject</groupId>
+		<artifactId>properties</artifactId>
+		<version>4.0.0-SNAPSHOT</version>
+		<relativePath>../properties</relativePath>
+	</parent>
+	
+	<artifactId>dependencies-wicket</artifactId>
+	<packaging>pom</packaging>
+	
+	<name>Managed dependencies - Wicket</name>
+	<description>
+		This module provides managed wicket dependencies.
+	</description>
+	
+	<dependencyManagement>
+		<dependencies>
+			<dependency>
+				<groupId>org.apache.wicket</groupId>
+				<artifactId>wicket</artifactId>
+				<version>${igloo.wicket.version}</version>
+				<type>pom</type>
+			</dependency>
+
+			<dependency>
+				<groupId>org.apache.wicket</groupId>
+				<artifactId>wicket-core</artifactId>
+				<version>${igloo.wicket.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>org.apache.wicket</groupId>
+				<artifactId>wicket-ioc</artifactId>
+				<version>${igloo.wicket.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>org.apache.wicket</groupId>
+				<artifactId>wicket-spring</artifactId>
+				<version>${igloo.wicket.version}</version>
+				<exclusions>
+					<exclusion>
+						<groupId>org.springframework</groupId>
+						<artifactId>spring</artifactId>
+					</exclusion>
+				</exclusions>
+			</dependency>
+
+			<dependency>
+				<groupId>org.apache.wicket</groupId>
+				<artifactId>wicket-auth-roles</artifactId>
+				<version>${igloo.wicket.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>org.apache.wicket</groupId>
+				<artifactId>wicket-extensions</artifactId>
+				<version>${igloo.wicket.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>org.apache.wicket</groupId>
+				<artifactId>wicket-devutils</artifactId>
+				<version>${igloo.wicket.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>org.wicketstuff.wiquery</groupId>
+				<artifactId>wiquery-core</artifactId>
+				<version>${igloo.wiquery.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>org.wicketstuff.wiquery</groupId>
+				<artifactId>wiquery-jquery-ui</artifactId>
+				<version>${igloo.wiquery.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>org.wicketstuff</groupId>
+				<artifactId>wicketstuff-select2</artifactId>
+				<version>${igloo.wicketstuff-select2.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>de.agilecoders.wicket.webjars</groupId>
+				<artifactId>wicket-webjars</artifactId>
+				<version>${igloo.wicket-webjars.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>org.webjars</groupId>
+				<artifactId>webjars-locator-core</artifactId>
+				<version>${igloo.webjars-locator-core.version}</version>
+				<exclusions>
+					<!-- used only by extractor -->
+					<exclusion>
+						<groupId>*</groupId>
+						<artifactId>commons-compress</artifactId>
+					</exclusion>
+					<exclusion>
+						<groupId>*</groupId>
+						<artifactId>jackson-core</artifactId>
+					</exclusion>
+				</exclusions>
+			</dependency>
+
+			<dependency>
+				<groupId>org.webjars.npm</groupId>
+				<artifactId>bootstrap</artifactId>
+				<version>${igloo.webjars.bootstrap.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>org.webjars.npm</groupId>
+				<artifactId>popper.js</artifactId>
+				<version>${igloo.webjars.popper.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>org.webjars.npm</groupId>
+				<artifactId>clipboard</artifactId>
+				<version>${igloo.webjars.clipboard.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>org.webjars.npm</groupId>
+				<artifactId>jquery-mask-plugin</artifactId>
+				<version>${igloo.webjars.jquery-mask-plugin.version}</version>
+			</dependency>
+		</dependencies>
+	</dependencyManagement>
+	
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.codehaus.mojo</groupId>
+				<artifactId>flatten-maven-plugin</artifactId>
+				<configuration>
+					<updatePomFile>true</updatePomFile>
+					<flattenMode>bom</flattenMode>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+</project>
