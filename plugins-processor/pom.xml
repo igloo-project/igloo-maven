@@ -4,25 +4,27 @@
 	
 	<parent>
 		<groupId>org.iglooproject</groupId>
-		<artifactId>igloo-maven</artifactId>
+		<artifactId>plugins-enforcer</artifactId>
 		<version>4.0.0-SNAPSHOT</version>
+		<relativePath>../plugins-enforcer</relativePath>
 	</parent>
 	
 	<artifactId>plugins-processor</artifactId>
 	<packaging>pom</packaging>
 	
-	<name>Processor plugin configuration</name>
+	<name>Maven - Processor plugin configuration</name>
 	<description>
-		This module configures common maven plugins (compiler, ...).
+		This module configures processor plugin.
 	</description>
 	
 	<properties>
 		<!-- maven plugins versions -->
 		<igloo.maven-processor-plugin.version>5.0-rc3</igloo.maven-processor-plugin.version>
-		
-		<!-- local properties -->
-		<maven.install.skip>false</maven.install.skip>
-		<maven.deploy.skip>false</maven.deploy.skip>
+		<!-- processor dependencies; for bindgen and immutables, keep it in sync with imported dependencies -->
+		<!-- TODO: push to igloo-maven ? -->
+		<igloo.bindgen.version>5.0.0</igloo.bindgen.version>
+		<igloo.querydsl.version>5.0.0</igloo.querydsl.version>
+		<igloo.immutables.version>2.8.2</igloo.immutables.version>
 	</properties>
 	
 	<build>
@@ -31,6 +33,8 @@
 				<plugin>
 					<groupId>org.apache.maven.plugins</groupId>
 					<artifactId>maven-compiler-plugin</artifactId>
+					<!-- set version so that versions-maven-plugin:display-update-plugins is happy -->
+					<version>${igloo.maven-compiler-plugin.version}</version>
 					<configuration>
 						<compilerArgs>
 							<compilerArg>-proc:none</compilerArg>
@@ -58,22 +62,6 @@
 							<artifactId>value</artifactId>
 							<version>${igloo.immutables.version}</version>
 						</dependency>
-						<!-- for bindings, we can encounter guava types that uses check-time annotations -->
-						<dependency>
-							<groupId>com.google.errorprone</groupId>
-							<artifactId>error_prone_annotations</artifactId>
-							<version>${igloo.errorprone.version}</version>
-						</dependency>
-						<dependency>
-							<groupId>com.google.code.findbugs</groupId>
-							<artifactId>annotations</artifactId>
-							<version>${igloo.findbugs-annotations.version}</version>
-						</dependency>
-						<dependency>
-							<groupId>com.google.code.findbugs</groupId>
-							<artifactId>jsr305</artifactId>
-							<version>${igloo.findbugs-jsr305.version}</version>
-						</dependency>
 					</dependencies>
 					<configuration>
 						<processors>
@@ -84,7 +72,13 @@
 						<systemProperties>
 							<querydsl.generatedAnnotationClass>javax.annotation.processing.Generated</querydsl.generatedAnnotationClass>
 						</systemProperties>
-						<releaseVersion>${jdk.release.version}</releaseVersion>
+						<releaseVersion>${maven.compiler.release}</releaseVersion>
+						<!--
+						Windows encoding workaround: file.encoding is not used^M + command-line maven triggers
+						encoding error in generated files^M + (date in @Generated annotation is written in french
+						and iso-8859)
+						-->
+						<compilerArguments>-encoding ${project.build.sourceEncoding}</compilerArguments>
 					</configuration>
 					<executions>
 						<execution>
@@ -93,9 +87,6 @@
 							<goals>
 								<goal>process</goal>
 							</goals>
-							<configuration>
-								<skip>${processor.skip}</skip>
-							</configuration>
 						</execution>
 						<execution>
 							<id>maven-processor-plugin-default-test</id>
@@ -103,9 +94,6 @@
 							<goals>
 								<goal>process-test</goal>
 							</goals>
-							<configuration>
-								<skip>${processor.test.skip}</skip>
-							</configuration>
 						</execution>
 					</executions>
 				</plugin>

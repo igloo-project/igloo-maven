@@ -1,0 +1,76 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+	
+	<modelVersion>4.0.0</modelVersion>
+	
+	<parent>
+		<groupId>org.iglooproject</groupId>
+		<artifactId>plugins-common</artifactId>
+		<version>4.0.0-SNAPSHOT</version>
+		<relativePath>../plugins-common</relativePath>
+	</parent>
+	
+	<artifactId>plugins-enforcer</artifactId>
+	<packaging>pom</packaging>
+	
+	<name>Maven - Enforcer plugin configuration</name>
+	<description>
+		This module configures enforcer plugin.
+	</description>
+	
+	<properties>
+		<!-- maven plugins versions -->
+		<igloo.maven-enforcer-plugin.version>3.0.0</igloo.maven-enforcer-plugin.version>
+	</properties>
+	
+	<build>
+		<pluginManagement>
+			<plugins>
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-enforcer-plugin</artifactId>
+					<version>${igloo.maven-enforcer-plugin.version}</version>
+					<executions>
+						<execution>
+							<id>enforce</id>
+							<goals>
+								<goal>enforce</goal>
+							</goals>
+							<configuration>
+								<rules>
+									<requireUpperBoundDeps>
+										<excludes>
+											<exclude>org.osgi:org.osgi.core</exclude>
+											<exclude>org.codehaus.plexus:plexus-utils</exclude>
+										</excludes>
+									</requireUpperBoundDeps>
+									<bannedDependencies>
+										<excludes>
+											<exclude>org.springframework:spring</exclude>
+											<exclude>org.springframework:spring-ldap</exclude>
+											<exclude>commons-logging:commons-logging</exclude>
+											<exclude>rhino:rhino</exclude>
+											<exclude>rhino:js</exclude>
+											<exclude>javassist:javassist</exclude>
+											<exclude>xml-apis:xml-apis</exclude>
+											<exclude>apache-xerces:xml-apis</exclude>
+											<exclude>javax.servlet:servlet-api</exclude>
+											<exclude>net.sf.ehcache:ehcache-core</exclude>
+											<exclude>postgresql:postgresql</exclude>
+											<!-- this dependency is intended for testing -->
+											<exclude>*:elasticsearch-cluster-runner:*:jar:compile</exclude>
+											<exclude>*:embedded-elasticsearch:*:jar:test</exclude>
+											<!-- this dependency is renamed com.sun.mail:jakarta.mail -->
+											<exclude>com.sun.mail:javax.mail</exclude><!-- old implementation -->
+											<exclude>javax.mail:mail-api</exclude><!-- old API -->
+											<exclude>jakarta.mail:jakarta.mail-api</exclude><!-- API only -->
+										</excludes>
+									</bannedDependencies>
+								</rules>
+							</configuration>
+						</execution>
+					</executions>
+				</plugin>
+			</plugins>
+		</pluginManagement>
+	</build>
+</project>

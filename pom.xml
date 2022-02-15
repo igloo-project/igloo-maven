@@ -7,7 +7,7 @@
 	<packaging>pom</packaging>
 	<version>4.0.0-SNAPSHOT</version>
 	
-	<name>Igloo maven configuration</name>
+	<name>Maven configuration for Igloo stack</name>
 	<description>
 		This module tree contains various maven-related configurations
 		
@@ -25,6 +25,10 @@
 	<modules>
 		<module>properties</module>
 		<module>plugins-common</module>
+		<module>plugins-enforcer</module>
+		<module>plugins-processor</module>
+		<module>plugins-jacoco</module>
+		<module>plugins-all</module>
 	</modules>
 	
 	<properties>
@@ -40,7 +44,6 @@
 		<igloo.owasp-maven-plugin.version>6.5.3</igloo.owasp-maven-plugin.version>
 		<igloo.versions-maven-plugin.version>2.9.0</igloo.versions-maven-plugin.version>
 		<igloo.maven-enforcer-plugin.version>3.0.0</igloo.maven-enforcer-plugin.version>
-		<igloo.flatten-maven-plugin.version>1.2.7</igloo.flatten-maven-plugin.version>
 		
 		<!-- very general project/java configurations -->
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -48,10 +51,6 @@
 		<maven.compiler.source>11</maven.compiler.source>
 		<maven.compiler.target>11</maven.compiler.target>
 		<maven.compiler.release>11</maven.compiler.release>
-		
-		<!-- local properties -->
-		<maven.install.skip>true</maven.install.skip>
-		<maven.deploy.skip>true</maven.deploy.skip>
 	</properties>
 	
 	<build>
@@ -98,6 +97,9 @@
 									<requireMavenVersion>
 										<version>${minimal.maven.version}</version>
 									</requireMavenVersion>
+									<requireJavaVersion>
+										<version>${maven.compiler.release}</version>
+									</requireJavaVersion>
 								</rules>
 							</configuration>
 						</execution>

@@ -11,14 +11,14 @@
 	<artifactId>plugins-common</artifactId>
 	<packaging>pom</packaging>
 	
-	<name>Common maven plugins configuration</name>
+	<name>Maven - Common plugins configuration</name>
 	<description>
 		This module configures common maven plugins (compiler, ...).
 	</description>
 	
 	<properties>
 		<!-- maven plugins versions -->
-		<igloo.maven-compiler-plugin.version>3.8.1</igloo.maven-compiler-plugin.version>
+		<igloo.maven-compiler-plugin.version>3.10.0</igloo.maven-compiler-plugin.version>
 		<igloo.maven-resources-plugin.version>3.2.0</igloo.maven-resources-plugin.version>
 		<igloo.maven-surefire-plugin.version>3.0.0-M5</igloo.maven-surefire-plugin.version>
 		<igloo.maven-war-plugin.version>3.3.2</igloo.maven-war-plugin.version>
@@ -32,10 +32,7 @@
 		<igloo.maven-failsafe-plugin.version>3.0.0-M5</igloo.maven-failsafe-plugin.version>
 		<igloo.jacoco-maven-plugin.version>0.8.7</igloo.jacoco-maven-plugin.version>
 		<igloo.buildnumber-maven-plugin.version>1.4</igloo.buildnumber-maven-plugin.version>
-		
-		<!-- local properties -->
-		<maven.install.skip>false</maven.install.skip>
-		<maven.deploy.skip>false</maven.deploy.skip>
+		<igloo.flatten-maven-plugin.version>1.2.7</igloo.flatten-maven-plugin.version>
 	</properties>
 	
 	<build>

@@ -4,15 +4,16 @@
 	
 	<parent>
 		<groupId>org.iglooproject</groupId>
-		<artifactId>igloo-maven</artifactId>
+		<artifactId>plugins-jacoco</artifactId>
 		<version>4.0.0-SNAPSHOT</version>
+		<relativePath>../plugins-jacoco</relativePath>
 	</parent>
 	
-	<artifactId>properties</artifactId>
+	<artifactId>plugins-all</artifactId>
 	<packaging>pom</packaging>
 	
-	<name>Maven - Dependencies' versions as properties</name>
+	<name>Maven - All plugin configuration</name>
 	<description>
-		This module is intended to expose maven properties used as dependency versions.
+		This module configures plugin stack for Igloo projects.
 	</description>
 </project>
