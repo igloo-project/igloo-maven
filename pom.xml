@@ -28,6 +28,7 @@
 		<module>plugins-enforcer</module>
 		<module>plugins-processor</module>
 		<module>plugins-jacoco</module>
+		<module>plugins-misc</module>
 		<module>plugins-all</module>
 	</modules>
 	
