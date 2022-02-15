@@ -32,8 +32,9 @@
 		
 		<module>properties</module>
 		
-		<module>dependencies-hibernate</module>		
+		<module>dependencies-hibernate</module>
 		<module>dependencies-spring</module>
+		<module>dependencies-spring-security</module>
 	</modules>
 	
 	<properties>
