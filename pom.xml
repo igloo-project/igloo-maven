@@ -32,6 +32,7 @@
 		
 		<module>properties</module>
 		
+		<module>dependencies-commons</module>
 		<module>dependencies-logging</module>
 		<module>dependencies-hibernate</module>
 		<module>dependencies-hibernate-search</module>

@@ -69,6 +69,18 @@
 			</dependency>
 
 			<dependency>
+				<groupId>org.apache.wicket</groupId>
+				<artifactId>wicket-util</artifactId>
+				<version>${igloo.wicket.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>commons-fileupload</groupId>
+				<artifactId>commons-fileupload</artifactId>
+				<version>${igloo.commons-fileupload.version}</version>
+			</dependency>
+
+			<dependency>
 				<groupId>org.wicketstuff.wiquery</groupId>
 				<artifactId>wiquery-core</artifactId>
 				<version>${igloo.wiquery.version}</version>
@@ -131,6 +143,18 @@
 				<groupId>org.webjars.npm</groupId>
 				<artifactId>jquery-mask-plugin</artifactId>
 				<version>${igloo.webjars.jquery-mask-plugin.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>io.bit3</groupId>
+				<artifactId>jsass</artifactId>
+				<version>${igloo.jsass.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>org.mozilla</groupId>
+				<artifactId>rhino</artifactId>
+				<version>${igloo.rhino.version}</version>
 			</dependency>
 		</dependencies>
 	</dependencyManagement>
