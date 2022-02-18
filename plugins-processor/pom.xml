@@ -84,6 +84,9 @@
 							<goals>
 								<goal>process</goal>
 							</goals>
+							<configuration>
+								<outputDirectory>${project.build.directory}/generated-sources/apt</outputDirectory>
+							</configuration>
 						</execution>
 						<execution>
 							<id>maven-processor-plugin-default-test</id>
@@ -91,6 +94,9 @@
 							<goals>
 								<goal>process-test</goal>
 							</goals>
+							<configuration>
+								<outputDirectory>${project.build.directory}/generated-sources-test/apt</outputDirectory>
+							</configuration>
 						</execution>
 					</executions>
 				</plugin>
