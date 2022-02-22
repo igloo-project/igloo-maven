@@ -1,4 +1,9 @@
-.project
+target
 .classpath
+.factorypath
+.project
 .settings/
-target/
+.idea/
+out/
+bin/
+.*.swp
