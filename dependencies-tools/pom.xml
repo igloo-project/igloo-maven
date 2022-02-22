@@ -49,7 +49,7 @@
 						<artifactId>truevfs-access-swing</artifactId>
 					</exclusion>
 					<exclusion>
-						<groupId>net.java.truevfs</groupId>
+						<groupId>net.java.truecommons</groupId>
 						<artifactId>truecommons-key-swing</artifactId>
 					</exclusion>
 				</exclusions>
