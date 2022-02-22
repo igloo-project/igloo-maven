@@ -33,6 +33,7 @@
 		<module>properties</module>
 		
 		<module>dependencies-commons</module>
+		<module>dependencies-bindgen</module>
 		<module>dependencies-logging</module>
 		<module>dependencies-hibernate</module>
 		<module>dependencies-hibernate-search</module>
@@ -68,8 +69,6 @@
 		<!-- very general project/java configurations -->
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-		<maven.compiler.source>11</maven.compiler.source>
-		<maven.compiler.target>11</maven.compiler.target>
 		<maven.compiler.release>11</maven.compiler.release>
 	</properties>
 	

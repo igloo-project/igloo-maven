@@ -17,6 +17,10 @@
 	</description>
 	
 	<properties>
+		<igloo.bindgen.version>5.0.0</igloo.bindgen.version>
+		<igloo.bindgen-java.version>2.0.0</igloo.bindgen-java.version>
+		<igloo.bindgen-bindings-java.version>2.0.0</igloo.bindgen-bindings-java.version>
+
 		<!--https://github.com/google/guava/releases/ -->
 		<igloo.guava.version>31.0.1-jre</igloo.guava.version>
 		<igloo.jdk-serializable-functional.version>1.9.0</igloo.jdk-serializable-functional.version>
@@ -33,6 +37,7 @@
 		<igloo.commons-validator.version>1.7</igloo.commons-validator.version>
 		<igloo.commons-collections4.version>4.4</igloo.commons-collections4.version>
 		<igloo.commons-beanutils.version>1.9.4</igloo.commons-beanutils.version>
+		<igloo.javatuples.version>1.2</igloo.javatuples.version>
 
 		<!-- http://hibernate.org/orm/releases/5.3/ -->
 		<!-- https://hibernate.atlassian.net/browse/HHH-12932?jql=project%20%3D%20HHH%20AND%20fixVersion%20in%20(5.3.6)%20ORDER%20BY%20updated -->

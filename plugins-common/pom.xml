@@ -26,6 +26,7 @@
 		<igloo.maven-jar-plugin.version>3.2.0</igloo.maven-jar-plugin.version>
 		<igloo.maven-source-plugin.version>3.2.1</igloo.maven-source-plugin.version>
 		<igloo.maven-javadoc-plugin.version>3.3.1</igloo.maven-javadoc-plugin.version>
+		<!-- waiting 3.3.0 for https://issues.apache.org/jira/browse/MDEP-753 -->
 		<igloo.maven-dependency-plugin.version>3.2.0</igloo.maven-dependency-plugin.version>
 		<igloo.maven-antrun-plugin.version>3.0.0</igloo.maven-antrun-plugin.version>
 		<igloo.exec-maven-plugin.version>3.0.0</igloo.exec-maven-plugin.version>
@@ -120,6 +121,11 @@
 					<artifactId>maven-javadoc-plugin</artifactId>
 					<version>${igloo.maven-javadoc-plugin.version}</version>
 					<!-- TODO: doclint issue -->
+				</plugin>
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-dependency-plugin</artifactId>
+					<version>${igloo.maven-dependency-plugin.version}</version>
 				</plugin>
 				<plugin>
 					<!--

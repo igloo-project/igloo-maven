@@ -43,6 +43,31 @@
 				<artifactId>truevfs-profile-base</artifactId>
 				<version>${igloo.truevfs.version}</version>
 				<type>pom</type>
+				<exclusions>
+					<exclusion>
+						<groupId>net.java.truevfs</groupId>
+						<artifactId>truevfs-access-swing</artifactId>
+					</exclusion>
+					<exclusion>
+						<groupId>net.java.truevfs</groupId>
+						<artifactId>truecommons-key-swing</artifactId>
+					</exclusion>
+				</exclusions>
+			</dependency>
+			<dependency>
+				<groupId>net.java.truevfs</groupId>
+				<artifactId>truevfs-access</artifactId>
+				<version>${igloo.truevfs.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>net.java.truevfs</groupId>
+				<artifactId>truevfs-driver-zip</artifactId>
+				<version>${igloo.truevfs.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>net.java.truevfs</groupId>
+				<artifactId>truevfs-kernel-spec</artifactId>
+				<version>${igloo.truevfs.version}</version>
 			</dependency>
 
 			<dependency>

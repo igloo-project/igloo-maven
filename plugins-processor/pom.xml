@@ -22,6 +22,11 @@
 		<igloo.maven-processor-plugin.version>5.0-rc3</igloo.maven-processor-plugin.version>
 		
 		<!-- processor dependencies' version kept in igloo-maven for centralization -->
+		
+		<igloo.processor.immutables>org.immutables.processor.ProxyProcessor</igloo.processor.immutables>
+		<igloo.processor.querydsl>com.querydsl.apt.jpa.JPAAnnotationProcessor</igloo.processor.querydsl>
+		<igloo.processor.bindgen>org.bindgen.processor.Processor</igloo.processor.bindgen>
+		<igloo.processors>${igloo.processor.immutables},${igloo.processor.querydsl},${igloo.processor.bindgen}</igloo.processors>
 	</properties>
 	
 	<build>
@@ -42,30 +47,8 @@
 					<groupId>org.bsc.maven</groupId>
 					<artifactId>maven-processor-plugin</artifactId>
 					<version>${igloo.maven-processor-plugin.version}</version>
-					<dependencies>
-						<dependency>
-							<groupId>org.bindgen</groupId>
-							<artifactId>bindgen</artifactId>
-							<version>${igloo.bindgen.version}</version>
-						</dependency>
-						<dependency>
-							<groupId>com.querydsl</groupId>
-							<artifactId>querydsl-apt</artifactId>
-							<classifier>jpa</classifier>
-							<version>${igloo.querydsl.version}</version>
-						</dependency>
-						<dependency>
-							<groupId>org.immutables</groupId>
-							<artifactId>value</artifactId>
-							<version>${igloo.immutables.version}</version>
-						</dependency>
-					</dependencies>
 					<configuration>
-						<processors>
-							<processor>org.immutables.processor.ProxyProcessor</processor>
-							<processor>com.querydsl.apt.jpa.JPAAnnotationProcessor</processor>
-							<processor>org.bindgen.processor.Processor</processor>
-						</processors>
+						<processors>${igloo.processors}</processors>
 						<systemProperties>
 							<querydsl.generatedAnnotationClass>javax.annotation.processing.Generated</querydsl.generatedAnnotationClass>
 						</systemProperties>
