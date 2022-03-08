@@ -41,6 +41,10 @@
 										<excludes>
 											<exclude>org.osgi:org.osgi.core</exclude>
 											<exclude>org.codehaus.plexus:plexus-utils</exclude>
+											<!-- it is a problem as libraries uses 2.0 alpha -->
+											<exclude>org.slf4j:slf4j-api</exclude>
+											<exclude>jakarta.activation:jakarta.activation-api</exclude>
+											<exclude>io.github.classgraph:classgraph</exclude>
 										</excludes>
 									</requireUpperBoundDeps>
 									<bannedDependencies>

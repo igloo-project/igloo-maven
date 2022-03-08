@@ -20,6 +20,12 @@
 	<dependencyManagement>
 		<dependencies>
 			<dependency>
+				<groupId>javax.servlet</groupId>
+				<artifactId>javax.servlet-api</artifactId>
+				<version>${igloo.servlet-api.version}</version>
+			</dependency>
+
+			<dependency>
 				<groupId>org.apache.wicket</groupId>
 				<artifactId>wicket</artifactId>
 				<version>${igloo.wicket.version}</version>
@@ -44,8 +50,9 @@
 				<version>${igloo.wicket.version}</version>
 				<exclusions>
 					<exclusion>
+						<!-- Importer is responsible for spring dependency definition -->
 						<groupId>org.springframework</groupId>
-						<artifactId>spring</artifactId>
+						<artifactId>*</artifactId>
 					</exclusion>
 				</exclusions>
 			</dependency>
@@ -143,6 +150,12 @@
 				<groupId>org.webjars.npm</groupId>
 				<artifactId>jquery-mask-plugin</artifactId>
 				<version>${igloo.webjars.jquery-mask-plugin.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>nl.topicus</groupId>
+				<artifactId>wqplot</artifactId>
+				<version>${igloo.wqplot.version}</version>
 			</dependency>
 		</dependencies>
 	</dependencyManagement>

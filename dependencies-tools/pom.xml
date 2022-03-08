@@ -39,6 +39,18 @@
 			</dependency>
 
 			<dependency>
+				<groupId>com.opencsv</groupId>
+				<artifactId>opencsv</artifactId>
+				<version>${igloo.opencsv.version}</version>
+				<exclusions>
+					<exclusion>
+						<groupId>commons-logging</groupId>
+						<artifactId>commons-logging</artifactId>
+					</exclusion>
+				</exclusions>
+			</dependency>
+
+			<dependency>
 				<groupId>net.java.truevfs</groupId>
 				<artifactId>truevfs-profile-base</artifactId>
 				<version>${igloo.truevfs.version}</version>
@@ -51,6 +63,10 @@
 					<exclusion>
 						<groupId>net.java.truecommons</groupId>
 						<artifactId>truecommons-key-swing</artifactId>
+					</exclusion>
+					<exclusion>
+						<groupId>org.projectlombok</groupId>
+						<artifactId>lombok</artifactId>
 					</exclusion>
 				</exclusions>
 			</dependency>
@@ -68,6 +84,12 @@
 				<groupId>net.java.truevfs</groupId>
 				<artifactId>truevfs-kernel-spec</artifactId>
 				<version>${igloo.truevfs.version}</version>
+				<exclusions>
+					<exclusion>
+						<groupId>org.projectlombok</groupId>
+						<artifactId>lombok</artifactId>
+					</exclusion>
+				</exclusions>
 			</dependency>
 
 			<dependency>
@@ -80,6 +102,18 @@
 				<groupId>org.freemarker</groupId>
 				<artifactId>freemarker</artifactId>
 				<version>${igloo.freemarker.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>org.devlib.schmidt</groupId>
+				<artifactId>imageinfo</artifactId>
+				<version>${igloo.imageinfo.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>de.danielbechler</groupId>
+				<artifactId>java-object-diff</artifactId>
+				<version>${igloo.object-diff.version}</version>
 			</dependency>
 		</dependencies>
 	</dependencyManagement>

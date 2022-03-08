@@ -21,6 +21,7 @@
 		<igloo.maven-compiler-plugin.version>3.10.0</igloo.maven-compiler-plugin.version>
 		<igloo.maven-resources-plugin.version>3.2.0</igloo.maven-resources-plugin.version>
 		<igloo.maven-surefire-plugin.version>3.0.0-M5</igloo.maven-surefire-plugin.version>
+		<igloo.maven-failsafe-plugin.version>3.0.0-M5</igloo.maven-failsafe-plugin.version>
 		<igloo.maven-war-plugin.version>3.3.2</igloo.maven-war-plugin.version>
 		<igloo.maven-assembly-plugin.version>3.3.0</igloo.maven-assembly-plugin.version>
 		<igloo.maven-jar-plugin.version>3.2.2</igloo.maven-jar-plugin.version>
@@ -82,6 +83,11 @@
 					<groupId>org.apache.maven.plugins</groupId>
 					<artifactId>maven-surefire-plugin</artifactId>
 					<version>${igloo.maven-surefire-plugin.version}</version>
+				</plugin>
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-failsafe-plugin</artifactId>
+					<version>${igloo.maven-failsafe-plugin.version}</version>
 				</plugin>
 				<plugin>
 					<groupId>org.apache.maven.plugins</groupId>

@@ -98,6 +98,12 @@
 			</dependency>
 
 			<dependency>
+				<groupId>net.sf.ehcache</groupId>
+				<artifactId>ehcache</artifactId>
+				<version>${igloo.ehcache.version}</version>
+			</dependency>
+
+			<dependency>
 				<groupId>org.springframework</groupId>
 				<artifactId>spring-test</artifactId>
 				<version>${igloo.spring.version}</version>
@@ -154,6 +160,11 @@
 			<dependency>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-test</artifactId>
+				<version>${igloo.spring-boot.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-autoconfigure-processor</artifactId>
 				<version>${igloo.spring-boot.version}</version>
 			</dependency>
 		</dependencies>

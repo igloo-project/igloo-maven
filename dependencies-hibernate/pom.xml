@@ -51,6 +51,12 @@
 					</exclusion>
 				</exclusions>
 			</dependency>
+
+			<dependency>
+				<groupId>javax.persistence</groupId>
+				<artifactId>javax.persistence-api</artifactId>
+				<version>${igloo.persistence-api.version}</version>
+			</dependency>
 			
 			<!-- Ehcache2 - Deprecated! TODO - replace with jcache/ehcache3 -->
 			<dependency>
@@ -97,6 +103,12 @@
 			</dependency>
 
 			<dependency>
+				<groupId>com.h2database</groupId>
+				<artifactId>h2</artifactId>
+				<version>${igloo.h2.version}</version>
+			</dependency>
+
+			<dependency>
 				<groupId>com.querydsl</groupId>
 				<artifactId>querydsl-jpa</artifactId>
 				<version>${igloo.querydsl.version}</version>
@@ -107,12 +119,25 @@
 					</exclusion>
 				</exclusions>
 			</dependency>
+			<dependency>
+				<!-- Code generation tool -->
+				<groupId>com.querydsl</groupId>
+				<artifactId>querydsl-apt</artifactId>
+				<classifier>jpa</classifier>
+				<version>${igloo.querydsl.version}</version>
+			</dependency>
 			
 			<!-- TODO: how to handle flyway 7 case ? -->
 			<dependency>
 				<groupId>org.flywaydb</groupId>
 				<artifactId>flyway-core</artifactId>
 				<version>${igloo.flywaydb.version}</version>
+				<exclusions>
+					<exclusion>
+						<groupId>org.projectlombok</groupId>
+						<artifactId>lombok</artifactId>
+					</exclusion>
+				</exclusions>
 			</dependency>
 		</dependencies>
 	</dependencyManagement>

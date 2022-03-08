@@ -63,7 +63,7 @@
 			<dependency>
 				<groupId>org.glassfish.jersey.containers</groupId>
 				<artifactId>jersey-container-grizzly2-servlet</artifactId>
-				<version>${igloo.grizzly.version}</version>
+				<version>${igloo.jersey2.version}</version>
 			</dependency>
 		</dependencies>
 	</dependencyManagement>
