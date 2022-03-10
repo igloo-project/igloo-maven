@@ -57,6 +57,7 @@
 		<!-- 5.11.9: https://hibernate.atlassian.net/secure/ReleaseNote.jspa?projectId=10061&version=31916 -->
 		<!-- 5.11.10: https://hibernate.atlassian.net/secure/ReleaseNote.jspa?projectId=10061&version=31941 -->
 		<igloo.hibernate-search.version>5.11.10.Final</igloo.hibernate-search.version>
+		<igloo.jboss-logging.version>3.4.1.Final</igloo.jboss-logging.version>
 
 		<igloo.flywaydb.version>8.5.1</igloo.flywaydb.version>
 		<igloo.flywaydb7.version>7.15.0</igloo.flywaydb7.version>
