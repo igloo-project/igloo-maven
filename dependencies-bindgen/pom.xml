@@ -23,6 +23,13 @@
 				<groupId>org.bindgen</groupId>
 				<artifactId>bindgen</artifactId>
 				<version>${igloo.bindgen.version}</version>
+				<exclusions>
+					<exclusion>
+						<!-- Circumvent dependency error in bindgen; remove exclusion when bindgen is fixed -->
+						<groupId>junit</groupId>
+						<artifactId>junit</artifactId>
+					</exclusion>
+				</exclusions>
 			</dependency>
 			<dependency>
 				<groupId>org.iglooproject.components</groupId>
