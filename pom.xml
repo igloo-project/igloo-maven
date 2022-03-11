@@ -36,6 +36,7 @@
 		<module>dependencies-bindgen</module>
 		<module>dependencies-logging</module>
 		<module>dependencies-hibernate</module>
+		<module>dependencies-flyway-7</module>
 		<module>dependencies-hibernate-search</module>
 		<module>dependencies-spring</module>
 		<module>dependencies-wicket</module>

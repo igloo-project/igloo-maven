@@ -127,7 +127,6 @@
 				<version>${igloo.querydsl.version}</version>
 			</dependency>
 			
-			<!-- TODO: how to handle flyway 7 case ? -->
 			<dependency>
 				<groupId>org.flywaydb</groupId>
 				<artifactId>flyway-core</artifactId>
