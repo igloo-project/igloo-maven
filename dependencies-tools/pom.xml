@@ -68,17 +68,33 @@
 						<groupId>org.projectlombok</groupId>
 						<artifactId>lombok</artifactId>
 					</exclusion>
+					<exclusion>
+						<groupId>com.google.code.findbugs</groupId>
+						<artifactId>annotations</artifactId>
+					</exclusion>
 				</exclusions>
 			</dependency>
 			<dependency>
 				<groupId>net.java.truevfs</groupId>
 				<artifactId>truevfs-access</artifactId>
 				<version>${igloo.truevfs.version}</version>
+				<exclusions>
+					<exclusion>
+						<groupId>com.google.code.findbugs</groupId>
+						<artifactId>annotations</artifactId>
+					</exclusion>
+				</exclusions>
 			</dependency>
 			<dependency>
 				<groupId>net.java.truevfs</groupId>
 				<artifactId>truevfs-driver-zip</artifactId>
 				<version>${igloo.truevfs.version}</version>
+				<exclusions>
+					<exclusion>
+						<groupId>com.google.code.findbugs</groupId>
+						<artifactId>annotations</artifactId>
+					</exclusion>
+				</exclusions>
 			</dependency>
 			<dependency>
 				<groupId>net.java.truevfs</groupId>
@@ -88,6 +104,10 @@
 					<exclusion>
 						<groupId>org.projectlombok</groupId>
 						<artifactId>lombok</artifactId>
+					</exclusion>
+					<exclusion>
+						<groupId>com.google.code.findbugs</groupId>
+						<artifactId>annotations</artifactId>
 					</exclusion>
 				</exclusions>
 			</dependency>
