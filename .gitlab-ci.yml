@@ -37,7 +37,6 @@ trigger:
   stage: trigger
   trigger:
     project: igloo-project/igloo-commons
-    strategy: depend
     branch: $CI_COMMIT_BRANCH
   only:
     - /^dev$/
