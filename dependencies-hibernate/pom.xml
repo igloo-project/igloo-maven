@@ -110,6 +110,11 @@
 
 			<dependency>
 				<groupId>com.querydsl</groupId>
+				<artifactId>querydsl-core</artifactId>
+				<version>${igloo.querydsl.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>com.querydsl</groupId>
 				<artifactId>querydsl-jpa</artifactId>
 				<version>${igloo.querydsl.version}</version>
 				<exclusions>
