@@ -106,6 +106,7 @@
 		<igloo.mockito.version>4.3.1</igloo.mockito.version>
 		<igloo.assertj.version>3.22.0</igloo.assertj.version>
 		<igloo.assertj-guava.version>3.4.0</igloo.assertj-guava.version>
+		<igloo.hamcrest.version>2.2</igloo.hamcrest.version>
 		<igloo.grizzly.version>2.4.4</igloo.grizzly.version>
 		
 		<igloo.findbugs-annotations.version>3.0.1u2</igloo.findbugs-annotations.version>

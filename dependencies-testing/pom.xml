@@ -48,6 +48,11 @@
 				<artifactId>assertj-core</artifactId>
 				<version>${igloo.assertj.version}</version>
 			</dependency>
+			<dependency>
+				<groupId>org.hamcrest</groupId>
+				<artifactId>hamcrest</artifactId>
+				<version>${igloo.hamcrest.version}</version>
+			</dependency>
 
 			<dependency>
 				<groupId>org.assertj</groupId>
