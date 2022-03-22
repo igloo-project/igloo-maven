@@ -98,6 +98,17 @@
 			</dependency>
 			<dependency>
 				<groupId>net.java.truevfs</groupId>
+				<artifactId>truevfs-driver-jar</artifactId>
+				<version>${igloo.truevfs.version}</version>
+				<exclusions>
+					<exclusion>
+						<groupId>org.osgi</groupId>
+						<artifactId>org.osgi.core</artifactId>
+					</exclusion>
+				</exclusions>
+			</dependency>
+			<dependency>
+				<groupId>net.java.truevfs</groupId>
 				<artifactId>truevfs-kernel-spec</artifactId>
 				<version>${igloo.truevfs.version}</version>
 				<exclusions>
