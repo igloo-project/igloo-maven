@@ -74,6 +74,12 @@
 				<artifactId>slf4j-reload4j</artifactId>
 				<version>${igloo.slf4j.version}</version>
 			</dependency>
+
+			<dependency>
+				<groupId>io.github.netmikey.logunit</groupId>
+				<artifactId>logunit-log4j2</artifactId>
+				<version>${igloo.logunit.version}</version>
+			</dependency>
 		</dependencies>
 	</dependencyManagement>
 	
