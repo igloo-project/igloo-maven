@@ -26,7 +26,8 @@
 		<igloo.processor.immutables>org.immutables.processor.ProxyProcessor</igloo.processor.immutables>
 		<igloo.processor.querydsl>com.querydsl.apt.jpa.JPAAnnotationProcessor</igloo.processor.querydsl>
 		<igloo.processor.bindgen>org.bindgen.processor.Processor</igloo.processor.bindgen>
-		<igloo.processors>${igloo.processor.immutables},${igloo.processor.querydsl},${igloo.processor.bindgen}</igloo.processors>
+		<igloo.processor.spring>org.springframework.context.index.processor.CandidateComponentsIndexer</igloo.processor.spring>
+		<igloo.processors>${igloo.processor.querydsl},${igloo.processor.bindgen}</igloo.processors>
 	</properties>
 	
 	<build>
