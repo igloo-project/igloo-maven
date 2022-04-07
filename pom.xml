@@ -57,7 +57,7 @@
 		<igloo.maven-install-plugin.version>3.0.0-M1</igloo.maven-install-plugin.version>
 		<igloo.maven-site-plugin.version>3.10.0</igloo.maven-site-plugin.version>
 		<igloo.maven-project-info-reports-plugin.version>3.2.1</igloo.maven-project-info-reports-plugin.version>
-		<igloo.maven-jgitflow-plugin.version>1.0-m5.1</igloo.maven-jgitflow-plugin.version>
+		<igloo.jgitflow-maven-plugin.version>1.0-m5.1</igloo.jgitflow-maven-plugin.version>
 		<igloo.jsch.version>0.1.55</igloo.jsch.version>
 		<igloo.owasp-maven-plugin.version>6.5.3</igloo.owasp-maven-plugin.version>
 		<igloo.versions-maven-plugin.version>2.9.0</igloo.versions-maven-plugin.version>
@@ -80,6 +80,10 @@
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-enforcer-plugin</artifactId>
+			</plugin>
+			<plugin>
+				<groupId>external.atlassian.jgitflow</groupId>
+				<artifactId>jgitflow-maven-plugin</artifactId>
 			</plugin>
 		</plugins>
 		<pluginManagement>
@@ -165,6 +169,29 @@
 							</goals>
 						</execution>
 					</executions>
+				</plugin>
+				<plugin>
+					<groupId>external.atlassian.jgitflow</groupId>
+					<artifactId>jgitflow-maven-plugin</artifactId>
+					<version>${igloo.jgitflow-maven-plugin.version}</version>
+					<configuration>
+						<autoVersionSubmodules>true</autoVersionSubmodules>
+						<flowInitContext>
+							<masterBranchName>main</masterBranchName>
+							<developBranchName>dev</developBranchName>
+							<featureBranchPrefix>ft-</featureBranchPrefix>
+							<releaseBranchPrefix>rl-</releaseBranchPrefix>
+							<hotfixBranchPrefix>hf-</hotfixBranchPrefix>
+							<versionTagPrefix>v</versionTagPrefix>
+						</flowInitContext>
+					</configuration>
+					<dependencies>
+						<dependency>
+							<groupId>com.jcraft</groupId>
+							<artifactId>jsch</artifactId>
+							<version>${igloo.jsch.version}</version>
+						</dependency>
+					</dependencies>
 				</plugin>
 			</plugins>
 		</pluginManagement>
