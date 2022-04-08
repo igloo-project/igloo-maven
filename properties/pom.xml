@@ -133,5 +133,6 @@
 		<igloo.freemarker.version>2.3.31</igloo.freemarker.version>
 		<igloo.imageinfo.version>1.9</igloo.imageinfo.version>
 		<igloo.object-diff.version>0.95</igloo.object-diff.version>
+		<igloo.micrometer.version>1.8.4</igloo.micrometer.version>
 	</properties>
 </project>

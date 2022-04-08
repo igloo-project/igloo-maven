@@ -146,6 +146,12 @@
 				<artifactId>java-object-diff</artifactId>
 				<version>${igloo.object-diff.version}</version>
 			</dependency>
+
+			<dependency>
+				<groupId>io.micrometer</groupId>
+				<artifactId>micrometer-core</artifactId>
+				<version>${igloo.micrometer.version}</version>
+			</dependency>
 		</dependencies>
 	</dependencyManagement>
 	
