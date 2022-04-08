@@ -27,8 +27,14 @@
 
 			<dependency>
 				<groupId>org.webjars.npm</groupId>
-				<artifactId>popper.js</artifactId>
+				<artifactId>popperjs__core</artifactId>
 				<version>${igloo.webjars.popper2.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>org.webjars.npm</groupId>
+				<artifactId>select2-bootstrap-5-theme</artifactId>
+				<version>${igloo.webjars.select2-bootstrap-5-theme.version}</version>
 			</dependency>
 		</dependencies>
 	</dependencyManagement>
