@@ -130,18 +130,6 @@
 
 			<dependency>
 				<groupId>org.webjars.npm</groupId>
-				<artifactId>bootstrap</artifactId>
-				<version>${igloo.webjars.bootstrap.version}</version>
-			</dependency>
-
-			<dependency>
-				<groupId>org.webjars.npm</groupId>
-				<artifactId>popper.js</artifactId>
-				<version>${igloo.webjars.popper.version}</version>
-			</dependency>
-
-			<dependency>
-				<groupId>org.webjars.npm</groupId>
 				<artifactId>clipboard</artifactId>
 				<version>${igloo.webjars.clipboard.version}</version>
 			</dependency>
