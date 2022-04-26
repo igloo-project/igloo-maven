@@ -62,14 +62,6 @@
 						<compilerArguments>-encoding ${project.build.sourceEncoding}</compilerArguments>
 					</configuration>
 					<executions>
-						<!--
-						We need to setup outputClassDirectory == outputDirectory for spring-context-indexer:
-						- if spring.components is written directly in target/classes, eclipse drops it when it performs
-						  incremental compilation and file is lost until we perform a maven update...
-						- generation uses StandardLocation.CLASS_OUTPUT to generate spring.components; by using
-						  generated source folder, eclipse correctly refresh it from generated sources on incremental
-						  build (no more lost file).
-						-->
 						<execution>
 							<id>maven-processor-plugin-default</id>
 							<phase>generate-sources</phase>
@@ -78,7 +70,6 @@
 							</goals>
 							<configuration>
 								<outputDirectory>${project.build.directory}/generated-sources/apt</outputDirectory>
-								<outputClassDirectory>${project.build.directory}/generated-sources/apt</outputClassDirectory>
 							</configuration>
 						</execution>
 						<execution>
@@ -89,7 +80,6 @@
 							</goals>
 							<configuration>
 								<outputDirectory>${project.build.directory}/generated-sources-test/apt</outputDirectory>
-								<outputClassDirectory>${project.build.directory}/generated-sources-test/apt</outputClassDirectory>
 							</configuration>
 						</execution>
 					</executions>
