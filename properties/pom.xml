@@ -4,8 +4,9 @@
 	
 	<parent>
 		<groupId>org.iglooproject</groupId>
-		<artifactId>igloo-maven</artifactId>
+		<artifactId>plugins-report</artifactId>
 		<version>4.0.0-SNAPSHOT</version>
+		<relativePath>../plugins-report</relativePath>
 	</parent>
 	
 	<artifactId>properties</artifactId>

@@ -4,9 +4,9 @@
 	
 	<parent>
 		<groupId>org.iglooproject</groupId>
-		<artifactId>plugins-common</artifactId>
+		<artifactId>plugins-report</artifactId>
 		<version>4.0.0-SNAPSHOT</version>
-		<relativePath>../plugins-common</relativePath>
+		<relativePath>../plugins-report</relativePath>
 	</parent>
 	
 	<artifactId>plugins-enforcer</artifactId>
