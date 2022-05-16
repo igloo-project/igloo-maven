@@ -76,6 +76,8 @@
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 		<maven.compiler.release>11</maven.compiler.release>
+
+		<masterBranchName>main</masterBranchName>
 	</properties>
 	
 	<build>
@@ -180,7 +182,7 @@
 					<configuration>
 						<autoVersionSubmodules>true</autoVersionSubmodules>
 						<flowInitContext>
-							<masterBranchName>main</masterBranchName>
+							<masterBranchName>${masterBranchName}</masterBranchName>
 							<developBranchName>dev</developBranchName>
 							<featureBranchPrefix>ft-</featureBranchPrefix>
 							<releaseBranchPrefix>rl-</releaseBranchPrefix>
