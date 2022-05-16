@@ -9,45 +9,32 @@
 		<relativePath>../properties</relativePath>
 	</parent>
 	
-	<artifactId>dependencies-html</artifactId>
+	<artifactId>dependencies-bootstrap5</artifactId>
 	<packaging>pom</packaging>
 	
-	<name>Managed dependencies - HTML manipulation tools</name>
+	<name>Managed dependencies - Bootstrap 5</name>
 	<description>
-		This module provides managed HTML manipulation tools dependencies.
+		This module provides managed dependencies for bootstrap 5.
 	</description>
 	
 	<dependencyManagement>
 		<dependencies>
 			<dependency>
-				<groupId>io.bit3</groupId>
-				<artifactId>jsass</artifactId>
-				<version>${igloo.jsass.version}</version>
+				<groupId>org.webjars.npm</groupId>
+				<artifactId>bootstrap</artifactId>
+				<version>${igloo.webjars.bootstrap5.version}</version>
 			</dependency>
 
 			<dependency>
-				<groupId>org.mozilla</groupId>
-				<artifactId>rhino</artifactId>
-				<version>${igloo.rhino.version}</version>
+				<groupId>org.webjars.npm</groupId>
+				<artifactId>popperjs__core</artifactId>
+				<version>${igloo.webjars.popper2.version}</version>
 			</dependency>
 
 			<dependency>
-				<groupId>org.jsoup</groupId>
-				<artifactId>jsoup</artifactId>
-				<version>${igloo.jsoup.version}</version>
-			</dependency>
-
-			<dependency>
-				<groupId>com.helger</groupId>
-				<artifactId>ph-css</artifactId>
-				<version>${igloo.ph-css.version}</version>
-				<exclusions>
-					<!-- code analysis annotation -->
-					<exclusion>
-						<groupId>com.google.code.findbugs</groupId>
-						<artifactId>*</artifactId>
-					</exclusion>
-				</exclusions>
+				<groupId>org.webjars.npm</groupId>
+				<artifactId>select2-bootstrap-5-theme</artifactId>
+				<version>${igloo.webjars.select2-bootstrap-5-theme.version}</version>
 			</dependency>
 		</dependencies>
 	</dependencyManagement>

@@ -5,7 +5,7 @@
 	<parent>
 		<groupId>org.iglooproject</groupId>
 		<artifactId>properties</artifactId>
-		<version>4.0.0-SNAPSHOT</version>
+		<version>4.0.0</version>
 		<relativePath>../properties</relativePath>
 	</parent>
 	
@@ -19,6 +19,12 @@
 	
 	<dependencyManagement>
 		<dependencies>
+			<dependency>
+				<groupId>javax.servlet</groupId>
+				<artifactId>javax.servlet-api</artifactId>
+				<version>${igloo.servlet-api.version}</version>
+			</dependency>
+
 			<dependency>
 				<groupId>org.apache.wicket</groupId>
 				<artifactId>wicket</artifactId>
@@ -44,8 +50,9 @@
 				<version>${igloo.wicket.version}</version>
 				<exclusions>
 					<exclusion>
+						<!-- Importer is responsible for spring dependency definition -->
 						<groupId>org.springframework</groupId>
-						<artifactId>spring</artifactId>
+						<artifactId>*</artifactId>
 					</exclusion>
 				</exclusions>
 			</dependency>
@@ -123,18 +130,6 @@
 
 			<dependency>
 				<groupId>org.webjars.npm</groupId>
-				<artifactId>bootstrap</artifactId>
-				<version>${igloo.webjars.bootstrap.version}</version>
-			</dependency>
-
-			<dependency>
-				<groupId>org.webjars.npm</groupId>
-				<artifactId>popper.js</artifactId>
-				<version>${igloo.webjars.popper.version}</version>
-			</dependency>
-
-			<dependency>
-				<groupId>org.webjars.npm</groupId>
 				<artifactId>clipboard</artifactId>
 				<version>${igloo.webjars.clipboard.version}</version>
 			</dependency>
@@ -143,6 +138,12 @@
 				<groupId>org.webjars.npm</groupId>
 				<artifactId>jquery-mask-plugin</artifactId>
 				<version>${igloo.webjars.jquery-mask-plugin.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>nl.topicus</groupId>
+				<artifactId>wqplot</artifactId>
+				<version>${igloo.wqplot.version}</version>
 			</dependency>
 		</dependencies>
 	</dependencyManagement>

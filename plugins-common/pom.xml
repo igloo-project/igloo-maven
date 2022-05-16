@@ -5,7 +5,7 @@
 	<parent>
 		<groupId>org.iglooproject</groupId>
 		<artifactId>igloo-maven</artifactId>
-		<version>4.0.0-SNAPSHOT</version>
+		<version>4.0.0</version>
 	</parent>
 	
 	<artifactId>plugins-common</artifactId>
@@ -21,13 +21,13 @@
 		<igloo.maven-compiler-plugin.version>3.10.0</igloo.maven-compiler-plugin.version>
 		<igloo.maven-resources-plugin.version>3.2.0</igloo.maven-resources-plugin.version>
 		<igloo.maven-surefire-plugin.version>3.0.0-M5</igloo.maven-surefire-plugin.version>
+		<igloo.maven-failsafe-plugin.version>3.0.0-M5</igloo.maven-failsafe-plugin.version>
 		<igloo.maven-war-plugin.version>3.3.2</igloo.maven-war-plugin.version>
 		<igloo.maven-assembly-plugin.version>3.3.0</igloo.maven-assembly-plugin.version>
 		<igloo.maven-jar-plugin.version>3.2.2</igloo.maven-jar-plugin.version>
 		<igloo.maven-source-plugin.version>3.2.1</igloo.maven-source-plugin.version>
 		<igloo.maven-javadoc-plugin.version>3.3.2</igloo.maven-javadoc-plugin.version>
-		<!-- waiting 3.3.0 for https://issues.apache.org/jira/browse/MDEP-753 -->
-		<igloo.maven-dependency-plugin.version>3.2.0</igloo.maven-dependency-plugin.version>
+		<igloo.maven-dependency-plugin.version>3.3.0</igloo.maven-dependency-plugin.version>
 		<igloo.maven-antrun-plugin.version>3.0.0</igloo.maven-antrun-plugin.version>
 		<igloo.exec-maven-plugin.version>3.0.0</igloo.exec-maven-plugin.version>
 		<igloo.maven-failsafe-plugin.version>3.0.0-M5</igloo.maven-failsafe-plugin.version>
@@ -82,6 +82,11 @@
 					<groupId>org.apache.maven.plugins</groupId>
 					<artifactId>maven-surefire-plugin</artifactId>
 					<version>${igloo.maven-surefire-plugin.version}</version>
+				</plugin>
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-failsafe-plugin</artifactId>
+					<version>${igloo.maven-failsafe-plugin.version}</version>
 				</plugin>
 				<plugin>
 					<groupId>org.apache.maven.plugins</groupId>
