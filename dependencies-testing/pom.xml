@@ -35,6 +35,11 @@
 				<artifactId>junit-jupiter-params</artifactId>
 				<version>${igloo.junit5.version}</version>
 			</dependency>
+			<dependency>
+				<groupId>org.junit.platform</groupId>
+				<artifactId>junit-platform-suite-engine</artifactId>
+				<version>${igloo.junit5-suite.version}</version>
+			</dependency>
 
 			<dependency>
 				<groupId>com.h2database</groupId>

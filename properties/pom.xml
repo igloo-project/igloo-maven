@@ -107,6 +107,8 @@
 		
 		<igloo.junit.version>4.13.2</igloo.junit.version>
 		<igloo.junit5.version>5.8.2</igloo.junit5.version>
+		<!-- keep in sync with junit5 -->
+		<igloo.junit5-suite.version>1.8.2</igloo.junit5-suite.version>
 		<igloo.h2.version>2.1.210</igloo.h2.version>
 		<igloo.mockito.version>4.3.1</igloo.mockito.version>
 		<igloo.assertj.version>3.22.0</igloo.assertj.version>
