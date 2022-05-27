@@ -5,7 +5,7 @@
 	<parent>
 		<groupId>org.iglooproject</groupId>
 		<artifactId>plugins-enforcer</artifactId>
-		<version>4.0.0</version>
+		<version>4.1.0</version>
 		<relativePath>../plugins-enforcer</relativePath>
 	</parent>
 	
@@ -28,6 +28,9 @@
 		<igloo.processor.bindgen>org.bindgen.processor.Processor</igloo.processor.bindgen>
 		<igloo.processor.spring>org.springframework.context.index.processor.CandidateComponentsIndexer</igloo.processor.spring>
 		<igloo.processors>${igloo.processor.querydsl},${igloo.processor.bindgen}</igloo.processors>
+
+		<!-- switch it to true if you do not want to perform processing on test sources -->
+		<processor.test.skip>false</processor.test.skip>
 	</properties>
 	
 	<build>
@@ -80,6 +83,7 @@
 							</goals>
 							<configuration>
 								<outputDirectory>${project.build.directory}/generated-sources-test/apt</outputDirectory>
+								<skip>${processor.test.skip}</skip>
 							</configuration>
 						</execution>
 					</executions>
