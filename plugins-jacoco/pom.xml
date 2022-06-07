@@ -19,7 +19,7 @@
 	
 	<properties>
 		<!-- maven plugins versions -->
-		<igloo.maven-jacoco-plugin.version>0.8.7</igloo.maven-jacoco-plugin.version>
+		<igloo.maven-jacoco-plugin.version>0.8.8</igloo.maven-jacoco-plugin.version>
 		
 		<igloo.jacoco.include>org.iglooproject.*</igloo.jacoco.include>
 	</properties>
