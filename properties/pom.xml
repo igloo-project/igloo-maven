@@ -39,6 +39,7 @@
 		<igloo.commons-validator.version>1.7</igloo.commons-validator.version>
 		<igloo.commons-collections4.version>4.4</igloo.commons-collections4.version>
 		<igloo.commons-beanutils.version>1.9.4</igloo.commons-beanutils.version>
+		<igloo.commons-codec.version>1.15</igloo.commons-codec.version>
 		<igloo.javatuples.version>1.2</igloo.javatuples.version>
 		<igloo.jakarta-mail.version>1.6.7</igloo.jakarta-mail.version>
 		<igloo.jackson.version>2.13.1</igloo.jackson.version>
