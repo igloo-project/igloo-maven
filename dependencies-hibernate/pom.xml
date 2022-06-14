@@ -58,6 +58,13 @@
 				<version>${igloo.persistence-api.version}</version>
 			</dependency>
 			
+			<!-- Hibernate spatial -->
+			<dependency>
+				<groupId>org.hibernate</groupId>
+				<artifactId>hibernate-spatial</artifactId>
+				<version>${igloo.hibernate.version}</version>
+			</dependency>
+			
 			<!-- Ehcache2 - Deprecated! TODO - replace with jcache/ehcache3 -->
 			<dependency>
 				<groupId>org.hibernate</groupId>
