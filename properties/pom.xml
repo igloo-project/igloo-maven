@@ -50,6 +50,8 @@
 		<!-- https://hibernate.atlassian.net/browse/HHH-12784?jql=project%20%3D%20HHH%20AND%20fixVersion%20%3D%205.3.7%20ORDER%20BY%20updated -->
 		<!-- http://hibernate.org/orm/releases/5.4/ -->
 		<igloo.hibernate.version>5.6.9.Final</igloo.hibernate.version>
+		<!-- Use highest version from hibernate-core/hibernate-search -->
+		<igloo.jboss-logging-annotations.version>2.2.0.Final</igloo.jboss-logging-annotations.version>
 		<igloo.ehcache3.version>3.10.0</igloo.ehcache3.version>
 		<!-- https://jira.terracotta.org/jira/browse/EHC/fixforversion/13000/?selectedTab=com.atlassian.jira.jira-projects-plugin:version-summary-panel -->
 		<!-- terracotta maven repository cannot be managed efficiently; use central dependency -->

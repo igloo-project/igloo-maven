@@ -53,6 +53,12 @@
 			</dependency>
 
 			<dependency>
+				<groupId>org.jboss.logging</groupId>
+				<artifactId>jboss-logging-annotations</artifactId>
+				<version>${igloo.jboss-logging-annotations.version}</version>
+			</dependency>
+
+			<dependency>
 				<groupId>javax.persistence</groupId>
 				<artifactId>javax.persistence-api</artifactId>
 				<version>${igloo.persistence-api.version}</version>
