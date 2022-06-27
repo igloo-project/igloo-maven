@@ -1,22 +1,22 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
-	
+
 	<modelVersion>4.0.0</modelVersion>
-	
+
 	<parent>
 		<groupId>org.iglooproject</groupId>
 		<artifactId>properties</artifactId>
-		<version>4.1.0</version>
+		<version>4.2.0</version>
 		<relativePath>../properties</relativePath>
 	</parent>
-	
+
 	<artifactId>dependencies-testing</artifactId>
 	<packaging>pom</packaging>
-	
+
 	<name>Managed dependencies - Testing</name>
 	<description>
 		This module provides managed testing dependencies.
 	</description>
-	
+
 	<dependencyManagement>
 		<dependencies>
 			<dependency>
@@ -25,6 +25,11 @@
 				<version>${igloo.junit.version}</version>
 			</dependency>
 
+			<dependency>
+				<groupId>org.junit.jupiter</groupId>
+				<artifactId>junit-jupiter</artifactId>
+				<version>${igloo.junit5.version}</version>
+			</dependency>
 			<dependency>
 				<groupId>org.junit.jupiter</groupId>
 				<artifactId>junit-jupiter-api</artifactId>
@@ -87,7 +92,7 @@
 			</dependency>
 		</dependencies>
 	</dependencyManagement>
-	
+
 	<build>
 		<plugins>
 			<plugin>

@@ -5,7 +5,7 @@
 	<parent>
 		<groupId>org.iglooproject</groupId>
 		<artifactId>plugins-jacoco</artifactId>
-		<version>4.1.0</version>
+		<version>4.2.0</version>
 		<relativePath>../plugins-jacoco</relativePath>
 	</parent>
 	
@@ -18,7 +18,7 @@
 	</description>
 	
 	<properties>
-		<igloo.maven-antrun-plugin.version>3.0.0</igloo.maven-antrun-plugin.version>
+		<igloo.maven-antrun-plugin.version>3.1.0</igloo.maven-antrun-plugin.version>
 		<igloo.exec-maven-plugin.version>3.0.0</igloo.exec-maven-plugin.version>
 	</properties>
 	
