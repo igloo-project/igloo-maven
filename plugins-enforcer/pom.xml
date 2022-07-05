@@ -19,7 +19,7 @@
 	
 	<properties>
 		<!-- maven plugins versions -->
-		<igloo.maven-enforcer-plugin.version>3.0.0</igloo.maven-enforcer-plugin.version>
+		<igloo.maven-enforcer-plugin.version>3.1.0</igloo.maven-enforcer-plugin.version>
 	</properties>
 	
 	<build>
