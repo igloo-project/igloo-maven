@@ -73,6 +73,11 @@
 				<artifactId>hamcrest</artifactId>
 				<version>${igloo.hamcrest.version}</version>
 			</dependency>
+			<dependency>
+				<groupId>net.bytebuddy</groupId>
+				<artifactId>byte-buddy</artifactId>
+				<version>${igloo.byte-buddy.version}</version>
+			</dependency>
 
 			<dependency>
 				<groupId>org.assertj</groupId>

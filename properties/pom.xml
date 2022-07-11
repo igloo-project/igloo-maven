@@ -63,6 +63,8 @@
 		<!-- 5.11.10: https://hibernate.atlassian.net/secure/ReleaseNote.jspa?projectId=10061&version=31941 -->
 		<igloo.hibernate-search.version>5.11.10.Final</igloo.hibernate-search.version>
 		<igloo.jboss-logging.version>3.5.0.Final</igloo.jboss-logging.version>
+		<!-- assertj/hibernate may use a different version -->
+		<igloo.byte-buddy.version>1.12.10</igloo.byte-buddy.version>
 
 		<igloo.flywaydb.version>8.5.13</igloo.flywaydb.version>
 		<igloo.flywaydb7.version>7.15.0</igloo.flywaydb7.version>
