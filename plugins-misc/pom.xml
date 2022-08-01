@@ -19,7 +19,7 @@
 	
 	<properties>
 		<igloo.maven-antrun-plugin.version>3.1.0</igloo.maven-antrun-plugin.version>
-		<igloo.exec-maven-plugin.version>3.0.0</igloo.exec-maven-plugin.version>
+		<igloo.exec-maven-plugin.version>3.1.0</igloo.exec-maven-plugin.version>
 	</properties>
 	
 	<build>
