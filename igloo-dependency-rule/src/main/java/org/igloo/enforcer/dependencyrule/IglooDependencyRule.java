@@ -1,11 +1,21 @@
 package org.igloo.enforcer.dependencyrule;
 
+import java.util.stream.Collectors;
+
+import org.apache.maven.artifact.Artifact;
+import org.apache.maven.artifact.DefaultArtifact;
+import org.apache.maven.artifact.handler.DefaultArtifactHandler;
 import org.apache.maven.enforcer.rule.api.EnforcerRule;
 import org.apache.maven.enforcer.rule.api.EnforcerRuleException;
 import org.apache.maven.enforcer.rule.api.EnforcerRuleHelper;
 import org.apache.maven.execution.MavenSession;
+import org.apache.maven.model.building.ModelBuilder;
 import org.apache.maven.plugin.logging.Log;
+import org.apache.maven.project.DefaultProjectBuildingRequest;
 import org.apache.maven.project.MavenProject;
+import org.apache.maven.project.ProjectBuilder;
+import org.apache.maven.project.ProjectBuildingException;
+import org.apache.maven.project.ProjectBuildingResult;
 import org.apache.maven.project.ProjectDependenciesResolver;
 import org.codehaus.plexus.component.configurator.expression.ExpressionEvaluationException;
 import org.codehaus.plexus.component.repository.exception.ComponentLookupException;
@@ -29,6 +39,8 @@ public class IglooDependencyRule implements EnforcerRule {
 
 			// retrieve any component out of the session directly
 			ProjectDependenciesResolver resolver = helper.getComponent(ProjectDependenciesResolver.class);
+			ModelBuilder modelBuilder = helper.getComponent(ModelBuilder.class);
+			ProjectBuilder buildingHelper = helper.getComponent(ProjectBuilder.class);
 
 			log.info("Retrieved Target Folder: " + target);
 			log.info("Retrieved ArtifactId: " + artifactId);
@@ -36,6 +48,19 @@ public class IglooDependencyRule implements EnforcerRule {
 			log.info("Retrieved Maven version: " + mavenVersion);
 			log.info("Retrieved Session: " + session);
 			log.info("Retrieved Resolver: " + resolver);
+			
+			Artifact artifact = new DefaultArtifact("org.iglooproject", "dependencies-logging", "4.2.0", null, "jar", null, new DefaultArtifactHandler());
+//				  //Create a project building request
+//				ProjectBuildingRequest request = new DefaultProjectBuildingRequest();
+//				  //Build the project and get the result
+//				MavenProject project = m_projectBuilder.build(artifact,request).getProject();
+//			ModelBuildingRequest mRequest = new DefaultModelBuildingRequest();
+//			mRequest.set
+//			ModelSource model = modelBuilder.resolveModel("org.iglooproject", "dependencies-logging", "4.2.0");
+			DefaultProjectBuildingRequest request = new DefaultProjectBuildingRequest();
+			request.setRepositorySession(session.getRepositorySession());
+			ProjectBuildingResult result = buildingHelper.build(artifact, true, request);
+			System.out.println(result.getProject().getDependencyManagement().getDependencies().stream().map(d -> String.format("%s %s %s", d.getGroupId(), d.getArtifactId(), d.getVersion())).collect(Collectors.joining(", ")));
 
 			if (("war".equals(project.getPackaging()) || "jar".equals(project.getPackaging())) && this.shouldIFail) {
 				throw new EnforcerRuleException("Failing because my param said so.");
@@ -44,6 +69,8 @@ public class IglooDependencyRule implements EnforcerRule {
 			throw new EnforcerRuleException("Unable to lookup a component " + e.getLocalizedMessage(), e);
 		} catch (ExpressionEvaluationException e) {
 			throw new EnforcerRuleException("Unable to lookup an expression " + e.getLocalizedMessage(), e);
+		} catch (ProjectBuildingException e) {
+			throw new EnforcerRuleException("TODO", e);
 		}
 	}
 
