@@ -5,7 +5,7 @@
 	<parent>
 		<groupId>org.iglooproject</groupId>
 		<artifactId>properties</artifactId>
-		<version>4.2.0</version>
+		<version>4.3.0</version>
 		<relativePath>../properties</relativePath>
 	</parent>
 
@@ -72,6 +72,11 @@
 				<groupId>org.hamcrest</groupId>
 				<artifactId>hamcrest</artifactId>
 				<version>${igloo.hamcrest.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>net.bytebuddy</groupId>
+				<artifactId>byte-buddy</artifactId>
+				<version>${igloo.byte-buddy.version}</version>
 			</dependency>
 
 			<dependency>
