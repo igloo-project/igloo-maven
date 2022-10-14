@@ -26,6 +26,7 @@
 		<module>plugins-common</module>
 		<module>plugins-report</module>
 		<module>plugins-enforcer</module>
+		<module>plugins-npm</module>
 		<module>plugins-processor</module>
 		<module>plugins-jacoco</module>
 		<module>plugins-misc</module>

@@ -20,8 +20,8 @@
 	<dependencyManagement>
 		<dependencies>
 			<dependency>
-				<groupId>org.webjars.npm</groupId>
-				<artifactId>bootstrap</artifactId>
+				<groupId>org.iglooproject.webjars</groupId>
+				<artifactId>bootstrap4</artifactId>
 				<version>${igloo.webjars.bootstrap4.version}</version>
 			</dependency>
 
