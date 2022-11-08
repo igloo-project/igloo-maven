@@ -4,9 +4,9 @@
 	
 	<parent>
 		<groupId>org.iglooproject</groupId>
-		<artifactId>plugins-enforcer</artifactId>
-		<version>4.3.0</version>
-		<relativePath>../plugins-enforcer</relativePath>
+		<artifactId>plugins-npm</artifactId>
+		<version>4.4.0</version>
+		<relativePath>../plugins-npm</relativePath>
 	</parent>
 	
 	<artifactId>plugins-processor</artifactId>
@@ -18,11 +18,6 @@
 	</description>
 	
 	<properties>
-		<!-- maven plugins versions -->
-		<igloo.maven-processor-plugin.version>5.0-rc3</igloo.maven-processor-plugin.version>
-		
-		<!-- processor dependencies' version kept in igloo-maven for centralization -->
-		
 		<igloo.processor.immutables>org.immutables.processor.ProxyProcessor</igloo.processor.immutables>
 		<igloo.processor.querydsl>com.querydsl.apt.jpa.JPAAnnotationProcessor</igloo.processor.querydsl>
 		<igloo.processor.bindgen>org.bindgen.processor.Processor</igloo.processor.bindgen>
