@@ -5,7 +5,7 @@
 	<parent>
 		<groupId>org.iglooproject</groupId>
 		<artifactId>plugins-report</artifactId>
-		<version>4.5.0-SNAPSHOT</version>
+		<version>4.4.1-SNAPSHOT</version>
 		<relativePath>../plugins-report</relativePath>
 	</parent>
 	
@@ -32,7 +32,7 @@
 						<dependency>
 							<groupId>org.iglooproject.rules</groupId>
 							<artifactId>igloo-dependency-rule</artifactId>
-							<version>4.5.0-SNAPSHOT</version>
+							<version>4.4.1-SNAPSHOT</version>
 						</dependency>
 					</dependencies>
 					<executions>
