@@ -59,7 +59,7 @@
 									<bannedDependencies>
 										<excludes>
 											<!--bootstrap 4 is repackaged in org.iglooproject.webjars:bootstrap4 -->
-											<exclude>org.webjars.npm:bootstrap:[,5)</exclude>
+											<!-- <exclude>org.webjars.npm:bootstrap:[,5)</exclude> -->
 											<exclude>org.springframework:spring</exclude>
 											<exclude>org.springframework:spring-ldap</exclude>
 											<exclude>commons-logging:commons-logging</exclude>
