@@ -86,11 +86,6 @@
 			</dependency>
 
 			<dependency>
-				<groupId>com.sun.grizzly</groupId>
-				<artifactId>grizzly-webserver</artifactId>
-				<version>${igloo.grizzly.version}</version>
-			</dependency>
-			<dependency>
 				<groupId>org.glassfish.jersey.containers</groupId>
 				<artifactId>jersey-container-grizzly2-servlet</artifactId>
 				<version>${igloo.jersey2.version}</version>
