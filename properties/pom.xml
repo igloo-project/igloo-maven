@@ -145,5 +145,6 @@
 		<igloo.imageinfo.version>1.9</igloo.imageinfo.version>
 		<igloo.object-diff.version>0.95</igloo.object-diff.version>
 		<igloo.micrometer.version>1.10.4</igloo.micrometer.version>
+		<igloo.openpdf.version>1.3.30</igloo.openpdf.version>
 	</properties>
 </project>

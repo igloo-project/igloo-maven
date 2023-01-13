@@ -152,6 +152,27 @@
 				<artifactId>micrometer-core</artifactId>
 				<version>${igloo.micrometer.version}</version>
 			</dependency>
+
+			<dependency>
+				<groupId>com.github.librepdf</groupId>
+				<artifactId>openpdf</artifactId>
+				<version>${igloo.openpdf.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>com.github.librepdf</groupId>
+				<artifactId>pdf-swing</artifactId>
+				<version>${igloo.openpdf.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>com.github.librepdf</groupId>
+				<artifactId>pdf-toolbox</artifactId>
+				<version>${igloo.openpdf.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>com.github.librepdf</groupId>
+				<artifactId>openpdf-fonts-extra</artifactId>
+				<version>${igloo.openpdf.version}</version>
+			</dependency>
 		</dependencies>
 	</dependencyManagement>
 	
