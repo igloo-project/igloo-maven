@@ -5,7 +5,7 @@
 	<parent>
 		<groupId>org.iglooproject</groupId>
 		<artifactId>plugins-report</artifactId>
-		<version>5.0.5</version>
+		<version>5.1.0</version>
 		<relativePath>../plugins-report</relativePath>
 	</parent>
 	
@@ -63,8 +63,7 @@
 		<!-- assertj/hibernate may use a different version -->
 		<igloo.byte-buddy.version>1.12.19</igloo.byte-buddy.version>
 
-		<igloo.flywaydb.version>9.8.3</igloo.flywaydb.version>
-		<igloo.flywaydb7.version>7.15.0</igloo.flywaydb7.version>
+		<igloo.flywaydb.version>9.11.0</igloo.flywaydb.version>
 		<!-- https://github.com/brettwooldridge/HikariCP/blob/dev/CHANGES -->
 		<igloo.hikaricp.version>5.0.1</igloo.hikaricp.version>
 		<!-- https://github.com/querydsl/querydsl/issues?utf8=%E2%9C%93&q=milestone%3A4.2.1 -->
