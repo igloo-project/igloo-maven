@@ -111,7 +111,7 @@
 		<igloo.junit5.version>5.9.2</igloo.junit5.version>
 
 		<!-- keep in sync with junit5 -->
-		<igloo.junit5-suite.version>1.9.1</igloo.junit5-suite.version>
+		<igloo.junit5-suite.version>1.9.2</igloo.junit5-suite.version>
 		<igloo.h2.version>2.1.214</igloo.h2.version>
 		<igloo.mockito.version>5.1.1</igloo.mockito.version>
 		<igloo.assertj.version>3.24.2</igloo.assertj.version>
