@@ -148,6 +148,12 @@
 			</dependency>
 
 			<dependency>
+				<groupId>com.sun.activation</groupId>
+				<artifactId>jakarta.activation</artifactId>
+				<version>${igloo.jakarta-activation.version}</version>
+			</dependency>
+
+			<dependency>
 				<groupId>com.fasterxml.jackson.core</groupId>
 				<artifactId>jackson-annotations</artifactId>
 				<version>${igloo.jackson.version}</version>

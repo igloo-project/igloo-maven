@@ -42,6 +42,7 @@
 		<igloo.commons-codec.version>1.15</igloo.commons-codec.version>
 		<igloo.javatuples.version>1.2</igloo.javatuples.version>
 		<igloo.jakarta-mail.version>1.6.7</igloo.jakarta-mail.version>
+		<igloo.jakarta-activation.version>1.2.2</igloo.jakarta-activation.version>
 		<igloo.jackson.version>2.14.2</igloo.jackson.version>
 		<igloo.picocli.version>4.7.1</igloo.picocli.version>
 
