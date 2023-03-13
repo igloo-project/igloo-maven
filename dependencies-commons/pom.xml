@@ -5,7 +5,7 @@
 	<parent>
 		<groupId>org.iglooproject</groupId>
 		<artifactId>properties</artifactId>
-		<version>5.3.0</version>
+		<version>5.4.0</version>
 		<relativePath>../properties</relativePath>
 	</parent>
 	
@@ -145,6 +145,12 @@
 				<artifactId>javax.annotation-api</artifactId>
 				<version>${igloo.javax-annotation.version}</version>
 				<scope>provided</scope>
+			</dependency>
+
+			<dependency>
+				<groupId>com.sun.activation</groupId>
+				<artifactId>jakarta.activation</artifactId>
+				<version>${igloo.jakarta-activation.version}</version>
 			</dependency>
 
 			<dependency>
