@@ -50,10 +50,11 @@
 		<igloo.hibernate.version>5.6.14.Final</igloo.hibernate.version>
 		<!-- Use highest version from hibernate-core/hibernate-search -->
 		<igloo.jboss-logging-annotations.version>2.2.1.Final</igloo.jboss-logging-annotations.version>
-		<igloo.ehcache3.version>3.10.8</igloo.ehcache3.version>
 		<!-- https://jira.terracotta.org/jira/browse/EHC/fixforversion/13000/?selectedTab=com.atlassian.jira.jira-projects-plugin:version-summary-panel -->
 		<!-- terracotta maven repository cannot be managed efficiently; use central dependency -->
 		<igloo.ehcache.version>2.10.9.2</igloo.ehcache.version>
+		<igloo.caffeine.version>3.1.5</igloo.caffeine.version>
+		<igloo.jcache.version>1.1.1</igloo.jcache.version>
 		<igloo.persistence-api.version>2.2</igloo.persistence-api.version>
 		<igloo.lucene.version>5.5.5</igloo.lucene.version>
 
