@@ -109,9 +109,8 @@
 		<igloo.grizzly.version>1.9.65</igloo.grizzly.version>
 		<igloo.jaxrs.version>2.1.6</igloo.jaxrs.version>
 		
-		<igloo.junit.version>4.13.2</igloo.junit.version>
 		<igloo.junit5.version>5.9.2</igloo.junit5.version>
-
+		
 		<!-- keep in sync with junit5 -->
 		<igloo.junit5-suite.version>1.9.2</igloo.junit5-suite.version>
 		<igloo.h2.version>2.1.214</igloo.h2.version>
