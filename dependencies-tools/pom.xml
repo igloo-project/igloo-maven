@@ -5,7 +5,7 @@
 	<parent>
 		<groupId>org.iglooproject</groupId>
 		<artifactId>properties</artifactId>
-		<version>5.5.0</version>
+		<version>5.6.0-SNAPSHOT</version>
 		<relativePath>../properties</relativePath>
 	</parent>
 	
@@ -151,6 +151,27 @@
 				<groupId>io.micrometer</groupId>
 				<artifactId>micrometer-core</artifactId>
 				<version>${igloo.micrometer.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>com.github.librepdf</groupId>
+				<artifactId>openpdf</artifactId>
+				<version>${igloo.openpdf.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>com.github.librepdf</groupId>
+				<artifactId>pdf-swing</artifactId>
+				<version>${igloo.openpdf.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>com.github.librepdf</groupId>
+				<artifactId>pdf-toolbox</artifactId>
+				<version>${igloo.openpdf.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>com.github.librepdf</groupId>
+				<artifactId>openpdf-fonts-extra</artifactId>
+				<version>${igloo.openpdf.version}</version>
 			</dependency>
 		</dependencies>
 	</dependencyManagement>
