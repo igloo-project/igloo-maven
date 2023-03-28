@@ -87,6 +87,9 @@
 						<configuration>
 							<processDependencyManagement>true</processDependencyManagement>
 							<processDependencyManagementTransitive>true</processDependencyManagementTransitive>
+							<formats>
+								<format>xml</format>
+							</formats>
 						</configuration>
 						<reportSets>
 							<reportSet>
