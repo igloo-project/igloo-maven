@@ -20,26 +20,19 @@
 	<dependencyManagement>
 		<dependencies>
 			<dependency>
-				<groupId>org.hibernate</groupId>
-				<artifactId>hibernate-search-orm</artifactId>
+				<groupId>org.hibernate.search</groupId>
+				<artifactId>hibernate-search-mapper-orm-orm6</artifactId>
 				<version>${igloo.hibernate-search.version}</version>
 			</dependency>
 			<dependency>
-				<groupId>org.hibernate</groupId>
-				<artifactId>hibernate-search-engine</artifactId>
+				<groupId>org.hibernate.search</groupId>
+				<artifactId>hibernate-search-backend-lucene</artifactId>
 				<version>${igloo.hibernate-search.version}</version>
 			</dependency>
 			<dependency>
-				<groupId>org.hibernate</groupId>
-				<artifactId>hibernate-search-elasticsearch</artifactId>
+				<groupId>org.hibernate.search</groupId>
+				<artifactId>hibernate-search-v5migrationhelper-orm-jakarta</artifactId>
 				<version>${igloo.hibernate-search.version}</version>
-				<exclusions>
-					<!-- elasticsearch client include commons-logging; we use jcl-over-slf4j -->
-					<exclusion>
-						<groupId>commons-logging</groupId>
-						<artifactId>commons-logging</artifactId>
-					</exclusion>
-				</exclusions>
 			</dependency>
 			<dependency>
 				<groupId>org.apache.lucene</groupId>

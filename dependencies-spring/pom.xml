@@ -104,12 +104,6 @@
 			</dependency>
 
 			<dependency>
-				<groupId>net.sf.ehcache</groupId>
-				<artifactId>ehcache</artifactId>
-				<version>${igloo.ehcache.version}</version>
-			</dependency>
-
-			<dependency>
 				<groupId>com.github.ben-manes.caffeine</groupId>
 				<artifactId>caffeine</artifactId>
 				<version>${igloo.caffeine.version}</version>

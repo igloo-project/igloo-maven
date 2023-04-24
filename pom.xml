@@ -1,27 +1,31 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
-	
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+
 	<modelVersion>4.0.0</modelVersion>
-	
+
 	<groupId>org.iglooproject</groupId>
 	<artifactId>igloo-maven</artifactId>
 	<packaging>pom</packaging>
 	<version>6.0.0-SNAPSHOT</version>
-	
+
 	<name>Maven configuration for Igloo stack</name>
 	<description>
 		This module tree contains various maven-related configurations
-		
+
 		Tree is split between dependency (provided as managed BOM) and common
 		managed plugin configurations.
-		
-		This module is a minimalist self-contained pom declaration with updated and curated common plugin
-		configuration, and common repository information (scm, project page, ...).
-		
+
+		This module is a minimalist self-contained pom declaration with updated
+		and curated common plugin
+		configuration, and common repository information (scm, project page,
+		...).
+
 		Maven 3.8 is set as a prerequisite.
-		
+
 		This module is not installed nor published.
 	</description>
-	
+
 	<modules>
 		<module>plugins-common</module>
 		<module>plugins-report</module>
@@ -31,9 +35,9 @@
 		<module>plugins-jacoco</module>
 		<module>plugins-misc</module>
 		<module>plugins-all</module>
-		
+
 		<module>properties</module>
-		
+
 		<module>dependencies-commons</module>
 		<module>dependencies-bindgen</module>
 		<module>dependencies-logging</module>
@@ -48,10 +52,10 @@
 		<module>dependencies-quality-annotations</module>
 		<module>dependencies-html</module>
 		<module>dependencies-tools</module>
-		
+
 		<module>igloo-dependency-rule</module>
 	</modules>
-	
+
 	<properties>
 		<!-- pure maven plugin configuration -->
 		<minimal.maven.version>3.8.0</minimal.maven.version>
@@ -66,20 +70,21 @@
 		<igloo.versions-maven-plugin.version>2.15.0</igloo.versions-maven-plugin.version>
 		<igloo.maven-enforcer-plugin.version>3.2.1</igloo.maven-enforcer-plugin.version>
 		<igloo.flatten-maven-plugin.version>1.4.1</igloo.flatten-maven-plugin.version>
-		
-		<!-- processor dependencies; for bindgen and immutables, added here to keep it in sync -->
+
+		<!-- processor dependencies; for bindgen and immutables, added here to
+		keep it in sync -->
 		<igloo.bindgen.version>5.0.0</igloo.bindgen.version>
 		<igloo.querydsl.version>5.0.0</igloo.querydsl.version>
 		<igloo.immutables.version>2.9.3</igloo.immutables.version>
-		
+
 		<!-- very general project/java configurations -->
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-		<maven.compiler.release>11</maven.compiler.release>
+		<maven.compiler.release>17</maven.compiler.release>
 
 		<masterBranchName>main</masterBranchName>
 	</properties>
-	
+
 	<build>
 		<plugins>
 			<plugin>
@@ -201,7 +206,7 @@
 			</plugins>
 		</pluginManagement>
 	</build>
-	
+
 	<!-- Project information -->
 
 	<organization>
@@ -249,7 +254,7 @@
 			<organization>Kobalt</organization>
 		</developer>
 	</developers>
-	
+
 	<distributionManagement>
 		<site>
 			<id>igloo</id>
@@ -279,7 +284,8 @@
 	</ciManagement>
 
 	<scm>
-		<developerConnection>scm:git:git@github.com:igloo-project/igloo-parent.git</developerConnection>
+		<developerConnection>
+			scm:git:git@github.com:igloo-project/igloo-parent.git</developerConnection>
 		<url>https://github.com/igloo-project/igloo-parent</url>
 		<tag>HEAD</tag>
 	</scm>
@@ -290,20 +296,40 @@
 			<name>Nexus Igloo Releases</name>
 			<url>https://nexus.tools.kobalt.fr/repository/igloo-releases/</url>
 			<snapshots>
-				<enabled>false</enabled>
+				<enabled>
+					false</enabled>
 			</snapshots>
 		</repository>
-		
+
 		<repository>
 			<id>nexus-igloo-snapshots</id>
 			<name>Nexus Igloo Snapshots</name>
 			<url>https://nexus.tools.kobalt.fr/repository/igloo-snapshots/</url>
 			<snapshots>
-				<enabled>true</enabled>
+				<enabled>
+					true</enabled>
 			</snapshots>
 			<releases>
 				<enabled>false</enabled>
 			</releases>
+		</repository>
+
+		<repository>
+			<id>wicket-snapshots</id>
+			<name>Wicket snapshots</name>
+			<url>https://repository.apache.org/content/repositories/snapshots/</url>
+			<releases>
+				<enabled>false</enabled>
+			</releases>
+		</repository>
+
+		<repository>
+			<id>spring-milestones</id>
+			<name>Spring Milestones</name>
+			<url>https://repo.spring.io/milestone</url>
+			<snapshots>
+				<enabled>false</enabled>
+			</snapshots>
 		</repository>
 	</repositories>
 	<pluginRepositories>
@@ -312,7 +338,8 @@
 			<name>Nexus Igloo Releases</name>
 			<url>https://nexus.tools.kobalt.fr/repository/igloo-releases/</url>
 			<snapshots>
-				<enabled>false</enabled>
+				<enabled>
+					false</enabled>
 			</snapshots>
 		</pluginRepository>
 		<pluginRepository>
@@ -320,7 +347,8 @@
 			<name>Nexus Igloo Snapshots</name>
 			<url>https://nexus.tools.kobalt.fr/repository/igloo-snapshots/</url>
 			<snapshots>
-				<enabled>true</enabled>
+				<enabled>
+					true</enabled>
 			</snapshots>
 			<releases>
 				<enabled>false</enabled>

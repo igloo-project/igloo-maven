@@ -20,8 +20,8 @@
 	<dependencyManagement>
 		<dependencies>
 			<dependency>
-				<groupId>javax.servlet</groupId>
-				<artifactId>javax.servlet-api</artifactId>
+				<groupId>jakarta.servlet</groupId>
+				<artifactId>jakarta.servlet-api</artifactId>
 				<version>${igloo.servlet-api.version}</version>
 			</dependency>
 
@@ -88,8 +88,8 @@
 			</dependency>
 
 			<dependency>
-				<groupId>commons-fileupload</groupId>
-				<artifactId>commons-fileupload</artifactId>
+				<groupId>org.apache.commons</groupId>
+				<artifactId>commons-fileupload2</artifactId>
 				<version>${igloo.commons-fileupload.version}</version>
 			</dependency>
 

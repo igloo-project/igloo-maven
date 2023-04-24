@@ -34,6 +34,11 @@
 				<artifactId>bindgen-bindings-java</artifactId>
 				<version>${igloo.bindgen-bindings-java.version}</version>
 			</dependency>
+			<dependency>
+				<groupId>jakarta.annotation</groupId>
+				<artifactId>jakarta.annotation-api</artifactId>
+				<version>${igloo.jakarta.annotation-api.version}</version>
+			</dependency>
 		</dependencies>
 	</dependencyManagement>
 	
