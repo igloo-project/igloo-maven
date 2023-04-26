@@ -48,7 +48,7 @@
 		<igloo.picocli.version>4.7.1</igloo.picocli.version>
 
 		<!-- https://hibernate.org/orm/releases/5.6/ -->
-		<igloo.hibernate.version>6.1.7.Final</igloo.hibernate.version>
+		<igloo.hibernate.version>6.2.1.Final</igloo.hibernate.version>
 		<!-- Use highest version from hibernate-core/hibernate-search -->
 		<igloo.jboss-logging-annotations.version>2.2.1.Final</igloo.jboss-logging-annotations.version>
 		<!-- https://jira.terracotta.org/jira/browse/EHC/fixforversion/13000/?selectedTab=com.atlassian.jira.jira-projects-plugin:version-summary-panel -->
