@@ -60,17 +60,15 @@
 		<igloo.maven-clean-plugin.version>3.2.0</igloo.maven-clean-plugin.version>
 		<igloo.maven-deploy-plugin.version>3.1.1</igloo.maven-deploy-plugin.version>
 		<igloo.maven-install-plugin.version>3.1.1</igloo.maven-install-plugin.version>
-		<igloo.maven-site-plugin.version>4.0.0-M6</igloo.maven-site-plugin.version>
-		<igloo.maven-project-info-reports-plugin.version>3.4.2</igloo.maven-project-info-reports-plugin.version>
+		<igloo.maven-site-plugin.version>4.0.0-M8</igloo.maven-site-plugin.version>
+		<igloo.maven-project-info-reports-plugin.version>3.4.3</igloo.maven-project-info-reports-plugin.version>
 		<igloo.jgitflow-maven-plugin.version>1.0-m5.1</igloo.jgitflow-maven-plugin.version>
 		<igloo.jsch.version>0.1.55</igloo.jsch.version>
 		<igloo.owasp-maven-plugin.version>8.2.1</igloo.owasp-maven-plugin.version>
 		<igloo.versions-maven-plugin.version>2.15.0</igloo.versions-maven-plugin.version>
-		<igloo.maven-enforcer-plugin.version>3.2.1</igloo.maven-enforcer-plugin.version>
-		<igloo.flatten-maven-plugin.version>1.4.1</igloo.flatten-maven-plugin.version>
+		<igloo.maven-enforcer-plugin.version>3.3.0</igloo.maven-enforcer-plugin.version>
+		<igloo.flatten-maven-plugin.version>1.5.0</igloo.flatten-maven-plugin.version>
 
-		<!-- processor dependencies; for bindgen and immutables, added here to
-		keep it in sync -->
 		<igloo.bindgen.version>5.0.0</igloo.bindgen.version>
 		<igloo.querydsl.version>5.0.0</igloo.querydsl.version>
 		<igloo.immutables.version>2.9.3</igloo.immutables.version>
