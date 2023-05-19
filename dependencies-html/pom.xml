@@ -20,12 +20,6 @@
 	<dependencyManagement>
 		<dependencies>
 			<dependency>
-				<groupId>io.bit3</groupId>
-				<artifactId>jsass</artifactId>
-				<version>${igloo.jsass.version}</version>
-			</dependency>
-
-			<dependency>
 				<groupId>org.mozilla</groupId>
 				<artifactId>rhino</artifactId>
 				<version>${igloo.rhino.version}</version>

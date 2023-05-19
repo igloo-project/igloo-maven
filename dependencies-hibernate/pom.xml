@@ -24,22 +24,12 @@
 	<dependencyManagement>
 		<dependencies>
 			<dependency>
-				<groupId>org.hibernate</groupId>
+				<groupId>org.hibernate.orm</groupId>
 				<artifactId>hibernate-core</artifactId>
 				<version>${igloo.hibernate.version}</version>
 				<exclusions>
 					<exclusion>
-						<groupId>commons-logging</groupId>
-						<artifactId>commons-logging</artifactId>
-					</exclusion>
-					
-					<!-- from 5.4.25, dom4j and jaxb optional if hibernate.xml_mapping_enabled=false -->
-					<exclusion>
-						<groupId>org.dom4j</groupId>
-						<artifactId>dom4j</artifactId>
-					</exclusion>
-					<exclusion>
-						<groupId>javax.xml.bind</groupId>
+						<groupId>jakarata.xml.bind</groupId>
 						<artifactId>jaxb-api</artifactId>
 					</exclusion>
 					<exclusion>
@@ -68,14 +58,14 @@
 			
 			<!-- Hibernate spatial -->
 			<dependency>
-				<groupId>org.hibernate</groupId>
+				<groupId>org.hibernate.orm</groupId>
 				<artifactId>hibernate-spatial</artifactId>
 				<version>${igloo.hibernate.version}</version>
 			</dependency>
 			
 			<!-- JCache / Caffeine -->
 			<dependency>
-				<groupId>org.hibernate</groupId>
+				<groupId>org.hibernate.orm</groupId>
 				<artifactId>hibernate-jcache</artifactId>
 				<version>${igloo.hibernate.version}</version>
 			</dependency>
