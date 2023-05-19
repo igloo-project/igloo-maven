@@ -84,6 +84,38 @@
 				<artifactId>jersey-container-grizzly2-servlet</artifactId>
 				<version>${igloo.jersey2.version}</version>
 			</dependency>
+			
+			<dependency>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-test</artifactId>
+				<version>${igloo.spring-boot.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-test-autoconfigure</artifactId>
+				<version>${igloo.spring-boot.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-starter-test</artifactId>
+				<version>${igloo.spring-boot.version}</version>
+				<exclusions>
+					<exclusion>
+						<!-- remove junit 4 -->
+						<groupId>junit</groupId>
+						<artifactId>junit</artifactId>
+					</exclusion>
+					<exclusion>
+						<!-- we use slf4j -> log4j so we need to ignore this dependency -->
+						<groupId>org.apache.logging.log4j</groupId>
+						<artifactId>log4j-to-slf4j</artifactId>
+					</exclusion>
+					<exclusion>
+						<groupId>ch.qos.logback</groupId>
+						<artifactId>logback-classic</artifactId>
+					</exclusion>
+				</exclusions>
+			</dependency>
 		</dependencies>
 	</dependencyManagement>
 
