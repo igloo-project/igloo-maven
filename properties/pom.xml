@@ -79,10 +79,10 @@
 		<!-- https://github.com/spring-projects/spring-framework/releases -->
 		<igloo.spring.version>6.0.8</igloo.spring.version>
 		<!-- https://github.com/spring-projects/spring-boot/releases -->
-		<igloo.spring-boot.version>3.1.0-RC1</igloo.spring-boot.version>
+		<igloo.spring-boot.version>3.1.0</igloo.spring-boot.version>
 		
 		<!-- https://github.com/spring-projects/spring-security/releases -->
-		<igloo.spring-security.version>6.1.0-RC1</igloo.spring-security.version>
+		<igloo.spring-security.version>6.1.0</igloo.spring-security.version>
 		
 		<igloo.servlet-api.version>6.0.0</igloo.servlet-api.version>
 		<igloo.wicket.version>10.0.0-M1-SNAPSHOT</igloo.wicket.version>
