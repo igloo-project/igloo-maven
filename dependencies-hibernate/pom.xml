@@ -39,6 +39,11 @@
 				</exclusions>
 			</dependency>
 			<dependency>
+				<groupId>org.hibernate.common</groupId>
+				<artifactId>hibernate-commons-annotations</artifactId>
+				<version>${igloo.hibernate-commons-annotations.version}</version>
+			</dependency>
+			<dependency>
 				<groupId>net.bytebuddy</groupId>
 				<artifactId>byte-buddy</artifactId>
 				<version>${igloo.byte-buddy.version}</version>
