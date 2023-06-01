@@ -1,13 +1,11 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0"
-	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>org.iglooproject</groupId>
 	<artifactId>igloo-maven</artifactId>
 	<packaging>pom</packaging>
-	<version>6.0.0-SNAPSHOT</version>
+	<version>6.0.0-Alpha1</version>
 
 	<name>Maven configuration for Igloo stack</name>
 	<description>
@@ -83,6 +81,8 @@
 		<maven.compiler.release>17</maven.compiler.release>
 
 		<masterBranchName>igloo-boot</masterBranchName>
+		<!-- needed for wicket, bindgen, bindgen-*, commons-fileupload2 -->
+		<allowSnapshots>true</allowSnapshots>
 	</properties>
 
 	<build>
