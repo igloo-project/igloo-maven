@@ -83,6 +83,8 @@
 		<maven.compiler.release>17</maven.compiler.release>
 
 		<masterBranchName>igloo-boot</masterBranchName>
+		<!-- needed for wicket, bindgen, bindgen-*, commons-fileupload2 -->
+		<allowSnapshots>true</allowSnapshots>
 	</properties>
 
 	<build>
