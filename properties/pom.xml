@@ -5,7 +5,7 @@
 	<parent>
 		<groupId>org.iglooproject</groupId>
 		<artifactId>plugins-report</artifactId>
-		<version>5.9.0</version>
+		<version>5.10.0</version>
 		<relativePath>../plugins-report</relativePath>
 	</parent>
 	
@@ -136,7 +136,6 @@
 		
 		<igloo.poi.version>5.2.3</igloo.poi.version>
 		<igloo.opencsv.version>4.3.2</igloo.opencsv.version>
-		<igloo.truevfs.version>0.14.0</igloo.truevfs.version>
 		<!-- https://github.com/vt-middleware/passay/commits/master -->
 		<igloo.passay.version>1.6.3</igloo.passay.version>
 		<!-- TODO: to remove - used for email notifications -->
