@@ -59,7 +59,7 @@
 		<igloo.maven-deploy-plugin.version>3.1.1</igloo.maven-deploy-plugin.version>
 		<igloo.maven-install-plugin.version>3.1.1</igloo.maven-install-plugin.version>
 		<igloo.maven-site-plugin.version>4.0.0-M8</igloo.maven-site-plugin.version>
-		<igloo.maven-project-info-reports-plugin.version>3.4.3</igloo.maven-project-info-reports-plugin.version>
+		<igloo.maven-project-info-reports-plugin.version>3.4.4</igloo.maven-project-info-reports-plugin.version>
 		<igloo.jgitflow-maven-plugin.version>1.0-m5.1</igloo.jgitflow-maven-plugin.version>
 		<igloo.jsch.version>0.1.55</igloo.jsch.version>
 		<igloo.owasp-maven-plugin.version>8.2.1</igloo.owasp-maven-plugin.version>
