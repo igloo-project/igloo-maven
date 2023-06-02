@@ -22,11 +22,11 @@
 		<igloo.maven-resources-plugin.version>3.3.1</igloo.maven-resources-plugin.version>
 		<igloo.maven-surefire-plugin.version>3.1.0</igloo.maven-surefire-plugin.version>
 		<igloo.maven-war-plugin.version>3.3.2</igloo.maven-war-plugin.version>
-		<igloo.maven-assembly-plugin.version>3.5.0</igloo.maven-assembly-plugin.version>
+		<igloo.maven-assembly-plugin.version>3.6.0</igloo.maven-assembly-plugin.version>
 		<igloo.maven-jar-plugin.version>3.3.0</igloo.maven-jar-plugin.version>
-		<igloo.maven-source-plugin.version>3.2.1</igloo.maven-source-plugin.version>
+		<igloo.maven-source-plugin.version>3.3.0</igloo.maven-source-plugin.version>
 		<igloo.maven-javadoc-plugin.version>3.5.0</igloo.maven-javadoc-plugin.version>
-		<igloo.maven-dependency-plugin.version>3.5.0</igloo.maven-dependency-plugin.version>
+		<igloo.maven-dependency-plugin.version>3.6.0</igloo.maven-dependency-plugin.version>
 		<igloo.maven-antrun-plugin.version>3.1.0</igloo.maven-antrun-plugin.version>
 		<igloo.exec-maven-plugin.version>3.1.0</igloo.exec-maven-plugin.version>
 		<igloo.maven-failsafe-plugin.version>3.1.0</igloo.maven-failsafe-plugin.version>
