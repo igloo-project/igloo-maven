@@ -9,7 +9,7 @@
 		<relativePath>../properties</relativePath>
 	</parent>
 	
-	<artifactId>dependencies-jersey2</artifactId>
+	<artifactId>dependencies-jersey</artifactId>
 	<packaging>pom</packaging>
 	
 	<name>Managed dependencies - Jersey stack</name>
@@ -22,25 +22,25 @@
 			<dependency>
 				<groupId>org.glassfish.jersey.core</groupId>
 				<artifactId>jersey-server</artifactId>
-				<version>${igloo.jersey2.version}</version>
+				<version>${igloo.jersey.version}</version>
 			</dependency>
 			
 			<dependency>
 				<groupId>org.glassfish.jersey.core</groupId>
 				<artifactId>jersey-client</artifactId>
-				<version>${igloo.jersey2.version}</version>
+				<version>${igloo.jersey.version}</version>
 			</dependency>
 			
 			<dependency>
 				<groupId>org.glassfish.jersey.media</groupId>
 				<artifactId>jersey-media-multipart</artifactId>
-				<version>${igloo.jersey2.version}</version>
+				<version>${igloo.jersey.version}</version>
 			</dependency>
 			
 			<dependency>
 				<groupId>org.glassfish.jersey.ext</groupId>
 				<artifactId>jersey-spring6</artifactId>
-				<version>${igloo.jersey2.version}</version>
+				<version>${igloo.jersey.version}</version>
 			</dependency>
 
 
@@ -59,23 +59,29 @@
 			<dependency>
 				<groupId>org.glassfish.jersey.containers</groupId>
 				<artifactId>jersey-container-servlet-core</artifactId>
-				<version>${igloo.jersey2.version}</version>
+				<version>${igloo.jersey.version}</version>
 			</dependency>
 			<dependency>
 				<groupId>org.glassfish.jersey.containers</groupId>
 				<artifactId>jersey-container-grizzly2-servlet</artifactId>
-				<version>${igloo.jersey2.version}</version>
+				<version>${igloo.jersey.version}</version>
 			</dependency>
 			<dependency>
 				<groupId>org.glassfish.jersey.containers</groupId>
 				<artifactId>jersey-container-grizzly2-http</artifactId>
-				<version>${igloo.jersey2.version}</version>
+				<version>${igloo.jersey.version}</version>
 			</dependency>
 
 			<dependency>
 				<groupId>jakarta.ws.rs</groupId>
 				<artifactId>jakarta.ws.rs-api</artifactId>
 				<version>${igloo.jaxrs.version}</version>
+			</dependency>
+			
+			<dependency>
+				<groupId>com.fasterxml.jackson.jakarta.rs</groupId>
+				<artifactId>jackson-jakarta-rs-json-provider</artifactId>
+				<version>${igloo.jackson.version}</version>
 			</dependency>
 		</dependencies>
 	</dependencyManagement>

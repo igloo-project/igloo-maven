@@ -107,7 +107,7 @@
 		<igloo.reload4j.version>1.2.25</igloo.reload4j.version>
 		<igloo.log4j2.version>2.20.0</igloo.log4j2.version>
 		
-		<igloo.jersey2.version>3.1.1</igloo.jersey2.version>
+		<igloo.jersey.version>3.1.2</igloo.jersey.version>
 		<igloo.jaxrs.version>3.1.0</igloo.jaxrs.version>
 		
 		<igloo.junit5.version>5.9.3</igloo.junit5.version>
@@ -119,7 +119,7 @@
 		<igloo.assertj.version>3.24.2</igloo.assertj.version>
 		<igloo.assertj-guava.version>3.24.2</igloo.assertj-guava.version>
 		<igloo.hamcrest.version>2.2</igloo.hamcrest.version>
-		<igloo.grizzly.version>3.0.1</igloo.grizzly.version>
+		<igloo.grizzly.version>4.0.0</igloo.grizzly.version>
 		<igloo.logunit.version>1.1.3</igloo.logunit.version>
 		
 		<igloo.findbugs-annotations.version>3.0.1u2</igloo.findbugs-annotations.version>

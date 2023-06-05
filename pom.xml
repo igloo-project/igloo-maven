@@ -45,7 +45,7 @@
 		<module>dependencies-wicket</module>
 		<module>dependencies-bootstrap4</module>
 		<module>dependencies-bootstrap5</module>
-		<module>dependencies-jersey2</module>
+		<module>dependencies-jersey</module>
 		<module>dependencies-testing</module>
 		<module>dependencies-quality-annotations</module>
 		<module>dependencies-html</module>
