@@ -22,7 +22,7 @@
 		<igloo.processor.querydsl>com.querydsl.apt.jpa.JPAAnnotationProcessor</igloo.processor.querydsl>
 		<igloo.processor.bindgen>org.bindgen.processor.Processor</igloo.processor.bindgen>
 		<igloo.processor.jpamodelgen>org.hibernate.jpamodelgen.JPAMetaModelEntityProcessor</igloo.processor.jpamodelgen>
-		<igloo.processor.spring>org.springframework.context.index.processor.CandidateComponentsIndexer</igloo.processor.spring>
+		<igloo.processor.spring>org.springframework.boot.autoconfigureprocessor.AutoConfigureAnnotationProcessor</igloo.processor.spring>
 		<igloo.processors>${igloo.processor.querydsl},${igloo.processor.jpamodelgen},${igloo.processor.bindgen}</igloo.processors>
 
 		<!-- switch it to true if you do not want to perform processing on test sources -->
