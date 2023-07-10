@@ -48,7 +48,7 @@
 		<igloo.picocli.version>4.7.3</igloo.picocli.version>
 
 		<!-- https://hibernate.org/orm/releases/5.6/ -->
-		<igloo.hibernate.version>6.2.3.Final</igloo.hibernate.version>
+		<igloo.hibernate.version>6.2.6.Final</igloo.hibernate.version>
 		<igloo.hibernate-commons-annotations.version>6.0.6.Final</igloo.hibernate-commons-annotations.version>
 		<!-- Use highest version from hibernate-core/hibernate-search -->
 		<igloo.jboss-logging-annotations.version>2.2.1.Final</igloo.jboss-logging-annotations.version>
