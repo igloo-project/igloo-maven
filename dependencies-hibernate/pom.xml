@@ -39,6 +39,21 @@
 				</exclusions>
 			</dependency>
 			<dependency>
+				<groupId>org.hibernate.orm</groupId>
+				<artifactId>hibernate-jpamodelgen</artifactId>
+				<version>${igloo.hibernate.version}</version>
+				<exclusions>
+					<exclusion>
+						<groupId>org.glassfish.jaxb</groupId>
+						<artifactId>jaxb-runtime</artifactId>
+					</exclusion>
+					<exclusion>
+						<groupId>jakarta.xml.bind</groupId>
+						<artifactId>jakarta.xml.bind-api</artifactId>
+					</exclusion>
+				</exclusions>
+			</dependency>
+			<dependency>
 				<groupId>org.hibernate.common</groupId>
 				<artifactId>hibernate-commons-annotations</artifactId>
 				<version>${igloo.hibernate-commons-annotations.version}</version>
