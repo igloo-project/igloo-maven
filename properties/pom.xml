@@ -21,9 +21,9 @@
 		<igloo.bindgen.version>5.1.0.jdk17-SNAPSHOT</igloo.bindgen.version>
 		<igloo.bindgen-java.version>2.1.0.jdk17-SNAPSHOT</igloo.bindgen-java.version>
 		<igloo.bindgen-bindings-java.version>2.1.0.jdk17-SNAPSHOT</igloo.bindgen-bindings-java.version>
-		<igloo.jakarta.annotation-api.version>2.1.1</igloo.jakarta.annotation-api.version>
 
 		<igloo.javax-annotation.version>1.3.2</igloo.javax-annotation.version>
+		<igloo.jakarta.annotation-api.version>2.1.1</igloo.jakarta.annotation-api.version>
 		<!--https://github.com/google/guava/releases/ -->
 		<igloo.guava.version>32.0.0-jre</igloo.guava.version>
 		<igloo.jdk-serializable-functional.version>1.9.0</igloo.jdk-serializable-functional.version>
