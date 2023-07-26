@@ -4,7 +4,7 @@
 	<parent>
 		<groupId>org.iglooproject</groupId>
 		<artifactId>plugins-common</artifactId>
-		<version>6.0.0-Alpha4-SNAPSHOT</version>
+		<version>6.0.0-Alpha4</version>
 		<relativePath>../plugins-common</relativePath>
 	</parent>
 	
