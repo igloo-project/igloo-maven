@@ -5,7 +5,7 @@
 	<parent>
 		<groupId>org.iglooproject</groupId>
 		<artifactId>plugins-npm</artifactId>
-		<version>6.0.0-Alpha3</version>
+		<version>6.0.0-Alpha4</version>
 		<relativePath>../plugins-npm</relativePath>
 	</parent>
 	
@@ -21,8 +21,9 @@
 		<igloo.processor.immutables>org.immutables.processor.ProxyProcessor</igloo.processor.immutables>
 		<igloo.processor.querydsl>com.querydsl.apt.jpa.JPAAnnotationProcessor</igloo.processor.querydsl>
 		<igloo.processor.bindgen>org.bindgen.processor.Processor</igloo.processor.bindgen>
-		<igloo.processor.spring>org.springframework.context.index.processor.CandidateComponentsIndexer</igloo.processor.spring>
-		<igloo.processors>${igloo.processor.querydsl},${igloo.processor.bindgen}</igloo.processors>
+		<igloo.processor.jpamodelgen>org.hibernate.jpamodelgen.JPAMetaModelEntityProcessor</igloo.processor.jpamodelgen>
+		<igloo.processor.spring>org.springframework.boot.autoconfigureprocessor.AutoConfigureAnnotationProcessor</igloo.processor.spring>
+		<igloo.processors>${igloo.processor.querydsl},${igloo.processor.jpamodelgen},${igloo.processor.bindgen}</igloo.processors>
 
 		<!-- switch it to true if you do not want to perform processing on test sources -->
 		<processor.test.skip>false</processor.test.skip>
@@ -68,6 +69,10 @@
 							</goals>
 							<configuration>
 								<outputDirectory>${project.build.directory}/generated-sources/apt</outputDirectory>
+								<optionMap>
+									<!-- allow to get rid of XML dependency for jpamodelgen -->
+									<fullyAnnotationConfigured>true</fullyAnnotationConfigured>
+								</optionMap>
 							</configuration>
 						</execution>
 						<execution>
@@ -78,6 +83,10 @@
 							</goals>
 							<configuration>
 								<outputDirectory>${project.build.directory}/generated-sources-test/apt</outputDirectory>
+								<optionMap>
+									<!-- allow to get rid of XML dependency for jpamodelgen -->
+									<fullyAnnotationConfigured>true</fullyAnnotationConfigured>
+								</optionMap>
 								<skip>${processor.test.skip}</skip>
 							</configuration>
 						</execution>
