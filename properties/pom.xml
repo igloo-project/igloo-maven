@@ -18,9 +18,9 @@
 	</description>
 	
 	<properties>
-		<igloo.bindgen.version>5.1.0.jdk17-SNAPSHOT</igloo.bindgen.version>
-		<igloo.bindgen-java.version>2.1.0.jdk17-SNAPSHOT</igloo.bindgen-java.version>
-		<igloo.bindgen-bindings-java.version>2.1.0.jdk17-SNAPSHOT</igloo.bindgen-bindings-java.version>
+		<igloo.bindgen.version>6.0.0</igloo.bindgen.version>
+		<igloo.bindgen-java.version>3.0.0</igloo.bindgen-java.version>
+		<igloo.bindgen-bindings-java.version>3.0.0</igloo.bindgen-bindings-java.version>
 
 		<igloo.javax-annotation.version>1.3.2</igloo.javax-annotation.version>
 		<igloo.jakarta.annotation-api.version>2.1.1</igloo.jakarta.annotation-api.version>
