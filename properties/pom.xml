@@ -5,7 +5,7 @@
 	<parent>
 		<groupId>org.iglooproject</groupId>
 		<artifactId>plugins-report</artifactId>
-		<version>5.12.0</version>
+		<version>5.12.1</version>
 		<relativePath>../plugins-report</relativePath>
 	</parent>
 	
@@ -78,7 +78,7 @@
 		<!-- https://github.com/spring-projects/spring-framework/releases -->
 		<igloo.spring.version>5.3.28</igloo.spring.version>
 		<!-- https://github.com/spring-projects/spring-boot/releases -->
-		<igloo.spring-boot.version>2.7.13</igloo.spring-boot.version>
+		<igloo.spring-boot.version>2.7.14</igloo.spring-boot.version>
 		
 		<!-- https://github.com/spring-projects/spring-security/releases -->
 		<igloo.spring-security.version>5.8.4</igloo.spring-security.version>
