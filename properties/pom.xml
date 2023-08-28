@@ -26,7 +26,7 @@
 		<!--https://github.com/google/guava/releases/ -->
 		<igloo.guava.version>32.1.1-jre</igloo.guava.version>
 		<igloo.jdk-serializable-functional.version>1.9.0</igloo.jdk-serializable-functional.version>
-		<igloo.commons-io.version>2.11.0</igloo.commons-io.version>
+		<igloo.commons-io.version>2.13.0</igloo.commons-io.version>
 		<igloo.commons-lang.version>2.6</igloo.commons-lang.version>
 		<!-- https://commons.apache.org/proper/commons-lang/release-notes/RELEASE-NOTES-3.10.txt -->
 		<igloo.commons-lang3.version>3.12.0</igloo.commons-lang3.version>
