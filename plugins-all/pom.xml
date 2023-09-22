@@ -4,9 +4,9 @@
 	
 	<parent>
 		<groupId>org.iglooproject</groupId>
-		<artifactId>plugins-misc</artifactId>
+		<artifactId>plugins-jacoco</artifactId>
 		<version>5.13.0-SNAPSHOT</version>
-		<relativePath>../plugins-misc</relativePath>
+		<relativePath>../plugins-jacoco</relativePath>
 	</parent>
 	
 	<artifactId>plugins-all</artifactId>
