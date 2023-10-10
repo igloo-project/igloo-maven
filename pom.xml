@@ -5,7 +5,7 @@
 	<groupId>org.iglooproject</groupId>
 	<artifactId>igloo-maven</artifactId>
 	<packaging>pom</packaging>
-	<version>6.0.0-Alpha5</version>
+	<version>6.0.0-Alpha6</version>
 
 	<name>Maven configuration for Igloo stack</name>
 	<description>
@@ -31,7 +31,6 @@
 		<module>plugins-npm</module>
 		<module>plugins-processor</module>
 		<module>plugins-jacoco</module>
-		<module>plugins-misc</module>
 		<module>plugins-all</module>
 
 		<module>properties</module>
@@ -57,16 +56,16 @@
 	<properties>
 		<!-- pure maven plugin configuration -->
 		<minimal.maven.version>3.8.0</minimal.maven.version>
-		<igloo.maven-clean-plugin.version>3.2.0</igloo.maven-clean-plugin.version>
+		<igloo.maven-clean-plugin.version>3.3.1</igloo.maven-clean-plugin.version>
 		<igloo.maven-deploy-plugin.version>3.1.1</igloo.maven-deploy-plugin.version>
 		<igloo.maven-install-plugin.version>3.1.1</igloo.maven-install-plugin.version>
-		<igloo.maven-site-plugin.version>4.0.0-M8</igloo.maven-site-plugin.version>
-		<igloo.maven-project-info-reports-plugin.version>3.4.4</igloo.maven-project-info-reports-plugin.version>
+		<igloo.maven-site-plugin.version>4.0.0-M9</igloo.maven-site-plugin.version>
+		<igloo.maven-project-info-reports-plugin.version>3.4.5</igloo.maven-project-info-reports-plugin.version>
 		<igloo.jgitflow-maven-plugin.version>1.0-m5.1</igloo.jgitflow-maven-plugin.version>
 		<igloo.jsch.version>0.1.55</igloo.jsch.version>
-		<igloo.owasp-maven-plugin.version>8.2.1</igloo.owasp-maven-plugin.version>
-		<igloo.versions-maven-plugin.version>2.15.0</igloo.versions-maven-plugin.version>
-		<igloo.maven-enforcer-plugin.version>3.3.0</igloo.maven-enforcer-plugin.version>
+		<igloo.owasp-maven-plugin.version>8.4.0</igloo.owasp-maven-plugin.version>
+		<igloo.versions-maven-plugin.version>2.16.1</igloo.versions-maven-plugin.version>
+		<igloo.maven-enforcer-plugin.version>3.4.1</igloo.maven-enforcer-plugin.version>
 		<igloo.flatten-maven-plugin.version>1.5.0</igloo.flatten-maven-plugin.version>
 
 		<igloo.bindgen.version>5.0.0</igloo.bindgen.version>
