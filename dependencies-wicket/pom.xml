@@ -94,6 +94,12 @@
 			</dependency>
 
 			<dependency>
+				<groupId>org.apache.wicket</groupId>
+				<artifactId>wicket-tester</artifactId>
+				<version>${igloo.wicket.version}</version>
+			</dependency>
+
+			<dependency>
 				<groupId>org.apache.commons</groupId>
 				<artifactId>commons-fileupload2</artifactId>
 				<version>${igloo.commons-fileupload.version}</version>
