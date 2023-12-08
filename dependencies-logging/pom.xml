@@ -64,18 +64,6 @@
 			</dependency>
 
 			<dependency>
-				<groupId>ch.qos.reload4j</groupId>
-				<artifactId>reload4j</artifactId>
-				<version>${igloo.reload4j.version}</version>
-			</dependency>
-
-			<dependency>
-				<groupId>org.slf4j</groupId>
-				<artifactId>slf4j-reload4j</artifactId>
-				<version>${igloo.slf4j.version}</version>
-			</dependency>
-
-			<dependency>
 				<groupId>io.github.netmikey.logunit</groupId>
 				<artifactId>logunit-log4j2</artifactId>
 				<version>${igloo.logunit.version}</version>

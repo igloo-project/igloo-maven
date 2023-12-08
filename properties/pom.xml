@@ -104,7 +104,6 @@
 		
 		<!-- https://www.slf4j.org/news.html -->
 		<igloo.slf4j.version>2.0.9</igloo.slf4j.version>
-		<igloo.reload4j.version>1.2.25</igloo.reload4j.version>
 		<igloo.log4j2.version>2.20.0</igloo.log4j2.version>
 		
 		<igloo.jersey2.version>2.40</igloo.jersey2.version>
