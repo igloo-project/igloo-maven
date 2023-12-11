@@ -69,7 +69,6 @@
 											<exclude>xml-apis:xml-apis</exclude>
 											<exclude>apache-xerces:xml-apis</exclude>
 											<exclude>javax.servlet:servlet-api</exclude>
-											<exclude>net.sf.ehcache:ehcache-core</exclude>
 											<exclude>postgresql:postgresql</exclude>
 											<!-- this dependency is intended for testing -->
 											<exclude>*:elasticsearch-cluster-runner:*:jar:compile</exclude>
