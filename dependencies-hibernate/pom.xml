@@ -20,8 +20,7 @@
 		If you do not use hibernate.xml_mapping_enabled=false, you'll need to readd dom4j,
 		jaxb-api and jaxb-runtime dependencies.
 		
-		Hibernate can be configured either with ehcache 2 (deprecated) or jcache/caffeine
-		second level caching.
+		Hibernate can be configured with jcache/caffeine second level caching.
 	</description>
 	
 	<dependencyManagement>
@@ -74,18 +73,6 @@
 				<groupId>org.hibernate</groupId>
 				<artifactId>hibernate-spatial</artifactId>
 				<version>${igloo.hibernate.version}</version>
-			</dependency>
-			
-			<!-- Ehcache2 - Deprecated! TODO - replace with jcache/ehcache3 -->
-			<dependency>
-				<groupId>org.hibernate</groupId>
-				<artifactId>hibernate-ehcache</artifactId>
-				<version>${igloo.hibernate.version}</version>
-			</dependency>
-			<dependency>
-				<groupId>net.sf.ehcache</groupId>
-				<artifactId>ehcache</artifactId>
-				<version>${igloo.ehcache.version}</version>
 			</dependency>
 			
 			<!-- JCache / Caffeine -->
