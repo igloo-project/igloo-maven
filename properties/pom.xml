@@ -5,7 +5,7 @@
 	<parent>
 		<groupId>org.iglooproject</groupId>
 		<artifactId>plugins-report</artifactId>
-		<version>6.0.0-Alpha7</version>
+		<version>6.0.0-Alpha8</version>
 		<relativePath>../plugins-report</relativePath>
 	</parent>
 	
@@ -54,7 +54,6 @@
 		<igloo.jboss-logging-annotations.version>2.2.1.Final</igloo.jboss-logging-annotations.version>
 		<!-- https://jira.terracotta.org/jira/browse/EHC/fixforversion/13000/?selectedTab=com.atlassian.jira.jira-projects-plugin:version-summary-panel -->
 		<!-- terracotta maven repository cannot be managed efficiently; use central dependency -->
-		<igloo.ehcache.version>2.10.9.2</igloo.ehcache.version>
 		<igloo.caffeine.version>3.1.8</igloo.caffeine.version>
 		<igloo.jcache.version>1.1.1</igloo.jcache.version>
 		<igloo.persistence-api.version>3.1.0</igloo.persistence-api.version>
