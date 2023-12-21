@@ -86,7 +86,7 @@
 		<igloo.servlet-api.version>4.0.1</igloo.servlet-api.version>
 		<!-- wicket 9.14+ triggers issue for some cases -->
 		<!-- https://issues.apache.org/jira/browse/WICKET-7046 -->
-		<igloo.wicket.version>9.16.0</igloo.wicket.version>
+		<igloo.wicket.version>9.13.0</igloo.wicket.version>
 		<igloo.commons-fileupload.version>1.5</igloo.commons-fileupload.version>
 		<igloo.wiquery.version>9.0.0</igloo.wiquery.version>
 		<igloo.wicketstuff-select2.version>${igloo.wicket.version}</igloo.wicketstuff-select2.version>
