@@ -85,8 +85,8 @@
 		<igloo.spring-security.version>6.1.3</igloo.spring-security.version>
 		
 		<igloo.servlet-api.version>6.0.0</igloo.servlet-api.version>
-		<igloo.wicket.version>10.0.0-M2-SNAPSHOT</igloo.wicket.version>
-		<igloo.commons-fileupload.version>2.0-SNAPSHOT</igloo.commons-fileupload.version>
+		<igloo.wicket.version>10.0.0-M3-SNAPSHOT</igloo.wicket.version>
+		<igloo.commons-fileupload.version>2.0.0-M1</igloo.commons-fileupload.version>
 		<igloo.wiquery.version>9.0.0</igloo.wiquery.version>
 		<igloo.wicketstuff-select2.version>10.0.0-M1</igloo.wicketstuff-select2.version>
 		<!-- https://github.com/l0rdn1kk0n/wicket-webjars (0.5.x -> wicket 7, 2.0.x -> wicket 8) -->

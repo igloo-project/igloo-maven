@@ -39,9 +39,9 @@
 			</dependency>
 
 			<dependency>
-				<groupId>org.apache.wicket</groupId>
-				<artifactId>wicket-commons-fileupload</artifactId>
-				<version>${igloo.wicket.version}</version>
+				<groupId>org.apache.commons</groupId>
+				<artifactId>commons-fileupload2-jakarta</artifactId>
+				<version>${igloo.commons-fileupload.version}</version>
 			</dependency>
 
 			<dependency>
