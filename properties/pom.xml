@@ -46,6 +46,7 @@
 		<igloo.jakarta-activation.version>2.0.1</igloo.jakarta-activation.version>
 		<igloo.jackson.version>2.15.2</igloo.jackson.version>
 		<igloo.picocli.version>4.7.5</igloo.picocli.version>
+		<igloo.resilience4j.version>2.1.0</igloo.resilience4j.version>
 
 		<!-- https://hibernate.org/orm/releases/5.6/ -->
 		<igloo.hibernate.version>6.2.9.Final</igloo.hibernate.version>
