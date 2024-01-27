@@ -110,6 +110,7 @@
 		<igloo.jaxrs.version>2.1.6</igloo.jaxrs.version>
 		
 		<igloo.junit5.version>5.10.1</igloo.junit5.version>
+		<igloo.mockserver.version>5.15.0</igloo.mockserver.version>
 		
 		<!-- keep in sync with junit5 -->
 		<igloo.junit5-suite.version>1.10.1</igloo.junit5-suite.version>
