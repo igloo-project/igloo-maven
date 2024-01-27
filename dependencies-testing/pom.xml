@@ -31,6 +31,11 @@
 			</dependency>
 			<dependency>
 				<groupId>org.junit.jupiter</groupId>
+				<artifactId>junit-jupiter-engine</artifactId>
+				<version>${igloo.junit5.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.junit.jupiter</groupId>
 				<artifactId>junit-jupiter-params</artifactId>
 				<version>${igloo.junit5.version}</version>
 			</dependency>
@@ -113,6 +118,40 @@
 					<exclusion>
 						<groupId>ch.qos.logback</groupId>
 						<artifactId>logback-classic</artifactId>
+					</exclusion>
+				</exclusions>
+			</dependency>
+			
+			<!-- mockserver -->
+			<dependency>
+				<groupId>org.mock-server</groupId>
+				<artifactId>mockserver-client-java-no-dependencies</artifactId>
+				<version>${igloo.mockserver.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.mock-server</groupId>
+				<artifactId>mockserver-netty-no-dependencies</artifactId>
+				<version>${igloo.mockserver.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.mock-server</groupId>
+				<artifactId>mockserver-spring-test-listener</artifactId>
+				<version>${igloo.mockserver.version}</version>
+				<exclusions>
+					<exclusion>
+						<groupId>*</groupId>
+						<artifactId>*</artifactId>
+					</exclusion>
+				</exclusions>
+			</dependency>
+			<dependency>
+				<groupId>org.mock-server</groupId>
+				<artifactId>mockserver-junit-jupiter</artifactId>
+				<version>${igloo.mockserver.version}</version>
+				<exclusions>
+					<exclusion>
+						<groupId>*</groupId>
+						<artifactId>*</artifactId>
 					</exclusion>
 				</exclusions>
 			</dependency>
