@@ -78,19 +78,20 @@
 		<igloo.h2.version>2.2.224</igloo.h2.version>
 		
 		<!-- https://github.com/spring-projects/spring-framework/releases -->
-		<igloo.spring.version>6.0.11</igloo.spring.version>
+		<igloo.spring.version>6.1.1</igloo.spring.version>
 		<!-- https://github.com/spring-projects/spring-boot/releases -->
-		<igloo.spring-boot.version>3.1.3</igloo.spring-boot.version>
+		<igloo.spring-boot.version>3.2.2</igloo.spring-boot.version>
 		
 		<!-- https://github.com/spring-projects/spring-security/releases -->
-		<igloo.spring-security.version>6.1.3</igloo.spring-security.version>
+		<igloo.spring-security.version>6.2.0</igloo.spring-security.version>
 		
 		<igloo.servlet-api.version>6.0.0</igloo.servlet-api.version>
 		<igloo.wicket.version>10.0.0-M3-SNAPSHOT</igloo.wicket.version>
 		<igloo.commons-fileupload.version>2.0.0-M1</igloo.commons-fileupload.version>
 		<igloo.wiquery.version>9.0.0</igloo.wiquery.version>
-		<igloo.wicketstuff-select2.version>10.0.0-M1</igloo.wicketstuff-select2.version>
+		<igloo.wicketstuff-select2.version>10.0.0-M2</igloo.wicketstuff-select2.version>
 		<!-- https://github.com/l0rdn1kk0n/wicket-webjars (0.5.x -> wicket 7, 2.0.x -> wicket 8) -->
+		<!-- 2024-01: 4.0.1 triggers errors in basic-application-webapp tests, bootstrap.js and other resources not found -->
 		<igloo.wicket-webjars.version>4.0.0</igloo.wicket-webjars.version>
 		<igloo.webjars-locator-core.version>0.55</igloo.webjars-locator-core.version>
 		<igloo.webjars.bootstrap4.version>4.6.0</igloo.webjars.bootstrap4.version>
@@ -106,7 +107,7 @@
 		<igloo.slf4j.version>2.0.9</igloo.slf4j.version>
 		<igloo.log4j2.version>2.22.0</igloo.log4j2.version>
 		
-		<igloo.jersey.version>3.1.3</igloo.jersey.version>
+		<igloo.jersey.version>3.1.4</igloo.jersey.version>
 		<igloo.jaxrs.version>3.1.0</igloo.jaxrs.version>
 		
 		<igloo.junit5.version>5.10.1</igloo.junit5.version>
@@ -119,7 +120,7 @@
 		<igloo.assertj.version>3.24.2</igloo.assertj.version>
 		<igloo.assertj-guava.version>3.24.2</igloo.assertj-guava.version>
 		<igloo.hamcrest.version>2.2</igloo.hamcrest.version>
-		<igloo.grizzly.version>4.0.0</igloo.grizzly.version>
+		<igloo.grizzly.version>4.0.1</igloo.grizzly.version>
 		<igloo.logunit.version>2.0.0</igloo.logunit.version>
 		
 		<igloo.findbugs-annotations.version>3.0.1u2</igloo.findbugs-annotations.version>
@@ -143,7 +144,7 @@
 		<igloo.freemarker.version>2.3.32</igloo.freemarker.version>
 		<igloo.imageinfo.version>1.9</igloo.imageinfo.version>
 		<igloo.object-diff.version>0.95</igloo.object-diff.version>
-		<igloo.micrometer.version>1.12.0</igloo.micrometer.version>
+		<igloo.micrometer.version>1.12.1</igloo.micrometer.version>
 		<igloo.openpdf.version>1.3.34</igloo.openpdf.version>
 	</properties>
 </project>
