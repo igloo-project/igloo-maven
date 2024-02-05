@@ -5,7 +5,7 @@
 	<groupId>org.iglooproject</groupId>
 	<artifactId>igloo-maven</artifactId>
 	<packaging>pom</packaging>
-	<version>5.14.0</version>
+	<version>5.15.0</version>
 	
 	<name>Maven configuration for Igloo stack</name>
 	<description>
@@ -54,22 +54,22 @@
 	<properties>
 		<!-- pure maven plugin configuration -->
 		<minimal.maven.version>3.8.0</minimal.maven.version>
-		<igloo.maven-clean-plugin.version>3.3.1</igloo.maven-clean-plugin.version>
+		<igloo.maven-clean-plugin.version>3.3.2</igloo.maven-clean-plugin.version>
 		<igloo.maven-deploy-plugin.version>3.1.1</igloo.maven-deploy-plugin.version>
 		<igloo.maven-install-plugin.version>3.1.1</igloo.maven-install-plugin.version>
-		<igloo.maven-site-plugin.version>4.0.0-M9</igloo.maven-site-plugin.version>
-		<igloo.maven-project-info-reports-plugin.version>3.4.5</igloo.maven-project-info-reports-plugin.version>
+		<igloo.maven-site-plugin.version>4.0.0-M12</igloo.maven-site-plugin.version>
+		<igloo.maven-project-info-reports-plugin.version>3.5.0</igloo.maven-project-info-reports-plugin.version>
 		<igloo.jgitflow-maven-plugin.version>1.0-m5.1</igloo.jgitflow-maven-plugin.version>
 		<igloo.jsch.version>0.1.55</igloo.jsch.version>
-		<igloo.owasp-maven-plugin.version>8.4.0</igloo.owasp-maven-plugin.version>
-		<igloo.versions-maven-plugin.version>2.16.1</igloo.versions-maven-plugin.version>
+		<igloo.owasp-maven-plugin.version>9.0.4</igloo.owasp-maven-plugin.version>
+		<igloo.versions-maven-plugin.version>2.16.2</igloo.versions-maven-plugin.version>
 		<igloo.maven-enforcer-plugin.version>3.3.0</igloo.maven-enforcer-plugin.version>
 		<igloo.flatten-maven-plugin.version>1.5.0</igloo.flatten-maven-plugin.version>
 		
 		<!-- processor dependencies; for bindgen and immutables, added here to keep it in sync -->
 		<igloo.bindgen.version>5.0.0</igloo.bindgen.version>
 		<igloo.querydsl.version>5.0.0</igloo.querydsl.version>
-		<igloo.immutables.version>2.9.3</igloo.immutables.version>
+		<igloo.immutables.version>2.10.0</igloo.immutables.version>
 		
 		<!-- very general project/java configurations -->
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>

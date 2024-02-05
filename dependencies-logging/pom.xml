@@ -5,7 +5,7 @@
 	<parent>
 		<groupId>org.iglooproject</groupId>
 		<artifactId>properties</artifactId>
-		<version>5.14.0</version>
+		<version>5.15.0</version>
 		<relativePath>../properties</relativePath>
 	</parent>
 	
@@ -60,18 +60,6 @@
 			<dependency>
 				<groupId>org.slf4j</groupId>
 				<artifactId>jul-to-slf4j</artifactId>
-				<version>${igloo.slf4j.version}</version>
-			</dependency>
-
-			<dependency>
-				<groupId>ch.qos.reload4j</groupId>
-				<artifactId>reload4j</artifactId>
-				<version>${igloo.reload4j.version}</version>
-			</dependency>
-
-			<dependency>
-				<groupId>org.slf4j</groupId>
-				<artifactId>slf4j-reload4j</artifactId>
 				<version>${igloo.slf4j.version}</version>
 			</dependency>
 

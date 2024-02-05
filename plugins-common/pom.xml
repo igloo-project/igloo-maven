@@ -5,7 +5,7 @@
 	<parent>
 		<groupId>org.iglooproject</groupId>
 		<artifactId>igloo-maven</artifactId>
-		<version>5.14.0</version>
+		<version>5.15.0</version>
 	</parent>
 	
 	<artifactId>plugins-common</artifactId>
@@ -20,21 +20,22 @@
 		<!-- maven plugins versions -->
 		<igloo.maven-compiler-plugin.version>3.11.0</igloo.maven-compiler-plugin.version>
 		<igloo.maven-resources-plugin.version>3.3.1</igloo.maven-resources-plugin.version>
-		<igloo.maven-surefire-plugin.version>3.1.2</igloo.maven-surefire-plugin.version>
+		<igloo.maven-surefire-plugin.version>3.2.2</igloo.maven-surefire-plugin.version>
 		<igloo.maven-war-plugin.version>3.4.0</igloo.maven-war-plugin.version>
 		<igloo.maven-assembly-plugin.version>3.6.0</igloo.maven-assembly-plugin.version>
 		<igloo.maven-jar-plugin.version>3.3.0</igloo.maven-jar-plugin.version>
 		<igloo.maven-source-plugin.version>3.3.0</igloo.maven-source-plugin.version>
-		<igloo.maven-javadoc-plugin.version>3.6.0</igloo.maven-javadoc-plugin.version>
-		<igloo.maven-dependency-plugin.version>3.6.0</igloo.maven-dependency-plugin.version>
+		<igloo.maven-javadoc-plugin.version>3.6.3</igloo.maven-javadoc-plugin.version>
+		<igloo.maven-dependency-plugin.version>3.6.1</igloo.maven-dependency-plugin.version>
 		<igloo.maven-antrun-plugin.version>3.1.0</igloo.maven-antrun-plugin.version>
-		<igloo.exec-maven-plugin.version>3.1.0</igloo.exec-maven-plugin.version>
-		<igloo.maven-failsafe-plugin.version>3.1.2</igloo.maven-failsafe-plugin.version>
-		<igloo.jacoco-maven-plugin.version>0.8.10</igloo.jacoco-maven-plugin.version>
+		<igloo.exec-maven-plugin.version>3.1.1</igloo.exec-maven-plugin.version>
+		<igloo.maven-failsafe-plugin.version>3.2.2</igloo.maven-failsafe-plugin.version>
+		<igloo.jacoco-maven-plugin.version>0.8.11</igloo.jacoco-maven-plugin.version>
 		<igloo.buildnumber-maven-plugin.version>3.2.0</igloo.buildnumber-maven-plugin.version>
-		<igloo.frontend-maven-plugin.version>1.14.0</igloo.frontend-maven-plugin.version>
+		<igloo.frontend-maven-plugin.version>1.15.0</igloo.frontend-maven-plugin.version>
 		<igloo.maven-enforcer-plugin.version>3.4.1</igloo.maven-enforcer-plugin.version>
-		<igloo.maven-processor-plugin.version>5.0-jdk8</igloo.maven-processor-plugin.version>
+		<igloo.maven-processor-plugin.version>5.0</igloo.maven-processor-plugin.version>
+		<igloo.spotless-maven-plugin.version>2.41.1</igloo.spotless-maven-plugin.version>
 		
 		<igloo.node.version>16.14.0</igloo.node.version>
 		<igloo.npm.version>8.3.1</igloo.npm.version>
@@ -167,6 +168,26 @@
 					<groupId>org.codehaus.mojo</groupId>
 					<artifactId>exec-maven-plugin</artifactId>
 					<version>${igloo.exec-maven-plugin.version}</version>
+				</plugin>
+				<plugin>
+					<groupId>com.diffplug.spotless</groupId>
+					<artifactId>spotless-maven-plugin</artifactId>
+					<version>${igloo.spotless-maven-plugin.version}</version>
+					<executions>
+						<execution>
+							<id>default-cli</id>
+							<configuration>
+								<java>
+									<!-- These are the defaults, you can override if you want -->
+									<includes>
+										<include>src/main/java/**/*.java</include>
+										<include>src/test/java/**/*.java</include>
+									</includes>
+									<googleJavaFormat />
+								</java>
+							</configuration>
+						</execution>
+					</executions>
 				</plugin>
 			</plugins>
 		</pluginManagement>
