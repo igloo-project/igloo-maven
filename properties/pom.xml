@@ -80,7 +80,7 @@
 		<igloo.spring-boot.version>2.7.18</igloo.spring-boot.version>
 		
 		<!-- https://github.com/spring-projects/spring-security/releases -->
-		<igloo.spring-security.version>5.8.10</igloo.spring-security.version>
+		<igloo.spring-security.version>5.8.11</igloo.spring-security.version>
 		
 		<igloo.servlet-api.version>4.0.1</igloo.servlet-api.version>
 		<!-- wicket 9.14+ triggers issue for some cases -->
