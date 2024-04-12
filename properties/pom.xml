@@ -75,7 +75,7 @@
 		<igloo.h2.version>2.2.224</igloo.h2.version>
 		
 		<!-- https://github.com/spring-projects/spring-framework/releases -->
-		<igloo.spring.version>5.3.32</igloo.spring.version>
+		<igloo.spring.version>5.3.34</igloo.spring.version>
 		<!-- https://github.com/spring-projects/spring-boot/releases -->
 		<igloo.spring-boot.version>2.7.18</igloo.spring-boot.version>
 		
