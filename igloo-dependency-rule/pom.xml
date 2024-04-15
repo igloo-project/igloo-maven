@@ -4,14 +4,14 @@
 	<parent>
 		<groupId>org.iglooproject</groupId>
 		<artifactId>plugins-common</artifactId>
-		<version>5.15.0</version>
+		<version>5.16.0</version>
 		<relativePath>../plugins-common</relativePath>
 	</parent>
 	
 	<groupId>org.iglooproject.rules</groupId>
 	<artifactId>igloo-dependency-rule</artifactId>
 	<packaging>jar</packaging>
-	<version>5.15.0</version>
+	<version>5.16.0</version>
 	<name>Maven plugins - Check Igloo dependency rules.</name>
 	
 	<properties>
