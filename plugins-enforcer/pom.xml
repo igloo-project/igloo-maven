@@ -54,6 +54,8 @@
 											<exclude>org.slf4j:slf4j-api</exclude>
 											<exclude>jakarta.activation:jakarta.activation-api</exclude>
 											<exclude>io.github.classgraph:classgraph</exclude>
+											<!-- see properties / pom.xml version is pinned to 4.0.0-->
+											<exclude>de.agilecoders.wicket.webjars:wicket-webjars</exclude>
 										</excludes>
 									</requireUpperBoundDeps>
 									<bannedDependencies>
@@ -76,7 +78,6 @@
 											<!-- this dependency is renamed com.sun.mail:jakarta.mail -->
 											<exclude>com.sun.mail:javax.mail</exclude><!-- old implementation -->
 											<exclude>javax.mail:mail-api</exclude><!-- old API -->
-											<exclude>jakarta.mail:jakarta.mail-api</exclude><!-- API only -->
 										</excludes>
 									</bannedDependencies>
 								</rules>

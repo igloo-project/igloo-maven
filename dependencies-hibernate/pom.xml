@@ -54,6 +54,12 @@
 				</exclusions>
 			</dependency>
 			<dependency>
+				<groupId>jakarta.xml.bind</groupId>
+				<artifactId>jakarta.xml.bind-api</artifactId>
+				<version>${igloo.jakarta-xml-bind-api.version}</version>
+				<optional>true</optional>
+			</dependency>
+			<dependency>
 				<groupId>org.hibernate.common</groupId>
 				<artifactId>hibernate-commons-annotations</artifactId>
 				<version>${igloo.hibernate-commons-annotations.version}</version>
