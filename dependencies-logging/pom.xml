@@ -5,7 +5,7 @@
 	<parent>
 		<groupId>org.iglooproject</groupId>
 		<artifactId>properties</artifactId>
-		<version>5.17.0</version>
+		<version>5.17.1-SNAPSHOT</version>
 		<relativePath>../properties</relativePath>
 	</parent>
 	
