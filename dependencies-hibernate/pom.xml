@@ -173,6 +173,11 @@
 					</exclusion>
 				</exclusions>
 			</dependency>
+			<dependency>
+				<groupId>org.flywaydb</groupId>
+				<artifactId>flyway-database-postgresql</artifactId>
+				<version>${igloo.flywaydb.version}</version>
+			</dependency>
 			
 			<dependency>
 				<groupId>org.jboss.logging</groupId>
