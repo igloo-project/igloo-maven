@@ -79,6 +79,20 @@
 				<artifactId>micrometer-core</artifactId>
 				<version>${igloo.micrometer.version}</version>
 			</dependency>
+			
+			 <!-- upper bound dependency - override spring security-->
+			<dependency>
+				<groupId>io.micrometer</groupId>
+				<artifactId>micrometer-commons</artifactId>
+				<version>${igloo.micrometer.version}</version>
+			</dependency>
+
+			<!-- upper bound dependency issue - override spring security / spring / resilience4j -->
+			<dependency>
+				<groupId>io.micrometer</groupId>
+				<artifactId>micrometer-observation</artifactId>
+				<version>${igloo.micrometer.version}</version>
+			</dependency>
 
 			<dependency>
 				<groupId>com.github.librepdf</groupId>
