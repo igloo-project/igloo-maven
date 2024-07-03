@@ -157,12 +157,7 @@
 				<artifactId>jquery-mask-plugin</artifactId>
 				<version>${igloo.webjars.jquery-mask-plugin.version}</version>
 			</dependency>
-
-			<dependency>
-				<groupId>nl.topicus</groupId>
-				<artifactId>wqplot</artifactId>
-				<version>${igloo.wqplot.version}</version>
-			</dependency>
+			
 		</dependencies>
 	</dependencyManagement>
 
