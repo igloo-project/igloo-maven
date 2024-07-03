@@ -76,7 +76,6 @@
 		<igloo.querydsl.version>5.1.0</igloo.querydsl.version>
 		<!-- https://jdbc.postgresql.org/changelogs/ -->
 		<igloo.postgresql.version>42.7.3</igloo.postgresql.version>
-		<igloo.h2.version>2.2.224</igloo.h2.version>
 		
 		<!-- https://github.com/spring-projects/spring-framework/releases -->
 		<igloo.spring.version>6.1.10</igloo.spring.version>

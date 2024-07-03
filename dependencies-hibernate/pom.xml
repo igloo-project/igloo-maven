@@ -132,12 +132,6 @@
 			</dependency>
 
 			<dependency>
-				<groupId>com.h2database</groupId>
-				<artifactId>h2</artifactId>
-				<version>${igloo.h2.version}</version>
-			</dependency>
-
-			<dependency>
 				<groupId>com.querydsl</groupId>
 				<artifactId>querydsl-core</artifactId>
 				<version>${igloo.querydsl.version}</version>

@@ -44,13 +44,6 @@
 				<artifactId>junit-platform-suite-engine</artifactId>
 				<version>${igloo.junit5-suite.version}</version>
 			</dependency>
-
-			<dependency>
-				<groupId>com.h2database</groupId>
-				<artifactId>h2</artifactId>
-				<version>${igloo.h2.version}</version>
-			</dependency>
-
 			<dependency>
 				<groupId>org.mockito</groupId>
 				<artifactId>mockito-core</artifactId>
