@@ -130,8 +130,6 @@
 		
 		<!-- https://github.com/phax/ph-css/releases -->
 		<igloo.ph-css.version>7.0.2</igloo.ph-css.version>
-		<!-- http://jsass.readthedocs.io/en/latest/changelog.html -->
-		<igloo.jsass.version>5.10.5</igloo.jsass.version>
 		<!-- autoprefixer plugin; experimental, do not reuse without notice -->
 		<igloo.rhino.version>1.7.15</igloo.rhino.version>
 		<!-- https://github.com/jhy/jsoup/blob/master/CHANGES -->
