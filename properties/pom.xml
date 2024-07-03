@@ -116,7 +116,6 @@
 		
 		<!-- keep in sync with junit5 -->
 		<igloo.junit5-suite.version>1.10.2</igloo.junit5-suite.version>
-		<igloo.h2.version>2.2.224</igloo.h2.version>
 		<igloo.mockito.version>5.12.0</igloo.mockito.version>
 		<igloo.assertj.version>3.25.3</igloo.assertj.version>
 		<igloo.assertj-guava.version>3.25.3</igloo.assertj-guava.version>
@@ -147,7 +146,6 @@
 		<igloo.imageinfo.version>1.9</igloo.imageinfo.version>
 		<igloo.object-diff.version>0.95</igloo.object-diff.version>
 		<igloo.micrometer.version>1.13.1</igloo.micrometer.version>
-		<igloo.openpdf.version>2.0.2</igloo.openpdf.version>
 		
 		<igloo.httpclient5.version>5.3.1</igloo.httpclient5.version>
 		<igloo.springdoc-openapi-starter-webmvc-ui.version>2.5.0</igloo.springdoc-openapi-starter-webmvc-ui.version>
