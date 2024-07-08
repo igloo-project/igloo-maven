@@ -13,7 +13,6 @@
 	<packaging>pom</packaging>
 	
 	<properties>
-		<igloo-maven.version>6.0.0-SNAPSHOT</igloo-maven.version>
 		<start-class></start-class>
 	</properties>
 	
@@ -75,7 +74,7 @@
 			<dependency>
 				<groupId>org.iglooproject</groupId>
 				<artifactId>dependencies-spring</artifactId>
-				<version>${igloo-maven.version}</version>
+				<version>6.0.0-SNAPSHOT</version>
 				<type>pom</type>
 				<scope>import</scope>
 			</dependency>
@@ -83,7 +82,7 @@
 			<dependency>
 				<groupId>org.iglooproject</groupId>
 				<artifactId>dependencies-hibernate</artifactId>
-				<version>${igloo-maven.version}</version>
+				<version>6.0.0-SNAPSHOT</version>
 				<type>pom</type>
 				<scope>import</scope>
 			</dependency>
@@ -91,7 +90,7 @@
 			<dependency>
 				<groupId>org.iglooproject</groupId>
 				<artifactId>dependencies-commons</artifactId>
-				<version>${igloo-maven.version}</version>
+				<version>6.0.0-SNAPSHOT</version>
 				<type>pom</type>
 				<scope>import</scope>
 			</dependency>
@@ -99,63 +98,63 @@
 			<dependency>
 				<groupId>org.iglooproject</groupId>
 				<artifactId>dependencies-bindgen</artifactId>
-				<version>${igloo-maven.version}</version>
+				<version>6.0.0-SNAPSHOT</version>
 				<type>pom</type>
 				<scope>import</scope>
 			</dependency>
 			<dependency>
 				<groupId>org.iglooproject</groupId>
 				<artifactId>dependencies-bootstrap5</artifactId>
-				<version>${igloo-maven.version}</version>
+				<version>6.0.0-SNAPSHOT</version>
 				<type>pom</type>
 				<scope>import</scope>
 			</dependency>
 			<dependency>
 				<groupId>org.iglooproject</groupId>
 				<artifactId>dependencies-hibernate-search</artifactId>
-				<version>${igloo-maven.version}</version>
+				<version>6.0.0-SNAPSHOT</version>
 				<type>pom</type>
 				<scope>import</scope>
 			</dependency>
 			<dependency>
 				<groupId>org.iglooproject</groupId>
 				<artifactId>dependencies-html</artifactId>
-				<version>${igloo-maven.version}</version>
+				<version>6.0.0-SNAPSHOT</version>
 				<type>pom</type>
 				<scope>import</scope>
 			</dependency>
 			<dependency>
 				<groupId>org.iglooproject</groupId>
 				<artifactId>dependencies-logging</artifactId>
-				<version>${igloo-maven.version}</version>
+				<version>6.0.0-SNAPSHOT</version>
 				<type>pom</type>
 				<scope>import</scope>
 			</dependency>
 			<dependency>
 				<groupId>org.iglooproject</groupId>
 				<artifactId>dependencies-quality-annotations</artifactId>
-				<version>${igloo-maven.version}</version>
+				<version>6.0.0-SNAPSHOT</version>
 				<type>pom</type>
 				<scope>import</scope>
 			</dependency>
 			<dependency>
 				<groupId>org.iglooproject</groupId>
 				<artifactId>dependencies-testing</artifactId>
-				<version>${igloo-maven.version}</version>
+				<version>6.0.0-SNAPSHOT</version>
 				<type>pom</type>
 				<scope>import</scope>
 			</dependency>
 			<dependency>
 				<groupId>org.iglooproject</groupId>
 				<artifactId>dependencies-tools</artifactId>
-				<version>${igloo-maven.version}</version>
+				<version>6.0.0-SNAPSHOT</version>
 				<type>pom</type>
 				<scope>import</scope>
 			</dependency>
 			<dependency>
 				<groupId>org.iglooproject</groupId>
 				<artifactId>dependencies-wicket</artifactId>
-				<version>${igloo-maven.version}</version>
+				<version>6.0.0-SNAPSHOT</version>
 				<type>pom</type>
 				<scope>import</scope>
 			</dependency>
