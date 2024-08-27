@@ -36,6 +36,7 @@
 		<igloo.maven-enforcer-plugin.version>3.5.0</igloo.maven-enforcer-plugin.version>
 		<igloo.maven-processor-plugin.version>5.1</igloo.maven-processor-plugin.version>
 		<igloo.spotless-maven-plugin.version>2.43.0</igloo.spotless-maven-plugin.version>
+		<igloo.google-java-format.version>1.23.0</igloo.google-java-format.version>
 		
 		<igloo.node.version>16.14.0</igloo.node.version>
 		<igloo.npm.version>8.3.1</igloo.npm.version>
@@ -183,7 +184,9 @@
 										<include>src/main/java/**/*.java</include>
 										<include>src/test/java/**/*.java</include>
 									</includes>
-									<googleJavaFormat />
+									<googleJavaFormat>
+										<version>${igloo.google-java-format.version}</version>
+									</googleJavaFormat>
 								</java>
 							</configuration>
 						</execution>
