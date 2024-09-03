@@ -68,7 +68,7 @@
 		
 		<!-- processor dependencies; for bindgen and immutables, added here to keep it in sync -->
 		<igloo.bindgen.version>5.0.0</igloo.bindgen.version>
-		<igloo.querydsl.version>5.0.0</igloo.querydsl.version>
+		<igloo.querydsl.version>5.1.0</igloo.querydsl.version>
 		<igloo.immutables.version>2.10.1</igloo.immutables.version>
 		
 		<!-- very general project/java configurations -->
