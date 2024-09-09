@@ -94,6 +94,13 @@
 				<version>${igloo.micrometer.version}</version>
 			</dependency>
 			
+			 <!-- upper bound dependency - override spring security-->
+			<dependency>
+				<groupId>io.micrometer</groupId>
+				<artifactId>micrometer-registry-prometheus</artifactId>
+				<version>${igloo.micrometer.version}</version>
+			</dependency>
+			
 			<dependency>
 				<groupId>org.apache.httpcomponents.client5</groupId>
 				<artifactId>httpclient5</artifactId>
