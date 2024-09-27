@@ -5,7 +5,7 @@
 	<parent>
 		<groupId>org.iglooproject</groupId>
 		<artifactId>igloo-maven</artifactId>
-		<version>6.0.0-Alpha15</version>
+		<version>6.0.0-Alpha16</version>
 	</parent>
 	
 	<artifactId>plugins-common</artifactId>
@@ -36,6 +36,7 @@
 		<igloo.maven-enforcer-plugin.version>3.5.0</igloo.maven-enforcer-plugin.version>
 		<igloo.maven-processor-plugin.version>5.1</igloo.maven-processor-plugin.version>
 		<igloo.spotless-maven-plugin.version>2.43.0</igloo.spotless-maven-plugin.version>
+		<igloo.google-java-format.version>1.23.0</igloo.google-java-format.version>
 		<igloo.spring-boot-maven-plugin.version>3.3.1</igloo.spring-boot-maven-plugin.version>
 		
 		<igloo.node.version>16.14.0</igloo.node.version>
@@ -205,7 +206,9 @@
 										<include>src/main/java/**/*.java</include>
 										<include>src/test/java/**/*.java</include>
 									</includes>
-									<googleJavaFormat />
+									<googleJavaFormat>
+										<version>${igloo.google-java-format.version}</version>
+									</googleJavaFormat>
 								</java>
 							</configuration>
 						</execution>
