@@ -49,24 +49,6 @@
 				<artifactId>lucene-analysis-common</artifactId>
 				<version>${igloo.lucene.version}</version>
 			</dependency>
-			<!--override lucene version because of CVE-2024-45772 vulnerability-->
-			<dependency>
-				<groupId>org.apache.lucene</groupId>
-				<artifactId>lucene-facet</artifactId>
-				<version>${igloo.lucene.version}</version>
-			</dependency>
-			<!--override lucene version because of CVE-2024-45772 vulnerability-->
-			<dependency>
-				<groupId>org.apache.lucene</groupId>
-				<artifactId>lucene-highlighter</artifactId>
-				<version>${igloo.lucene.version}</version>
-			</dependency>
-			<!--override lucene version because of CVE-2024-45772 vulnerability-->
-			<dependency>
-				<groupId>org.apache.lucene</groupId>
-				<artifactId>lucene-join</artifactId>
-				<version>${igloo.lucene.version}</version>
-			</dependency>
 		</dependencies>
 	</dependencyManagement>
 	
