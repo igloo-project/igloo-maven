@@ -53,6 +53,25 @@
 				<groupId>de.larsgrefer.sass</groupId>
 				<artifactId>sass-embedded-host</artifactId>
 				<version>${igloo.sass-embedded-host.version}</version>
+				<exclusions>
+					<!-- Not needed arch; jar is big (30MB) -->
+					<exclusion>
+						<groupId>de.larsgrefer.sass</groupId>
+						<artifactId>sass-embedded-bundled-ia32</artifactId>
+					</exclusion>
+				</exclusions>
+			</dependency>
+			<dependency>
+				<groupId>de.larsgrefer.sass</groupId>
+				<artifactId>sass-embedded-bundled</artifactId>
+				<version>${igloo.sass-embedded-host.version}</version>
+				<exclusions>
+					<!-- Not needed arch; jar is big (30MB) -->
+					<exclusion>
+						<groupId>de.larsgrefer.sass</groupId>
+						<artifactId>sass-embedded-bundled-ia32</artifactId>
+					</exclusion>
+				</exclusions>
 			</dependency>
 			<dependency>
 				<groupId>com.google.protobuf</groupId>
