@@ -60,6 +60,7 @@
 		<igloo.maven-site-plugin.version>4.0.0-M16</igloo.maven-site-plugin.version>
 		<igloo.maven-project-info-reports-plugin.version>3.7.0</igloo.maven-project-info-reports-plugin.version>
 		<igloo.jgitflow-maven-plugin.version>1.0-m5.1</igloo.jgitflow-maven-plugin.version>
+		<igloo.gitflow-maven-plugin.version>1.21.0</igloo.gitflow-maven-plugin.version>
 		<igloo.jsch.version>0.1.55</igloo.jsch.version>
 		<igloo.owasp-maven-plugin.version>10.0.4</igloo.owasp-maven-plugin.version>
 		<igloo.versions-maven-plugin.version>2.17.1</igloo.versions-maven-plugin.version>
@@ -196,6 +197,38 @@
 							<version>${igloo.jsch.version}</version>
 						</dependency>
 					</dependencies>
+				</plugin>
+				<plugin>
+					<groupId>com.amashchenko.maven.plugin</groupId>
+					<artifactId>gitflow-maven-plugin</artifactId>
+					<version>${igloo.gitflow-maven-plugin.version}</version>
+					<configuration>
+						<gitFlowConfig>
+							<productionBranch>igloo-boot</productionBranch>
+							<developmentBranch>igloo-boot-dev</developmentBranch>
+							<featureBranchPrefix>igloo-boot-ft-</featureBranchPrefix>
+							<releaseBranchPrefix>igloo-boot-rl-</releaseBranchPrefix>
+							<hotfixBranchPrefix>igloo-boot-hf-</hotfixBranchPrefix>
+							<supportBranchPrefix>igloo-boot-sp-</supportBranchPrefix>
+							<versionTagPrefix>v</versionTagPrefix>
+							<origin>origin</origin>
+						</gitFlowConfig>
+						<skipFeatureVersion>true</skipFeatureVersion>
+						<!-- do not run verify, done on CI -->
+						<skipTestProject>true</skipTestProject>
+						<!-- In X.Y.Z, update Y -->
+						<versionDigitToIncrement>1</versionDigitToIncrement>
+						<!-- do not push during release; we perform this independently-->
+						<pushRemote>false</pushRemote>
+						<!-- build project during release -->
+						<installProject>true</installProject>
+						<!-- ensure all modules are processed by versions: calls -->
+						<argLine>-DskipTests=true -DprocessAllModules=true -DskipResolution=true</argLine>
+						<!-- print subcommand output -->
+						<verbose>true</verbose>
+						<!-- Needed as it implies project reloading during versioning, and triggers resolution failure -->
+						<updateOutputTimestamp>false</updateOutputTimestamp>
+					</configuration>
 				</plugin>
 			</plugins>
 		</pluginManagement>
