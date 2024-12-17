@@ -73,11 +73,6 @@
 					</exclusion>
 				</exclusions>
 			</dependency>
-			<dependency>
-				<groupId>com.google.protobuf</groupId>
-				<artifactId>protobuf-java</artifactId>
-				<version>${igloo.protobuf-java.version}</version>
-			</dependency>
 		</dependencies>
 	</dependencyManagement>
 	
