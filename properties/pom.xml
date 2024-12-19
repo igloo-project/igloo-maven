@@ -122,6 +122,7 @@
 		<igloo.hamcrest.version>3.0</igloo.hamcrest.version>
 		<igloo.grizzly.version>4.0.2</igloo.grizzly.version>
 		<igloo.logunit.version>2.0.0</igloo.logunit.version>
+		<igloo.awaitility.version>4.2.2</igloo.awaitility.version>
 		
 		<igloo.findbugs-annotations.version>3.0.1u2</igloo.findbugs-annotations.version>
 		<igloo.findbugs-jsr305.version>3.0.2</igloo.findbugs-jsr305.version>
