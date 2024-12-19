@@ -50,7 +50,7 @@
 		<igloo.resilience4j.version>2.2.0</igloo.resilience4j.version>
 
 		<!-- https://hibernate.org/orm/releases/5.6/ -->
-		<igloo.hibernate.version>6.6.3.Final</igloo.hibernate.version>
+		<igloo.hibernate.version>6.6.4.Final</igloo.hibernate.version>
 		<igloo.hibernate-commons-annotations.version>7.0.3.Final</igloo.hibernate-commons-annotations.version>
 		<!-- Use highest version from hibernate-core/hibernate-search -->
 		<igloo.jboss-logging-annotations.version>3.0.3.Final</igloo.jboss-logging-annotations.version>
