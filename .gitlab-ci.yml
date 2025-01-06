@@ -24,14 +24,14 @@ maven-deploy:
   environment: staging
   script:
     - "mvn deploy -DperformRelease"
-  only:
-    - /^main$/
-    - /^dev$/
-    - /^ft-.*-deploy$/
-    - /^hf-.*$/
-    - igloo-boot
-    - igloo-boot-dev
-    - /^igloo-boot-ft-.*$/
+  rules:
+    - if: $CI_COMMIT_BRANCH == "main"
+    - if: $CI_COMMIT_BRANCH == "dev"
+    - if: $CI_COMMIT_BRANCH == "igloo-boot"
+    - if: $CI_COMMIT_BRANCH == "igloo-boot-dev"
+    - if: $CI_COMMIT_BRANCH =~ /^ft-.*-deploy$/
+    - if: $CI_COMMIT_BRANCH =~ /^hf-.*$/
+    - if: $CI_COMMIT_BRANCH =~ /^igloo-boot-ft-.*$/
   tags:
     - docker
 
@@ -40,5 +40,6 @@ trigger:
   trigger:
     project: igloo-project/igloo-commons
     branch: $CI_COMMIT_BRANCH
-  only:
-    - /^dev$/
+  rules:
+    - if: $CI_COMMIT_BRANCH == "dev"
+

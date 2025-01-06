@@ -5,7 +5,7 @@
 	<parent>
 		<groupId>org.iglooproject</groupId>
 		<artifactId>properties</artifactId>
-		<version>6.0.0-Alpha18</version>
+		<version>6.0.0</version>
 		<relativePath>../properties</relativePath>
 	</parent>
 	
@@ -47,11 +47,25 @@
 				<groupId>de.larsgrefer.sass</groupId>
 				<artifactId>sass-embedded-host</artifactId>
 				<version>${igloo.sass-embedded-host.version}</version>
+				<exclusions>
+					<!-- Not needed arch; jar is big (30MB) -->
+					<exclusion>
+						<groupId>de.larsgrefer.sass</groupId>
+						<artifactId>sass-embedded-bundled-ia32</artifactId>
+					</exclusion>
+				</exclusions>
 			</dependency>
 			<dependency>
-				<groupId>com.google.protobuf</groupId>
-				<artifactId>protobuf-java</artifactId>
-				<version>${igloo.protobuf-java.version}</version>
+				<groupId>de.larsgrefer.sass</groupId>
+				<artifactId>sass-embedded-bundled</artifactId>
+				<version>${igloo.sass-embedded-host.version}</version>
+				<exclusions>
+					<!-- Not needed arch; jar is big (30MB) -->
+					<exclusion>
+						<groupId>de.larsgrefer.sass</groupId>
+						<artifactId>sass-embedded-bundled-ia32</artifactId>
+					</exclusion>
+				</exclusions>
 			</dependency>
 		</dependencies>
 	</dependencyManagement>
