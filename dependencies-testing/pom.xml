@@ -169,6 +169,11 @@
 				<artifactId>postgresql</artifactId>
 				<version>${igloo.testcontainers.version}</version>
 			</dependency>
+			<dependency>
+				<groupId>org.awaitility</groupId>
+				<artifactId>awaitility</artifactId>
+				<version>${igloo.awaitility.version}</version>
+			</dependency>
 		</dependencies>
 	</dependencyManagement>
 
