@@ -76,8 +76,6 @@
 		<maven.compiler.release>11</maven.compiler.release>
 
 		<masterBranchName>main</masterBranchName>
-		<!-- needed for wicket, bindgen, bindgen-*, commons-fileupload2, gitflow -->
-		<allowSnapshots>true</allowSnapshots>
 	</properties>
 	
 	<build>
