@@ -202,12 +202,12 @@
 					<version>${igloo.gitflow-maven-plugin.version}</version>
 					<configuration>
 						<gitFlowConfig>
-							<productionBranch>igloo-boot</productionBranch>
-							<developmentBranch>igloo-boot-dev</developmentBranch>
-							<featureBranchPrefix>igloo-boot-ft-</featureBranchPrefix>
-							<releaseBranchPrefix>igloo-boot-rl-</releaseBranchPrefix>
-							<hotfixBranchPrefix>igloo-boot-hf-</hotfixBranchPrefix>
-							<supportBranchPrefix>igloo-boot-sp-</supportBranchPrefix>
+							<productionBranch>main</productionBranch>
+							<developmentBranch>dev</developmentBranch>
+							<featureBranchPrefix>ft-</featureBranchPrefix>
+							<releaseBranchPrefix>rl-</releaseBranchPrefix>
+							<hotfixBranchPrefix>hf-</hotfixBranchPrefix>
+							<supportBranchPrefix>sp-</supportBranchPrefix>
 							<versionTagPrefix>v</versionTagPrefix>
 							<origin>origin</origin>
 						</gitFlowConfig>
