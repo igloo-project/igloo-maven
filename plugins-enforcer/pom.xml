@@ -28,13 +28,6 @@
 					<groupId>org.apache.maven.plugins</groupId>
 					<artifactId>maven-enforcer-plugin</artifactId>
 					<version>${igloo.maven-enforcer-plugin.version}</version>
-					<dependencies>
-						<dependency>
-							<groupId>org.iglooproject.rules</groupId>
-							<artifactId>igloo-dependency-rule</artifactId>
-							<version>5.23.0-SNAPSHOT</version>
-						</dependency>
-					</dependencies>
 					<executions>
 						<execution>
 							<id>enforce</id>
@@ -43,9 +36,6 @@
 							</goals>
 							<configuration>
 								<rules>
-									<iglooDependencyRule implementation="org.igloo.enforcer.dependencyrule.IglooDependencyRule">
-										<shouldIFail>false</shouldIFail>
-									</iglooDependencyRule>
 									<requireUpperBoundDeps>
 										<excludes>
 											<exclude>org.osgi:org.osgi.core</exclude>
