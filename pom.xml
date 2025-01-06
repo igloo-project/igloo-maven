@@ -202,7 +202,7 @@
 					<version>${igloo.gitflow-maven-plugin.version}</version>
 					<configuration>
 						<gitFlowConfig>
-							<productionBranch>main</productionBranch>
+							<productionBranch>${masterBranchName}</productionBranch>
 							<developmentBranch>dev</developmentBranch>
 							<featureBranchPrefix>ft-</featureBranchPrefix>
 							<releaseBranchPrefix>rl-</releaseBranchPrefix>
