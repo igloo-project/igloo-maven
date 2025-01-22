@@ -86,10 +86,10 @@
 		<igloo.spring-security.version>6.4.2</igloo.spring-security.version>
 		
 		<igloo.servlet-api.version>6.0.0</igloo.servlet-api.version>
-		<igloo.wicket.version>10.3.0</igloo.wicket.version>
+		<igloo.wicket.version>10.2.0</igloo.wicket.version>
 		<igloo.commons-fileupload.version>2.0.0-M2</igloo.commons-fileupload.version>
 		<igloo.wiquery.version>10.0.0</igloo.wiquery.version>
-		<igloo.wicketstuff-select2.version>10.3.0</igloo.wicketstuff-select2.version>
+		<igloo.wicketstuff-select2.version>10.2.0</igloo.wicketstuff-select2.version>
 		<!-- https://github.com/l0rdn1kk0n/wicket-webjars (0.5.x -> wicket 7, 2.0.x -> wicket 8) -->
 		<!-- 2024-01: 4.0.1 triggers errors in basic-application-webapp tests, bootstrap.js and other resources not found -->
 		<igloo.wicket-webjars.version>4.0.0</igloo.wicket-webjars.version>
