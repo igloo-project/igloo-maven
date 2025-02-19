@@ -5,7 +5,7 @@
 	<groupId>org.iglooproject</groupId>
 	<artifactId>igloo-maven</artifactId>
 	<packaging>pom</packaging>
-	<version>5.23.0</version>
+	<version>5.24.0</version>
 	
 	<name>Maven configuration for Igloo stack</name>
 	<description>
@@ -76,8 +76,6 @@
 		<maven.compiler.release>11</maven.compiler.release>
 
 		<masterBranchName>main</masterBranchName>
-		<!-- needed for wicket, bindgen, bindgen-*, commons-fileupload2, gitflow -->
-		<allowSnapshots>true</allowSnapshots>
 	</properties>
 	
 	<build>
