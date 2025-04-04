@@ -117,9 +117,20 @@
 				<version>${igloo.jsonwebtoken.version}</version>
 			</dependency>
 			<dependency>
+				<groupId>com.nimbusds</groupId>
+				<artifactId>nimbus-jose-jwt</artifactId>
+				<version>${igloo.nimbus-jose-jwt.version}</version>
+			</dependency>
+			<dependency>
 				<groupId>com.pivovarit</groupId>
 				<artifactId>throwing-function</artifactId>
 				<version>${igloo.throwing-function.version}</version>
+			</dependency>
+			<!--fix upperbound wicket / spring-boot-test-->
+			<dependency>
+				<groupId>org.ow2.asm</groupId>
+				<artifactId>asm</artifactId>
+				<version>${igloo.asm.version}</version>
 			</dependency>
 		</dependencies>
 	</dependencyManagement>
