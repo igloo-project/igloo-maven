@@ -121,6 +121,12 @@
 				<artifactId>throwing-function</artifactId>
 				<version>${igloo.throwing-function.version}</version>
 			</dependency>
+			<!--fix upperbound wicket / spring-boot-test-->
+			<dependency>
+				<groupId>org.ow2.asm</groupId>
+				<artifactId>asm</artifactId>
+				<version>${igloo.asm.version}</version>
+			</dependency>
 		</dependencies>
 	</dependencyManagement>
 	
