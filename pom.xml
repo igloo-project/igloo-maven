@@ -25,16 +25,17 @@
 	</description>
 
 	<modules>
+		<module>plugins-all</module>
 		<module>plugins-common</module>
 		<module>plugins-report</module>
 		<module>plugins-enforcer</module>
 		<module>plugins-npm</module>
 		<module>plugins-processor</module>
 		<module>plugins-jacoco</module>
-		<module>plugins-all</module>
 
 		<module>properties</module>
 
+		<module>dependencies-all</module>
 		<module>dependencies-commons</module>
 		<module>dependencies-bindgen</module>
 		<module>dependencies-logging</module>
