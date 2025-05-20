@@ -215,6 +215,22 @@
 						</execution>
 					</executions>
 				</plugin>
+				<plugin>
+					<groupId>org.springframework.boot</groupId>
+					<artifactId>spring-boot-maven-plugin</artifactId>
+					<version>${igloo.spring-boot-maven-plugin.version}</version>
+					<executions>
+						<execution>
+							<id>repackage</id>
+							<goals>
+								<goal>repackage</goal>
+							</goals>
+						</execution>
+					</executions>
+					<configuration>
+						<mainClass>${start-class}</mainClass>
+					</configuration>
+				</plugin>
 			</plugins>
 		</pluginManagement>
 	</build>
