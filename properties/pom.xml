@@ -146,6 +146,7 @@
 		<!-- TODO: to remove - used for email notifications -->
 		<igloo.freemarker.version>2.3.34</igloo.freemarker.version>
 		<igloo.imageinfo.version>1.9</igloo.imageinfo.version>
+		<!-- If updated, please ensure that HibernateProxyAwareIntrospector still overrides StandardIntrospector correctly (beware of final methods).  -->
 		<igloo.object-diff.version>0.95</igloo.object-diff.version>
 		<igloo.micrometer.version>1.14.5</igloo.micrometer.version>
 		
