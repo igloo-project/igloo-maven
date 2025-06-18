@@ -39,7 +39,7 @@
 		<igloo.commons-compress.version>1.27.1</igloo.commons-compress.version>
 		<igloo.commons-validator.version>1.9.0</igloo.commons-validator.version>
 		<igloo.commons-collections4.version>4.4</igloo.commons-collections4.version>
-		<igloo.commons-beanutils.version>1.10.1</igloo.commons-beanutils.version>
+		<igloo.commons-beanutils.version>1.11.0</igloo.commons-beanutils.version>
 		<igloo.commons-codec.version>1.18.0</igloo.commons-codec.version>
 		<igloo.javatuples.version>1.2</igloo.javatuples.version>
 		<igloo.angus-mail.version>2.0.3</igloo.angus-mail.version>
@@ -73,7 +73,7 @@
 		<!-- https://github.com/querydsl/querydsl/issues?utf8=%E2%9C%93&q=milestone%3A4.2.1 -->
 		<igloo.querydsl.version>5.1.0</igloo.querydsl.version>
 		<!-- https://jdbc.postgresql.org/changelogs/ -->
-		<igloo.postgresql.version>42.7.5</igloo.postgresql.version>
+		<igloo.postgresql.version>42.7.7</igloo.postgresql.version>
 		
 		<!-- https://github.com/spring-projects/spring-framework/releases -->
 		<igloo.spring.version>6.2.5</igloo.spring.version>
