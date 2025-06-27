@@ -128,7 +128,7 @@
 		<igloo.findbugs-annotations.version>3.0.1u2</igloo.findbugs-annotations.version>
 		<igloo.findbugs-jsr305.version>3.0.2</igloo.findbugs-jsr305.version>
 		<igloo.errorprone.version>2.37.0</igloo.errorprone.version>
-		<igloo.checker-qual.version>3.49.2</igloo.checker-qual.version>
+		<igloo.checker-qual.version>3.49.4</igloo.checker-qual.version>
 		
 		<!-- https://github.com/phax/ph-css/releases -->
 		<igloo.ph-css.version>7.0.4</igloo.ph-css.version>
