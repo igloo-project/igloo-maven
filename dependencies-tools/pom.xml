@@ -132,6 +132,11 @@
 				<artifactId>asm</artifactId>
 				<version>${igloo.asm.version}</version>
 			</dependency>
+			<dependency>
+				<groupId>io.github.classgraph</groupId>
+				<artifactId>classgraph</artifactId>
+				<version>${igloo.classgraph.version}</version>
+			</dependency>
 		</dependencies>
 	</dependencyManagement>
 	

@@ -67,6 +67,7 @@
 											<!-- this dependency is renamed com.sun.mail:jakarta.mail -->
 											<exclude>com.sun.mail:javax.mail</exclude><!-- old implementation -->
 											<exclude>javax.mail:mail-api</exclude><!-- old API -->
+											<exclude>com.querydsl</exclude> <!-- queryDsl is no longer maintained. Use fork by openfeign-->
 										</excludes>
 									</bannedDependencies>
 								</rules>

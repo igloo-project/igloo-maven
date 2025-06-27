@@ -71,7 +71,7 @@
 		<!-- https://github.com/brettwooldridge/HikariCP/blob/dev/CHANGES -->
 		<igloo.hikaricp.version>6.3.0</igloo.hikaricp.version>
 		<!-- https://github.com/querydsl/querydsl/issues?utf8=%E2%9C%93&q=milestone%3A4.2.1 -->
-		<igloo.querydsl.version>5.1.0</igloo.querydsl.version>
+		<igloo.querydsl.version>7.0</igloo.querydsl.version>
 		<!-- https://jdbc.postgresql.org/changelogs/ -->
 		<igloo.postgresql.version>42.7.7</igloo.postgresql.version>
 		
@@ -158,5 +158,6 @@
 		<igloo.logbook.version>3.11.0</igloo.logbook.version>
 		<igloo.aspectjweaver.version>1.9.23</igloo.aspectjweaver.version>
 		<igloo.asm.version>9.8</igloo.asm.version>
+		<igloo.classgraph.version>4.8.180</igloo.classgraph.version>
 	</properties>
 </project>
