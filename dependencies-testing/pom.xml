@@ -117,6 +117,11 @@
 						<groupId>ch.qos.logback</groupId>
 						<artifactId>logback-classic</artifactId>
 					</exclusion>
+					<!-- TODO remove this when hibernate upgrade to 7.x-->
+					<exclusion>
+						<groupId>org.junit.jupiter</groupId>
+						<artifactId>junit-jupiter</artifactId>
+					</exclusion>
 				</exclusions>
 			</dependency>
 			

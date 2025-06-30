@@ -38,11 +38,7 @@
 								<rules>
 									<requireUpperBoundDeps>
 										<excludes>
-											<!-- it is a problem as libraries uses 2.0 alpha -->
-											<exclude>org.slf4j:slf4j-api</exclude>
 											<exclude>jakarta.activation:jakarta.activation-api</exclude>
-											<!-- see properties / pom.xml version is pinned to 4.0.0-->
-											<exclude>de.agilecoders.wicket.webjars:wicket-webjars</exclude>
 											<!-- wicket use 2.0.1.MR / Hibernate and jcache use 2.0.1-->
 											<exclude>jakarta.inject:jakarta.inject-api</exclude>
 										</excludes>
