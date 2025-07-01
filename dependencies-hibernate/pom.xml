@@ -5,7 +5,7 @@
 	<parent>
 		<groupId>org.iglooproject</groupId>
 		<artifactId>properties</artifactId>
-		<version>6.10.1</version>
+		<version>6.11.0</version>
 		<relativePath>../properties</relativePath>
 	</parent>
 	
@@ -137,14 +137,14 @@
 			</dependency>
 
 			<dependency>
-				<groupId>com.querydsl</groupId>
+				 <groupId>io.github.openfeign.querydsl</groupId>
 				<artifactId>querydsl-core</artifactId>
 				<version>${igloo.querydsl.version}</version>
 			</dependency>
 			<dependency>
-				<groupId>com.querydsl</groupId>
+				 <groupId>io.github.openfeign.querydsl</groupId>
 				<artifactId>querydsl-jpa</artifactId>
-				<classifier>jakarta</classifier>
+				
 				<version>${igloo.querydsl.version}</version>
 				<exclusions>
 					<exclusion>
@@ -155,10 +155,20 @@
 			</dependency>
 			<dependency>
 				<!-- Code generation tool -->
-				<groupId>com.querydsl</groupId>
+				 <groupId>io.github.openfeign.querydsl</groupId>
 				<artifactId>querydsl-apt</artifactId>
-				<classifier>jakarta</classifier>
 				<version>${igloo.querydsl.version}</version>
+				<!-- fix upperbound-->
+				<exclusions>
+					<exclusion>
+						<groupId>jakarta.annotation</groupId>
+						<artifactId>jakarta.annotation-api</artifactId>
+					</exclusion>
+					<exclusion>
+						<groupId>jakarta.persistence</groupId>
+						<artifactId>jakarta.persistence-api</artifactId>
+					</exclusion>
+				</exclusions>
 			</dependency>
 			
 			<dependency>

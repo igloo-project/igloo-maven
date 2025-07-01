@@ -5,7 +5,7 @@
 	<parent>
 		<groupId>org.iglooproject</groupId>
 		<artifactId>plugins-report</artifactId>
-		<version>6.10.1</version>
+		<version>6.11.0</version>
 		<relativePath>../plugins-report</relativePath>
 	</parent>
 	
@@ -38,11 +38,7 @@
 								<rules>
 									<requireUpperBoundDeps>
 										<excludes>
-											<!-- it is a problem as libraries uses 2.0 alpha -->
-											<exclude>org.slf4j:slf4j-api</exclude>
 											<exclude>jakarta.activation:jakarta.activation-api</exclude>
-											<!-- see properties / pom.xml version is pinned to 4.0.0-->
-											<exclude>de.agilecoders.wicket.webjars:wicket-webjars</exclude>
 											<!-- wicket use 2.0.1.MR / Hibernate and jcache use 2.0.1-->
 											<exclude>jakarta.inject:jakarta.inject-api</exclude>
 										</excludes>
@@ -67,6 +63,7 @@
 											<!-- this dependency is renamed com.sun.mail:jakarta.mail -->
 											<exclude>com.sun.mail:javax.mail</exclude><!-- old implementation -->
 											<exclude>javax.mail:mail-api</exclude><!-- old API -->
+											<exclude>com.querydsl</exclude> <!-- queryDsl is no longer maintained. Use fork by openfeign-->
 										</excludes>
 									</bannedDependencies>
 								</rules>
