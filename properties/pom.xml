@@ -150,5 +150,8 @@
 		<igloo.micrometer.version>1.15.1</igloo.micrometer.version>
 		<!-- Version 2.x.x require java 17 -->
 		<igloo.openpdf.version>1.4.2</igloo.openpdf.version>
+		<igloo.jsonwebtoken.version>0.12.6</igloo.jsonwebtoken.version>
+		<igloo.nimbus-jose-jwt.version>10.3</igloo.nimbus-jose-jwt.version>
+
 	</properties>
 </project>
