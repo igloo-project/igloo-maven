@@ -35,6 +35,11 @@
 				<artifactId>error_prone_annotations</artifactId>
 				<version>${igloo.errorprone.version}</version>
 			</dependency>
+			<dependency>
+				<groupId>org.checkerframework</groupId>
+				<artifactId>checker-qual</artifactId>
+				<version>${igloo.checker-qual.version}</version>
+			</dependency>
 		</dependencies>
 	</dependencyManagement>
 	

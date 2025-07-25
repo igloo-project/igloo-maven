@@ -29,20 +29,10 @@
 						<groupId>com.google.code.findbugs</groupId>
 						<artifactId>*</artifactId>
 					</exclusion>
-					<!-- code analysis annotation -->
-					<exclusion>
-						<groupId>com.google.errorprone</groupId>
-						<artifactId>error_prone_annotations</artifactId>
-					</exclusion>
 					<!-- annotation for objective C -->
 					<exclusion>
 						<groupId>com.google.j2objc</groupId>
 						<artifactId>j2objc-annotations</artifactId>
-					</exclusion>
-					<!-- code analysis annotation -->
-					<exclusion>
-						<groupId>org.checkerframework</groupId>
-						<artifactId>checker-qual</artifactId>
 					</exclusion>
 				</exclusions>
 				<!-- NOTE: listenablefuture:jar:9999.0-empty-to-avoid-conflict-with-guava is
