@@ -157,6 +157,7 @@
 				<!-- Code generation tool -->
 				 <groupId>io.github.openfeign.querydsl</groupId>
 				<artifactId>querydsl-apt</artifactId>
+				<classifier>jakarta</classifier>
 				<version>${igloo.querydsl.version}</version>
 				<!-- fix upperbound-->
 				<exclusions>
