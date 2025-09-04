@@ -39,7 +39,7 @@
 		<igloo.maven-processor-plugin.version>5.1</igloo.maven-processor-plugin.version>
 		<igloo.spotless-maven-plugin.version>2.44.5</igloo.spotless-maven-plugin.version>
 		<igloo.google-java-format.version>1.23.0</igloo.google-java-format.version>
-		<igloo.spring-boot-maven-plugin.version>3.5.3</igloo.spring-boot-maven-plugin.version>
+		<igloo.spring-boot-maven-plugin.version>3.5.5</igloo.spring-boot-maven-plugin.version>
 		
 		<igloo.node.version>v22.14.0</igloo.node.version>
 
