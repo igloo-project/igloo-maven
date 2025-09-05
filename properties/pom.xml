@@ -5,7 +5,7 @@
 	<parent>
 		<groupId>org.iglooproject</groupId>
 		<artifactId>plugins-report</artifactId>
-		<version>6.14.0</version>
+		<version>6.14.1</version>
 		<relativePath>../plugins-report</relativePath>
 	</parent>
 	
@@ -30,7 +30,7 @@
 		<igloo.commons-io.version>2.19.0</igloo.commons-io.version>
 		<igloo.commons-lang.version>2.6</igloo.commons-lang.version>
 		<!-- https://commons.apache.org/proper/commons-lang/release-notes/RELEASE-NOTES-3.10.txt -->
-		<igloo.commons-lang3.version>3.18.0</igloo.commons-lang3.version>
+		<igloo.commons-lang3.version>3.17.0</igloo.commons-lang3.version>
 		<!-- https://commons.apache.org/proper/commons-text/RELEASE-NOTES.txt -->
 		<!-- TODO: drop internal uses ? -->
 		<igloo.commons-text.version>1.13.1</igloo.commons-text.version>
@@ -42,7 +42,7 @@
 		<igloo.commons-beanutils.version>1.11.0</igloo.commons-beanutils.version>
 		<igloo.commons-codec.version>1.18.0</igloo.commons-codec.version>
 		<igloo.javatuples.version>1.2</igloo.javatuples.version>
-		<igloo.angus-mail.version>2.0.4</igloo.angus-mail.version>
+		<igloo.angus-mail.version>2.0.3</igloo.angus-mail.version>
  		<igloo.jakarta-activation.version>2.0.1</igloo.jakarta-activation.version>
 		<igloo.jakarta-xml-bind-api.version>4.0.2</igloo.jakarta-xml-bind-api.version>
 		<igloo.jackson.version>2.19.1</igloo.jackson.version>
@@ -78,7 +78,7 @@
 		<igloo.postgresql.version>42.7.7</igloo.postgresql.version>
 		
 		<!-- https://github.com/spring-projects/spring-framework/releases -->
-		<igloo.spring.version>6.2.10</igloo.spring.version>
+		<igloo.spring.version>6.2.8</igloo.spring.version>
 		<!-- https://github.com/spring-projects/spring-boot/releases -->
 		<igloo.spring-boot.version>3.5.3</igloo.spring-boot.version>
 		
