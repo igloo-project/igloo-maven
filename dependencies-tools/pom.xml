@@ -137,6 +137,13 @@
 				<artifactId>classgraph</artifactId>
 				<version>${igloo.classgraph.version}</version>
 			</dependency>
+			<!-- XML mapping -->
+			<dependency>
+                                <groupId>jakarta.xml.bind</groupId>
+                                <artifactId>jakarta.xml.bind-api</artifactId>
+                                <version>${igloo.jakarta-xml-bind-api.version}</version>
+                        </dependency>
+
 		</dependencies>
 	</dependencyManagement>
 	
