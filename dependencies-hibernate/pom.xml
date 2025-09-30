@@ -40,7 +40,7 @@
 			</dependency>
 			<dependency>
 				<groupId>org.hibernate.orm</groupId>
-				<artifactId>hibernate-jpamodelgen</artifactId>
+				<artifactId>hibernate-processor</artifactId>
 				<version>${igloo.hibernate.version}</version>
 				<exclusions>
 					<exclusion>
@@ -62,11 +62,6 @@
 				<groupId>jakarta.xml.bind</groupId>
 				<artifactId>jakarta.xml.bind-api</artifactId>
 				<version>${igloo.jakarta-xml-bind-api.version}</version>
-			</dependency>
-			<dependency>
-				<groupId>org.hibernate.common</groupId>
-				<artifactId>hibernate-commons-annotations</artifactId>
-				<version>${igloo.hibernate-commons-annotations.version}</version>
 			</dependency>
 			<dependency>
 				<groupId>net.bytebuddy</groupId>
