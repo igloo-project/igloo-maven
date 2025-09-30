@@ -139,6 +139,12 @@
 				<artifactId>angus-mail</artifactId>
 				<version>${igloo.angus-mail.version}</version>
 			</dependency>
+			<!--Override spring-boot-starter-mail (upperbound with angus-mail)-->
+			<dependency>
+				<groupId>org.eclipse.angus</groupId>
+				<artifactId>jakarta.mail</artifactId>
+				<version>${igloo.angus-mail.version}</version>
+			</dependency>
 
 			<dependency>
 				<groupId>javax.annotation</groupId>
@@ -162,7 +168,7 @@
 			<dependency>
 				<groupId>com.fasterxml.jackson.core</groupId>
 				<artifactId>jackson-annotations</artifactId>
-				<version>${igloo.jackson.version}</version>
+				<version>${igloo.jackson-annotation.version}</version>
 			</dependency>
 			<dependency>
 				<groupId>com.fasterxml.jackson.core</groupId>
