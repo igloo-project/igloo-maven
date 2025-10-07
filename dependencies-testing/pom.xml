@@ -5,7 +5,7 @@
 	<parent>
 		<groupId>org.iglooproject</groupId>
 		<artifactId>properties</artifactId>
-		<version>6.15.0</version>
+		<version>6.16.0</version>
 		<relativePath>../properties</relativePath>
 	</parent>
 
@@ -42,6 +42,11 @@
 			<dependency>
 				<groupId>org.junit.platform</groupId>
 				<artifactId>junit-platform-commons</artifactId>
+				<version>${igloo.junit5-suite.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.junit.platform</groupId>
+				<artifactId>junit-platform-launcher</artifactId>
 				<version>${igloo.junit5-suite.version}</version>
 			</dependency>
 			<dependency>
@@ -117,11 +122,6 @@
 						<groupId>ch.qos.logback</groupId>
 						<artifactId>logback-classic</artifactId>
 					</exclusion>
-					<!-- TODO remove this when hibernate upgrade to 7.x-->
-					<exclusion>
-						<groupId>org.junit.jupiter</groupId>
-						<artifactId>junit-jupiter</artifactId>
-					</exclusion>
 				</exclusions>
 			</dependency>
 			
@@ -138,12 +138,37 @@
 			</dependency>
 			<dependency>
 				<groupId>org.mock-server</groupId>
+				<artifactId>mockserver-client-java</artifactId>
+				<version>${igloo.mockserver.version}</version>
+				<exclusions>
+					<!-- we use jcl-over-slf4j -->
+					<exclusion>
+						<groupId>commons-logging</groupId>
+						<artifactId>commons-logging</artifactId>
+					</exclusion>
+				</exclusions>
+			</dependency>
+			<dependency>
+				<groupId>org.mock-server</groupId>
+				<artifactId>mockserver-netty</artifactId>
+				<version>${igloo.mockserver.version}</version>
+				<exclusions>
+					<!-- we use jcl-over-slf4j -->
+					<exclusion>
+						<groupId>commons-logging</groupId>
+						<artifactId>commons-logging</artifactId>
+					</exclusion>
+				</exclusions>
+			</dependency>
+			<dependency>
+				<groupId>org.mock-server</groupId>
 				<artifactId>mockserver-spring-test-listener</artifactId>
 				<version>${igloo.mockserver.version}</version>
 				<exclusions>
+					<!-- we use jcl-over-slf4j -->
 					<exclusion>
-						<groupId>*</groupId>
-						<artifactId>*</artifactId>
+						<groupId>commons-logging</groupId>
+						<artifactId>commons-logging</artifactId>
 					</exclusion>
 				</exclusions>
 			</dependency>
@@ -152,9 +177,10 @@
 				<artifactId>mockserver-junit-jupiter</artifactId>
 				<version>${igloo.mockserver.version}</version>
 				<exclusions>
+					<!-- we use jcl-over-slf4j -->
 					<exclusion>
-						<groupId>*</groupId>
-						<artifactId>*</artifactId>
+						<groupId>commons-logging</groupId>
+						<artifactId>commons-logging</artifactId>
 					</exclusion>
 				</exclusions>
 			</dependency>

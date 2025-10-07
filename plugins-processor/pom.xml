@@ -5,7 +5,7 @@
 	<parent>
 		<groupId>org.iglooproject</groupId>
 		<artifactId>plugins-npm</artifactId>
-		<version>6.15.0</version>
+		<version>6.16.0</version>
 		<relativePath>../plugins-npm</relativePath>
 	</parent>
 	
@@ -21,7 +21,7 @@
 		<igloo.processor.immutables>org.immutables.processor.ProxyProcessor</igloo.processor.immutables>
 		<igloo.processor.querydsl>com.querydsl.apt.jpa.JPAAnnotationProcessor</igloo.processor.querydsl>
 		<igloo.processor.bindgen>org.bindgen.processor.Processor</igloo.processor.bindgen>
-		<igloo.processor.jpamodelgen>org.hibernate.jpamodelgen.JPAMetaModelEntityProcessor</igloo.processor.jpamodelgen>
+		<igloo.processor.jpamodelgen>org.hibernate.processor.HibernateProcessor</igloo.processor.jpamodelgen>
 		<igloo.processor.spring>org.springframework.boot.autoconfigureprocessor.AutoConfigureAnnotationProcessor</igloo.processor.spring>
 		<igloo.processors>${igloo.processor.querydsl},${igloo.processor.jpamodelgen},${igloo.processor.bindgen}</igloo.processors>
 
