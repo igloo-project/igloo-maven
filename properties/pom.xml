@@ -107,7 +107,6 @@
 		<igloo.jersey.version>3.1.11</igloo.jersey.version>
 		<igloo.jaxrs.version>4.0.0</igloo.jaxrs.version>
 		
-		<!--Do not update to 5.12 since hibernate-test use 5.10 version-->
 		<igloo.junit5.version>5.14.0</igloo.junit5.version>
 		<igloo.mockserver.version>5.15.0</igloo.mockserver.version>
 		<!--follow spring-boot starter version -->
