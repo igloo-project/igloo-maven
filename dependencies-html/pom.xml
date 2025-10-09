@@ -36,6 +36,11 @@
 				<artifactId>ph-css</artifactId>
 				<version>${igloo.ph-css.version}</version>
 				<exclusions>
+					<!--ph-cache has jakarta annotation 3.0.0 which is not compatible with tomcat 10-->
+					<exclusion>
+						<groupId>jakarta.annotation</groupId>
+						<artifactId>jakarta.annotation-api</artifactId>
+					</exclusion>
 					<!-- code analysis annotation -->
 					<exclusion>
 						<groupId>com.google.code.findbugs</groupId>
