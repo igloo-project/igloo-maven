@@ -5,7 +5,7 @@
 	<parent>
 		<groupId>org.iglooproject</groupId>
 		<artifactId>plugins-report</artifactId>
-		<version>6.16.2</version>
+		<version>6.16.3</version>
 		<relativePath>../plugins-report</relativePath>
 	</parent>
 	
@@ -86,12 +86,15 @@
 		<igloo.spring-security.version>6.5.5</igloo.spring-security.version>
 		
 		<igloo.servlet-api.version>6.0.0</igloo.servlet-api.version>
-		<!--do not update until the fix WICKET-7141 is included in a version-->
-		<igloo.wicket.version>10.7.0</igloo.wicket.version>
+		<!--do not update until the fix WICKET-7141 and WICKET-7167 is included in a version-->
+		<!-- TODO when the version will be updated -> delete asm dependence-->
+		<!--TODO delete wicket webjar exclusion when the version will be updated-->
+		<igloo.wicket.version>10.2.0</igloo.wicket.version>
 		<igloo.commons-fileupload.version>2.0.0-M4</igloo.commons-fileupload.version>
 		<igloo.wiquery.version>10.0.0</igloo.wiquery.version>
-		<igloo.wicketstuff-select2.version>10.7.0</igloo.wicketstuff-select2.version>
-		<igloo.wicket-webjars.version>4.0.13</igloo.wicket-webjars.version>
+		<igloo.wicketstuff-select2.version>10.2.0</igloo.wicketstuff-select2.version>
+		<!--upperbound Waiting from wicket 4.5.0 to upgrade-->
+		<igloo.wicket-webjars.version>4.0.11</igloo.wicket-webjars.version>
 		<igloo.webjars-locator-core.version>0.59</igloo.webjars-locator-core.version>
 		<igloo.webjars.bootstrap4.version>4.6.0</igloo.webjars.bootstrap4.version>
 		<igloo.webjars.popper1.version>1.16.1-lts</igloo.webjars.popper1.version>
@@ -108,13 +111,14 @@
 		<igloo.jersey.version>3.1.11</igloo.jersey.version>
 		<igloo.jaxrs.version>4.0.0</igloo.jaxrs.version>
 		
-		<igloo.junit5.version>5.14.0</igloo.junit5.version>
+		<!--Do not update to 5.12 since hibernate-test use 5.10 version-->
+		<igloo.junit5.version>5.13.4</igloo.junit5.version>
 		<igloo.mockserver.version>5.15.0</igloo.mockserver.version>
 		<!--follow spring-boot starter version -->
 		<igloo.testcontainers.version>1.21.3</igloo.testcontainers.version>
 		
 		<!-- keep in sync with junit5 -->
-		<igloo.junit5-suite.version>1.14.0</igloo.junit5-suite.version>
+		<igloo.junit5-suite.version>1.13.4</igloo.junit5-suite.version>
 		<igloo.mockito.version>5.20.0</igloo.mockito.version>
 		<igloo.assertj.version>3.27.6</igloo.assertj.version>
 		<igloo.assertj-guava.version>3.27.6</igloo.assertj-guava.version>
@@ -155,6 +159,7 @@
 		<igloo.throwing-function.version>1.6.1</igloo.throwing-function.version>
 		<igloo.logbook.version>3.12.3</igloo.logbook.version>
 		<igloo.aspectjweaver.version>1.9.24</igloo.aspectjweaver.version>
+		<igloo.asm.version>9.8</igloo.asm.version>
 		<igloo.classgraph.version>4.8.181</igloo.classgraph.version>
 	</properties>
 </project>

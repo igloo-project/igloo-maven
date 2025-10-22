@@ -1,22 +1,23 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
-	
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		 xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+
 	<modelVersion>4.0.0</modelVersion>
-	
+
 	<parent>
 		<groupId>org.iglooproject</groupId>
 		<artifactId>properties</artifactId>
-		<version>6.16.2</version>
+		<version>6.16.3</version>
 		<relativePath>../properties</relativePath>
 	</parent>
-	
+
 	<artifactId>dependencies-tools</artifactId>
 	<packaging>pom</packaging>
-	
+
 	<name>Managed dependencies - Tools (poi, ...)</name>
 	<description>
 		This module provides managed tools dependencies.
 	</description>
-	
+
 	<dependencyManagement>
 		<dependencies>
 			<dependency>
@@ -79,8 +80,8 @@
 				<artifactId>micrometer-core</artifactId>
 				<version>${igloo.micrometer.version}</version>
 			</dependency>
-			
-			 <!-- upper bound dependency - override spring security-->
+
+			<!-- upper bound dependency - override spring security-->
 			<dependency>
 				<groupId>io.micrometer</groupId>
 				<artifactId>micrometer-commons</artifactId>
@@ -93,14 +94,14 @@
 				<artifactId>micrometer-observation</artifactId>
 				<version>${igloo.micrometer.version}</version>
 			</dependency>
-			
-			 <!-- upper bound dependency - override spring security-->
+
+			<!-- upper bound dependency - override spring security-->
 			<dependency>
 				<groupId>io.micrometer</groupId>
 				<artifactId>micrometer-registry-prometheus</artifactId>
 				<version>${igloo.micrometer.version}</version>
 			</dependency>
-			
+
 			<dependency>
 				<groupId>org.apache.httpcomponents.client5</groupId>
 				<artifactId>httpclient5</artifactId>
@@ -126,6 +127,12 @@
 				<artifactId>throwing-function</artifactId>
 				<version>${igloo.throwing-function.version}</version>
 			</dependency>
+			<!--fix upperbound wicket / spring-boot-test-->
+			<dependency>
+				<groupId>org.ow2.asm</groupId>
+				<artifactId>asm</artifactId>
+				<version>${igloo.asm.version}</version>
+			</dependency>
 			<dependency>
 				<groupId>io.github.classgraph</groupId>
 				<artifactId>classgraph</artifactId>
@@ -133,14 +140,14 @@
 			</dependency>
 			<!-- XML mapping -->
 			<dependency>
-                                <groupId>jakarta.xml.bind</groupId>
-                                <artifactId>jakarta.xml.bind-api</artifactId>
-                                <version>${igloo.jakarta-xml-bind-api.version}</version>
-                        </dependency>
+				<groupId>jakarta.xml.bind</groupId>
+				<artifactId>jakarta.xml.bind-api</artifactId>
+				<version>${igloo.jakarta-xml-bind-api.version}</version>
+			</dependency>
 
 		</dependencies>
 	</dependencyManagement>
-	
+
 	<build>
 		<plugins>
 			<plugin>
