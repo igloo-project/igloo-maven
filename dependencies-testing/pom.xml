@@ -205,6 +205,21 @@
 				<artifactId>awaitility</artifactId>
 				<version>${igloo.awaitility.version}</version>
 			</dependency>
+			<dependency>
+				<groupId>de.redsix</groupId>
+				<artifactId>pdfcompare</artifactId>
+				<version>${pdf-compare.version}</version>
+				<exclusions>
+					<exclusion>
+						<groupId>ch.qos.logback</groupId>
+						<artifactId>logback-classic</artifactId>
+					</exclusion>
+					<exclusion>
+						<groupId>commons-logging</groupId>
+						<artifactId>commons-logging</artifactId>
+					</exclusion>
+				</exclusions>
+			</dependency>
 		</dependencies>
 	</dependencyManagement>
 
