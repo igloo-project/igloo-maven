@@ -5,7 +5,7 @@
 	<parent>
 		<groupId>org.iglooproject</groupId>
 		<artifactId>plugins-report</artifactId>
-		<version>6.16.4</version>
+		<version>6.17.0</version>
 		<relativePath>../plugins-report</relativePath>
 	</parent>
 	
@@ -103,6 +103,9 @@
 		<igloo.webjars.select2-bootstrap-5-theme.version>1.3.0</igloo.webjars.select2-bootstrap-5-theme.version>
 		<igloo.webjars.clipboard.version>2.0.11</igloo.webjars.clipboard.version>
 		<igloo.webjars.jquery-mask-plugin.version>1.14.16</igloo.webjars.jquery-mask-plugin.version>
+
+		<igloo.vue.version>3.5.22</igloo.vue.version>
+		<igloo.vue-datepicker.version>11.0.3</igloo.vue-datepicker.version>
 		
 		<!-- https://www.slf4j.org/news.html -->
 		<igloo.slf4j.version>2.0.17</igloo.slf4j.version>
