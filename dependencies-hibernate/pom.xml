@@ -138,7 +138,6 @@
 			<dependency>
 				 <groupId>io.github.openfeign.querydsl</groupId>
 				<artifactId>querydsl-jpa</artifactId>
-				
 				<version>${igloo.querydsl.version}</version>
 				<exclusions>
 					<exclusion>
