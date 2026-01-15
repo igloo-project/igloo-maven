@@ -208,7 +208,7 @@
 			<dependency>
 				<groupId>de.redsix</groupId>
 				<artifactId>pdfcompare</artifactId>
-				<version>${pdf-compare.version}</version>
+				<version>${igloo.pdfcompare.version}</version>
 				<exclusions>
 					<exclusion>
 						<groupId>ch.qos.logback</groupId>
