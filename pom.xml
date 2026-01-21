@@ -79,7 +79,7 @@
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 		<maven.compiler.release>17</maven.compiler.release>
 
-		<masterBranchName>main</masterBranchName>
+		<productionBranchName>main</productionBranchName>
 		<!-- needed for wicket, bindgen, bindgen-*, commons-fileupload2 -->
 		<allowSnapshots>true</allowSnapshots>
 
@@ -191,7 +191,7 @@
 					<configuration>
 						<autoVersionSubmodules>true</autoVersionSubmodules>
 						<flowInitContext>
-							<masterBranchName>${masterBranchName}</masterBranchName>
+							<masterBranchName>${productionBranchName}</masterBranchName>
 							<developBranchName>dev</developBranchName>
 							<featureBranchPrefix>ft-</featureBranchPrefix>
 							<releaseBranchPrefix>rl-</releaseBranchPrefix>
