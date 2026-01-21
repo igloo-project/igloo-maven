@@ -75,7 +75,7 @@
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 		<maven.compiler.release>11</maven.compiler.release>
 
-		<masterBranchName>main</masterBranchName>
+		<productionBranchName>v5-main</productionBranchName>
 	</properties>
 	
 	<build>
@@ -180,11 +180,11 @@
 					<configuration>
 						<autoVersionSubmodules>true</autoVersionSubmodules>
 						<flowInitContext>
-							<masterBranchName>${masterBranchName}</masterBranchName>
-							<developBranchName>dev</developBranchName>
-							<featureBranchPrefix>ft-</featureBranchPrefix>
-							<releaseBranchPrefix>rl-</releaseBranchPrefix>
-							<hotfixBranchPrefix>hf-</hotfixBranchPrefix>
+							<masterBranchName>${productionBranchName}</masterBranchName>
+							<developBranchName>v5-dev</developBranchName>
+							<featureBranchPrefix>v5-ft-</featureBranchPrefix>
+							<releaseBranchPrefix>v5-rl-</releaseBranchPrefix>
+							<hotfixBranchPrefix>v5-hf-</hotfixBranchPrefix>
 							<versionTagPrefix>v</versionTagPrefix>
 						</flowInitContext>
 					</configuration>
@@ -202,12 +202,12 @@
 					<version>${igloo.gitflow-maven-plugin.version}</version>
 					<configuration>
 						<gitFlowConfig>
-							<productionBranch>${masterBranchName}</productionBranch>
-							<developmentBranch>dev</developmentBranch>
-							<featureBranchPrefix>ft-</featureBranchPrefix>
-							<releaseBranchPrefix>rl-</releaseBranchPrefix>
-							<hotfixBranchPrefix>hf-</hotfixBranchPrefix>
-							<supportBranchPrefix>sp-</supportBranchPrefix>
+							<productionBranch>${productionBranchName}</productionBranch>
+							<developmentBranch>v5-dev</developmentBranch>
+							<featureBranchPrefix>v5-ft-</featureBranchPrefix>
+							<releaseBranchPrefix>v5-rl-</releaseBranchPrefix>
+							<hotfixBranchPrefix>v5-hf-</hotfixBranchPrefix>
+							<supportBranchPrefix>v5-sp-</supportBranchPrefix>
 							<versionTagPrefix>v</versionTagPrefix>
 							<origin>origin</origin>
 						</gitFlowConfig>
