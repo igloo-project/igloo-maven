@@ -27,11 +27,8 @@ maven-deploy:
   rules:
     - if: $CI_COMMIT_BRANCH == "main"
     - if: $CI_COMMIT_BRANCH == "dev"
-    - if: $CI_COMMIT_BRANCH == "igloo-boot"
-    - if: $CI_COMMIT_BRANCH == "igloo-boot-dev"
     - if: $CI_COMMIT_BRANCH =~ /^ft-.*-deploy$/
     - if: $CI_COMMIT_BRANCH =~ /^hf-.*$/
-    - if: $CI_COMMIT_BRANCH =~ /^igloo-boot-ft-.*$/
   tags:
     - docker
 
