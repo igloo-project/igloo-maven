@@ -76,6 +76,11 @@
 		<maven.compiler.release>11</maven.compiler.release>
 
 		<productionBranchName>v5-main</productionBranchName>
+
+		<!-- setup versions-maven-plugin version for gitflow release -->
+		<!-- see https://github.com/aleksandr-m/gitflow-maven-plugin/commit/4adbb9a06b73504c20a7ac59be85e3f24f0edb5f -->
+		<!-- default 2.6.0 is known to be buggy when parent version is updated -->
+		<versionsMavenPluginVersion>${igloo.versions-maven-plugin.version}</versionsMavenPluginVersion>
 	</properties>
 	
 	<build>
