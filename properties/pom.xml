@@ -5,7 +5,7 @@
 	<parent>
 		<groupId>org.iglooproject</groupId>
 		<artifactId>plugins-report</artifactId>
-		<version>6.18.0</version>
+		<version>6.19.0</version>
 		<relativePath>../plugins-report</relativePath>
 	</parent>
 	
@@ -124,7 +124,7 @@
 		<igloo.grizzly.version>4.0.2</igloo.grizzly.version>
 		<igloo.logunit.version>2.0.0</igloo.logunit.version>
 		<igloo.awaitility.version>4.3.0</igloo.awaitility.version>
-		<igloo.pdf-compare.version>1.2.7</igloo.pdf-compare.version>
+		<igloo.pdfcompare.version>1.2.7</igloo.pdfcompare.version>
 		
 		<igloo.findbugs-annotations.version>3.0.1u2</igloo.findbugs-annotations.version>
 		<igloo.findbugs-jsr305.version>3.0.2</igloo.findbugs-jsr305.version>
