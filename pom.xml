@@ -5,7 +5,7 @@
 	<groupId>org.iglooproject</groupId>
 	<artifactId>igloo-maven</artifactId>
 	<packaging>pom</packaging>
-	<version>6.20.0-SNAPSHOT</version>
+	<version>${revision}</version>
 
 	<name>Maven configuration for Igloo stack</name>
 	<description>
@@ -55,6 +55,8 @@
 	</modules>
 
 	<properties>
+		<revision>6.20.0-rev-SNAPSHOT</revision>
+
 		<!-- pure maven plugin configuration -->
 		<minimal.maven.version>3.8.0</minimal.maven.version>
 		<igloo.maven-clean-plugin.version>3.5.0</igloo.maven-clean-plugin.version>
@@ -62,7 +64,6 @@
 		<igloo.maven-install-plugin.version>3.1.4</igloo.maven-install-plugin.version>
 		<igloo.maven-site-plugin.version>4.0.0-M16</igloo.maven-site-plugin.version>
 		<igloo.maven-project-info-reports-plugin.version>3.9.0</igloo.maven-project-info-reports-plugin.version>
-		<igloo.jgitflow-maven-plugin.version>1.0-m5.1</igloo.jgitflow-maven-plugin.version>
 		<igloo.gitflow-maven-plugin.version>1.21.0</igloo.gitflow-maven-plugin.version>
 		<igloo.jsch.version>0.1.55</igloo.jsch.version>
 		<igloo.owasp-maven-plugin.version>12.1.9</igloo.owasp-maven-plugin.version>
@@ -96,8 +97,8 @@
 				<artifactId>maven-enforcer-plugin</artifactId>
 			</plugin>
 			<plugin>
-				<groupId>external.atlassian.jgitflow</groupId>
-				<artifactId>jgitflow-maven-plugin</artifactId>
+				<groupId>org.codehaus.mojo</groupId>
+				<artifactId>flatten-maven-plugin</artifactId>
 			</plugin>
 		</plugins>
 		<pluginManagement>
@@ -165,6 +166,8 @@
 					<artifactId>flatten-maven-plugin</artifactId>
 					<version>${igloo.flatten-maven-plugin.version}</version>
 					<configuration>
+						<updatePomFile>true</updatePomFile>
+						<flattenMode>resolveCiFriendliesOnly</flattenMode>
 						<outputDirectory>${project.build.directory}</outputDirectory>
 					</configuration>
 					<executions>
@@ -185,36 +188,13 @@
 					</executions>
 				</plugin>
 				<plugin>
-					<groupId>external.atlassian.jgitflow</groupId>
-					<artifactId>jgitflow-maven-plugin</artifactId>
-					<version>${igloo.jgitflow-maven-plugin.version}</version>
-					<configuration>
-						<autoVersionSubmodules>true</autoVersionSubmodules>
-						<flowInitContext>
-							<masterBranchName>${productionBranchName}</masterBranchName>
-							<developBranchName>dev</developBranchName>
-							<featureBranchPrefix>ft-</featureBranchPrefix>
-							<releaseBranchPrefix>rl-</releaseBranchPrefix>
-							<hotfixBranchPrefix>hf-</hotfixBranchPrefix>
-							<versionTagPrefix>v</versionTagPrefix>
-						</flowInitContext>
-					</configuration>
-					<dependencies>
-						<dependency>
-							<groupId>com.jcraft</groupId>
-							<artifactId>jsch</artifactId>
-							<version>${igloo.jsch.version}</version>
-						</dependency>
-					</dependencies>
-				</plugin>
-				<plugin>
 					<groupId>com.amashchenko.maven.plugin</groupId>
 					<artifactId>gitflow-maven-plugin</artifactId>
 					<version>${igloo.gitflow-maven-plugin.version}</version>
 					<configuration>
 						<gitFlowConfig>
 							<productionBranch>main</productionBranch>
-							<developmentBranch>dev</developmentBranch>
+							<developmentBranch>ft-maven-revision-deploy</developmentBranch>
 							<featureBranchPrefix>ft-</featureBranchPrefix>
 							<releaseBranchPrefix>rl-</releaseBranchPrefix>
 							<hotfixBranchPrefix>hf-</hotfixBranchPrefix>
@@ -222,6 +202,9 @@
 							<versionTagPrefix>v</versionTagPrefix>
 							<origin>origin</origin>
 						</gitFlowConfig>
+						<!-- handle release versioning with revision property -->
+						<versionProperty>revision</versionProperty>
+						<skipUpdateVersion>true</skipUpdateVersion>
 						<skipFeatureVersion>true</skipFeatureVersion>
 						<!-- do not run verify, done on CI -->
 						<skipTestProject>true</skipTestProject>
