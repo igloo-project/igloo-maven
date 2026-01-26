@@ -37,7 +37,7 @@
     <igloo.maven-enforcer-plugin.version>3.6.2</igloo.maven-enforcer-plugin.version>
     <igloo.maven-processor-plugin.version>5.1</igloo.maven-processor-plugin.version>
     <igloo.google-java-format.version>1.28.0</igloo.google-java-format.version>
-    <igloo.spring-boot-maven-plugin.version>3.5.9</igloo.spring-boot-maven-plugin.version>
+    <igloo.spring-boot-maven-plugin.version>4.0.1</igloo.spring-boot-maven-plugin.version>
     <igloo.jaxb2-maven-plugin.version>4.0.0</igloo.jaxb2-maven-plugin.version>
     <igloo.node.version>v24.12.0</igloo.node.version>
     <!-- add-opens as needed by tomcat / wicket -->

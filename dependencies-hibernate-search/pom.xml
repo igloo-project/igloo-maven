@@ -24,11 +24,6 @@
         <version>${igloo.hibernate-search.version}</version>
       </dependency>
       <dependency>
-        <groupId>org.hibernate.search</groupId>
-        <artifactId>hibernate-search-v5migrationhelper-orm</artifactId>
-        <version>${igloo.hibernate-search.version}</version>
-      </dependency>
-      <dependency>
         <groupId>org.apache.lucene</groupId>
         <artifactId>lucene-core</artifactId>
         <version>${igloo.lucene.version}</version>

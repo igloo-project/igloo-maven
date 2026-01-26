@@ -16,37 +16,37 @@
       <dependency>
         <groupId>org.junit.jupiter</groupId>
         <artifactId>junit-jupiter</artifactId>
-        <version>${igloo.junit5.version}</version>
+        <version>${igloo.junit6.version}</version>
       </dependency>
       <dependency>
         <groupId>org.junit.jupiter</groupId>
         <artifactId>junit-jupiter-api</artifactId>
-        <version>${igloo.junit5.version}</version>
+        <version>${igloo.junit6.version}</version>
       </dependency>
       <dependency>
         <groupId>org.junit.jupiter</groupId>
         <artifactId>junit-jupiter-engine</artifactId>
-        <version>${igloo.junit5.version}</version>
+        <version>${igloo.junit6.version}</version>
       </dependency>
       <dependency>
         <groupId>org.junit.jupiter</groupId>
         <artifactId>junit-jupiter-params</artifactId>
-        <version>${igloo.junit5.version}</version>
+        <version>${igloo.junit6.version}</version>
       </dependency>
       <dependency>
         <groupId>org.junit.platform</groupId>
         <artifactId>junit-platform-commons</artifactId>
-        <version>${igloo.junit5-suite.version}</version>
+        <version>${igloo.junit6-suite.version}</version>
       </dependency>
       <dependency>
         <groupId>org.junit.platform</groupId>
         <artifactId>junit-platform-launcher</artifactId>
-        <version>${igloo.junit5-suite.version}</version>
+        <version>${igloo.junit6-suite.version}</version>
       </dependency>
       <dependency>
         <groupId>org.junit.platform</groupId>
         <artifactId>junit-platform-suite-engine</artifactId>
-        <version>${igloo.junit5-suite.version}</version>
+        <version>${igloo.junit6-suite.version}</version>
       </dependency>
       <dependency>
         <groupId>org.mockito</groupId>
@@ -77,11 +77,6 @@
         <groupId>org.assertj</groupId>
         <artifactId>assertj-guava</artifactId>
         <version>${igloo.assertj-guava.version}</version>
-      </dependency>
-      <dependency>
-        <groupId>org.glassfish.jersey.containers</groupId>
-        <artifactId>jersey-container-grizzly2-servlet</artifactId>
-        <version>${igloo.jersey.version}</version>
       </dependency>
       <dependency>
         <groupId>org.springframework.boot</groupId>
@@ -186,7 +181,7 @@
       </dependency>
       <dependency>
         <groupId>org.testcontainers</groupId>
-        <artifactId>postgresql</artifactId>
+        <artifactId>testcontainers-postgresql</artifactId>
         <version>${igloo.testcontainers.version}</version>
       </dependency>
       <dependency>

@@ -34,7 +34,7 @@
       </dependency>
       <dependency>
         <groupId>org.hibernate.orm</groupId>
-        <artifactId>hibernate-jpamodelgen</artifactId>
+        <artifactId>hibernate-processor</artifactId>
         <version>${igloo.hibernate.version}</version>
         <exclusions>
           <exclusion>
@@ -48,14 +48,14 @@
         </exclusions>
       </dependency>
       <dependency>
+        <groupId>org.hibernate.validator</groupId>
+        <artifactId>hibernate-validator</artifactId>
+        <version>${igloo.hibernate-validator.version}</version>
+      </dependency>
+      <dependency>
         <groupId>jakarta.xml.bind</groupId>
         <artifactId>jakarta.xml.bind-api</artifactId>
         <version>${igloo.jakarta-xml-bind-api.version}</version>
-      </dependency>
-      <dependency>
-        <groupId>org.hibernate.common</groupId>
-        <artifactId>hibernate-commons-annotations</artifactId>
-        <version>${igloo.hibernate-commons-annotations.version}</version>
       </dependency>
       <dependency>
         <groupId>net.bytebuddy</groupId>
@@ -93,11 +93,6 @@
         <groupId>com.github.ben-manes.caffeine</groupId>
         <artifactId>jcache</artifactId>
         <version>${igloo.caffeine.version}</version>
-      </dependency>
-      <dependency>
-        <groupId>javax.cache</groupId>
-        <artifactId>cache-api</artifactId>
-        <version>${igloo.jcache.version}</version>
       </dependency>
       <dependency>
         <groupId>com.zaxxer</groupId>
@@ -152,15 +147,12 @@
         </exclusions>
       </dependency>
       <dependency>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-flyway</artifactId>
+      </dependency>
+      <dependency>
         <groupId>org.flywaydb</groupId>
         <artifactId>flyway-core</artifactId>
-        <version>${igloo.flywaydb.version}</version>
-        <exclusions>
-          <exclusion>
-            <groupId>org.projectlombok</groupId>
-            <artifactId>lombok</artifactId>
-          </exclusion>
-        </exclusions>
       </dependency>
       <dependency>
         <groupId>org.flywaydb</groupId>

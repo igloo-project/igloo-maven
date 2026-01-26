@@ -22,6 +22,11 @@
             <groupId>org.springframework</groupId>
             <artifactId>spring-jcl</artifactId>
           </exclusion>
+          <!-- we use jcl-over-slf4j -->
+          <exclusion>
+            <groupId>commons-logging</groupId>
+            <artifactId>commons-logging</artifactId>
+          </exclusion>
         </exclusions>
       </dependency>
       <dependency>
@@ -105,11 +110,21 @@
         <version>${igloo.spring.version}</version>
       </dependency>
       <dependency>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-security-test</artifactId>
+        <version>${igloo.spring-boot.version}</version>
+      </dependency>
+      <dependency>
         <groupId>org.zalando</groupId>
         <artifactId>logbook-core</artifactId>
         <version>${igloo.logbook.version}</version>
       </dependency>
       <!-- Spring Security -->
+      <dependency>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-security</artifactId>
+        <version>${igloo.spring-boot.version}</version>
+      </dependency>
       <dependency>
         <groupId>org.springframework.security</groupId>
         <artifactId>spring-security-core</artifactId>
@@ -144,14 +159,13 @@
       </dependency>
       <dependency>
         <groupId>org.springframework.security</groupId>
-        <artifactId>spring-security-ldap</artifactId>
+        <artifactId>spring-security-oauth2-jose</artifactId>
         <version>${igloo.spring-security.version}</version>
       </dependency>
       <dependency>
         <groupId>org.springframework.security</groupId>
-        <artifactId>spring-security-test</artifactId>
+        <artifactId>spring-security-ldap</artifactId>
         <version>${igloo.spring-security.version}</version>
-        <scope>test</scope>
       </dependency>
       <!-- Spring Boot -->
       <dependency>
@@ -166,12 +180,32 @@
       </dependency>
       <dependency>
         <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-jackson</artifactId>
+        <version>${igloo.spring-boot.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-test</artifactId>
         <version>${igloo.spring-boot.version}</version>
       </dependency>
       <dependency>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-autoconfigure-processor</artifactId>
+        <version>${igloo.spring-boot.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-hibernate</artifactId>
+        <version>${igloo.spring-boot.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-data-jpa</artifactId>
+        <version>${igloo.spring-boot.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-security-oauth2-client</artifactId>
         <version>${igloo.spring-boot.version}</version>
       </dependency>
       <!-- Spring Boot Starters-->
@@ -197,7 +231,7 @@
       </dependency>
       <dependency>
         <groupId>org.springframework.boot</groupId>
-        <artifactId>spring-boot-starter-aop</artifactId>
+        <artifactId>spring-boot-starter-aspectjc</artifactId>
         <version>${igloo.spring-boot.version}</version>
       </dependency>
       <dependency>
@@ -292,7 +326,7 @@
       </dependency>
       <dependency>
         <groupId>org.springframework.boot</groupId>
-        <artifactId>spring-boot-starter-freemarker</artifactId>
+        <artifactId>spring-boot-cache</artifactId>
         <version>${igloo.spring-boot.version}</version>
       </dependency>
       <dependency>
@@ -318,11 +352,6 @@
       <dependency>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-jdbc</artifactId>
-        <version>${igloo.spring-boot.version}</version>
-      </dependency>
-      <dependency>
-        <groupId>org.springframework.boot</groupId>
-        <artifactId>spring-boot-starter-jersey</artifactId>
         <version>${igloo.spring-boot.version}</version>
       </dependency>
       <dependency>
@@ -362,7 +391,7 @@
       </dependency>
       <dependency>
         <groupId>org.springframework.boot</groupId>
-        <artifactId>spring-boot-starter-oauth2-authorization-server</artifactId>
+        <artifactId>spring-boot-starter-security-oauth2-authorization-server</artifactId>
         <version>${igloo.spring-boot.version}</version>
         <exclusions>
           <exclusion>
@@ -374,12 +403,19 @@
       </dependency>
       <dependency>
         <groupId>org.springframework.boot</groupId>
-        <artifactId>spring-boot-starter-oauth2-client</artifactId>
+        <artifactId>spring-boot-starter-security-oauth2-client</artifactId>
         <version>${igloo.spring-boot.version}</version>
+        <exclusions>
+          <exclusion>
+            <!-- Pour exclure Logback et utiliser Log4j2 -->
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-logging</artifactId>
+          </exclusion>
+        </exclusions>
       </dependency>
       <dependency>
         <groupId>org.springframework.boot</groupId>
-        <artifactId>spring-boot-starter-oauth2-resource-server</artifactId>
+        <artifactId>spring-boot-starter-security-oauth2-resource-server</artifactId>
         <version>${igloo.spring-boot.version}</version>
       </dependency>
       <dependency>
@@ -439,7 +475,7 @@
       </dependency>
       <dependency>
         <groupId>org.springframework.boot</groupId>
-        <artifactId>spring-boot-starter-web</artifactId>
+        <artifactId>spring-boot-starter-webmvc</artifactId>
         <version>${igloo.spring-boot.version}</version>
       </dependency>
       <dependency>
@@ -454,8 +490,24 @@
       </dependency>
       <dependency>
         <groupId>org.springframework.boot</groupId>
-        <artifactId>spring-boot-starter-web-services</artifactId>
+        <artifactId>spring-boot-starter-webservices</artifactId>
         <version>${igloo.spring-boot.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-flyway</artifactId>
+        <version>${igloo.spring-boot.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>org.flywaydb</groupId>
+        <artifactId>flyway-core</artifactId>
+        <version>${igloo.flywaydb.version}</version>
+        <exclusions>
+          <exclusion>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+          </exclusion>
+        </exclusions>
       </dependency>
       <dependency>
         <groupId>org.springdoc</groupId>
