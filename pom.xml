@@ -43,7 +43,7 @@
     <module>dependencies-tools</module>
   </modules>
   <properties>
-    <revision>6.21.0-SNAPSHOT</revision>
+    <revision>7.0.0-SNAPSHOT</revision>
     <!-- pure maven plugin configuration -->
     <minimal.maven.version>3.8.0</minimal.maven.version>
     <igloo.maven-clean-plugin.version>3.5.0</igloo.maven-clean-plugin.version>
