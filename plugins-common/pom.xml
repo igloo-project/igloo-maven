@@ -21,7 +21,10 @@
 		<igloo.maven-compiler-plugin.version>3.14.1</igloo.maven-compiler-plugin.version>
 		<igloo.maven-resources-plugin.version>3.4.0</igloo.maven-resources-plugin.version>
 		<igloo.maven-surefire-plugin.version>3.5.4</igloo.maven-surefire-plugin.version>
-		<igloo.maven-war-plugin.version>3.5.1</igloo.maven-war-plugin.version>
+		<!--
+		see maven-jar-plugin
+		-->
+		<igloo.maven-war-plugin.version>3.5.0</igloo.maven-war-plugin.version>
 		<igloo.maven-assembly-plugin.version>3.8.0</igloo.maven-assembly-plugin.version>
 		<!--
 		maven-jar-plugin:3.5.0 + ${revision}: OutOfScopeException for eclipse m2eclipse

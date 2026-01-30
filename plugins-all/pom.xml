@@ -4,9 +4,9 @@
 	
 	<parent>
 		<groupId>org.iglooproject</groupId>
-		<artifactId>plugins-jacoco</artifactId>
+		<artifactId>plugins-spring</artifactId>
 		<version>${revision}</version>
-		<relativePath>../plugins-jacoco</relativePath>
+		<relativePath>../plugins-spring</relativePath>
 	</parent>
 	
 	<artifactId>plugins-all</artifactId>

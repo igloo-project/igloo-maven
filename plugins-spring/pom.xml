@@ -1,0 +1,105 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+	
+	<modelVersion>4.0.0</modelVersion>
+	
+	<parent>
+		<groupId>org.iglooproject</groupId>
+		<artifactId>plugins-jacoco</artifactId>
+		<version>${revision}</version>
+		<relativePath>../plugins-jacoco</relativePath>
+	</parent>
+	
+	<artifactId>plugins-spring</artifactId>
+	<packaging>pom</packaging>
+	
+	<name>Maven - Spring plugins</name>
+	<description>
+		This module configures Spring plugins (including spring-boot).
+		
+		Configuration are linked to spring-app maven profile, triggered with file spring-app.profile
+		(in the pom.xml folder).
+		
+		It configures maven-jar-plugin, maven-war-plugin and spring-boot-maven-plugin to
+		setup spring boot launcher setup, and add dependencies-all for dependency management.
+	</description>
+	
+	<profiles>
+		<profile>
+			<id>spring-app</id>
+			<activation>
+				<file>
+					<exists>spring-app.profile</exists>
+				</file>
+			</activation>
+			<properties>
+				<!-- empty values, override in project -->
+				<start-class />
+				<igloo.add-opens />
+			</properties>
+			<build>
+				<pluginManagement>
+					<plugins>
+						<plugin>
+							<groupId>org.apache.maven.plugins</groupId>
+							<artifactId>maven-jar-plugin</artifactId>
+							<configuration>
+								<archive>
+									<manifest>
+										<mainClass>${start-class}</mainClass>
+										<addDefaultImplementationEntries>true</addDefaultImplementationEntries>
+									</manifest>
+									<manifestEntries>
+										<Add-Opens>${igloo.add-opens}</Add-Opens>
+									</manifestEntries>
+								</archive>
+							</configuration>
+						</plugin>
+						<plugin>
+							<groupId>org.apache.maven.plugins</groupId>
+							<artifactId>maven-war-plugin</artifactId>
+							<configuration>
+								<archive>
+									<manifest>
+										<mainClass>${start-class}</mainClass>
+										<addDefaultImplementationEntries>true</addDefaultImplementationEntries>
+									</manifest>
+									<manifestEntries>
+										<Add-Opens>${igloo.add-opens}</Add-Opens>
+									</manifestEntries>
+								</archive>
+							</configuration>
+						</plugin>
+						<plugin>
+							<groupId>org.springframework.boot</groupId>
+							<artifactId>spring-boot-maven-plugin</artifactId>
+							<version>${igloo.spring-boot-maven-plugin.version}</version>
+							<executions>
+								<execution>
+									<id>repackage</id>
+									<goals>
+										<goal>repackage</goal>
+									</goals>
+								</execution>
+							</executions>
+							<configuration>
+								<mainClass>${start-class}</mainClass>
+							</configuration>
+						</plugin>
+					</plugins>
+				</pluginManagement>
+			</build>
+
+			<dependencyManagement>
+				<dependencies>
+					<dependency>
+						<groupId>org.iglooproject</groupId>
+						<artifactId>dependencies-all</artifactId>
+						<version>${revision}</version>
+						<type>pom</type>
+						<scope>import</scope>
+					</dependency>
+				</dependencies>
+			</dependencyManagement>
+		</profile>
+	</profiles>
+</project>

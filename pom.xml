@@ -26,6 +26,7 @@
 
 	<modules>
 		<module>plugins-all</module>
+		<module>plugins-spring</module>
 		<module>plugins-common</module>
 		<module>plugins-report</module>
 		<module>plugins-enforcer</module>
@@ -50,8 +51,6 @@
 		<module>dependencies-quality-annotations</module>
 		<module>dependencies-html</module>
 		<module>dependencies-tools</module>
-
-		<module>spring-boot-starter-parent</module>
 	</modules>
 
 	<properties>
