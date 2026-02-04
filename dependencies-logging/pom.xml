@@ -1,92 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
-	
-	<modelVersion>4.0.0</modelVersion>
-	
-	<parent>
-		<groupId>org.iglooproject</groupId>
-		<artifactId>properties</artifactId>
-		<version>${revision}</version>
-		<relativePath>../properties</relativePath>
-	</parent>
-	
-	<artifactId>dependencies-logging</artifactId>
-	<packaging>pom</packaging>
-	
-	<name>Managed dependencies - Logging stack</name>
-	<description>
-		This module provides managed logging dependencies.
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <groupId>org.iglooproject</groupId>
+    <artifactId>properties</artifactId>
+    <version>${revision}</version>
+    <relativePath>../properties</relativePath>
+  </parent>
+  <artifactId>dependencies-logging</artifactId>
+  <packaging>pom</packaging>
+  <name>Managed dependencies - Logging stack</name>
+  <description>This module provides managed logging dependencies.
 
 		Logging is based upon a slf4j frontend and log4j2 backend. Various
-		configurations are done to allow jcl and jul redirection to slf4j.
-	</description>
-	
-	<dependencyManagement>
-		<dependencies>
-			<dependency>
-				<groupId>org.slf4j</groupId>
-				<artifactId>slf4j-api</artifactId>
-				<version>${igloo.slf4j.version}</version>
-			</dependency>
-			<dependency>
-				<groupId>org.slf4j</groupId>
-				<artifactId>slf4j-simple</artifactId>
-				<version>${igloo.slf4j.version}</version>
-			</dependency>
-		
-			<dependency>
-				<groupId>org.apache.logging.log4j</groupId>
-				<artifactId>log4j-core</artifactId>
-				<version>${igloo.log4j2.version}</version>
-			</dependency>
-		
-			<dependency>
-				<groupId>org.apache.logging.log4j</groupId>
-				<artifactId>log4j-api</artifactId>
-				<version>${igloo.log4j2.version}</version>
-			</dependency>
-		
-			<dependency>
-				<groupId>org.apache.logging.log4j</groupId>
-				<artifactId>log4j-slf4j2-impl</artifactId>
-				<version>${igloo.log4j2.version}</version>
-			</dependency>
-
-			<dependency>
-				<groupId>org.apache.logging.log4j</groupId>
-				<artifactId>log4j-layout-template-json</artifactId>
-				<version>${igloo.log4j2.version}</version>
-			</dependency>
-
-			<dependency>
-				<groupId>org.slf4j</groupId>
-				<artifactId>jcl-over-slf4j</artifactId>
-				<version>${igloo.slf4j.version}</version>
-			</dependency>
-
-			<dependency>
-				<groupId>org.slf4j</groupId>
-				<artifactId>jul-to-slf4j</artifactId>
-				<version>${igloo.slf4j.version}</version>
-			</dependency>
-
-			<dependency>
-				<groupId>io.github.netmikey.logunit</groupId>
-				<artifactId>logunit-log4j2</artifactId>
-				<version>${igloo.logunit.version}</version>
-			</dependency>
-		</dependencies>
-	</dependencyManagement>
-	
-	<build>
-		<plugins>
-			<plugin>
-				<groupId>org.codehaus.mojo</groupId>
-				<artifactId>flatten-maven-plugin</artifactId>
-				<configuration>
-					<updatePomFile>true</updatePomFile>
-					<flattenMode>bom</flattenMode>
-				</configuration>
-			</plugin>
-		</plugins>
-	</build>
+		configurations are done to allow jcl and jul redirection to slf4j.</description>
+  <dependencyManagement>
+    <dependencies>
+      <dependency>
+        <groupId>org.slf4j</groupId>
+        <artifactId>slf4j-api</artifactId>
+        <version>${igloo.slf4j.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>org.slf4j</groupId>
+        <artifactId>slf4j-simple</artifactId>
+        <version>${igloo.slf4j.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>org.apache.logging.log4j</groupId>
+        <artifactId>log4j-core</artifactId>
+        <version>${igloo.log4j2.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>org.apache.logging.log4j</groupId>
+        <artifactId>log4j-api</artifactId>
+        <version>${igloo.log4j2.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>org.apache.logging.log4j</groupId>
+        <artifactId>log4j-slf4j2-impl</artifactId>
+        <version>${igloo.log4j2.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>org.apache.logging.log4j</groupId>
+        <artifactId>log4j-layout-template-json</artifactId>
+        <version>${igloo.log4j2.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>org.slf4j</groupId>
+        <artifactId>jcl-over-slf4j</artifactId>
+        <version>${igloo.slf4j.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>org.slf4j</groupId>
+        <artifactId>jul-to-slf4j</artifactId>
+        <version>${igloo.slf4j.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>io.github.netmikey.logunit</groupId>
+        <artifactId>logunit-log4j2</artifactId>
+        <version>${igloo.logunit.version}</version>
+      </dependency>
+    </dependencies>
+  </dependencyManagement>
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>org.codehaus.mojo</groupId>
+        <artifactId>flatten-maven-plugin</artifactId>
+        <configuration>
+          <updatePomFile>true</updatePomFile>
+          <flattenMode>bom</flattenMode>
+        </configuration>
+      </plugin>
+    </plugins>
+  </build>
 </project>

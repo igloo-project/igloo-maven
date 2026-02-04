@@ -1,237 +1,223 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
-	
-	<modelVersion>4.0.0</modelVersion>
-	
-	<parent>
-		<groupId>org.iglooproject</groupId>
-		<artifactId>igloo-maven</artifactId>
-		<version>${revision}</version>
-	</parent>
-	
-	<artifactId>plugins-common</artifactId>
-	<packaging>pom</packaging>
-	
-	<name>Maven - Common plugins configuration</name>
-	<description>
-		This module configures common maven plugins (compiler, ...).
-	</description>
-	
-	<properties>
-		<!-- maven plugins versions -->
-		<igloo.maven-compiler-plugin.version>3.14.1</igloo.maven-compiler-plugin.version>
-		<igloo.maven-resources-plugin.version>3.4.0</igloo.maven-resources-plugin.version>
-		<igloo.maven-surefire-plugin.version>3.5.4</igloo.maven-surefire-plugin.version>
-		<!--
-		see maven-jar-plugin
-		-->
-		<igloo.maven-war-plugin.version>3.5.0</igloo.maven-war-plugin.version>
-		<igloo.maven-assembly-plugin.version>3.8.0</igloo.maven-assembly-plugin.version>
-		<!--
-		maven-jar-plugin:3.5.0 + ${revision}: OutOfScopeException for eclipse m2eclipse
-		https://github.com/eclipse-m2e/m2e-core/issues/2091
-		-->
-		<igloo.maven-jar-plugin.version>3.4.2</igloo.maven-jar-plugin.version>
-		<igloo.maven-source-plugin.version>3.4.0</igloo.maven-source-plugin.version>
-		<igloo.maven-javadoc-plugin.version>3.12.0</igloo.maven-javadoc-plugin.version>
-		<igloo.maven-dependency-plugin.version>3.9.0</igloo.maven-dependency-plugin.version>
-		<igloo.maven-antrun-plugin.version>3.2.0</igloo.maven-antrun-plugin.version>
-		<igloo.exec-maven-plugin.version>3.6.3</igloo.exec-maven-plugin.version>
-		<igloo.maven-failsafe-plugin.version>3.5.4</igloo.maven-failsafe-plugin.version>
-		<igloo.jacoco-maven-plugin.version>0.8.14</igloo.jacoco-maven-plugin.version>
-		<!--Rollback version 3.2.1 to 3.2.0 because of issue : https://github.com/mojohaus/buildnumber-maven-plugin/issues/229-->
-		<!--Initializing a new igloo project does not work with the 3.2.1 version-->
-		<igloo.buildnumber-maven-plugin.version>3.2.0</igloo.buildnumber-maven-plugin.version>
-		<igloo.frontend-maven-plugin.version>2.0.0</igloo.frontend-maven-plugin.version>
-		<igloo.maven-enforcer-plugin.version>3.6.2</igloo.maven-enforcer-plugin.version>
-		<igloo.maven-processor-plugin.version>5.1</igloo.maven-processor-plugin.version>
-		<igloo.google-java-format.version>1.28.0</igloo.google-java-format.version>
-		<igloo.spring-boot-maven-plugin.version>3.5.9</igloo.spring-boot-maven-plugin.version>
-		<igloo.jaxb2-maven-plugin.version>4.0.0</igloo.jaxb2-maven-plugin.version>
-		
-		<igloo.node.version>v24.12.0</igloo.node.version>
-
-		<!-- add-opens as needed by tomcat / wicket -->
-		<igloo.add-opens>java.base/java.lang java.base/java.io java.base/java.util java.base/java.util.concurrent java.rmi/sun.rmi.transport</igloo.add-opens>
-	</properties>
-	
-	<build>
-		<plugins>
-			<plugin>
-				<groupId>org.codehaus.mojo</groupId>
-				<artifactId>flatten-maven-plugin</artifactId>
-				<configuration>
-					<updatePomFile>true</updatePomFile>
-					<flattenMode>resolveCiFriendliesOnly</flattenMode>
-				</configuration>
-			</plugin>
-		</plugins>
-		<pluginManagement>
-			<plugins>
-				<plugin>
-					<groupId>org.apache.maven.plugins</groupId>
-					<artifactId>maven-compiler-plugin</artifactId>
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <groupId>org.iglooproject</groupId>
+    <artifactId>igloo-maven</artifactId>
+    <version>${revision}</version>
+  </parent>
+  <artifactId>plugins-common</artifactId>
+  <packaging>pom</packaging>
+  <name>Maven - Common plugins configuration</name>
+  <description>This module configures common maven plugins (compiler, ...).</description>
+  <properties>
+    <!-- maven plugins versions -->
+    <igloo.maven-compiler-plugin.version>3.14.1</igloo.maven-compiler-plugin.version>
+    <igloo.maven-resources-plugin.version>3.4.0</igloo.maven-resources-plugin.version>
+    <igloo.maven-surefire-plugin.version>3.5.4</igloo.maven-surefire-plugin.version>
+    <!-- see maven-jar-plugin -->
+    <igloo.maven-war-plugin.version>3.5.0</igloo.maven-war-plugin.version>
+    <igloo.maven-assembly-plugin.version>3.8.0</igloo.maven-assembly-plugin.version>
+    <!--
+      maven-jar-plugin:3.5.0 + ${revision}: OutOfScopeException for eclipse m2eclipse
+      https://github.com/eclipse-m2e/m2e-core/issues/2091
+    -->
+    <igloo.maven-jar-plugin.version>3.4.2</igloo.maven-jar-plugin.version>
+    <igloo.maven-source-plugin.version>3.4.0</igloo.maven-source-plugin.version>
+    <igloo.maven-javadoc-plugin.version>3.12.0</igloo.maven-javadoc-plugin.version>
+    <igloo.maven-dependency-plugin.version>3.9.0</igloo.maven-dependency-plugin.version>
+    <igloo.maven-antrun-plugin.version>3.2.0</igloo.maven-antrun-plugin.version>
+    <igloo.exec-maven-plugin.version>3.6.3</igloo.exec-maven-plugin.version>
+    <igloo.maven-failsafe-plugin.version>3.5.4</igloo.maven-failsafe-plugin.version>
+    <igloo.jacoco-maven-plugin.version>0.8.14</igloo.jacoco-maven-plugin.version>
+    <!--Rollback version 3.2.1 to 3.2.0 because of issue : https://github.com/mojohaus/buildnumber-maven-plugin/issues/229-->
+    <!--Initializing a new igloo project does not work with the 3.2.1 version-->
+    <igloo.buildnumber-maven-plugin.version>3.2.0</igloo.buildnumber-maven-plugin.version>
+    <igloo.frontend-maven-plugin.version>2.0.0</igloo.frontend-maven-plugin.version>
+    <igloo.maven-enforcer-plugin.version>3.6.2</igloo.maven-enforcer-plugin.version>
+    <igloo.maven-processor-plugin.version>5.1</igloo.maven-processor-plugin.version>
+    <igloo.google-java-format.version>1.28.0</igloo.google-java-format.version>
+    <igloo.spring-boot-maven-plugin.version>3.5.9</igloo.spring-boot-maven-plugin.version>
+    <igloo.jaxb2-maven-plugin.version>4.0.0</igloo.jaxb2-maven-plugin.version>
+    <igloo.node.version>v24.12.0</igloo.node.version>
+    <!-- add-opens as needed by tomcat / wicket -->
+    <igloo.add-opens>java.base/java.lang java.base/java.io java.base/java.util java.base/java.util.concurrent java.rmi/sun.rmi.transport</igloo.add-opens>
+  </properties>
+  <build>
+    <pluginManagement>
+      <plugins>
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-compiler-plugin</artifactId>
           <version>${igloo.maven-compiler-plugin.version}</version>
           <configuration>
             <!-- https://github.com/spring-projects/spring-framework/wiki/Upgrading-to-Spring-Framework-6.x#parameter-name-retention -->
             <!-- spring >= 6.1 does not parse bytecode to retrieve parameter names; compilation config must be done to include parameters -->
             <parameters>true</parameters>
           </configuration>
-				</plugin>
-				<plugin>
-					<groupId>org.apache.maven.plugins</groupId>
-					<artifactId>maven-resources-plugin</artifactId>
-					<version>${igloo.maven-resources-plugin.version}</version>
-					<configuration>
-						<!--
-						Default delimiter includes '@' and it is not possible to escape it. We disable it as
-						we do not uses this delimiter.
-						See MRESOURCES-141
-						-->
-						<delimiters>
-							<delimiter>${*}</delimiter>
-						</delimiters>
-						<useDefaultDelimiters>false</useDefaultDelimiters>
-						<!-- exclude from filtering common binary extensions -->
-						<nonFilteredFileExtensions>
-							<nonFilteredFileExtension>zip</nonFilteredFileExtension>
-							<nonFilteredFileExtension>gz</nonFilteredFileExtension>
-							<nonFilteredFileExtension>pdf</nonFilteredFileExtension>
-							<nonFilteredFileExtension>xls</nonFilteredFileExtension>
-							<nonFilteredFileExtension>xlsx</nonFilteredFileExtension>
-							<nonFilteredFileExtension>doc</nonFilteredFileExtension>
-							<nonFilteredFileExtension>docx</nonFilteredFileExtension>
-							<nonFilteredFileExtension>jpg</nonFilteredFileExtension>
-							<nonFilteredFileExtension>jpeg</nonFilteredFileExtension>
-							<nonFilteredFileExtension>gif</nonFilteredFileExtension>
-							<nonFilteredFileExtension>png</nonFilteredFileExtension>
-							<nonFilteredFileExtension>svg</nonFilteredFileExtension>
-							<nonFilteredFileExtension>psd</nonFilteredFileExtension>
-							<nonFilteredFileExtension>ftl</nonFilteredFileExtension>
-							<!-- License file -->
-							<nonFilteredFileExtension>lic</nonFilteredFileExtension>
-						</nonFilteredFileExtensions>
-					</configuration>
-				</plugin>
-				<plugin>
-					<groupId>org.apache.maven.plugins</groupId>
-					<artifactId>maven-surefire-plugin</artifactId>
-					<version>${igloo.maven-surefire-plugin.version}</version>
-				</plugin>
-				<plugin>
-					<groupId>org.apache.maven.plugins</groupId>
-					<artifactId>maven-failsafe-plugin</artifactId>
-					<version>${igloo.maven-failsafe-plugin.version}</version>
-				</plugin>
-				<plugin>
-					<groupId>org.apache.maven.plugins</groupId>
-					<artifactId>maven-jar-plugin</artifactId>
-					<version>${igloo.maven-jar-plugin.version}</version>
-					<configuration>
-						<archive>
-							<!-- configure manifest file; it is used to lookup component version -->
-							<manifest>
-								<addDefaultImplementationEntries>true</addDefaultImplementationEntries>
-							</manifest>
-							<manifestEntries>
-								<Implementation-Build>${buildNumber}</Implementation-Build>
-								<Built-Date>${timestamp}</Built-Date>
-								<Built-By>${user.name}</Built-By>
-							</manifestEntries>
-						</archive>
-					</configuration>
-				</plugin>
-				<plugin>
-					<groupId>org.apache.maven.plugins</groupId>
-					<artifactId>maven-war-plugin</artifactId>
-					<configuration>
-						<archive>
-							<!-- configure manifest file; it is used to lookup component version -->
-							<manifest>
-								<addDefaultImplementationEntries>true</addDefaultImplementationEntries>
-							</manifest>
-							<manifestEntries>
-								<Implementation-Build>${buildNumber}</Implementation-Build>
-								<Built-Date>${timestamp}</Built-Date>
-								<Built-By>${user.name}</Built-By>
-							</manifestEntries>
-						</archive>
-					</configuration>
-					<version>${igloo.maven-war-plugin.version}</version>
-				</plugin>
-				<plugin>
-					<groupId>org.apache.maven.plugins</groupId>
-					<artifactId>maven-assembly-plugin</artifactId>
-					<version>${igloo.maven-assembly-plugin.version}</version>
-				</plugin>
-				<plugin>
-					<groupId>org.apache.maven.plugins</groupId>
-					<artifactId>maven-source-plugin</artifactId>
-					<version>${igloo.maven-source-plugin.version}</version>
-				</plugin>
-				<plugin>
-					<groupId>org.apache.maven.plugins</groupId>
-					<artifactId>maven-javadoc-plugin</artifactId>
-					<version>${igloo.maven-javadoc-plugin.version}</version>
-					<!-- TODO: doclint issue -->
-				</plugin>
-				<plugin>
-					<groupId>org.apache.maven.plugins</groupId>
-					<artifactId>maven-dependency-plugin</artifactId>
-					<version>${igloo.maven-dependency-plugin.version}</version>
-				</plugin>
-				<plugin>
-					<!--
-						This plugin allows to use ${buildNumber} and ${timestamp} property for manifest generation
-					-->
-					<groupId>org.codehaus.mojo</groupId>
-					<artifactId>buildnumber-maven-plugin</artifactId>
-					<version>${igloo.buildnumber-maven-plugin.version}</version>
-					<executions>
-						<execution>
-							<phase>validate</phase>
-							<goals>
-								<goal>create</goal>
-							</goals>
-						</execution>
-					</executions>
-					<configuration>
-						<doCheck>false</doCheck>
-						<doUpdate>false</doUpdate>
-					</configuration>
-				</plugin>
-				<!-- TODO: add cargo-maven2-plugin to easily run a tomcat container -->
-				<plugin>
-					<groupId>org.apache.maven.plugins</groupId>
-					<artifactId>maven-antrun-plugin</artifactId>
-					<version>${igloo.maven-antrun-plugin.version}</version>
-				</plugin>
-				<plugin>
-					<groupId>org.codehaus.mojo</groupId>
-					<artifactId>exec-maven-plugin</artifactId>
-					<version>${igloo.exec-maven-plugin.version}</version>
-				</plugin>
-				<plugin>
-					<groupId>org.springframework.boot</groupId>
-					<artifactId>spring-boot-maven-plugin</artifactId>
-					<version>${igloo.spring-boot-maven-plugin.version}</version>
-					<executions>
-						<execution>
-							<id>repackage</id>
-							<goals>
-								<goal>repackage</goal>
-							</goals>
-						</execution>
-					</executions>
-					<configuration>
-						<mainClass>${start-class}</mainClass>
-					</configuration>
-				</plugin>
-				<plugin>
-					<groupId>org.codehaus.mojo</groupId>
-					<artifactId>jaxb2-maven-plugin</artifactId>
-					<version>${igloo.jaxb2-maven-plugin.version}</version>
-				</plugin>
-			</plugins>
-		</pluginManagement>
-	</build>
+        </plugin>
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-resources-plugin</artifactId>
+          <version>${igloo.maven-resources-plugin.version}</version>
+          <configuration>
+            <!--
+              Default delimiter includes '@' and it is not possible to escape it. We disable it as we do not uses this 
+              delimiter. See MRESOURCES-141
+            -->
+            <delimiters>
+              <delimiter>${*}</delimiter>
+            </delimiters>
+            <useDefaultDelimiters>false</useDefaultDelimiters>
+            <!-- exclude from filtering common binary extensions -->
+            <nonFilteredFileExtensions>
+              <nonFilteredFileExtension>zip</nonFilteredFileExtension>
+              <nonFilteredFileExtension>gz</nonFilteredFileExtension>
+              <nonFilteredFileExtension>pdf</nonFilteredFileExtension>
+              <nonFilteredFileExtension>xls</nonFilteredFileExtension>
+              <nonFilteredFileExtension>xlsx</nonFilteredFileExtension>
+              <nonFilteredFileExtension>doc</nonFilteredFileExtension>
+              <nonFilteredFileExtension>docx</nonFilteredFileExtension>
+              <nonFilteredFileExtension>jpg</nonFilteredFileExtension>
+              <nonFilteredFileExtension>jpeg</nonFilteredFileExtension>
+              <nonFilteredFileExtension>gif</nonFilteredFileExtension>
+              <nonFilteredFileExtension>png</nonFilteredFileExtension>
+              <nonFilteredFileExtension>svg</nonFilteredFileExtension>
+              <nonFilteredFileExtension>psd</nonFilteredFileExtension>
+              <nonFilteredFileExtension>ftl</nonFilteredFileExtension>
+              <!-- License file -->
+              <nonFilteredFileExtension>lic</nonFilteredFileExtension>
+            </nonFilteredFileExtensions>
+          </configuration>
+        </plugin>
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-surefire-plugin</artifactId>
+          <version>${igloo.maven-surefire-plugin.version}</version>
+        </plugin>
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-failsafe-plugin</artifactId>
+          <version>${igloo.maven-failsafe-plugin.version}</version>
+        </plugin>
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-jar-plugin</artifactId>
+          <version>${igloo.maven-jar-plugin.version}</version>
+          <configuration>
+            <archive>
+              <!-- configure manifest file; it is used to lookup component version -->
+              <manifest>
+                <addDefaultImplementationEntries>true</addDefaultImplementationEntries>
+              </manifest>
+              <manifestEntries>
+                <Implementation-Build>${buildNumber}</Implementation-Build>
+                <Built-Date>${timestamp}</Built-Date>
+                <Built-By>${user.name}</Built-By>
+              </manifestEntries>
+            </archive>
+          </configuration>
+        </plugin>
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-war-plugin</artifactId>
+          <version>${igloo.maven-war-plugin.version}</version>
+          <configuration>
+            <archive>
+              <!-- configure manifest file; it is used to lookup component version -->
+              <manifest>
+                <addDefaultImplementationEntries>true</addDefaultImplementationEntries>
+              </manifest>
+              <manifestEntries>
+                <Implementation-Build>${buildNumber}</Implementation-Build>
+                <Built-Date>${timestamp}</Built-Date>
+                <Built-By>${user.name}</Built-By>
+              </manifestEntries>
+            </archive>
+          </configuration>
+        </plugin>
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-assembly-plugin</artifactId>
+          <version>${igloo.maven-assembly-plugin.version}</version>
+        </plugin>
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-source-plugin</artifactId>
+          <version>${igloo.maven-source-plugin.version}</version>
+        </plugin>
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-javadoc-plugin</artifactId>
+          <version>${igloo.maven-javadoc-plugin.version}</version>
+          <!-- TODO: doclint issue -->
+        </plugin>
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-dependency-plugin</artifactId>
+          <version>${igloo.maven-dependency-plugin.version}</version>
+        </plugin>
+        <plugin>
+          <!-- This plugin allows to use ${buildNumber} and ${timestamp} property for manifest generation -->
+          <groupId>org.codehaus.mojo</groupId>
+          <artifactId>buildnumber-maven-plugin</artifactId>
+          <version>${igloo.buildnumber-maven-plugin.version}</version>
+          <configuration>
+            <doCheck>false</doCheck>
+            <doUpdate>false</doUpdate>
+          </configuration>
+          <executions>
+            <execution>
+              <goals>
+                <goal>create</goal>
+              </goals>
+              <phase>validate</phase>
+            </execution>
+          </executions>
+        </plugin>
+        <!-- TODO: add cargo-maven2-plugin to easily run a tomcat container -->
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-antrun-plugin</artifactId>
+          <version>${igloo.maven-antrun-plugin.version}</version>
+        </plugin>
+        <plugin>
+          <groupId>org.codehaus.mojo</groupId>
+          <artifactId>exec-maven-plugin</artifactId>
+          <version>${igloo.exec-maven-plugin.version}</version>
+        </plugin>
+        <plugin>
+          <groupId>org.springframework.boot</groupId>
+          <artifactId>spring-boot-maven-plugin</artifactId>
+          <version>${igloo.spring-boot-maven-plugin.version}</version>
+          <configuration>
+            <mainClass>${start-class}</mainClass>
+          </configuration>
+          <executions>
+            <execution>
+              <id>repackage</id>
+              <goals>
+                <goal>repackage</goal>
+              </goals>
+            </execution>
+          </executions>
+        </plugin>
+        <plugin>
+          <groupId>org.codehaus.mojo</groupId>
+          <artifactId>jaxb2-maven-plugin</artifactId>
+          <version>${igloo.jaxb2-maven-plugin.version}</version>
+        </plugin>
+      </plugins>
+    </pluginManagement>
+    <plugins>
+      <plugin>
+        <groupId>org.codehaus.mojo</groupId>
+        <artifactId>flatten-maven-plugin</artifactId>
+        <configuration>
+          <updatePomFile>true</updatePomFile>
+          <flattenMode>resolveCiFriendliesOnly</flattenMode>
+        </configuration>
+      </plugin>
+    </plugins>
+  </build>
 </project>

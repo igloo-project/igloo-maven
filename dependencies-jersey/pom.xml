@@ -1,101 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
-	
-	<modelVersion>4.0.0</modelVersion>
-	
-	<parent>
-		<groupId>org.iglooproject</groupId>
-		<artifactId>properties</artifactId>
-		<version>${revision}</version>
-		<relativePath>../properties</relativePath>
-	</parent>
-	
-	<artifactId>dependencies-jersey</artifactId>
-	<packaging>pom</packaging>
-	
-	<name>Managed dependencies - Jersey stack</name>
-	<description>
-		This module provides managed jersey dependencies.
-	</description>
-	
-	<dependencyManagement>
-		<dependencies>
-			<dependency>
-				<groupId>org.glassfish.jersey.core</groupId>
-				<artifactId>jersey-server</artifactId>
-				<version>${igloo.jersey.version}</version>
-			</dependency>
-			
-			<dependency>
-				<groupId>org.glassfish.jersey.core</groupId>
-				<artifactId>jersey-client</artifactId>
-				<version>${igloo.jersey.version}</version>
-			</dependency>
-			
-			<dependency>
-				<groupId>org.glassfish.jersey.media</groupId>
-				<artifactId>jersey-media-multipart</artifactId>
-				<version>${igloo.jersey.version}</version>
-			</dependency>
-			
-			<dependency>
-				<groupId>org.glassfish.jersey.ext</groupId>
-				<artifactId>jersey-spring6</artifactId>
-				<version>${igloo.jersey.version}</version>
-			</dependency>
-
-
-			<!-- For testing purpose (embedded web-server) -->
-
-			<dependency>
-				<groupId>org.glassfish.grizzly</groupId>
-				<artifactId>grizzly-http-server</artifactId>
-				<version>${igloo.grizzly.version}</version>
-			</dependency>
-			<dependency>
-				<groupId>org.glassfish.grizzly</groupId>
-				<artifactId>grizzly-http-servlet</artifactId>
-				<version>${igloo.grizzly.version}</version>
-			</dependency>
-			<dependency>
-				<groupId>org.glassfish.jersey.containers</groupId>
-				<artifactId>jersey-container-servlet-core</artifactId>
-				<version>${igloo.jersey.version}</version>
-			</dependency>
-			<dependency>
-				<groupId>org.glassfish.jersey.containers</groupId>
-				<artifactId>jersey-container-grizzly2-servlet</artifactId>
-				<version>${igloo.jersey.version}</version>
-			</dependency>
-			<dependency>
-				<groupId>org.glassfish.jersey.containers</groupId>
-				<artifactId>jersey-container-grizzly2-http</artifactId>
-				<version>${igloo.jersey.version}</version>
-			</dependency>
-
-			<dependency>
-				<groupId>jakarta.ws.rs</groupId>
-				<artifactId>jakarta.ws.rs-api</artifactId>
-				<version>${igloo.jaxrs.version}</version>
-			</dependency>
-			
-			<dependency>
-				<groupId>com.fasterxml.jackson.jakarta.rs</groupId>
-				<artifactId>jackson-jakarta-rs-json-provider</artifactId>
-				<version>${igloo.jackson.version}</version>
-			</dependency>
-		</dependencies>
-	</dependencyManagement>
-	
-	<build>
-		<plugins>
-			<plugin>
-				<groupId>org.codehaus.mojo</groupId>
-				<artifactId>flatten-maven-plugin</artifactId>
-				<configuration>
-					<updatePomFile>true</updatePomFile>
-					<flattenMode>bom</flattenMode>
-				</configuration>
-			</plugin>
-		</plugins>
-	</build>
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <groupId>org.iglooproject</groupId>
+    <artifactId>properties</artifactId>
+    <version>${revision}</version>
+    <relativePath>../properties</relativePath>
+  </parent>
+  <artifactId>dependencies-jersey</artifactId>
+  <packaging>pom</packaging>
+  <name>Managed dependencies - Jersey stack</name>
+  <description>This module provides managed jersey dependencies.</description>
+  <dependencyManagement>
+    <dependencies>
+      <dependency>
+        <groupId>org.glassfish.jersey.core</groupId>
+        <artifactId>jersey-server</artifactId>
+        <version>${igloo.jersey.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>org.glassfish.jersey.core</groupId>
+        <artifactId>jersey-client</artifactId>
+        <version>${igloo.jersey.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>org.glassfish.jersey.media</groupId>
+        <artifactId>jersey-media-multipart</artifactId>
+        <version>${igloo.jersey.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>org.glassfish.jersey.ext</groupId>
+        <artifactId>jersey-spring6</artifactId>
+        <version>${igloo.jersey.version}</version>
+      </dependency>
+      <!-- For testing purpose (embedded web-server) -->
+      <dependency>
+        <groupId>org.glassfish.grizzly</groupId>
+        <artifactId>grizzly-http-server</artifactId>
+        <version>${igloo.grizzly.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>org.glassfish.grizzly</groupId>
+        <artifactId>grizzly-http-servlet</artifactId>
+        <version>${igloo.grizzly.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>org.glassfish.jersey.containers</groupId>
+        <artifactId>jersey-container-servlet-core</artifactId>
+        <version>${igloo.jersey.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>org.glassfish.jersey.containers</groupId>
+        <artifactId>jersey-container-grizzly2-servlet</artifactId>
+        <version>${igloo.jersey.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>org.glassfish.jersey.containers</groupId>
+        <artifactId>jersey-container-grizzly2-http</artifactId>
+        <version>${igloo.jersey.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>jakarta.ws.rs</groupId>
+        <artifactId>jakarta.ws.rs-api</artifactId>
+        <version>${igloo.jaxrs.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>com.fasterxml.jackson.jakarta.rs</groupId>
+        <artifactId>jackson-jakarta-rs-json-provider</artifactId>
+        <version>${igloo.jackson.version}</version>
+      </dependency>
+    </dependencies>
+  </dependencyManagement>
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>org.codehaus.mojo</groupId>
+        <artifactId>flatten-maven-plugin</artifactId>
+        <configuration>
+          <updatePomFile>true</updatePomFile>
+          <flattenMode>bom</flattenMode>
+        </configuration>
+      </plugin>
+    </plugins>
+  </build>
 </project>

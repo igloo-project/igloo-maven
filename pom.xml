@@ -1,436 +1,372 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>org.iglooproject</groupId>
+  <artifactId>igloo-maven</artifactId>
+  <version>${revision}</version>
+  <packaging>pom</packaging>
+  <name>Maven configuration for Igloo stack</name>
+  <description>This module tree contains various maven-related configurations
 
-	<modelVersion>4.0.0</modelVersion>
+    Tree is split between dependency (provided as managed BOM) and common managed plugin configurations.
 
-	<groupId>org.iglooproject</groupId>
-	<artifactId>igloo-maven</artifactId>
-	<packaging>pom</packaging>
-	<version>${revision}</version>
+    This module is a minimalist self-contained pom declaration with updated  and curated common plugin configuration, 
+    and common repository information (scm, project page, ...).
 
-	<name>Maven configuration for Igloo stack</name>
-	<description>
-		This module tree contains various maven-related configurations
+    Maven 3.8 is set as a prerequisite.
 
-		Tree is split between dependency (provided as managed BOM) and common
-		managed plugin configurations.
-
-		This module is a minimalist self-contained pom declaration with updated
-		and curated common plugin
-		configuration, and common repository information (scm, project page,
-		...).
-
-		Maven 3.8 is set as a prerequisite.
-
-		This module is not installed nor published.
-	</description>
-
-	<modules>
-		<module>plugins-all</module>
-		<module>plugins-spring</module>
-		<module>plugins-common</module>
-		<module>plugins-report</module>
-		<module>plugins-enforcer</module>
-		<module>plugins-npm</module>
-		<module>plugins-processor</module>
-		<module>plugins-jacoco</module>
-
-		<module>properties</module>
-
-		<module>dependencies-all</module>
-		<module>dependencies-commons</module>
-		<module>dependencies-bindgen</module>
-		<module>dependencies-logging</module>
-		<module>dependencies-hibernate</module>
-		<module>dependencies-hibernate-search</module>
-		<module>dependencies-spring</module>
-		<module>dependencies-wicket</module>
-		<module>dependencies-bootstrap4</module>
-		<module>dependencies-bootstrap5</module>
-		<module>dependencies-jersey</module>
-		<module>dependencies-testing</module>
-		<module>dependencies-quality-annotations</module>
-		<module>dependencies-html</module>
-		<module>dependencies-tools</module>
-	</modules>
-
-	<properties>
-		<revision>6.20.0-rev-SNAPSHOT</revision>
-
-		<!-- pure maven plugin configuration -->
-		<minimal.maven.version>3.8.0</minimal.maven.version>
-		<igloo.maven-clean-plugin.version>3.5.0</igloo.maven-clean-plugin.version>
-		<igloo.maven-deploy-plugin.version>3.1.4</igloo.maven-deploy-plugin.version>
-		<igloo.maven-install-plugin.version>3.1.4</igloo.maven-install-plugin.version>
-		<igloo.maven-site-plugin.version>4.0.0-M16</igloo.maven-site-plugin.version>
-		<igloo.maven-project-info-reports-plugin.version>3.9.0</igloo.maven-project-info-reports-plugin.version>
-		<igloo.gitflow-maven-plugin.version>1.21.0</igloo.gitflow-maven-plugin.version>
-		<igloo.jsch.version>0.1.55</igloo.jsch.version>
-		<igloo.owasp-maven-plugin.version>12.1.9</igloo.owasp-maven-plugin.version>
-		<igloo.versions-maven-plugin.version>2.20.1</igloo.versions-maven-plugin.version>
-		<igloo.maven-enforcer-plugin.version>3.6.2</igloo.maven-enforcer-plugin.version>
-		<igloo.flatten-maven-plugin.version>1.7.3</igloo.flatten-maven-plugin.version>
-		<igloo.spotless-maven-plugin.version>3.1.0</igloo.spotless-maven-plugin.version>
-
-		<igloo.bindgen.version>6.0.0</igloo.bindgen.version>
-		<igloo.querydsl.version>7.1</igloo.querydsl.version>
-		<igloo.immutables.version>2.12.0</igloo.immutables.version>
-
-		<!-- very general project/java configurations -->
-		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-		<maven.compiler.release>17</maven.compiler.release>
-
-		<productionBranchName>main</productionBranchName>
-		<!-- needed for wicket, bindgen, bindgen-*, commons-fileupload2 -->
-		<allowSnapshots>true</allowSnapshots>
-
-		<!-- setup versions-maven-plugin version for gitflow release -->
-		<!-- see https://github.com/aleksandr-m/gitflow-maven-plugin/commit/4adbb9a06b73504c20a7ac59be85e3f24f0edb5f -->
-		<!-- default 2.6.0 is known to be buggy when parent version is updated -->
-		<versionsMavenPluginVersion>${igloo.versions-maven-plugin.version}</versionsMavenPluginVersion>
-	</properties>
-
-	<build>
-		<plugins>
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-enforcer-plugin</artifactId>
-			</plugin>
-			<plugin>
-				<groupId>org.codehaus.mojo</groupId>
-				<artifactId>flatten-maven-plugin</artifactId>
-			</plugin>
-		</plugins>
-		<pluginManagement>
-			<plugins>
-				<plugin>
-					<groupId>org.apache.maven.plugins</groupId>
-					<artifactId>maven-site-plugin</artifactId>
-					<version>${igloo.maven-site-plugin.version}</version>
-				</plugin>
-				<plugin>
-					<groupId>org.apache.maven.plugins</groupId>
-					<artifactId>maven-project-info-reports-plugin</artifactId>
-					<version>${igloo.maven-project-info-reports-plugin.version}</version>
-				</plugin>
-				<plugin>
-					<groupId>org.owasp</groupId>
-					<artifactId>dependency-check-maven</artifactId>
-					<version>${igloo.owasp-maven-plugin.version}</version>
-				</plugin>
-				<plugin>
-					<groupId>org.codehaus.mojo</groupId>
-					<artifactId>versions-maven-plugin</artifactId>
-					<version>${igloo.versions-maven-plugin.version}</version>
-				</plugin>
-				<plugin>
-					<groupId>org.apache.maven.plugins</groupId>
-					<artifactId>maven-enforcer-plugin</artifactId>
-					<version>${igloo.maven-enforcer-plugin.version}</version>
-					<executions>
-						<execution>
-							<id>enforce-maven</id>
-							<goals>
-								<goal>enforce</goal>
-							</goals>
-							<configuration>
-								<rules>
-									<requireMavenVersion>
-										<version>${minimal.maven.version}</version>
-									</requireMavenVersion>
-									<requireJavaVersion>
-										<version>${maven.compiler.release}</version>
-									</requireJavaVersion>
-								</rules>
-							</configuration>
-						</execution>
-					</executions>
-				</plugin>
-				<plugin>
-					<groupId>org.apache.maven.plugins</groupId>
-					<artifactId>maven-clean-plugin</artifactId>
-					<version>${igloo.maven-clean-plugin.version}</version>
-				</plugin>
-				<plugin>
-					<groupId>org.apache.maven.plugins</groupId>
-					<artifactId>maven-deploy-plugin</artifactId>
-					<version>${igloo.maven-deploy-plugin.version}</version>
-				</plugin>
-				<plugin>
-					<groupId>org.apache.maven.plugins</groupId>
-					<artifactId>maven-install-plugin</artifactId>
-					<version>${igloo.maven-install-plugin.version}</version>
-				</plugin>
-				<plugin>
-					<groupId>org.codehaus.mojo</groupId>
-					<artifactId>flatten-maven-plugin</artifactId>
-					<version>${igloo.flatten-maven-plugin.version}</version>
-					<configuration>
-						<updatePomFile>true</updatePomFile>
-						<flattenMode>resolveCiFriendliesOnly</flattenMode>
-						<outputDirectory>${project.build.directory}</outputDirectory>
-					</configuration>
-					<executions>
-						<execution>
-							<id>flatten</id>
-							<phase>process-resources</phase>
-							<goals>
-								<goal>flatten</goal>
-							</goals>
-						</execution>
-						<execution>
-							<id>flatten.clean</id>
-							<phase>clean</phase>
-							<goals>
-								<goal>clean</goal>
-							</goals>
-						</execution>
-					</executions>
-				</plugin>
-				<plugin>
-					<groupId>com.amashchenko.maven.plugin</groupId>
-					<artifactId>gitflow-maven-plugin</artifactId>
-					<version>${igloo.gitflow-maven-plugin.version}</version>
-					<configuration>
-						<gitFlowConfig>
-							<productionBranch>main</productionBranch>
-							<developmentBranch>ft-maven-revision-deploy</developmentBranch>
-							<featureBranchPrefix>ft-</featureBranchPrefix>
-							<releaseBranchPrefix>rl-</releaseBranchPrefix>
-							<hotfixBranchPrefix>hf-</hotfixBranchPrefix>
-							<supportBranchPrefix>sp-</supportBranchPrefix>
-							<versionTagPrefix>v</versionTagPrefix>
-							<origin>origin</origin>
-						</gitFlowConfig>
-						<!-- handle release versioning with revision property -->
-						<versionProperty>revision</versionProperty>
-						<skipUpdateVersion>true</skipUpdateVersion>
-						<skipFeatureVersion>true</skipFeatureVersion>
-						<!-- do not run verify, done on CI -->
-						<skipTestProject>true</skipTestProject>
-						<!-- In X.Y.Z, update Y -->
-						<versionDigitToIncrement>1</versionDigitToIncrement>
-						<!-- do not push during release; we perform this independently-->
-						<pushRemote>false</pushRemote>
-						<!-- build project during release -->
-						<installProject>true</installProject>
-						<!-- ensure all modules are processed by versions: calls -->
-						<argLine>-DskipTests=true -DprocessAllModules=true -DskipResolution=true</argLine>
-						<!-- print subcommand output -->
-						<verbose>true</verbose>
-						<!-- Needed as it implies project reloading during versioning, and triggers resolution failure -->
-						<updateOutputTimestamp>false</updateOutputTimestamp>
-					</configuration>
-				</plugin>
-				<plugin>
-					<groupId>com.diffplug.spotless</groupId>
-					<artifactId>spotless-maven-plugin</artifactId>
-					<version>${igloo.spotless-maven-plugin.version}</version>
-					<executions>
-						<execution>
-							<id>default-cli</id>
-							<configuration>
-								<java>
-									<includes>
-										<include>src/main/java/**/*.java</include>
-										<include>src/test/java/**/*.java</include>
-									</includes>
-									<googleJavaFormat>
-										<version>${igloo.google-java-format.version}</version>
-									</googleJavaFormat>
-								</java>
-								<pom>
-									<includes>
-										<include>pom.xml</include>
-									</includes>
-									<sortPom>
-										<keepBlankLines>false</keepBlankLines>
-									</sortPom>
-								</pom>
-							</configuration>
-						</execution>
-						<execution>
-							<id>format-poms</id>
-							<configuration>
-								<formats>
-									<format>
-										<includes>
-											<include>**/pom.xml</include>
-										</includes>
-										<prettier>
-											<devDependencyProperties>
-												<property>
-													<name>prettier</name>
-													<value>3.8.1</value>
-												</property>
-												<property>
-													<name>@prettier/plugin-xml</name>
-													<value>3.4.2</value>
-												</property>
-											</devDependencyProperties>
-											<config>
-												<useTabs>true</useTabs>
-												<printWidth>200</printWidth>
-												<xmlWhitespaceSensitivity>preserve</xmlWhitespaceSensitivity>
-												<plugins>@prettier/plugin-xml</plugins>
-											</config>
-										</prettier>
-									</format>
-								</formats>
-							</configuration>
-						</execution>
-					</executions>
-				</plugin>
-			</plugins>
-		</pluginManagement>
-	</build>
-
-	<!-- Project information -->
-
-	<organization>
-		<name>Kobalt</name>
-		<url>https://www.kobalt.fr/</url>
-	</organization>
-
-	<licenses>
-		<license>
-			<name>The Apache Software License, Version 2.0</name>
-			<url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
-			<distribution>repo</distribution>
-		</license>
-	</licenses>
-
-	<developers>
-		<developer>
-			<id>lalmeras</id>
-			<name>Laurent Almeras</name>
-			<email>laurent.almeras@kobalt.fr</email>
-			<organization>Kobalt</organization>
-		</developer>
-		<developer>
-			<id>jgonzalez</id>
-			<name>Julien Gonzalez</name>
-			<email>julien.gonzalez@kobalt.fr</email>
-			<organization>Kobalt</organization>
-		</developer>
-		<developer>
-			<id>rjoly</id>
-			<name>Renaud Joly</name>
-			<email>renaud.joly@kobalt.fr</email>
-			<organization>Kobalt</organization>
-		</developer>
-		<developer>
-			<id>flacreuse</id>
-			<name>Florian Lacreuse</name>
-			<email>florian.lacreuse@kobalt.fr</email>
-			<organization>Kobalt</organization>
-		</developer>
-		<developer>
-			<id>jbenichou</id>
-			<name>Julien Bénichou</name>
-			<email>julien.benichou@kobalt.fr</email>
-			<organization>Kobalt</organization>
-		</developer>
-	</developers>
-
-	<distributionManagement>
-		<site>
-			<id>igloo</id>
-			<name>Igloo site</name>
-			<url>https://igloo-doc.readthedocs.org/</url>
-		</site>
-		<repository>
-			<id>nexus-igloo-releases</id>
-			<name>Nexus Igloo Releases</name>
-			<url>https://nexus.tools.kobalt.fr/repository/igloo-releases/</url>
-		</repository>
-		<snapshotRepository>
-			<id>nexus-igloo-snapshots</id>
-			<name>Nexus Igloo Snapshots</name>
-			<url>https://nexus.tools.kobalt.fr/repository/igloo-snapshots/</url>
-		</snapshotRepository>
-	</distributionManagement>
-
-	<issueManagement>
-		<system>GitHub</system>
-		<url>https://github.com/igloo-project/igloo-parent/issues</url>
-	</issueManagement>
-
-	<ciManagement>
-		<system>GitLab</system>
-		<url>https://gitlab.tools.kobalt.fr/igloo/igloo-parent/pipelines</url>
-	</ciManagement>
-
-	<scm>
-		<developerConnection>
-			scm:git:git@github.com:igloo-project/igloo-parent.git</developerConnection>
-		<url>https://github.com/igloo-project/igloo-parent</url>
-		<tag>HEAD</tag>
-	</scm>
-
-	<repositories>
-		<repository>
-			<id>nexus-igloo-releases</id>
-			<name>Nexus Igloo Releases</name>
-			<url>https://nexus.tools.kobalt.fr/repository/igloo-releases/</url>
-			<snapshots>
-				<enabled>
-					false</enabled>
-			</snapshots>
-		</repository>
-
-		<repository>
-			<id>nexus-igloo-snapshots</id>
-			<name>Nexus Igloo Snapshots</name>
-			<url>https://nexus.tools.kobalt.fr/repository/igloo-snapshots/</url>
-			<snapshots>
-				<enabled>
-					true</enabled>
-			</snapshots>
-			<releases>
-				<enabled>false</enabled>
-			</releases>
-		</repository>
-
-		<repository>
-			<id>wicket-snapshots</id>
-			<name>Wicket snapshots</name>
-			<url>https://repository.apache.org/content/repositories/snapshots/</url>
-			<releases>
-				<enabled>false</enabled>
-			</releases>
-		</repository>
-
-		<repository>
-			<id>spring-milestones</id>
-			<name>Spring Milestones</name>
-			<url>https://repo.spring.io/milestone</url>
-			<snapshots>
-				<enabled>false</enabled>
-			</snapshots>
-		</repository>
-	</repositories>
-	<pluginRepositories>
-		<pluginRepository>
-			<id>nexus-igloo-releases</id>
-			<name>Nexus Igloo Releases</name>
-			<url>https://nexus.tools.kobalt.fr/repository/igloo-releases/</url>
-			<snapshots>
-				<enabled>
-					false</enabled>
-			</snapshots>
-		</pluginRepository>
-		<pluginRepository>
-			<id>nexus-igloo-snapshots</id>
-			<name>Nexus Igloo Snapshots</name>
-			<url>https://nexus.tools.kobalt.fr/repository/igloo-snapshots/</url>
-			<snapshots>
-				<enabled>
-					true</enabled>
-			</snapshots>
-			<releases>
-				<enabled>false</enabled>
-			</releases>
-		</pluginRepository>
-	</pluginRepositories>
+    This module is not installed nor published.</description>
+  <modules>
+    <module>plugins-all</module>
+    <module>plugins-spring</module>
+    <module>plugins-common</module>
+    <module>plugins-report</module>
+    <module>plugins-enforcer</module>
+    <module>plugins-npm</module>
+    <module>plugins-processor</module>
+    <module>plugins-jacoco</module>
+    <module>properties</module>
+    <module>dependencies-all</module>
+    <module>dependencies-commons</module>
+    <module>dependencies-bindgen</module>
+    <module>dependencies-logging</module>
+    <module>dependencies-hibernate</module>
+    <module>dependencies-hibernate-search</module>
+    <module>dependencies-spring</module>
+    <module>dependencies-wicket</module>
+    <module>dependencies-bootstrap4</module>
+    <module>dependencies-bootstrap5</module>
+    <module>dependencies-jersey</module>
+    <module>dependencies-testing</module>
+    <module>dependencies-quality-annotations</module>
+    <module>dependencies-html</module>
+    <module>dependencies-tools</module>
+  </modules>
+  <properties>
+    <revision>6.20.0-rev-SNAPSHOT</revision>
+    <!-- pure maven plugin configuration -->
+    <minimal.maven.version>3.8.0</minimal.maven.version>
+    <igloo.maven-clean-plugin.version>3.5.0</igloo.maven-clean-plugin.version>
+    <igloo.maven-deploy-plugin.version>3.1.4</igloo.maven-deploy-plugin.version>
+    <igloo.maven-install-plugin.version>3.1.4</igloo.maven-install-plugin.version>
+    <igloo.maven-site-plugin.version>4.0.0-M16</igloo.maven-site-plugin.version>
+    <igloo.maven-project-info-reports-plugin.version>3.9.0</igloo.maven-project-info-reports-plugin.version>
+    <igloo.gitflow-maven-plugin.version>1.21.0</igloo.gitflow-maven-plugin.version>
+    <igloo.jsch.version>0.1.55</igloo.jsch.version>
+    <igloo.owasp-maven-plugin.version>12.1.9</igloo.owasp-maven-plugin.version>
+    <igloo.versions-maven-plugin.version>2.20.1</igloo.versions-maven-plugin.version>
+    <igloo.maven-enforcer-plugin.version>3.6.2</igloo.maven-enforcer-plugin.version>
+    <igloo.flatten-maven-plugin.version>1.7.3</igloo.flatten-maven-plugin.version>
+    <igloo.spotless-maven-plugin.version>3.1.0</igloo.spotless-maven-plugin.version>
+    <igloo.bindgen.version>6.0.0</igloo.bindgen.version>
+    <igloo.querydsl.version>7.1</igloo.querydsl.version>
+    <igloo.immutables.version>2.12.0</igloo.immutables.version>
+    <!-- very general project/java configurations -->
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+    <maven.compiler.release>17</maven.compiler.release>
+    <productionBranchName>main</productionBranchName>
+    <!-- needed for wicket, bindgen, bindgen-*, commons-fileupload2 -->
+    <allowSnapshots>true</allowSnapshots>
+    <!-- setup versions-maven-plugin version for gitflow release -->
+    <!-- see https://github.com/aleksandr-m/gitflow-maven-plugin/commit/4adbb9a06b73504c20a7ac59be85e3f24f0edb5f -->
+    <!-- default 2.6.0 is known to be buggy when parent version is updated -->
+    <versionsMavenPluginVersion>${igloo.versions-maven-plugin.version}</versionsMavenPluginVersion>
+  </properties>
+  <build>
+    <pluginManagement>
+      <plugins>
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-site-plugin</artifactId>
+          <version>${igloo.maven-site-plugin.version}</version>
+        </plugin>
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-project-info-reports-plugin</artifactId>
+          <version>${igloo.maven-project-info-reports-plugin.version}</version>
+        </plugin>
+        <plugin>
+          <groupId>org.owasp</groupId>
+          <artifactId>dependency-check-maven</artifactId>
+          <version>${igloo.owasp-maven-plugin.version}</version>
+        </plugin>
+        <plugin>
+          <groupId>org.codehaus.mojo</groupId>
+          <artifactId>versions-maven-plugin</artifactId>
+          <version>${igloo.versions-maven-plugin.version}</version>
+        </plugin>
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-enforcer-plugin</artifactId>
+          <version>${igloo.maven-enforcer-plugin.version}</version>
+          <executions>
+            <execution>
+              <id>enforce-maven</id>
+              <goals>
+                <goal>enforce</goal>
+              </goals>
+              <configuration>
+                <rules>
+                  <requireMavenVersion>
+                    <version>${minimal.maven.version}</version>
+                  </requireMavenVersion>
+                  <requireJavaVersion>
+                    <version>${maven.compiler.release}</version>
+                  </requireJavaVersion>
+                </rules>
+              </configuration>
+            </execution>
+          </executions>
+        </plugin>
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-clean-plugin</artifactId>
+          <version>${igloo.maven-clean-plugin.version}</version>
+        </plugin>
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-deploy-plugin</artifactId>
+          <version>${igloo.maven-deploy-plugin.version}</version>
+        </plugin>
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-install-plugin</artifactId>
+          <version>${igloo.maven-install-plugin.version}</version>
+        </plugin>
+        <plugin>
+          <groupId>org.codehaus.mojo</groupId>
+          <artifactId>flatten-maven-plugin</artifactId>
+          <version>${igloo.flatten-maven-plugin.version}</version>
+          <configuration>
+            <updatePomFile>true</updatePomFile>
+            <flattenMode>resolveCiFriendliesOnly</flattenMode>
+            <outputDirectory>${project.build.directory}</outputDirectory>
+          </configuration>
+          <executions>
+            <execution>
+              <id>flatten</id>
+              <goals>
+                <goal>flatten</goal>
+              </goals>
+              <phase>process-resources</phase>
+            </execution>
+            <execution>
+              <id>flatten.clean</id>
+              <goals>
+                <goal>clean</goal>
+              </goals>
+              <phase>clean</phase>
+            </execution>
+          </executions>
+        </plugin>
+        <plugin>
+          <groupId>com.amashchenko.maven.plugin</groupId>
+          <artifactId>gitflow-maven-plugin</artifactId>
+          <version>${igloo.gitflow-maven-plugin.version}</version>
+          <configuration>
+            <gitFlowConfig>
+              <productionBranch>main</productionBranch>
+              <developmentBranch>ft-maven-revision-deploy</developmentBranch>
+              <featureBranchPrefix>ft-</featureBranchPrefix>
+              <releaseBranchPrefix>rl-</releaseBranchPrefix>
+              <hotfixBranchPrefix>hf-</hotfixBranchPrefix>
+              <supportBranchPrefix>sp-</supportBranchPrefix>
+              <versionTagPrefix>v</versionTagPrefix>
+              <origin>origin</origin>
+            </gitFlowConfig>
+            <!-- handle release versioning with revision property -->
+            <versionProperty>revision</versionProperty>
+            <skipUpdateVersion>true</skipUpdateVersion>
+            <skipFeatureVersion>true</skipFeatureVersion>
+            <!-- do not run verify, done on CI -->
+            <skipTestProject>true</skipTestProject>
+            <!-- In X.Y.Z, update Y -->
+            <versionDigitToIncrement>1</versionDigitToIncrement>
+            <!-- do not push during release; we perform this independently-->
+            <pushRemote>false</pushRemote>
+            <!-- build project during release -->
+            <installProject>true</installProject>
+            <!-- ensure all modules are processed by versions: calls -->
+            <argLine>-DskipTests=true -DprocessAllModules=true -DskipResolution=true</argLine>
+            <!-- print subcommand output -->
+            <verbose>true</verbose>
+            <!-- Needed as it implies project reloading during versioning, and triggers resolution failure -->
+            <updateOutputTimestamp>false</updateOutputTimestamp>
+          </configuration>
+        </plugin>
+        <plugin>
+          <groupId>com.diffplug.spotless</groupId>
+          <artifactId>spotless-maven-plugin</artifactId>
+          <version>${igloo.spotless-maven-plugin.version}</version>
+          <executions>
+            <execution>
+              <id>default-cli</id>
+              <configuration>
+                <java>
+                  <includes>
+                    <include>src/main/java/**/*.java</include>
+                    <include>src/test/java/**/*.java</include>
+                  </includes>
+                  <googleJavaFormat>
+                    <version>${igloo.google-java-format.version}</version>
+                  </googleJavaFormat>
+                </java>
+                <pom>
+                  <includes>
+                    <include>pom.xml</include>
+                  </includes>
+                  <sortPom>
+                    <predefinedSortOrder>custom_1</predefinedSortOrder>
+                    <keepBlankLines>false</keepBlankLines>
+                  </sortPom>
+                </pom>
+              </configuration>
+            </execution>
+          </executions>
+        </plugin>
+      </plugins>
+    </pluginManagement>
+    <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-enforcer-plugin</artifactId>
+      </plugin>
+      <plugin>
+        <groupId>org.codehaus.mojo</groupId>
+        <artifactId>flatten-maven-plugin</artifactId>
+      </plugin>
+    </plugins>
+  </build>
+  <organization>
+    <name>Kobalt</name>
+    <url>https://www.kobalt.fr/</url>
+  </organization>
+  <licenses>
+    <license>
+      <name>The Apache Software License, Version 2.0</name>
+      <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+      <distribution>repo</distribution>
+    </license>
+  </licenses>
+  <developers>
+    <developer>
+      <id>lalmeras</id>
+      <name>Laurent Almeras</name>
+      <email>laurent.almeras@kobalt.fr</email>
+      <organization>Kobalt</organization>
+    </developer>
+    <developer>
+      <id>jgonzalez</id>
+      <name>Julien Gonzalez</name>
+      <email>julien.gonzalez@kobalt.fr</email>
+      <organization>Kobalt</organization>
+    </developer>
+    <developer>
+      <id>rjoly</id>
+      <name>Renaud Joly</name>
+      <email>renaud.joly@kobalt.fr</email>
+      <organization>Kobalt</organization>
+    </developer>
+    <developer>
+      <id>flacreuse</id>
+      <name>Florian Lacreuse</name>
+      <email>florian.lacreuse@kobalt.fr</email>
+      <organization>Kobalt</organization>
+    </developer>
+    <developer>
+      <id>jbenichou</id>
+      <name>Julien Bénichou</name>
+      <email>julien.benichou@kobalt.fr</email>
+      <organization>Kobalt</organization>
+    </developer>
+  </developers>
+  <scm>
+    <developerConnection>scm:git:git@github.com:igloo-project/igloo-parent.git</developerConnection>
+    <url>https://github.com/igloo-project/igloo-parent</url>
+    <tag>HEAD</tag>
+  </scm>
+  <issueManagement>
+    <system>GitHub</system>
+    <url>https://github.com/igloo-project/igloo-parent/issues</url>
+  </issueManagement>
+  <ciManagement>
+    <system>GitLab</system>
+    <url>https://gitlab.tools.kobalt.fr/igloo/igloo-parent/pipelines</url>
+  </ciManagement>
+  <repositories>
+    <repository>
+      <snapshots>
+        <enabled>false</enabled>
+      </snapshots>
+      <id>nexus-igloo-releases</id>
+      <name>Nexus Igloo Releases</name>
+      <url>https://nexus.tools.kobalt.fr/repository/igloo-releases/</url>
+    </repository>
+    <repository>
+      <releases>
+        <enabled>false</enabled>
+      </releases>
+      <snapshots>
+        <enabled>true</enabled>
+      </snapshots>
+      <id>nexus-igloo-snapshots</id>
+      <name>Nexus Igloo Snapshots</name>
+      <url>https://nexus.tools.kobalt.fr/repository/igloo-snapshots/</url>
+    </repository>
+    <repository>
+      <releases>
+        <enabled>false</enabled>
+      </releases>
+      <id>wicket-snapshots</id>
+      <name>Wicket snapshots</name>
+      <url>https://repository.apache.org/content/repositories/snapshots/</url>
+    </repository>
+    <repository>
+      <snapshots>
+        <enabled>false</enabled>
+      </snapshots>
+      <id>spring-milestones</id>
+      <name>Spring Milestones</name>
+      <url>https://repo.spring.io/milestone</url>
+    </repository>
+  </repositories>
+  <pluginRepositories>
+    <pluginRepository>
+      <snapshots>
+        <enabled>false</enabled>
+      </snapshots>
+      <id>nexus-igloo-releases</id>
+      <name>Nexus Igloo Releases</name>
+      <url>https://nexus.tools.kobalt.fr/repository/igloo-releases/</url>
+    </pluginRepository>
+    <pluginRepository>
+      <releases>
+        <enabled>false</enabled>
+      </releases>
+      <snapshots>
+        <enabled>true</enabled>
+      </snapshots>
+      <id>nexus-igloo-snapshots</id>
+      <name>Nexus Igloo Snapshots</name>
+      <url>https://nexus.tools.kobalt.fr/repository/igloo-snapshots/</url>
+    </pluginRepository>
+  </pluginRepositories>
+  <distributionManagement>
+    <repository>
+      <id>nexus-igloo-releases</id>
+      <name>Nexus Igloo Releases</name>
+      <url>https://nexus.tools.kobalt.fr/repository/igloo-releases/</url>
+    </repository>
+    <snapshotRepository>
+      <id>nexus-igloo-snapshots</id>
+      <name>Nexus Igloo Snapshots</name>
+      <url>https://nexus.tools.kobalt.fr/repository/igloo-snapshots/</url>
+    </snapshotRepository>
+    <site>
+      <id>igloo</id>
+      <name>Igloo site</name>
+      <url>https://igloo-doc.readthedocs.org/</url>
+    </site>
+  </distributionManagement>
 </project>

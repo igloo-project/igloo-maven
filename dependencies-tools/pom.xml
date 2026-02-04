@@ -1,157 +1,137 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-		 xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
-
-	<modelVersion>4.0.0</modelVersion>
-
-	<parent>
-		<groupId>org.iglooproject</groupId>
-		<artifactId>properties</artifactId>
-		<version>${revision}</version>
-		<relativePath>../properties</relativePath>
-	</parent>
-
-	<artifactId>dependencies-tools</artifactId>
-	<packaging>pom</packaging>
-
-	<name>Managed dependencies - Tools (poi, ...)</name>
-	<description>
-		This module provides managed tools dependencies.
-	</description>
-
-	<dependencyManagement>
-		<dependencies>
-			<dependency>
-				<groupId>org.apache.poi</groupId>
-				<artifactId>poi</artifactId>
-				<version>${igloo.poi.version}</version>
-			</dependency>
-
-			<dependency>
-				<groupId>org.apache.poi</groupId>
-				<artifactId>poi-ooxml</artifactId>
-				<version>${igloo.poi.version}</version>
-				<exclusions>
-					<!-- xml-apis may result in class loading issues and is provided by modern JREs -->
-					<exclusion>
-						<groupId>xml-apis</groupId>
-						<artifactId>xml-apis</artifactId>
-					</exclusion>
-				</exclusions>
-			</dependency>
-
-			<dependency>
-				<groupId>com.opencsv</groupId>
-				<artifactId>opencsv</artifactId>
-				<version>${igloo.opencsv.version}</version>
-				<exclusions>
-					<exclusion>
-						<groupId>commons-logging</groupId>
-						<artifactId>commons-logging</artifactId>
-					</exclusion>
-				</exclusions>
-			</dependency>
-
-			<dependency>
-				<groupId>org.passay</groupId>
-				<artifactId>passay</artifactId>
-				<version>${igloo.passay.version}</version>
-			</dependency>
-
-			<dependency>
-				<groupId>org.freemarker</groupId>
-				<artifactId>freemarker</artifactId>
-				<version>${igloo.freemarker.version}</version>
-			</dependency>
-
-			<dependency>
-				<groupId>org.devlib.schmidt</groupId>
-				<artifactId>imageinfo</artifactId>
-				<version>${igloo.imageinfo.version}</version>
-			</dependency>
-
-			<dependency>
-				<groupId>de.danielbechler</groupId>
-				<artifactId>java-object-diff</artifactId>
-				<version>${igloo.object-diff.version}</version>
-			</dependency>
-
-			<dependency>
-				<groupId>io.micrometer</groupId>
-				<artifactId>micrometer-core</artifactId>
-				<version>${igloo.micrometer.version}</version>
-			</dependency>
-
-			<!-- upper bound dependency - override spring security-->
-			<dependency>
-				<groupId>io.micrometer</groupId>
-				<artifactId>micrometer-commons</artifactId>
-				<version>${igloo.micrometer.version}</version>
-			</dependency>
-
-			<!-- upper bound dependency issue - override spring security / spring / resilience4j -->
-			<dependency>
-				<groupId>io.micrometer</groupId>
-				<artifactId>micrometer-observation</artifactId>
-				<version>${igloo.micrometer.version}</version>
-			</dependency>
-
-			<!-- upper bound dependency - override spring security-->
-			<dependency>
-				<groupId>io.micrometer</groupId>
-				<artifactId>micrometer-registry-prometheus</artifactId>
-				<version>${igloo.micrometer.version}</version>
-			</dependency>
-
-			<dependency>
-				<groupId>org.apache.httpcomponents.client5</groupId>
-				<artifactId>httpclient5</artifactId>
-				<version>${igloo.httpclient5.version}</version>
-			</dependency>
-			<dependency>
-				<groupId>io.jsonwebtoken</groupId>
-				<artifactId>jjwt</artifactId>
-				<version>${igloo.jsonwebtoken.version}</version>
-			</dependency>
-			<dependency>
-				<groupId>io.jsonwebtoken</groupId>
-				<artifactId>jjwt-jackson</artifactId>
-				<version>${igloo.jsonwebtoken.version}</version>
-			</dependency>
-			<dependency>
-				<groupId>com.nimbusds</groupId>
-				<artifactId>nimbus-jose-jwt</artifactId>
-				<version>${igloo.nimbus-jose-jwt.version}</version>
-			</dependency>
-			<dependency>
-				<groupId>com.pivovarit</groupId>
-				<artifactId>throwing-function</artifactId>
-				<version>${igloo.throwing-function.version}</version>
-			</dependency>
-			<dependency>
-				<groupId>io.github.classgraph</groupId>
-				<artifactId>classgraph</artifactId>
-				<version>${igloo.classgraph.version}</version>
-			</dependency>
-			<!-- XML mapping -->
-			<dependency>
-				<groupId>jakarta.xml.bind</groupId>
-				<artifactId>jakarta.xml.bind-api</artifactId>
-				<version>${igloo.jakarta-xml-bind-api.version}</version>
-			</dependency>
-
-		</dependencies>
-	</dependencyManagement>
-
-	<build>
-		<plugins>
-			<plugin>
-				<groupId>org.codehaus.mojo</groupId>
-				<artifactId>flatten-maven-plugin</artifactId>
-				<configuration>
-					<updatePomFile>true</updatePomFile>
-					<flattenMode>bom</flattenMode>
-				</configuration>
-			</plugin>
-		</plugins>
-	</build>
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <groupId>org.iglooproject</groupId>
+    <artifactId>properties</artifactId>
+    <version>${revision}</version>
+    <relativePath>../properties</relativePath>
+  </parent>
+  <artifactId>dependencies-tools</artifactId>
+  <packaging>pom</packaging>
+  <name>Managed dependencies - Tools (poi, ...)</name>
+  <description>This module provides managed tools dependencies.</description>
+  <dependencyManagement>
+    <dependencies>
+      <dependency>
+        <groupId>org.apache.poi</groupId>
+        <artifactId>poi</artifactId>
+        <version>${igloo.poi.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>org.apache.poi</groupId>
+        <artifactId>poi-ooxml</artifactId>
+        <version>${igloo.poi.version}</version>
+        <exclusions>
+          <!-- xml-apis may result in class loading issues and is provided by modern JREs -->
+          <exclusion>
+            <groupId>xml-apis</groupId>
+            <artifactId>xml-apis</artifactId>
+          </exclusion>
+        </exclusions>
+      </dependency>
+      <dependency>
+        <groupId>com.opencsv</groupId>
+        <artifactId>opencsv</artifactId>
+        <version>${igloo.opencsv.version}</version>
+        <exclusions>
+          <exclusion>
+            <groupId>commons-logging</groupId>
+            <artifactId>commons-logging</artifactId>
+          </exclusion>
+        </exclusions>
+      </dependency>
+      <dependency>
+        <groupId>org.passay</groupId>
+        <artifactId>passay</artifactId>
+        <version>${igloo.passay.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>org.freemarker</groupId>
+        <artifactId>freemarker</artifactId>
+        <version>${igloo.freemarker.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>org.devlib.schmidt</groupId>
+        <artifactId>imageinfo</artifactId>
+        <version>${igloo.imageinfo.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>de.danielbechler</groupId>
+        <artifactId>java-object-diff</artifactId>
+        <version>${igloo.object-diff.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>io.micrometer</groupId>
+        <artifactId>micrometer-core</artifactId>
+        <version>${igloo.micrometer.version}</version>
+      </dependency>
+      <!-- upper bound dependency - override spring security-->
+      <dependency>
+        <groupId>io.micrometer</groupId>
+        <artifactId>micrometer-commons</artifactId>
+        <version>${igloo.micrometer.version}</version>
+      </dependency>
+      <!-- upper bound dependency issue - override spring security / spring / resilience4j -->
+      <dependency>
+        <groupId>io.micrometer</groupId>
+        <artifactId>micrometer-observation</artifactId>
+        <version>${igloo.micrometer.version}</version>
+      </dependency>
+      <!-- upper bound dependency - override spring security-->
+      <dependency>
+        <groupId>io.micrometer</groupId>
+        <artifactId>micrometer-registry-prometheus</artifactId>
+        <version>${igloo.micrometer.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>org.apache.httpcomponents.client5</groupId>
+        <artifactId>httpclient5</artifactId>
+        <version>${igloo.httpclient5.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>io.jsonwebtoken</groupId>
+        <artifactId>jjwt</artifactId>
+        <version>${igloo.jsonwebtoken.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>io.jsonwebtoken</groupId>
+        <artifactId>jjwt-jackson</artifactId>
+        <version>${igloo.jsonwebtoken.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>com.nimbusds</groupId>
+        <artifactId>nimbus-jose-jwt</artifactId>
+        <version>${igloo.nimbus-jose-jwt.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>com.pivovarit</groupId>
+        <artifactId>throwing-function</artifactId>
+        <version>${igloo.throwing-function.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>io.github.classgraph</groupId>
+        <artifactId>classgraph</artifactId>
+        <version>${igloo.classgraph.version}</version>
+      </dependency>
+      <!-- XML mapping -->
+      <dependency>
+        <groupId>jakarta.xml.bind</groupId>
+        <artifactId>jakarta.xml.bind-api</artifactId>
+        <version>${igloo.jakarta-xml-bind-api.version}</version>
+      </dependency>
+    </dependencies>
+  </dependencyManagement>
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>org.codehaus.mojo</groupId>
+        <artifactId>flatten-maven-plugin</artifactId>
+        <configuration>
+          <updatePomFile>true</updatePomFile>
+          <flattenMode>bom</flattenMode>
+        </configuration>
+      </plugin>
+    </plugins>
+  </build>
 </project>

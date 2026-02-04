@@ -1,90 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
-	
-	<modelVersion>4.0.0</modelVersion>
-	
-	<parent>
-		<groupId>org.iglooproject</groupId>
-		<artifactId>properties</artifactId>
-		<version>${revision}</version>
-		<relativePath>../properties</relativePath>
-	</parent>
-	
-	<artifactId>dependencies-html</artifactId>
-	<packaging>pom</packaging>
-	
-	<name>Managed dependencies - HTML manipulation tools</name>
-	<description>
-		This module provides managed HTML manipulation tools dependencies.
-	</description>
-	
-	<dependencyManagement>
-		<dependencies>
-			<dependency>
-				<groupId>org.mozilla</groupId>
-				<artifactId>rhino</artifactId>
-				<version>${igloo.rhino.version}</version>
-			</dependency>
-
-			<dependency>
-				<groupId>org.jsoup</groupId>
-				<artifactId>jsoup</artifactId>
-				<version>${igloo.jsoup.version}</version>
-			</dependency>
-
-			<dependency>
-				<groupId>com.helger</groupId>
-				<artifactId>ph-css</artifactId>
-				<version>${igloo.ph-css.version}</version>
-				<exclusions>
-					<!--ph-cache has jakarta annotation 3.0.0 which is not compatible with tomcat 10-->
-					<exclusion>
-						<groupId>jakarta.annotation</groupId>
-						<artifactId>jakarta.annotation-api</artifactId>
-					</exclusion>
-					<!-- code analysis annotation -->
-					<exclusion>
-						<groupId>com.google.code.findbugs</groupId>
-						<artifactId>*</artifactId>
-					</exclusion>
-				</exclusions>
-			</dependency>
-			<dependency>
-				<groupId>de.larsgrefer.sass</groupId>
-				<artifactId>sass-embedded-host</artifactId>
-				<version>${igloo.sass-embedded-host.version}</version>
-				<exclusions>
-					<!-- Not needed arch; jar is big (30MB) -->
-					<exclusion>
-						<groupId>de.larsgrefer.sass</groupId>
-						<artifactId>sass-embedded-bundled-ia32</artifactId>
-					</exclusion>
-				</exclusions>
-			</dependency>
-			<dependency>
-				<groupId>de.larsgrefer.sass</groupId>
-				<artifactId>sass-embedded-bundled</artifactId>
-				<version>${igloo.sass-embedded-host.version}</version>
-				<exclusions>
-					<!-- Not needed arch; jar is big (30MB) -->
-					<exclusion>
-						<groupId>de.larsgrefer.sass</groupId>
-						<artifactId>sass-embedded-bundled-ia32</artifactId>
-					</exclusion>
-				</exclusions>
-			</dependency>
-		</dependencies>
-	</dependencyManagement>
-	
-	<build>
-		<plugins>
-			<plugin>
-				<groupId>org.codehaus.mojo</groupId>
-				<artifactId>flatten-maven-plugin</artifactId>
-				<configuration>
-					<updatePomFile>true</updatePomFile>
-					<flattenMode>bom</flattenMode>
-				</configuration>
-			</plugin>
-		</plugins>
-	</build>
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <groupId>org.iglooproject</groupId>
+    <artifactId>properties</artifactId>
+    <version>${revision}</version>
+    <relativePath>../properties</relativePath>
+  </parent>
+  <artifactId>dependencies-html</artifactId>
+  <packaging>pom</packaging>
+  <name>Managed dependencies - HTML manipulation tools</name>
+  <description>This module provides managed HTML manipulation tools dependencies.</description>
+  <dependencyManagement>
+    <dependencies>
+      <dependency>
+        <groupId>org.mozilla</groupId>
+        <artifactId>rhino</artifactId>
+        <version>${igloo.rhino.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>org.jsoup</groupId>
+        <artifactId>jsoup</artifactId>
+        <version>${igloo.jsoup.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>com.helger</groupId>
+        <artifactId>ph-css</artifactId>
+        <version>${igloo.ph-css.version}</version>
+        <exclusions>
+          <!--ph-cache has jakarta annotation 3.0.0 which is not compatible with tomcat 10-->
+          <exclusion>
+            <groupId>jakarta.annotation</groupId>
+            <artifactId>jakarta.annotation-api</artifactId>
+          </exclusion>
+          <!-- code analysis annotation -->
+          <exclusion>
+            <groupId>com.google.code.findbugs</groupId>
+            <artifactId>*</artifactId>
+          </exclusion>
+        </exclusions>
+      </dependency>
+      <dependency>
+        <groupId>de.larsgrefer.sass</groupId>
+        <artifactId>sass-embedded-host</artifactId>
+        <version>${igloo.sass-embedded-host.version}</version>
+        <exclusions>
+          <!-- Not needed arch; jar is big (30MB) -->
+          <exclusion>
+            <groupId>de.larsgrefer.sass</groupId>
+            <artifactId>sass-embedded-bundled-ia32</artifactId>
+          </exclusion>
+        </exclusions>
+      </dependency>
+      <dependency>
+        <groupId>de.larsgrefer.sass</groupId>
+        <artifactId>sass-embedded-bundled</artifactId>
+        <version>${igloo.sass-embedded-host.version}</version>
+        <exclusions>
+          <!-- Not needed arch; jar is big (30MB) -->
+          <exclusion>
+            <groupId>de.larsgrefer.sass</groupId>
+            <artifactId>sass-embedded-bundled-ia32</artifactId>
+          </exclusion>
+        </exclusions>
+      </dependency>
+    </dependencies>
+  </dependencyManagement>
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>org.codehaus.mojo</groupId>
+        <artifactId>flatten-maven-plugin</artifactId>
+        <configuration>
+          <updatePomFile>true</updatePomFile>
+          <flattenMode>bom</flattenMode>
+        </configuration>
+      </plugin>
+    </plugins>
+  </build>
 </project>
