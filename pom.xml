@@ -69,6 +69,7 @@
 		<igloo.versions-maven-plugin.version>2.20.1</igloo.versions-maven-plugin.version>
 		<igloo.maven-enforcer-plugin.version>3.6.2</igloo.maven-enforcer-plugin.version>
 		<igloo.flatten-maven-plugin.version>1.7.3</igloo.flatten-maven-plugin.version>
+		<igloo.spotless-maven-plugin.version>3.1.0</igloo.spotless-maven-plugin.version>
 
 		<igloo.bindgen.version>6.0.0</igloo.bindgen.version>
 		<igloo.querydsl.version>7.1</igloo.querydsl.version>
@@ -220,6 +221,65 @@
 						<!-- Needed as it implies project reloading during versioning, and triggers resolution failure -->
 						<updateOutputTimestamp>false</updateOutputTimestamp>
 					</configuration>
+				</plugin>
+				<plugin>
+					<groupId>com.diffplug.spotless</groupId>
+					<artifactId>spotless-maven-plugin</artifactId>
+					<version>${igloo.spotless-maven-plugin.version}</version>
+					<executions>
+						<execution>
+							<id>default-cli</id>
+							<configuration>
+								<java>
+									<includes>
+										<include>src/main/java/**/*.java</include>
+										<include>src/test/java/**/*.java</include>
+									</includes>
+									<googleJavaFormat>
+										<version>${igloo.google-java-format.version}</version>
+									</googleJavaFormat>
+								</java>
+								<pom>
+									<includes>
+										<include>pom.xml</include>
+									</includes>
+									<sortPom>
+										<keepBlankLines>false</keepBlankLines>
+									</sortPom>
+								</pom>
+							</configuration>
+						</execution>
+						<execution>
+							<id>format-poms</id>
+							<configuration>
+								<formats>
+									<format>
+										<includes>
+											<include>**/pom.xml</include>
+										</includes>
+										<prettier>
+											<devDependencyProperties>
+												<property>
+													<name>prettier</name>
+													<value>3.8.1</value>
+												</property>
+												<property>
+													<name>@prettier/plugin-xml</name>
+													<value>3.4.2</value>
+												</property>
+											</devDependencyProperties>
+											<config>
+												<useTabs>true</useTabs>
+												<printWidth>200</printWidth>
+												<xmlWhitespaceSensitivity>preserve</xmlWhitespaceSensitivity>
+												<plugins>@prettier/plugin-xml</plugins>
+											</config>
+										</prettier>
+									</format>
+								</formats>
+							</configuration>
+						</execution>
+					</executions>
 				</plugin>
 			</plugins>
 		</pluginManagement>

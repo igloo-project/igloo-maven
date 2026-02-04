@@ -44,7 +44,6 @@
 		<igloo.frontend-maven-plugin.version>2.0.0</igloo.frontend-maven-plugin.version>
 		<igloo.maven-enforcer-plugin.version>3.6.2</igloo.maven-enforcer-plugin.version>
 		<igloo.maven-processor-plugin.version>5.1</igloo.maven-processor-plugin.version>
-		<igloo.spotless-maven-plugin.version>3.1.0</igloo.spotless-maven-plugin.version>
 		<igloo.google-java-format.version>1.28.0</igloo.google-java-format.version>
 		<igloo.spring-boot-maven-plugin.version>3.5.9</igloo.spring-boot-maven-plugin.version>
 		<igloo.jaxb2-maven-plugin.version>4.0.0</igloo.jaxb2-maven-plugin.version>
@@ -210,28 +209,6 @@
 					<groupId>org.codehaus.mojo</groupId>
 					<artifactId>exec-maven-plugin</artifactId>
 					<version>${igloo.exec-maven-plugin.version}</version>
-				</plugin>
-				<plugin>
-					<groupId>com.diffplug.spotless</groupId>
-					<artifactId>spotless-maven-plugin</artifactId>
-					<version>${igloo.spotless-maven-plugin.version}</version>
-					<executions>
-						<execution>
-							<id>default-cli</id>
-							<configuration>
-								<java>
-									<!-- These are the defaults, you can override if you want -->
-									<includes>
-										<include>src/main/java/**/*.java</include>
-										<include>src/test/java/**/*.java</include>
-									</includes>
-									<googleJavaFormat>
-										<version>${igloo.google-java-format.version}</version>
-									</googleJavaFormat>
-								</java>
-							</configuration>
-						</execution>
-					</executions>
 				</plugin>
 				<plugin>
 					<groupId>org.springframework.boot</groupId>
