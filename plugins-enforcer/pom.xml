@@ -1,77 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
-	
-	<modelVersion>4.0.0</modelVersion>
-	
-	<parent>
-		<groupId>org.iglooproject</groupId>
-		<artifactId>plugins-report</artifactId>
-		<version>6.19.0</version>
-		<relativePath>../plugins-report</relativePath>
-	</parent>
-	
-	<artifactId>plugins-enforcer</artifactId>
-	<packaging>pom</packaging>
-	
-	<name>Maven - Enforcer plugin configuration</name>
-	<description>
-		This module configures enforcer plugin.
-	</description>
-	
-	<properties>
-		<!-- maven plugins versions -->
-	</properties>
-	
-	<build>
-		<pluginManagement>
-			<plugins>
-				<plugin>
-					<groupId>org.apache.maven.plugins</groupId>
-					<artifactId>maven-enforcer-plugin</artifactId>
-					<version>${igloo.maven-enforcer-plugin.version}</version>
-					<executions>
-						<execution>
-							<id>enforce</id>
-							<goals>
-								<goal>enforce</goal>
-							</goals>
-							<configuration>
-								<rules>
-									<requireUpperBoundDeps>
-										<excludes>
-											<exclude>jakarta.activation:jakarta.activation-api</exclude>
-											<!-- wicket use 2.0.1.MR / Hibernate and jcache use 2.0.1-->
-											<exclude>jakarta.inject:jakarta.inject-api</exclude>
-										</excludes>
-									</requireUpperBoundDeps>
-									<bannedDependencies>
-										<excludes>
-											<!--bootstrap 4 is repackaged in org.iglooproject.webjars:bootstrap4 -->
-											<exclude>org.webjars.npm:bootstrap:[,5)</exclude>
-											<exclude>org.springframework:spring</exclude>
-											<exclude>org.springframework:spring-ldap</exclude>
-											<exclude>commons-logging:commons-logging</exclude>
-											<exclude>rhino:rhino</exclude>
-											<exclude>rhino:js</exclude>
-											<exclude>javassist:javassist</exclude>
-											<exclude>xml-apis:xml-apis</exclude>
-											<exclude>apache-xerces:xml-apis</exclude>
-											<exclude>javax.servlet:servlet-api</exclude>
-											<exclude>postgresql:postgresql</exclude>
-											<!-- this dependency is intended for testing -->
-											<exclude>*:elasticsearch-cluster-runner:*:jar:compile</exclude>
-											<exclude>*:embedded-elasticsearch:*:jar:test</exclude>
-											<!-- this dependency is renamed com.sun.mail:jakarta.mail -->
-											<exclude>com.sun.mail:javax.mail</exclude><!-- old implementation -->
-											<exclude>javax.mail:mail-api</exclude><!-- old API -->
-											<exclude>com.querydsl</exclude> <!-- queryDsl is no longer maintained. Use fork by openfeign-->
-										</excludes>
-									</bannedDependencies>
-								</rules>
-							</configuration>
-						</execution>
-					</executions>
-				</plugin>
-			</plugins>
-		</pluginManagement>
-	</build>
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <groupId>org.iglooproject</groupId>
+    <artifactId>plugins-report</artifactId>
+    <version>${revision}</version>
+    <relativePath>../plugins-report</relativePath>
+  </parent>
+  <artifactId>plugins-enforcer</artifactId>
+  <packaging>pom</packaging>
+  <name>Maven - Enforcer plugin configuration</name>
+  <description>This module configures enforcer plugin.</description>
+  <properties>
+    <!-- maven plugins versions -->
+  </properties>
+  <build>
+    <pluginManagement>
+      <plugins>
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-enforcer-plugin</artifactId>
+          <version>${igloo.maven-enforcer-plugin.version}</version>
+          <executions>
+            <execution>
+              <id>enforce</id>
+              <goals>
+                <goal>enforce</goal>
+              </goals>
+              <configuration>
+                <rules>
+                  <requireUpperBoundDeps>
+                    <excludes>
+                      <exclude>jakarta.activation:jakarta.activation-api</exclude>
+                      <!-- wicket use 2.0.1.MR / Hibernate and jcache use 2.0.1-->
+                      <exclude>jakarta.inject:jakarta.inject-api</exclude>
+                    </excludes>
+                  </requireUpperBoundDeps>
+                  <bannedDependencies>
+                    <excludes>
+                      <!--bootstrap 4 is repackaged in org.iglooproject.webjars:bootstrap4 -->
+                      <exclude>org.webjars.npm:bootstrap:[,5)</exclude>
+                      <exclude>org.springframework:spring</exclude>
+                      <exclude>org.springframework:spring-ldap</exclude>
+                      <exclude>commons-logging:commons-logging</exclude>
+                      <exclude>rhino:rhino</exclude>
+                      <exclude>rhino:js</exclude>
+                      <exclude>javassist:javassist</exclude>
+                      <exclude>xml-apis:xml-apis</exclude>
+                      <exclude>apache-xerces:xml-apis</exclude>
+                      <exclude>javax.servlet:servlet-api</exclude>
+                      <exclude>postgresql:postgresql</exclude>
+                      <!-- this dependency is intended for testing -->
+                      <exclude>*:elasticsearch-cluster-runner:*:jar:compile</exclude>
+                      <exclude>*:embedded-elasticsearch:*:jar:test</exclude>
+                      <!-- this dependency is renamed com.sun.mail:jakarta.mail -->
+                      <exclude>com.sun.mail:javax.mail</exclude>
+                      <!-- old implementation -->
+                      <exclude>javax.mail:mail-api</exclude>
+                      <!-- old API -->
+                      <exclude>com.querydsl</exclude>
+                      <!-- queryDsl is no longer maintained. Use fork by openfeign-->
+                    </excludes>
+                  </bannedDependencies>
+                </rules>
+              </configuration>
+            </execution>
+          </executions>
+        </plugin>
+      </plugins>
+    </pluginManagement>
+  </build>
 </project>

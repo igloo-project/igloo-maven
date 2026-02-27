@@ -1,236 +1,210 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
-	
-	<modelVersion>4.0.0</modelVersion>
-	
-	<parent>
-		<groupId>org.iglooproject</groupId>
-		<artifactId>properties</artifactId>
-		<version>6.19.0</version>
-		<relativePath>../properties</relativePath>
-	</parent>
-	
-	<artifactId>dependencies-commons</artifactId>
-	<packaging>pom</packaging>
-	
-	<name>Managed dependencies - Common tools</name>
-	<description>
-		This module provides managed common tools dependencies.
-	</description>
-	
-	<dependencyManagement>
-		<dependencies>
-			<dependency>
-				<groupId>com.google.guava</groupId>
-				<artifactId>guava</artifactId>
-				<version>${igloo.guava.version}</version>
-				<exclusions>
-					<!-- code analysis annotation -->
-					<exclusion>
-						<groupId>com.google.code.findbugs</groupId>
-						<artifactId>*</artifactId>
-					</exclusion>
-					<!-- code analysis annotation -->
-					<exclusion>
-						<groupId>com.google.errorprone</groupId>
-						<artifactId>error_prone_annotations</artifactId>
-					</exclusion>
-					<!-- annotation for objective C -->
-					<exclusion>
-						<groupId>com.google.j2objc</groupId>
-						<artifactId>j2objc-annotations</artifactId>
-					</exclusion>
-					<!-- code analysis annotation -->
-					<exclusion>
-						<groupId>org.checkerframework</groupId>
-						<artifactId>checker-qual</artifactId>
-					</exclusion>
-				</exclusions>
-				<!-- NOTE: listenablefuture:jar:9999.0-empty-to-avoid-conflict-with-guava is
-				an empty jar to avoid conflict with listenablefuture:jar:1.0 that contains only
-				ListenableFuture. For our case, ListenableFuture is provided by guava jar -->
-			</dependency>
-
-			<dependency>
-				<groupId>org.danekja</groupId>
-				<artifactId>jdk-serializable-functional</artifactId>
-				<version>${igloo.jdk-serializable-functional.version}</version>
-			</dependency>
-
-			<dependency>
-				<groupId>commons-io</groupId>
-				<artifactId>commons-io</artifactId>
-				<version>${igloo.commons-io.version}</version>
-			</dependency>
-
-			<dependency>
-				<groupId>commons-lang</groupId>
-				<artifactId>commons-lang</artifactId>
-				<version>${igloo.commons-lang.version}</version>
-			</dependency>
-
-			<dependency>
-				<groupId>org.apache.commons</groupId>
-				<artifactId>commons-lang3</artifactId>
-				<version>${igloo.commons-lang3.version}</version>
-			</dependency>
-
-			<dependency>
-				<groupId>org.apache.commons</groupId>
-				<artifactId>commons-text</artifactId>
-				<version>${igloo.commons-text.version}</version>
-			</dependency>
-
-			<dependency>
-				<groupId>org.apache.commons</groupId>
-				<artifactId>commons-exec</artifactId>
-				<version>${igloo.commons-exec.version}</version>
-			</dependency>
-
-			<dependency>
-				<groupId>org.apache.commons</groupId>
-				<artifactId>commons-compress</artifactId>
-				<version>${igloo.commons-compress.version}</version>
-			</dependency>
-
-			<dependency>
-				<groupId>commons-validator</groupId>
-				<artifactId>commons-validator</artifactId>
-				<version>${igloo.commons-validator.version}</version>
-				<exclusions>
-					<exclusion>
-						<groupId>commons-logging</groupId>
-						<artifactId>commons-logging</artifactId>
-					</exclusion>
-				</exclusions>
-			</dependency>
-
-			<dependency>
-				<groupId>commons-beanutils</groupId>
-				<artifactId>commons-beanutils</artifactId>
-				<version>${igloo.commons-beanutils.version}</version>
-				<exclusions>
-					<exclusion>
-						<groupId>commons-logging</groupId>
-						<artifactId>commons-logging</artifactId>
-					</exclusion>
-				</exclusions>
-			</dependency>
-
-			<dependency>
-				<groupId>commons-codec</groupId>
-				<artifactId>commons-codec</artifactId>
-				<version>${igloo.commons-codec.version}</version>
-			</dependency>
-
-			<dependency>
-				<groupId>org.apache.commons</groupId>
-				<artifactId>commons-collections4</artifactId>
-				<version>${igloo.commons-collections4.version}</version>
-			</dependency>
-		
-			<dependency>
-				<groupId>org.javatuples</groupId>
-				<artifactId>javatuples</artifactId>
-				<version>${igloo.javatuples.version}</version>
-			</dependency>
-
-			<dependency>
-				<groupId>org.eclipse.angus</groupId>
-				<artifactId>angus-mail</artifactId>
-				<version>${igloo.angus-mail.version}</version>
-			</dependency>
-			<!--Override spring-boot-starter-mail (upperbound with angus-mail)-->
-			<dependency>
-				<groupId>org.eclipse.angus</groupId>
-				<artifactId>jakarta.mail</artifactId>
-				<version>${igloo.angus-mail.version}</version>
-			</dependency>
-
-			<dependency>
-				<groupId>javax.annotation</groupId>
-				<artifactId>javax.annotation-api</artifactId>
-				<version>${igloo.javax-annotation.version}</version>
-				<scope>provided</scope>
-			</dependency>
-			<dependency>
-				<groupId>jakarta.annotation</groupId>
-				<artifactId>jakarta.annotation-api</artifactId>
-				<version>${igloo.jakarta.annotation-api.version}</version>
-				<scope>provided</scope>
-			</dependency>
-
-			<dependency>
-				<groupId>com.sun.activation</groupId>
-				<artifactId>jakarta.activation</artifactId>
-				<version>${igloo.jakarta-activation.version}</version>
-			</dependency>
-
-			<dependency>
-				<groupId>com.fasterxml.jackson.core</groupId>
-				<artifactId>jackson-annotations</artifactId>
-				<version>${igloo.jackson-annotation.version}</version>
-			</dependency>
-			<dependency>
-				<groupId>com.fasterxml.jackson.core</groupId>
-				<artifactId>jackson-core</artifactId>
-				<version>${igloo.jackson.version}</version>
-			</dependency>
-			<dependency>
-				<groupId>com.fasterxml.jackson.core</groupId>
-				<artifactId>jackson-databind</artifactId>
-				<version>${igloo.jackson.version}</version>
-			</dependency>
-			<dependency>
-				<groupId>com.fasterxml.jackson.dataformat</groupId>
-				<artifactId>jackson-dataformat-xml</artifactId>
-				<version>${igloo.jackson.version}</version>
-			</dependency>
-			<dependency>
-				<groupId>com.fasterxml.jackson.datatype</groupId>
-				<artifactId>jackson-datatype-jsr310</artifactId>
-				<version>${igloo.jackson.version}</version>
-			</dependency>
-			<dependency>
-				<groupId>com.fasterxml.jackson.jaxrs</groupId>
-				<artifactId>jackson-jaxrs-json-provider</artifactId>
-				<version>${igloo.jackson.version}</version>
-			</dependency>
-			
-			<dependency>
-				<groupId>org.immutables</groupId>
-				<artifactId>value</artifactId>
-				<version>${igloo.immutables.version}</version>
-			</dependency>
-			
-			<dependency>
-				<groupId>info.picocli</groupId>
-				<artifactId>picocli</artifactId>
-				<version>${igloo.picocli.version}</version>
-			</dependency>
-			
-			<dependency>
-				<groupId>io.github.resilience4j</groupId>
-				<artifactId>resilience4j-all</artifactId>
-				<version>${igloo.resilience4j.version}</version>
-			</dependency>
-			<dependency>
-				<groupId>io.github.resilience4j</groupId>
-				<artifactId>resilience4j-spring-boot3</artifactId>
-				<version>${igloo.resilience4j.version}</version>
-			</dependency>
-		</dependencies>
-	</dependencyManagement>
-	
-	<build>
-		<plugins>
-			<plugin>
-				<groupId>org.codehaus.mojo</groupId>
-				<artifactId>flatten-maven-plugin</artifactId>
-				<configuration>
-					<updatePomFile>true</updatePomFile>
-					<flattenMode>bom</flattenMode>
-				</configuration>
-			</plugin>
-		</plugins>
-	</build>
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <groupId>org.iglooproject</groupId>
+    <artifactId>properties</artifactId>
+    <version>${revision}</version>
+    <relativePath>../properties</relativePath>
+  </parent>
+  <artifactId>dependencies-commons</artifactId>
+  <packaging>pom</packaging>
+  <name>Managed dependencies - Common tools</name>
+  <description>This module provides managed common tools dependencies.</description>
+  <dependencyManagement>
+    <dependencies>
+      <dependency>
+        <groupId>com.google.guava</groupId>
+        <artifactId>guava</artifactId>
+        <version>${igloo.guava.version}</version>
+        <exclusions>
+          <!-- code analysis annotation -->
+          <exclusion>
+            <groupId>com.google.code.findbugs</groupId>
+            <artifactId>*</artifactId>
+          </exclusion>
+          <!-- code analysis annotation -->
+          <exclusion>
+            <groupId>com.google.errorprone</groupId>
+            <artifactId>error_prone_annotations</artifactId>
+          </exclusion>
+          <!-- annotation for objective C -->
+          <exclusion>
+            <groupId>com.google.j2objc</groupId>
+            <artifactId>j2objc-annotations</artifactId>
+          </exclusion>
+          <!-- code analysis annotation -->
+          <exclusion>
+            <groupId>org.checkerframework</groupId>
+            <artifactId>checker-qual</artifactId>
+          </exclusion>
+        </exclusions>
+        <!-- NOTE: listenablefuture:jar:9999.0-empty-to-avoid-conflict-with-guava is an empty jar to avoid conflict 
+             with listenablefuture:jar:1.0 that contains only ListenableFuture. For our case, ListenableFuture is 
+             provided by guava jar -->
+      </dependency>
+      <dependency>
+        <groupId>org.danekja</groupId>
+        <artifactId>jdk-serializable-functional</artifactId>
+        <version>${igloo.jdk-serializable-functional.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>commons-io</groupId>
+        <artifactId>commons-io</artifactId>
+        <version>${igloo.commons-io.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>commons-lang</groupId>
+        <artifactId>commons-lang</artifactId>
+        <version>${igloo.commons-lang.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>org.apache.commons</groupId>
+        <artifactId>commons-lang3</artifactId>
+        <version>${igloo.commons-lang3.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>org.apache.commons</groupId>
+        <artifactId>commons-text</artifactId>
+        <version>${igloo.commons-text.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>org.apache.commons</groupId>
+        <artifactId>commons-exec</artifactId>
+        <version>${igloo.commons-exec.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>org.apache.commons</groupId>
+        <artifactId>commons-compress</artifactId>
+        <version>${igloo.commons-compress.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>commons-validator</groupId>
+        <artifactId>commons-validator</artifactId>
+        <version>${igloo.commons-validator.version}</version>
+        <exclusions>
+          <exclusion>
+            <groupId>commons-logging</groupId>
+            <artifactId>commons-logging</artifactId>
+          </exclusion>
+        </exclusions>
+      </dependency>
+      <dependency>
+        <groupId>commons-beanutils</groupId>
+        <artifactId>commons-beanutils</artifactId>
+        <version>${igloo.commons-beanutils.version}</version>
+        <exclusions>
+          <exclusion>
+            <groupId>commons-logging</groupId>
+            <artifactId>commons-logging</artifactId>
+          </exclusion>
+        </exclusions>
+      </dependency>
+      <dependency>
+        <groupId>commons-codec</groupId>
+        <artifactId>commons-codec</artifactId>
+        <version>${igloo.commons-codec.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>org.apache.commons</groupId>
+        <artifactId>commons-collections4</artifactId>
+        <version>${igloo.commons-collections4.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>org.javatuples</groupId>
+        <artifactId>javatuples</artifactId>
+        <version>${igloo.javatuples.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>org.eclipse.angus</groupId>
+        <artifactId>angus-mail</artifactId>
+        <version>${igloo.angus-mail.version}</version>
+      </dependency>
+      <!--Override spring-boot-starter-mail (upperbound with angus-mail)-->
+      <dependency>
+        <groupId>org.eclipse.angus</groupId>
+        <artifactId>jakarta.mail</artifactId>
+        <version>${igloo.angus-mail.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>javax.annotation</groupId>
+        <artifactId>javax.annotation-api</artifactId>
+        <version>${igloo.javax-annotation.version}</version>
+        <scope>provided</scope>
+      </dependency>
+      <dependency>
+        <groupId>jakarta.annotation</groupId>
+        <artifactId>jakarta.annotation-api</artifactId>
+        <version>${igloo.jakarta.annotation-api.version}</version>
+        <scope>provided</scope>
+      </dependency>
+      <dependency>
+        <groupId>com.sun.activation</groupId>
+        <artifactId>jakarta.activation</artifactId>
+        <version>${igloo.jakarta-activation.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>com.fasterxml.jackson.core</groupId>
+        <artifactId>jackson-annotations</artifactId>
+        <version>${igloo.jackson-annotation.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>com.fasterxml.jackson.core</groupId>
+        <artifactId>jackson-core</artifactId>
+        <version>${igloo.jackson.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>com.fasterxml.jackson.core</groupId>
+        <artifactId>jackson-databind</artifactId>
+        <version>${igloo.jackson.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>com.fasterxml.jackson.dataformat</groupId>
+        <artifactId>jackson-dataformat-xml</artifactId>
+        <version>${igloo.jackson.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>com.fasterxml.jackson.datatype</groupId>
+        <artifactId>jackson-datatype-jsr310</artifactId>
+        <version>${igloo.jackson.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>com.fasterxml.jackson.jaxrs</groupId>
+        <artifactId>jackson-jaxrs-json-provider</artifactId>
+        <version>${igloo.jackson.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>org.immutables</groupId>
+        <artifactId>value</artifactId>
+        <version>${igloo.immutables.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>info.picocli</groupId>
+        <artifactId>picocli</artifactId>
+        <version>${igloo.picocli.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>io.github.resilience4j</groupId>
+        <artifactId>resilience4j-all</artifactId>
+        <version>${igloo.resilience4j.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>io.github.resilience4j</groupId>
+        <artifactId>resilience4j-spring-boot3</artifactId>
+        <version>${igloo.resilience4j.version}</version>
+      </dependency>
+    </dependencies>
+  </dependencyManagement>
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>org.codehaus.mojo</groupId>
+        <artifactId>flatten-maven-plugin</artifactId>
+        <configuration>
+          <updatePomFile>true</updatePomFile>
+          <flattenMode>bom</flattenMode>
+        </configuration>
+      </plugin>
+    </plugins>
+  </build>
 </project>

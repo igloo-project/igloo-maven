@@ -1,205 +1,189 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
-	
-	<modelVersion>4.0.0</modelVersion>
-	
-	<parent>
-		<groupId>org.iglooproject</groupId>
-		<artifactId>properties</artifactId>
-		<version>6.19.0</version>
-		<relativePath>../properties</relativePath>
-	</parent>
-	
-	<artifactId>dependencies-hibernate</artifactId>
-	<packaging>pom</packaging>
-	
-	<name>Managed dependencies - Hibernate</name>
-	<description>
-		This module provides managed hibernate dependencies.
-		
-		Dependency tree is customized to exclude XML related hibernate's dependencies.
-		If you do not use hibernate.xml_mapping_enabled=false, you'll need to readd dom4j,
-		jaxb-api and jaxb-runtime dependencies.
-	</description>
-	
-	<dependencyManagement>
-		<dependencies>
-			<dependency>
-				<groupId>org.hibernate.orm</groupId>
-				<artifactId>hibernate-core</artifactId>
-				<version>${igloo.hibernate.version}</version>
-				<exclusions>
-					<exclusion>
-						<groupId>jakarata.xml.bind</groupId>
-						<artifactId>jaxb-api</artifactId>
-					</exclusion>
-					<exclusion>
-						<groupId>org.glassfish.jaxb</groupId>
-						<artifactId>jaxb-runtime</artifactId>
-					</exclusion>
-				</exclusions>
-			</dependency>
-			<dependency>
-				<groupId>org.hibernate.orm</groupId>
-				<artifactId>hibernate-jpamodelgen</artifactId>
-				<version>${igloo.hibernate.version}</version>
-				<exclusions>
-					<exclusion>
-						<groupId>org.glassfish.jaxb</groupId>
-						<artifactId>jaxb-runtime</artifactId>
-					</exclusion>
-					<exclusion>
-						<groupId>jakarta.xml.bind</groupId>
-						<artifactId>jakarta.xml.bind-api</artifactId>
-					</exclusion>
-				</exclusions>
-			</dependency>
-			<dependency>
-				<groupId>jakarta.xml.bind</groupId>
-				<artifactId>jakarta.xml.bind-api</artifactId>
-				<version>${igloo.jakarta-xml-bind-api.version}</version>
-			</dependency>
-			<dependency>
-				<groupId>org.hibernate.common</groupId>
-				<artifactId>hibernate-commons-annotations</artifactId>
-				<version>${igloo.hibernate-commons-annotations.version}</version>
-			</dependency>
-			<dependency>
-				<groupId>net.bytebuddy</groupId>
-				<artifactId>byte-buddy</artifactId>
-				<version>${igloo.byte-buddy.version}</version>
-			</dependency>
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <groupId>org.iglooproject</groupId>
+    <artifactId>properties</artifactId>
+    <version>${revision}</version>
+    <relativePath>../properties</relativePath>
+  </parent>
+  <artifactId>dependencies-hibernate</artifactId>
+  <packaging>pom</packaging>
+  <name>Managed dependencies - Hibernate</name>
+  <description>This module provides managed hibernate dependencies.
 
-			<dependency>
-				<groupId>org.jboss.logging</groupId>
-				<artifactId>jboss-logging-annotations</artifactId>
-				<version>${igloo.jboss-logging-annotations.version}</version>
-			</dependency>
-
-			<dependency>
-				<groupId>jakarta.persistence</groupId>
-				<artifactId>jakarta.persistence-api</artifactId>
-				<version>${igloo.persistence-api.version}</version>
-			</dependency>
-			
-			<!-- Hibernate spatial -->
-			<dependency>
-				<groupId>org.hibernate.orm</groupId>
-				<artifactId>hibernate-spatial</artifactId>
-				<version>${igloo.hibernate.version}</version>
-			</dependency>
-			
-			<!-- JCache / Caffeine -->
-			<dependency>
-				<groupId>org.hibernate.orm</groupId>
-				<artifactId>hibernate-jcache</artifactId>
-				<version>${igloo.hibernate.version}</version>
-			</dependency>
-			<dependency>
-				<groupId>com.github.ben-manes.caffeine</groupId>
-				<artifactId>caffeine</artifactId>
-				<version>${igloo.caffeine.version}</version>
-			</dependency>
-			<dependency>
-				<groupId>com.github.ben-manes.caffeine</groupId>
-				<artifactId>jcache</artifactId>
-				<version>${igloo.caffeine.version}</version>
-			</dependency>
-			<dependency>
-				<groupId>javax.cache</groupId>
-				<artifactId>cache-api</artifactId>
-				<version>${igloo.jcache.version}</version>
-			</dependency>
-
-			<dependency>
-				<groupId>com.zaxxer</groupId>
-				<artifactId>HikariCP</artifactId>
-				<version>${igloo.hikaricp.version}</version>
-				<exclusions>
-					<!-- from 5.0.0, hikaricp activates slf4j 2.0.0 alpha1 if java 11 enabled -->
-					<!-- surely needed for hikari tests, we can keep our own version -->
-					<exclusion>
-						<groupId>org.slf4j</groupId>
-						<artifactId>slf4j-api</artifactId>
-					</exclusion>
-				</exclusions>
-			</dependency>
-
-			<dependency>
-				<groupId>org.postgresql</groupId>
-				<artifactId>postgresql</artifactId>
-				<version>${igloo.postgresql.version}</version>
-			</dependency>
-
-			<dependency>
-				 <groupId>io.github.openfeign.querydsl</groupId>
-				<artifactId>querydsl-core</artifactId>
-				<version>${igloo.querydsl.version}</version>
-			</dependency>
-			<dependency>
-				 <groupId>io.github.openfeign.querydsl</groupId>
-				<artifactId>querydsl-jpa</artifactId>
-				<version>${igloo.querydsl.version}</version>
-				<exclusions>
-					<exclusion>
-						<groupId>org.codehaus.mojo</groupId>
-						<artifactId>animal-sniffer-parent</artifactId>
-					</exclusion>
-				</exclusions>
-			</dependency>
-			<dependency>
-				<!-- Code generation tool -->
-				 <groupId>io.github.openfeign.querydsl</groupId>
-				<artifactId>querydsl-apt</artifactId>
-				<classifier>jakarta</classifier>
-				<version>${igloo.querydsl.version}</version>
-				<!-- fix upperbound-->
-				<exclusions>
-					<exclusion>
-						<groupId>jakarta.annotation</groupId>
-						<artifactId>jakarta.annotation-api</artifactId>
-					</exclusion>
-					<exclusion>
-						<groupId>jakarta.persistence</groupId>
-						<artifactId>jakarta.persistence-api</artifactId>
-					</exclusion>
-				</exclusions>
-			</dependency>
-			
-			<dependency>
-				<groupId>org.flywaydb</groupId>
-				<artifactId>flyway-core</artifactId>
-				<version>${igloo.flywaydb.version}</version>
-				<exclusions>
-					<exclusion>
-						<groupId>org.projectlombok</groupId>
-						<artifactId>lombok</artifactId>
-					</exclusion>
-				</exclusions>
-			</dependency>
-			<dependency>
-				<groupId>org.flywaydb</groupId>
-				<artifactId>flyway-database-postgresql</artifactId>
-				<version>${igloo.flywaydb.version}</version>
-			</dependency>
-			
-			<dependency>
-				<groupId>org.jboss.logging</groupId>
-				<artifactId>jboss-logging</artifactId>
-				<version>${igloo.jboss-logging.version}</version>
-			</dependency>
-		</dependencies>
-	</dependencyManagement>
-	
-	<build>
-		<plugins>
-			<plugin>
-				<groupId>org.codehaus.mojo</groupId>
-				<artifactId>flatten-maven-plugin</artifactId>
-				<configuration>
-					<updatePomFile>true</updatePomFile>
-					<flattenMode>bom</flattenMode>
-				</configuration>
-			</plugin>
-		</plugins>
-	</build>
+    Dependency tree is customized to exclude XML related hibernate's dependencies.
+    If you do not use hibernate.xml_mapping_enabled=false, you'll need to readd dom4j, jaxb-api and jaxb-runtime
+    dependencies.</description>
+  <dependencyManagement>
+    <dependencies>
+      <dependency>
+        <groupId>org.hibernate.orm</groupId>
+        <artifactId>hibernate-core</artifactId>
+        <version>${igloo.hibernate.version}</version>
+        <exclusions>
+          <exclusion>
+            <groupId>jakarata.xml.bind</groupId>
+            <artifactId>jaxb-api</artifactId>
+          </exclusion>
+          <exclusion>
+            <groupId>org.glassfish.jaxb</groupId>
+            <artifactId>jaxb-runtime</artifactId>
+          </exclusion>
+        </exclusions>
+      </dependency>
+      <dependency>
+        <groupId>org.hibernate.orm</groupId>
+        <artifactId>hibernate-jpamodelgen</artifactId>
+        <version>${igloo.hibernate.version}</version>
+        <exclusions>
+          <exclusion>
+            <groupId>org.glassfish.jaxb</groupId>
+            <artifactId>jaxb-runtime</artifactId>
+          </exclusion>
+          <exclusion>
+            <groupId>jakarta.xml.bind</groupId>
+            <artifactId>jakarta.xml.bind-api</artifactId>
+          </exclusion>
+        </exclusions>
+      </dependency>
+      <dependency>
+        <groupId>jakarta.xml.bind</groupId>
+        <artifactId>jakarta.xml.bind-api</artifactId>
+        <version>${igloo.jakarta-xml-bind-api.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>org.hibernate.common</groupId>
+        <artifactId>hibernate-commons-annotations</artifactId>
+        <version>${igloo.hibernate-commons-annotations.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>net.bytebuddy</groupId>
+        <artifactId>byte-buddy</artifactId>
+        <version>${igloo.byte-buddy.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>org.jboss.logging</groupId>
+        <artifactId>jboss-logging-annotations</artifactId>
+        <version>${igloo.jboss-logging-annotations.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>jakarta.persistence</groupId>
+        <artifactId>jakarta.persistence-api</artifactId>
+        <version>${igloo.persistence-api.version}</version>
+      </dependency>
+      <!-- Hibernate spatial -->
+      <dependency>
+        <groupId>org.hibernate.orm</groupId>
+        <artifactId>hibernate-spatial</artifactId>
+        <version>${igloo.hibernate.version}</version>
+      </dependency>
+      <!-- JCache / Caffeine -->
+      <dependency>
+        <groupId>org.hibernate.orm</groupId>
+        <artifactId>hibernate-jcache</artifactId>
+        <version>${igloo.hibernate.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>com.github.ben-manes.caffeine</groupId>
+        <artifactId>caffeine</artifactId>
+        <version>${igloo.caffeine.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>com.github.ben-manes.caffeine</groupId>
+        <artifactId>jcache</artifactId>
+        <version>${igloo.caffeine.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>javax.cache</groupId>
+        <artifactId>cache-api</artifactId>
+        <version>${igloo.jcache.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>com.zaxxer</groupId>
+        <artifactId>HikariCP</artifactId>
+        <version>${igloo.hikaricp.version}</version>
+        <exclusions>
+          <!-- from 5.0.0, hikaricp activates slf4j 2.0.0 alpha1 if java 11 enabled -->
+          <!-- surely needed for hikari tests, we can keep our own version -->
+          <exclusion>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-api</artifactId>
+          </exclusion>
+        </exclusions>
+      </dependency>
+      <dependency>
+        <groupId>org.postgresql</groupId>
+        <artifactId>postgresql</artifactId>
+        <version>${igloo.postgresql.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>io.github.openfeign.querydsl</groupId>
+        <artifactId>querydsl-core</artifactId>
+        <version>${igloo.querydsl.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>io.github.openfeign.querydsl</groupId>
+        <artifactId>querydsl-jpa</artifactId>
+        <version>${igloo.querydsl.version}</version>
+        <exclusions>
+          <exclusion>
+            <groupId>org.codehaus.mojo</groupId>
+            <artifactId>animal-sniffer-parent</artifactId>
+          </exclusion>
+        </exclusions>
+      </dependency>
+      <dependency>
+        <!-- Code generation tool -->
+        <groupId>io.github.openfeign.querydsl</groupId>
+        <artifactId>querydsl-apt</artifactId>
+        <version>${igloo.querydsl.version}</version>
+        <classifier>jakarta</classifier>
+        <!-- fix upperbound-->
+        <exclusions>
+          <exclusion>
+            <groupId>jakarta.annotation</groupId>
+            <artifactId>jakarta.annotation-api</artifactId>
+          </exclusion>
+          <exclusion>
+            <groupId>jakarta.persistence</groupId>
+            <artifactId>jakarta.persistence-api</artifactId>
+          </exclusion>
+        </exclusions>
+      </dependency>
+      <dependency>
+        <groupId>org.flywaydb</groupId>
+        <artifactId>flyway-core</artifactId>
+        <version>${igloo.flywaydb.version}</version>
+        <exclusions>
+          <exclusion>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+          </exclusion>
+        </exclusions>
+      </dependency>
+      <dependency>
+        <groupId>org.flywaydb</groupId>
+        <artifactId>flyway-database-postgresql</artifactId>
+        <version>${igloo.flywaydb.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>org.jboss.logging</groupId>
+        <artifactId>jboss-logging</artifactId>
+        <version>${igloo.jboss-logging.version}</version>
+      </dependency>
+    </dependencies>
+  </dependencyManagement>
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>org.codehaus.mojo</groupId>
+        <artifactId>flatten-maven-plugin</artifactId>
+        <configuration>
+          <updatePomFile>true</updatePomFile>
+          <flattenMode>bom</flattenMode>
+        </configuration>
+      </plugin>
+    </plugins>
+  </build>
 </project>

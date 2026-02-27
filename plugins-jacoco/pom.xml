@@ -1,66 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
-	
-	<modelVersion>4.0.0</modelVersion>
-	
-	<parent>
-		<groupId>org.iglooproject</groupId>
-		<artifactId>plugins-processor</artifactId>
-		<version>6.19.0</version>
-		<relativePath>../plugins-processor</relativePath>
-	</parent>
-	
-	<artifactId>plugins-jacoco</artifactId>
-	<packaging>pom</packaging>
-	
-	<name>Maven - Jacoco plugin configuration</name>
-	<description>
-		This module configures jacoco plugin.
-	</description>
-	
-	<properties>
-		<igloo.jacoco.include>org.iglooproject.*</igloo.jacoco.include>
-	</properties>
-	
-	<build>
-		<pluginManagement>
-			<plugins>
-				<plugin>
-					<groupId>org.jacoco</groupId>
-					<artifactId>jacoco-maven-plugin</artifactId>
-					<version>${igloo.jacoco-maven-plugin.version}</version>
-					<configuration>
-						<destFile>${project.build.directory}/coverage-reports/jacoco-unit.exec</destFile>
-						<dataFile>${project.build.directory}/coverage-reports/jacoco-unit.exec</dataFile>
-						<includes>
-							<!-- this allows better performance and memory usage for coverage computation -->
-							<include>${igloo.jacoco.include}</include>
-						</includes>
-					</configuration>
-					<executions>
-						<execution>
-							<!-- this goal modify argLine system property to append jacoco java-agent -->
-							<id>jacoco-initialize</id>
-							<goals>
-								<goal>prepare-agent</goal>
-							</goals>
-						</execution>
-						<execution>
-							<id>jacoco-site</id>
-							<phase>package</phase>
-							<goals>
-								<goal>report</goal>
-							</goals>
-						</execution>
-						<execution>
-							<id>jacoco-integration-site</id>
-							<phase>verify</phase>
-							<goals>
-								<goal>report-integration</goal>
-							</goals>
-						</execution>
-					</executions>
-				</plugin>
-			</plugins>
-		</pluginManagement>
-	</build>
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <groupId>org.iglooproject</groupId>
+    <artifactId>plugins-processor</artifactId>
+    <version>${revision}</version>
+    <relativePath>../plugins-processor</relativePath>
+  </parent>
+  <artifactId>plugins-jacoco</artifactId>
+  <packaging>pom</packaging>
+  <name>Maven - Jacoco plugin configuration</name>
+  <description>This module configures jacoco plugin.</description>
+  <properties>
+    <igloo.jacoco.include>org.iglooproject.*</igloo.jacoco.include>
+  </properties>
+  <build>
+    <pluginManagement>
+      <plugins>
+        <plugin>
+          <groupId>org.jacoco</groupId>
+          <artifactId>jacoco-maven-plugin</artifactId>
+          <version>${igloo.jacoco-maven-plugin.version}</version>
+          <configuration>
+            <destFile>${project.build.directory}/coverage-reports/jacoco-unit.exec</destFile>
+            <dataFile>${project.build.directory}/coverage-reports/jacoco-unit.exec</dataFile>
+            <includes>
+              <!-- this allows better performance and memory usage for coverage computation -->
+              <include>${igloo.jacoco.include}</include>
+            </includes>
+          </configuration>
+          <executions>
+            <execution>
+              <!-- this goal modify argLine system property to append jacoco java-agent -->
+              <id>jacoco-initialize</id>
+              <goals>
+                <goal>prepare-agent</goal>
+              </goals>
+            </execution>
+            <execution>
+              <id>jacoco-site</id>
+              <goals>
+                <goal>report</goal>
+              </goals>
+              <phase>package</phase>
+            </execution>
+            <execution>
+              <id>jacoco-integration-site</id>
+              <goals>
+                <goal>report-integration</goal>
+              </goals>
+              <phase>verify</phase>
+            </execution>
+          </executions>
+        </plugin>
+      </plugins>
+    </pluginManagement>
+  </build>
 </project>
