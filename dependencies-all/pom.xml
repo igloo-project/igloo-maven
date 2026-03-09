@@ -78,13 +78,6 @@
       </dependency>
       <dependency>
         <groupId>org.iglooproject</groupId>
-        <artifactId>dependencies-jersey</artifactId>
-        <version>${project.version}</version>
-        <type>pom</type>
-        <scope>import</scope>
-      </dependency>
-      <dependency>
-        <groupId>org.iglooproject</groupId>
         <artifactId>dependencies-testing</artifactId>
         <version>${project.version}</version>
         <type>pom</type>

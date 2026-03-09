@@ -137,11 +137,6 @@
         <artifactId>vue</artifactId>
         <version>${igloo.vue.version}</version>
       </dependency>
-      <dependency>
-        <groupId>org.webjars.npm</groupId>
-        <artifactId>vuepic__vue-datepicker</artifactId>
-        <version>${igloo.vue-datepicker.version}</version>
-      </dependency>
     </dependencies>
   </dependencyManagement>
   <build>
