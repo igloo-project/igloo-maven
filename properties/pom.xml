@@ -42,7 +42,7 @@
     <igloo.jackson-annotation.version>2.21</igloo.jackson-annotation.version>
     <igloo.picocli.version>4.7.7</igloo.picocli.version>
     <igloo.resilience4j.version>2.3.0</igloo.resilience4j.version>
-    <igloo.hibernate.version>7.2.1.Final</igloo.hibernate.version>
+    <igloo.hibernate.version>7.2.4.Final</igloo.hibernate.version>
     <igloo.hibernate-validator.version>9.1.0.Final</igloo.hibernate-validator.version>
     <!-- Use highest version from hibernate-core/hibernate-search -->
     <igloo.jboss-logging-annotations.version>3.0.4.Final</igloo.jboss-logging-annotations.version>
@@ -65,11 +65,11 @@
     <!-- https://jdbc.postgresql.org/changelogs/ -->
     <igloo.postgresql.version>42.7.9</igloo.postgresql.version>
     <!-- https://github.com/spring-projects/spring-framework/releases -->
-    <igloo.spring.version>7.0.2</igloo.spring.version>
+    <igloo.spring.version>7.0.6</igloo.spring.version>
     <!-- https://github.com/spring-projects/spring-boot/releases -->
-    <igloo.spring-boot.version>4.0.1</igloo.spring-boot.version>
+    <igloo.spring-boot.version>4.0.3</igloo.spring-boot.version>
     <!-- https://github.com/spring-projects/spring-security/releases -->
-    <igloo.spring-security.version>7.0.2</igloo.spring-security.version>
+    <igloo.spring-security.version>7.0.4</igloo.spring-security.version>
     <igloo.servlet-api.version>6.1.0</igloo.servlet-api.version>
     <igloo.wicket.version>10.8.0</igloo.wicket.version>
     <igloo.commons-fileupload.version>2.0.0-M4</igloo.commons-fileupload.version>
@@ -123,13 +123,14 @@
     <igloo.imageinfo.version>1.9</igloo.imageinfo.version>
     <!-- If updated, please ensure that HibernateProxyAwareIntrospector still overrides StandardIntrospector correctly (beware of final methods).  -->
     <igloo.object-diff.version>0.95</igloo.object-diff.version>
-    <igloo.micrometer.version>1.16.2</igloo.micrometer.version>
+    <igloo.micrometer.version>1.16.4</igloo.micrometer.version>
     <igloo.httpclient5.version>5.6</igloo.httpclient5.version>
     <igloo.springdoc-openapi-starter-webmvc-ui.version>3.0.1</igloo.springdoc-openapi-starter-webmvc-ui.version>
     <igloo.jsonwebtoken.version>0.13.0</igloo.jsonwebtoken.version>
     <igloo.nimbus-jose-jwt.version>10.7</igloo.nimbus-jose-jwt.version>
     <igloo.throwing-function.version>1.6.1</igloo.throwing-function.version>
-    <igloo.logbook.version>3.12.3</igloo.logbook.version>
+    
+    <igloo.logbook.version>4.0.3</igloo.logbook.version>
     <igloo.aspectjweaver.version>1.9.25.1</igloo.aspectjweaver.version>
     <igloo.asm.version>9.9.1</igloo.asm.version>
     <igloo.classgraph.version>4.8.184</igloo.classgraph.version>
