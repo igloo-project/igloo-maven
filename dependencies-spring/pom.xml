@@ -455,11 +455,6 @@
       </dependency>
       <dependency>
         <groupId>org.springframework.boot</groupId>
-        <artifactId>spring-boot-starter-test</artifactId>
-        <version>${igloo.spring-boot.version}</version>
-      </dependency>
-      <dependency>
-        <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-thymeleaf</artifactId>
         <version>${igloo.spring-boot.version}</version>
       </dependency>
