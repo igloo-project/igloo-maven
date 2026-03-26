@@ -129,7 +129,9 @@
     <igloo.jsonwebtoken.version>0.13.0</igloo.jsonwebtoken.version>
     <igloo.nimbus-jose-jwt.version>10.7</igloo.nimbus-jose-jwt.version>
     <igloo.throwing-function.version>1.6.1</igloo.throwing-function.version>
-    
+    <igloo.snakeyaml.version>2.6</igloo.snakeyaml.version>
+
+    <!-- keep in sync with spring-boot -->
     <igloo.logbook.version>4.0.3</igloo.logbook.version>
     <igloo.aspectjweaver.version>1.9.25.1</igloo.aspectjweaver.version>
     <igloo.asm.version>9.9.1</igloo.asm.version>
