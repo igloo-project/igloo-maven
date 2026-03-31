@@ -42,7 +42,7 @@
 			<dependency>
 				<groupId>org.junit.platform</groupId>
 				<artifactId>junit-platform-suite-engine</artifactId>
-				<version>${igloo.junit5-suite.version}</version>
+				<version>${igloo.junit5.version}</version>
 			</dependency>
 
 			<dependency>
@@ -81,7 +81,7 @@
 			<dependency>
 				<groupId>org.assertj</groupId>
 				<artifactId>assertj-guava</artifactId>
-				<version>${igloo.assertj-guava.version}</version>
+				<version>${igloo.assertj.version}</version>
 			</dependency>
 
 			<dependency>
