@@ -5,7 +5,7 @@
     <groupId>org.iglooproject</groupId>
     <artifactId>properties</artifactId>
     <version>${revision}</version>
-    <relativePath>../properties</relativePath>
+    <relativePath>../properties/pom.xml</relativePath>
   </parent>
   <artifactId>dependencies-tools</artifactId>
   <packaging>pom</packaging>

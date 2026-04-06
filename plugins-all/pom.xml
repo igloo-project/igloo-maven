@@ -5,7 +5,7 @@
     <groupId>org.iglooproject</groupId>
     <artifactId>plugins-spring</artifactId>
     <version>${revision}</version>
-    <relativePath>../plugins-spring</relativePath>
+    <relativePath>../plugins-spring/pom.xml</relativePath>
   </parent>
   <artifactId>plugins-all</artifactId>
   <packaging>pom</packaging>

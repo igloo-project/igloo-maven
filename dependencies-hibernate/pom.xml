@@ -5,7 +5,7 @@
     <groupId>org.iglooproject</groupId>
     <artifactId>properties</artifactId>
     <version>${revision}</version>
-    <relativePath>../properties</relativePath>
+    <relativePath>../properties/pom.xml</relativePath>
   </parent>
   <artifactId>dependencies-hibernate</artifactId>
   <packaging>pom</packaging>
@@ -155,6 +155,12 @@
         <groupId>org.flywaydb</groupId>
         <artifactId>flyway-core</artifactId>
         <version>${igloo.flywaydb.version}</version>
+        <exclusions>
+          <exclusion>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+          </exclusion>
+        </exclusions>
       </dependency>
       <dependency>
         <groupId>org.flywaydb</groupId>

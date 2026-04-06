@@ -5,7 +5,7 @@
     <groupId>org.iglooproject</groupId>
     <artifactId>plugins-report</artifactId>
     <version>${revision}</version>
-    <relativePath>../plugins-report</relativePath>
+    <relativePath>../plugins-report/pom.xml</relativePath>
   </parent>
   <artifactId>plugins-enforcer</artifactId>
   <packaging>pom</packaging>

@@ -5,7 +5,7 @@
     <groupId>org.iglooproject</groupId>
     <artifactId>plugins-processor</artifactId>
     <version>${revision}</version>
-    <relativePath>../plugins-processor</relativePath>
+    <relativePath>../plugins-processor/pom.xml</relativePath>
   </parent>
   <artifactId>plugins-jacoco</artifactId>
   <packaging>pom</packaging>
