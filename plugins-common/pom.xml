@@ -27,7 +27,7 @@
     <igloo.jacoco-maven-plugin.version>0.8.14</igloo.jacoco-maven-plugin.version>
     <!--Rollback version 3.2.1 to 3.2.0 because of issue : https://github.com/mojohaus/buildnumber-maven-plugin/issues/229-->
     <!--Initializing a new igloo project does not work with the 3.2.1 version-->
-    <igloo.buildnumber-maven-plugin.version>3.2.0</igloo.buildnumber-maven-plugin.version>
+    <igloo.buildnumber-maven-plugin.version>3.3.0</igloo.buildnumber-maven-plugin.version>
     <igloo.frontend-maven-plugin.version>2.0.0</igloo.frontend-maven-plugin.version>
     <igloo.maven-enforcer-plugin.version>3.6.2</igloo.maven-enforcer-plugin.version>
     <igloo.maven-processor-plugin.version>5.1</igloo.maven-processor-plugin.version>
