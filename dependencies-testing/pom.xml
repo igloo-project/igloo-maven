@@ -4,7 +4,7 @@
   <parent>
     <groupId>org.iglooproject</groupId>
     <artifactId>properties</artifactId>
-    <version>${revision}</version>
+    <version>7.1.0-UPDATE-SNAPSHOT</version>
     <relativePath>../properties</relativePath>
   </parent>
   <artifactId>dependencies-testing</artifactId>

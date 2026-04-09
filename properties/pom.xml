@@ -4,7 +4,7 @@
   <parent>
     <groupId>org.iglooproject</groupId>
     <artifactId>plugins-report</artifactId>
-    <version>${revision}</version>
+    <version>7.1.0-UPDATE-SNAPSHOT</version>
     <relativePath>../plugins-report</relativePath>
   </parent>
   <artifactId>properties</artifactId>
