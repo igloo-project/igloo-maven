@@ -124,7 +124,6 @@
         <artifactId>logbook-json-jackson2</artifactId>
         <version>${igloo.logbook.version}</version>
       </dependency>
-       
       <!-- Spring Security -->
       <dependency>
         <groupId>org.springframework.boot</groupId>
@@ -218,13 +217,12 @@
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-security-oauth2-client</artifactId>
         <version>${igloo.spring-boot.version}</version>
-      </dependency>      
+      </dependency>
       <dependency>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-security-oauth2-authorization-server</artifactId>
         <version>${igloo.spring-boot.version}</version>
       </dependency>
-      
       <!-- Spring Boot Starters-->
       <dependency>
         <groupId>org.springframework.boot</groupId>
