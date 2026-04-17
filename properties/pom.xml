@@ -5,7 +5,7 @@
 	<parent>
 		<groupId>org.iglooproject</groupId>
 		<artifactId>plugins-report</artifactId>
-		<version>5.31.0</version>
+		<version>5.31.1</version>
 		<relativePath>../plugins-report</relativePath>
 	</parent>
 	
@@ -39,12 +39,12 @@
 		<igloo.commons-validator.version>1.10.1</igloo.commons-validator.version>
 		<igloo.commons-collections4.version>4.5.0</igloo.commons-collections4.version>
 		<igloo.commons-beanutils.version>1.11.0</igloo.commons-beanutils.version>
-		<igloo.commons-codec.version>1.20.0</igloo.commons-codec.version>
+		<igloo.commons-codec.version>1.21.0</igloo.commons-codec.version>
 		<igloo.javatuples.version>1.2</igloo.javatuples.version>
 		<igloo.jakarta-mail.version>1.6.8</igloo.jakarta-mail.version>
 		<igloo.jakarta-activation.version>1.2.2</igloo.jakarta-activation.version>
-		<igloo.jackson.version>2.20.1</igloo.jackson.version>
-		<igloo.jackson-annotations.version>2.20</igloo.jackson-annotations.version>
+		<igloo.jackson.version>2.21.2</igloo.jackson.version>
+		<igloo.jackson-annotations.version>2.21</igloo.jackson-annotations.version>
 		<igloo.picocli.version>4.7.7</igloo.picocli.version>
 
 		<!-- https://hibernate.org/orm/releases/5.6/ -->
@@ -61,9 +61,9 @@
 		<!-- 5.11.9: https://hibernate.atlassian.net/secure/ReleaseNote.jspa?projectId=10061&version=31916 -->
 		<!-- 5.11.10: https://hibernate.atlassian.net/secure/ReleaseNote.jspa?projectId=10061&version=31941 -->
 		<igloo.hibernate-search.version>5.11.12.Final</igloo.hibernate-search.version>
-		<igloo.jboss-logging.version>3.6.1.Final</igloo.jboss-logging.version>
+		<igloo.jboss-logging.version>3.6.3.Final</igloo.jboss-logging.version>
 		<!-- assertj/hibernate may use a different version -->
-		<igloo.byte-buddy.version>1.18.3</igloo.byte-buddy.version>
+		<igloo.byte-buddy.version>1.18.7</igloo.byte-buddy.version>
 
 		<!-- https://documentation.red-gate.com/fd/release-notes-for-flyway-engine-179732572.html -->
 		<igloo.flywaydb.version>9.22.3</igloo.flywaydb.version>
@@ -72,7 +72,7 @@
 		<!-- https://github.com/querydsl/querydsl/issues?utf8=%E2%9C%93&q=milestone%3A4.2.1 -->
 		<igloo.querydsl.version>5.1.0</igloo.querydsl.version>
 		<!-- https://jdbc.postgresql.org/changelogs/ -->
-		<igloo.postgresql.version>42.7.8</igloo.postgresql.version>
+		<igloo.postgresql.version>42.7.10</igloo.postgresql.version>
 		<igloo.h2.version>2.4.240</igloo.h2.version>
 		
 		<!-- https://github.com/spring-projects/spring-framework/releases -->
@@ -87,7 +87,7 @@
 		<igloo.wicket.version>9.22.0</igloo.wicket.version>
 		<igloo.commons-fileupload.version>1.6.0</igloo.commons-fileupload.version>
 		<igloo.wiquery.version>9.0.0</igloo.wiquery.version>
-		<igloo.wicketstuff-select2.version>9.21.0</igloo.wicketstuff-select2.version>
+		<igloo.wicketstuff-select2.version>9.22.0</igloo.wicketstuff-select2.version>
 		<!-- https://github.com/l0rdn1kk0n/wicket-webjars (0.5.x -> wicket 7, 2.0.x -> wicket 8) -->
 		<igloo.wicket-webjars.version>3.0.8</igloo.wicket-webjars.version>
 		<igloo.webjars-locator-core.version>0.59</igloo.webjars-locator-core.version>
@@ -102,21 +102,19 @@
 		
 		<!-- https://www.slf4j.org/news.html -->
 		<igloo.slf4j.version>2.0.17</igloo.slf4j.version>
-		<igloo.log4j2.version>2.25.3</igloo.log4j2.version>
+		<igloo.log4j2.version>2.25.4</igloo.log4j2.version>
 		
 		<igloo.jersey2.version>2.47</igloo.jersey2.version>
 		<igloo.grizzly.version>1.9.65</igloo.grizzly.version>
 		<igloo.jaxrs.version>2.1.6</igloo.jaxrs.version>
 		
-		<igloo.junit5.version>5.14.1</igloo.junit5.version>
+		<igloo.junit5.version>5.14.3</igloo.junit5.version>
 		<igloo.mockserver.version>5.15.0</igloo.mockserver.version>
-		
+
 		<!-- keep in sync with junit5 -->
-		<igloo.junit5-suite.version>1.14.1</igloo.junit5-suite.version>
-		<igloo.mockito.version>5.21.0</igloo.mockito.version>
-		<!--v3.26.0 -> eroor on Temporal object -> https://github.com/assertj/assertj/issues/3491-->
-		<igloo.assertj.version>3.27.6</igloo.assertj.version>
-		<igloo.assertj-guava.version>3.27.6</igloo.assertj-guava.version>
+		<igloo.junit5-suite.version>1.14.3</igloo.junit5-suite.version>
+		<igloo.mockito.version>5.23.0</igloo.mockito.version>
+		<igloo.assertj.version>3.27.7</igloo.assertj.version>
 		<igloo.hamcrest.version>3.0</igloo.hamcrest.version>
 		<igloo.grizzly.version>2.4.4</igloo.grizzly.version>
 		<igloo.logunit.version>2.0.0</igloo.logunit.version>
@@ -124,8 +122,8 @@
 		
 		<igloo.findbugs-annotations.version>3.0.1u2</igloo.findbugs-annotations.version>
 		<igloo.findbugs-jsr305.version>3.0.2</igloo.findbugs-jsr305.version>
-		<igloo.errorprone.version>2.45.0</igloo.errorprone.version>
-		<igloo.checker-qual.version>3.52.1</igloo.checker-qual.version>
+		<igloo.errorprone.version>2.48.0</igloo.errorprone.version>
+		<igloo.checker-qual.version>3.54.0</igloo.checker-qual.version>
 		
 		<!-- https://github.com/phax/ph-css/releases -->
 		<igloo.ph-css.version>7.1.0</igloo.ph-css.version>
@@ -133,9 +131,9 @@
 		<!-- http://jsass.readthedocs.io/en/latest/changelog.html -->
 		<igloo.jsass.version>5.11.1</igloo.jsass.version>
 		<!-- autoprefixer plugin; experimental, do not reuse without notice -->
-		<igloo.rhino.version>1.9.0</igloo.rhino.version>
+		<igloo.rhino.version>1.9.1</igloo.rhino.version>
 		<!-- https://github.com/jhy/jsoup/blob/master/CHANGES -->
-		<igloo.jsoup.version>1.21.2</igloo.jsoup.version>
+		<igloo.jsoup.version>1.22.1</igloo.jsoup.version>
 		
 		<igloo.poi.version>5.5.1</igloo.poi.version>
 		<igloo.opencsv.version>5.12.0</igloo.opencsv.version>
@@ -145,11 +143,11 @@
 		<igloo.freemarker.version>2.3.34</igloo.freemarker.version>
 		<igloo.imageinfo.version>1.9</igloo.imageinfo.version>
 		<igloo.object-diff.version>0.95</igloo.object-diff.version>
-		<igloo.micrometer.version>1.16.1</igloo.micrometer.version>
-		<!-- Version 2.x.x require java 17 -->
+		<igloo.micrometer.version>1.16.4</igloo.micrometer.version>
+		<!-- Version up to 2.0.x require java 17 -->
 		<igloo.openpdf.version>1.4.2</igloo.openpdf.version>
 		<igloo.jsonwebtoken.version>0.13.0</igloo.jsonwebtoken.version>
-		<igloo.nimbus-jose-jwt.version>10.6</igloo.nimbus-jose-jwt.version>
+		<igloo.nimbus-jose-jwt.version>10.8</igloo.nimbus-jose-jwt.version>
 
 	</properties>
 </project>
