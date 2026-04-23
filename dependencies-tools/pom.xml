@@ -120,6 +120,12 @@
         <artifactId>jakarta.xml.bind-api</artifactId>
         <version>${igloo.jakarta-xml-bind-api.version}</version>
       </dependency>
+      <!--fix upperbound swagger / jackson / spring-boot -->
+      <dependency>
+        <groupId>org.yaml</groupId>
+        <artifactId>snakeyaml</artifactId>
+        <version>${igloo.snakeyaml.version}</version>
+      </dependency>
     </dependencies>
   </dependencyManagement>
   <build>
