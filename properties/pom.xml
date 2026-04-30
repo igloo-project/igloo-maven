@@ -128,7 +128,7 @@
     <igloo.throwing-function.version>1.6.1</igloo.throwing-function.version>
     <igloo.snakeyaml.version>2.6</igloo.snakeyaml.version>
     <!-- keep in sync with spring-boot -->
-    <igloo.logbook.version>4.0.5</igloo.logbook.version>
+    <igloo.logbook.version>4.0.4</igloo.logbook.version>
     <igloo.aspectjweaver.version>1.9.25.1</igloo.aspectjweaver.version>
     <igloo.asm.version>9.9.1</igloo.asm.version>
     <igloo.classgraph.version>4.8.184</igloo.classgraph.version>
