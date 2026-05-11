@@ -71,7 +71,7 @@
     <!-- https://github.com/spring-projects/spring-security/releases -->
     <igloo.spring-security.version>7.0.5</igloo.spring-security.version>
     <igloo.servlet-api.version>6.1.0</igloo.servlet-api.version>
-    <igloo.wicket.version>10.8.0</igloo.wicket.version>
+    <igloo.wicket.version>10.9.0</igloo.wicket.version>
     <igloo.commons-fileupload.version>2.0.0-M5</igloo.commons-fileupload.version>
     <igloo.wiquery.version>10.1.0</igloo.wiquery.version>
     <igloo.wicketstuff-select2.version>10.8.0</igloo.wicketstuff-select2.version>
