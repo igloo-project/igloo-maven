@@ -84,7 +84,7 @@
 		<igloo.spring-security.version>5.8.16</igloo.spring-security.version>
 		
 		<igloo.servlet-api.version>4.0.1</igloo.servlet-api.version>
-		<igloo.wicket.version>9.22.0</igloo.wicket.version>
+		<igloo.wicket.version>9.23.0</igloo.wicket.version>
 		<igloo.commons-fileupload.version>1.6.0</igloo.commons-fileupload.version>
 		<igloo.wiquery.version>9.0.0</igloo.wiquery.version>
 		<igloo.wicketstuff-select2.version>9.22.0</igloo.wicketstuff-select2.version>
