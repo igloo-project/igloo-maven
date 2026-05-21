@@ -42,7 +42,7 @@
     <igloo.jackson-annotation.version>2.21</igloo.jackson-annotation.version>
     <igloo.picocli.version>4.7.7</igloo.picocli.version>
     <igloo.resilience4j.version>2.4.0</igloo.resilience4j.version>
-    <igloo.hibernate.version>7.3.0.Final</igloo.hibernate.version>
+    <igloo.hibernate.version>7.3.5.Final</igloo.hibernate.version>
     <igloo.hibernate-validator.version>9.1.0.Final</igloo.hibernate-validator.version>
     <!-- Use highest version from hibernate-core/hibernate-search -->
     <igloo.jboss-logging-annotations.version>3.0.4.Final</igloo.jboss-logging-annotations.version>
@@ -52,7 +52,7 @@
     <igloo.jcache.version>1.1.1</igloo.jcache.version>
     <igloo.persistence-api.version>3.2.0</igloo.persistence-api.version>
     <igloo.lucene.version>9.12.3</igloo.lucene.version>
-    <igloo.hibernate-search.version>8.3.0.Final</igloo.hibernate-search.version>
+    <igloo.hibernate-search.version>8.3.1.Final</igloo.hibernate-search.version>
     <igloo.jboss-logging.version>3.6.3.Final</igloo.jboss-logging.version>
     <!-- assertj/hibernate may use a different version -->
     <igloo.byte-buddy.version>1.18.8</igloo.byte-buddy.version>
