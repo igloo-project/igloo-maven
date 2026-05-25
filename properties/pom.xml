@@ -122,12 +122,11 @@
     <igloo.object-diff.version>0.95</igloo.object-diff.version>
     <igloo.micrometer.version>1.16.5</igloo.micrometer.version>
     <igloo.httpclient5.version>5.6.1</igloo.httpclient5.version>
-    <igloo.springdoc-openapi-starter-webmvc-ui.version>3.0.2</igloo.springdoc-openapi-starter-webmvc-ui.version>
+    <igloo.springdoc-openapi-starter-webmvc-ui.version>3.0.3</igloo.springdoc-openapi-starter-webmvc-ui.version>
     <igloo.jsonwebtoken.version>0.13.0</igloo.jsonwebtoken.version>
     <igloo.nimbus-jose-jwt.version>10.9</igloo.nimbus-jose-jwt.version>
     <igloo.throwing-function.version>1.6.1</igloo.throwing-function.version>
     <igloo.snakeyaml.version>2.6</igloo.snakeyaml.version>
-    <!-- keep in sync with spring-boot -->
     <igloo.logbook.version>4.0.4</igloo.logbook.version>
     <igloo.aspectjweaver.version>1.9.25.1</igloo.aspectjweaver.version>
     <igloo.asm.version>9.9.1</igloo.asm.version>
