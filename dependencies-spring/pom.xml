@@ -519,6 +519,11 @@
         <version>${igloo.spring-boot.version}</version>
       </dependency>
       <dependency>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-tomcat</artifactId>
+        <version>${igloo.spring-boot.version}</version>
+      </dependency>
+      <dependency>
         <groupId>org.flywaydb</groupId>
         <artifactId>flyway-core</artifactId>
         <version>${igloo.flywaydb.version}</version>
