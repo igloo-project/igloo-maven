@@ -150,6 +150,12 @@
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-flyway</artifactId>
         <version>${igloo.spring-boot.version}</version>
+        <exclusions>
+          <exclusion>
+            <artifactId>flyway-core</artifactId>
+            <groupId>org.flywaydb</groupId>
+          </exclusion>
+        </exclusions>
       </dependency>
       <dependency>
         <groupId>org.flywaydb</groupId>
