@@ -38,7 +38,7 @@
     <igloo.angus-mail.version>2.0.5</igloo.angus-mail.version>
     <igloo.jakarta-activation.version>2.1.3</igloo.jakarta-activation.version>
     <igloo.jakarta-xml-bind-api.version>4.0.5</igloo.jakarta-xml-bind-api.version>
-    <igloo.jackson.version>2.22.1</igloo.jackson.version>
+    <igloo.jackson.version>3.2.0</igloo.jackson.version>
     <igloo.jackson-annotation.version>2.22</igloo.jackson-annotation.version>
     <igloo.picocli.version>4.7.7</igloo.picocli.version>
     <igloo.resilience4j.version>2.4.0</igloo.resilience4j.version>
