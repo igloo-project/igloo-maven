@@ -5,7 +5,7 @@
 	<parent>
 		<groupId>org.iglooproject</groupId>
 		<artifactId>plugins-report</artifactId>
-		<version>5.33.0</version>
+		<version>5.33.1</version>
 		<relativePath>../plugins-report</relativePath>
 	</parent>
 	
@@ -126,7 +126,7 @@
 		<igloo.checker-qual.version>4.2.1</igloo.checker-qual.version>
 		
 		<!-- https://github.com/phax/ph-css/releases -->
-		<igloo.ph-css.version>7.1.0</igloo.ph-css.version>
+		<igloo.ph-css.version>8.2.1</igloo.ph-css.version>
 		<igloo.sass-embedded-host.version>4.4.0</igloo.sass-embedded-host.version>
 		<!-- http://jsass.readthedocs.io/en/latest/changelog.html -->
 		<igloo.jsass.version>5.11.1</igloo.jsass.version>
@@ -138,14 +138,14 @@
 		<igloo.poi.version>5.5.1</igloo.poi.version>
 		<igloo.opencsv.version>5.12.0</igloo.opencsv.version>
 		<!-- https://github.com/vt-middleware/passay/commits/master -->
-		<igloo.passay.version>1.6.6</igloo.passay.version>
+		<igloo.passay.version>2.0.0</igloo.passay.version>
 		<!-- TODO: to remove - used for email notifications -->
 		<igloo.freemarker.version>2.3.34</igloo.freemarker.version>
 		<igloo.imageinfo.version>1.9</igloo.imageinfo.version>
 		<igloo.object-diff.version>0.95</igloo.object-diff.version>
 		<igloo.micrometer.version>1.17.0</igloo.micrometer.version>
 		<!-- Version up to 2.0.x require java 17 -->
-		<igloo.openpdf.version>1.4.2</igloo.openpdf.version>
+		<igloo.openpdf.version>2.0.5</igloo.openpdf.version>
 		<igloo.jsonwebtoken.version>0.13.0</igloo.jsonwebtoken.version>
 		<igloo.nimbus-jose-jwt.version>10.9.1</igloo.nimbus-jose-jwt.version>
 
