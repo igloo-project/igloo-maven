@@ -195,6 +195,11 @@
       </dependency>
       <dependency>
         <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-web-server</artifactId>
+        <version>${igloo.spring-boot.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-test</artifactId>
         <version>${igloo.spring-boot.version}</version>
       </dependency>
@@ -511,6 +516,11 @@
       <dependency>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-flyway</artifactId>
+        <version>${igloo.spring-boot.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-tomcat</artifactId>
         <version>${igloo.spring-boot.version}</version>
       </dependency>
       <dependency>
