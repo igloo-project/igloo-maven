@@ -75,8 +75,8 @@
     <igloo.wicket.version>10.10.0</igloo.wicket.version>
     <igloo.commons-fileupload.version>2.0.0-M5</igloo.commons-fileupload.version>
     <igloo.wiquery.version>10.1.0</igloo.wiquery.version>
-    <!--Ne pas mettre à jour temps qu'on n'a pas migré notre build de select2 avec la nouvelle version-->
-    <igloo.wicketstuff-select2.version>10.8.0</igloo.wicketstuff-select2.version>
+    <igloo.wicketstuff-select2.version>10.10.0</igloo.wicketstuff-select2.version>
+    <igloo.webjars.select2.version>4.1.0</igloo.webjars.select2.version>
     <igloo.wicket-webjars.version>4.0.14</igloo.wicket-webjars.version>
     <igloo.webjars-locator-core.version>0.59</igloo.webjars-locator-core.version>
     <igloo.webjars.bootstrap4.version>4.6.0</igloo.webjars.bootstrap4.version>
