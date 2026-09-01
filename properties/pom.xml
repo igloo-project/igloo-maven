@@ -5,7 +5,7 @@
 	<parent>
 		<groupId>org.iglooproject</groupId>
 		<artifactId>plugins-report</artifactId>
-		<version>5.33.1</version>
+		<version>5.34.0</version>
 		<relativePath>../plugins-report</relativePath>
 	</parent>
 	
@@ -84,10 +84,11 @@
 		<igloo.spring-security.version>5.8.16</igloo.spring-security.version>
 		
 		<igloo.servlet-api.version>4.0.1</igloo.servlet-api.version>
-		<igloo.wicket.version>9.23.0</igloo.wicket.version>
+		<igloo.wicket.version>9.24.0</igloo.wicket.version>
 		<igloo.commons-fileupload.version>1.6.0</igloo.commons-fileupload.version>
 		<igloo.wiquery.version>9.1.0</igloo.wiquery.version>
-		<igloo.wicketstuff-select2.version>9.23.1</igloo.wicketstuff-select2.version>
+		<!--Ne pas mettre à jour tant que select 2 n'a pas été mis à jour vers la 4.1.0-->
+		<igloo.wicketstuff-select2.version>9.22.0</igloo.wicketstuff-select2.version>
 		<!-- https://github.com/l0rdn1kk0n/wicket-webjars (0.5.x -> wicket 7, 2.0.x -> wicket 8) -->
 		<igloo.wicket-webjars.version>3.0.8</igloo.wicket-webjars.version>
 		<igloo.webjars-locator-core.version>0.59</igloo.webjars-locator-core.version>
