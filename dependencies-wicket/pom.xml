@@ -124,6 +124,11 @@
       </dependency>
       <dependency>
         <groupId>org.webjars.npm</groupId>
+        <artifactId>select2</artifactId>
+        <version>${igloo.webjars.select2.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>org.webjars.npm</groupId>
         <artifactId>clipboard</artifactId>
         <version>${igloo.webjars.clipboard.version}</version>
       </dependency>
