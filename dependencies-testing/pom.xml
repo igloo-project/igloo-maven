@@ -125,54 +125,6 @@
         <artifactId>mockserver-netty-no-dependencies</artifactId>
         <version>${igloo.mockserver.version}</version>
       </dependency>
-      <dependency>
-        <groupId>org.mock-server</groupId>
-        <artifactId>mockserver-client-java</artifactId>
-        <version>${igloo.mockserver.version}</version>
-        <exclusions>
-          <!-- we use jcl-over-slf4j -->
-          <exclusion>
-            <groupId>commons-logging</groupId>
-            <artifactId>commons-logging</artifactId>
-          </exclusion>
-        </exclusions>
-      </dependency>
-      <dependency>
-        <groupId>org.mock-server</groupId>
-        <artifactId>mockserver-netty</artifactId>
-        <version>${igloo.mockserver.version}</version>
-        <exclusions>
-          <!-- we use jcl-over-slf4j -->
-          <exclusion>
-            <groupId>commons-logging</groupId>
-            <artifactId>commons-logging</artifactId>
-          </exclusion>
-        </exclusions>
-      </dependency>
-      <dependency>
-        <groupId>org.mock-server</groupId>
-        <artifactId>mockserver-spring-test-listener</artifactId>
-        <version>${igloo.mockserver.version}</version>
-        <exclusions>
-          <!-- we use jcl-over-slf4j -->
-          <exclusion>
-            <groupId>commons-logging</groupId>
-            <artifactId>commons-logging</artifactId>
-          </exclusion>
-        </exclusions>
-      </dependency>
-      <dependency>
-        <groupId>org.mock-server</groupId>
-        <artifactId>mockserver-junit-jupiter</artifactId>
-        <version>${igloo.mockserver.version}</version>
-        <exclusions>
-          <!-- we use jcl-over-slf4j -->
-          <exclusion>
-            <groupId>commons-logging</groupId>
-            <artifactId>commons-logging</artifactId>
-          </exclusion>
-        </exclusions>
-      </dependency>
       <!--test-containers-->
       <dependency>
         <groupId>org.springframework.boot</groupId>
