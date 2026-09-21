@@ -12,9 +12,10 @@
   <name>Maven - Dependencies' versions as properties</name>
   <description>This module is intended to expose maven properties used as dependency versions.</description>
   <properties>
-    <igloo.bindgen.version>6.0.0</igloo.bindgen.version>
-    <igloo.bindgen-java.version>3.0.0</igloo.bindgen-java.version>
-    <igloo.bindgen-bindings-java.version>3.0.0</igloo.bindgen-bindings-java.version>
+    <!-- TODO RFO : repasser sur des release -->
+    <igloo.bindgen.version>6.1.0-SNAPSHOT</igloo.bindgen.version>
+    <igloo.bindgen-java.version>3.1.0-SNAPSHOT</igloo.bindgen-java.version>
+    <igloo.bindgen-bindings-java.version>3.1.0-SNAPSHOT</igloo.bindgen-bindings-java.version>
     <igloo.jakarta.annotation-api.version>3.0.0</igloo.jakarta.annotation-api.version>
     <!--https://github.com/google/guava/releases/ -->
     <igloo.guava.version>33.6.0-jre</igloo.guava.version>
