@@ -183,6 +183,12 @@
         <artifactId>resilience4j-spring-boot4</artifactId>
         <version>${igloo.resilience4j.version}</version>
       </dependency>
+      <!--fix upperbound spring / micrometer / guava -->
+      <dependency>
+        <groupId>org.jspecify</groupId>
+        <artifactId>jspecify</artifactId>
+        <version>${igloo.jspecify.version}</version>
+      </dependency>
     </dependencies>
   </dependencyManagement>
   <build>
