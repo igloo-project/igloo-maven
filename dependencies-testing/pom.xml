@@ -102,28 +102,6 @@
 				<version>${igloo.mockserver.version}</version>
 			</dependency>
 			<dependency>
-				<groupId>org.mock-server</groupId>
-				<artifactId>mockserver-spring-test-listener</artifactId>
-				<version>${igloo.mockserver.version}</version>
-				<exclusions>
-					<exclusion>
-						<groupId>*</groupId>
-						<artifactId>*</artifactId>
-					</exclusion>
-				</exclusions>
-			</dependency>
-			<dependency>
-				<groupId>org.mock-server</groupId>
-				<artifactId>mockserver-junit-jupiter</artifactId>
-				<version>${igloo.mockserver.version}</version>
-				<exclusions>
-					<exclusion>
-						<groupId>*</groupId>
-						<artifactId>*</artifactId>
-					</exclusion>
-				</exclusions>
-			</dependency>
-			<dependency>
 				<groupId>org.awaitility</groupId>
 				<artifactId>awaitility</artifactId>
 				<version>${igloo.awaitility.version}</version>
