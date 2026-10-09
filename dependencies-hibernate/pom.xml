@@ -152,8 +152,8 @@
         <version>${igloo.spring-boot.version}</version>
         <exclusions>
           <exclusion>
-            <artifactId>flyway-core</artifactId>
             <groupId>org.flywaydb</groupId>
+            <artifactId>flyway-core</artifactId>
           </exclusion>
         </exclusions>
       </dependency>
