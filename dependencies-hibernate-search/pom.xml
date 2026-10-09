@@ -19,8 +19,9 @@
         <version>${igloo.hibernate-search.version}</version>
       </dependency>
       <dependency>
+        <!-- Lucene 10 backend (incubating); hibernate-search-backend-lucene (Lucene 9) is banned by enforcer -->
         <groupId>org.hibernate.search</groupId>
-        <artifactId>hibernate-search-backend-lucene</artifactId>
+        <artifactId>hibernate-search-backend-lucene-next</artifactId>
         <version>${igloo.hibernate-search.version}</version>
       </dependency>
       <dependency>
@@ -36,6 +37,16 @@
       <dependency>
         <groupId>org.apache.lucene</groupId>
         <artifactId>lucene-analysis-common</artifactId>
+        <version>${igloo.lucene.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>org.apache.lucene</groupId>
+        <artifactId>lucene-join</artifactId>
+        <version>${igloo.lucene.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>org.apache.lucene</groupId>
+        <artifactId>lucene-highlighter</artifactId>
         <version>${igloo.lucene.version}</version>
       </dependency>
     </dependencies>
