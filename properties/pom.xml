@@ -51,7 +51,9 @@
     <igloo.caffeine.version>3.3.0</igloo.caffeine.version>
     <igloo.jcache.version>1.1.1</igloo.jcache.version>
     <igloo.persistence-api.version>3.2.0</igloo.persistence-api.version>
-    <igloo.lucene.version>9.12.3</igloo.lucene.version>
+    <!-- Must match the Lucene version pulled by hibernate-search-backend-lucene-next (Lucene 10 backend);
+         check https://hibernate.org/search/releases/ compatibility matrix on each hibernate-search upgrade -->
+    <igloo.lucene.version>10.4.0</igloo.lucene.version>
     <igloo.hibernate-search.version>8.4.0.Final</igloo.hibernate-search.version>
     <!-- Use highest version from hibernate-core/hibernate-search (upperbound) -->
     <igloo.hibernate-models.version>1.1.2</igloo.hibernate-models.version>
