@@ -172,6 +172,11 @@
         <artifactId>jboss-logging</artifactId>
         <version>${igloo.jboss-logging.version}</version>
       </dependency>
+      <dependency>
+        <groupId>org.hibernate.models</groupId>
+        <artifactId>hibernate-models</artifactId>
+        <version>${igloo.hibernate-models.version}</version>
+      </dependency>
     </dependencies>
   </dependencyManagement>
   <build>
