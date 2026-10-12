@@ -152,8 +152,8 @@
         <version>${igloo.spring-boot.version}</version>
         <exclusions>
           <exclusion>
-            <artifactId>flyway-core</artifactId>
             <groupId>org.flywaydb</groupId>
+            <artifactId>flyway-core</artifactId>
           </exclusion>
         </exclusions>
       </dependency>
@@ -171,6 +171,11 @@
         <groupId>org.jboss.logging</groupId>
         <artifactId>jboss-logging</artifactId>
         <version>${igloo.jboss-logging.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>org.hibernate.models</groupId>
+        <artifactId>hibernate-models</artifactId>
+        <version>${igloo.hibernate-models.version}</version>
       </dependency>
     </dependencies>
   </dependencyManagement>
