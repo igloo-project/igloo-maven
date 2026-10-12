@@ -34,7 +34,7 @@
     <igloo.google-java-format.version>1.36.1</igloo.google-java-format.version>
     <igloo.spring-boot-maven-plugin.version>4.1.1</igloo.spring-boot-maven-plugin.version>
     <igloo.jaxb2-maven-plugin.version>4.2.0</igloo.jaxb2-maven-plugin.version>
-    <igloo.node.version>v24.18.0</igloo.node.version>
+    <igloo.node.version>v24.21.0</igloo.node.version>
     <!-- add-opens as needed by tomcat / wicket -->
     <igloo.add-opens>java.base/java.lang java.base/java.io java.base/java.util java.base/java.util.concurrent java.rmi/sun.rmi.transport</igloo.add-opens>
   </properties>
