@@ -36,6 +36,8 @@
     <igloo.javatuples.version>1.2</igloo.javatuples.version>
     <!--suivre version jakarta.mail de spring-->
     <igloo.angus-mail.version>2.0.5</igloo.angus-mail.version>
+    <!--suivre version angus-mail-->
+    <igloo.jakarta.mail-api.version>2.1.5</igloo.jakarta.mail-api.version>
     <igloo.jakarta-activation.version>2.1.3</igloo.jakarta-activation.version>
     <igloo.jakarta-xml-bind-api.version>4.0.5</igloo.jakarta-xml-bind-api.version>
     <igloo.jackson.version>3.2.3</igloo.jackson.version>
@@ -44,6 +46,8 @@
     <igloo.resilience4j.version>2.4.0</igloo.resilience4j.version>
     <igloo.hibernate.version>7.4.12.Final</igloo.hibernate.version>
     <igloo.hibernate-validator.version>9.1.4.Final</igloo.hibernate-validator.version>
+    <!-- Must match the Bean Validation version targeted by hibernate-validator (9.x -> 3.1) -->
+    <igloo.jakarta-validation-api.version>3.1.1</igloo.jakarta-validation-api.version>
     <!-- Use highest version from hibernate-core/hibernate-search -->
     <igloo.jboss-logging-annotations.version>3.0.4.Final</igloo.jboss-logging-annotations.version>
     <!-- https://jira.terracotta.org/jira/browse/EHC/fixforversion/13000/?selectedTab=com.atlassian.jira.jira-projects-plugin:version-summary-panel -->
@@ -139,5 +143,6 @@
     <igloo.asm.version>9.9.1</igloo.asm.version>
     <igloo.classgraph.version>4.8.197</igloo.classgraph.version>
     <igloo.jspecify.version>1.0.1</igloo.jspecify.version>
+    <igloo.bcprov-jdk18.version>1.84</igloo.bcprov-jdk18.version>
   </properties>
 </project>

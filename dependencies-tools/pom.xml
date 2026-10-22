@@ -126,6 +126,11 @@
         <artifactId>snakeyaml</artifactId>
         <version>${igloo.snakeyaml.version}</version>
       </dependency>
+      <dependency>
+        <groupId>org.bouncycastle</groupId>
+        <artifactId>bcprov-jdk18on</artifactId>
+        <version>${igloo.bcprov-jdk18.version}</version>
+      </dependency>
     </dependencies>
   </dependencyManagement>
   <build>
