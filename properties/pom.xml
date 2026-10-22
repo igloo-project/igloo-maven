@@ -116,6 +116,8 @@
     <igloo.rhino.version>1.9.1</igloo.rhino.version>
     <!-- https://github.com/jhy/jsoup/blob/master/CHANGES -->
     <igloo.jsoup.version>1.23.2</igloo.jsoup.version>
+    <!-- https://github.com/commonmark/commonmark-java/releases -->
+    <igloo.commonmark.version>0.27.1</igloo.commonmark.version>
     <igloo.poi.version>5.5.1</igloo.poi.version>
     <igloo.opencsv.version>5.12.0</igloo.opencsv.version>
     <!-- https://github.com/vt-middleware/passay/commits/master -->
