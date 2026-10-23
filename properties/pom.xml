@@ -141,7 +141,7 @@
     <igloo.logbook.version>4.2.0</igloo.logbook.version>
     <igloo.aspectjweaver.version>1.9.25.1</igloo.aspectjweaver.version>
     <igloo.asm.version>9.9.1</igloo.asm.version>
-    <igloo.classgraph.version>4.8.197</igloo.classgraph.version>
+    <igloo.classgraph.version>4.8.199</igloo.classgraph.version>
     <igloo.jspecify.version>1.0.1</igloo.jspecify.version>
     <igloo.bcprov-jdk18.version>1.84</igloo.bcprov-jdk18.version>
   </properties>
