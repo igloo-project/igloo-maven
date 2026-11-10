@@ -52,6 +52,12 @@
         <artifactId>hibernate-validator</artifactId>
         <version>${igloo.hibernate-validator.version}</version>
       </dependency>
+      <!-- upper bound: swagger-core-jakarta (springdoc) pulls 3.0.2, hibernate-validator 9.x needs 3.1 -->
+      <dependency>
+        <groupId>jakarta.validation</groupId>
+        <artifactId>jakarta.validation-api</artifactId>
+        <version>${igloo.jakarta-validation-api.version}</version>
+      </dependency>
       <dependency>
         <groupId>jakarta.xml.bind</groupId>
         <artifactId>jakarta.xml.bind-api</artifactId>

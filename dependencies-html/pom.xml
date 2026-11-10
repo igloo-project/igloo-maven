@@ -24,6 +24,11 @@
         <version>${igloo.jsoup.version}</version>
       </dependency>
       <dependency>
+        <groupId>org.commonmark</groupId>
+        <artifactId>commonmark</artifactId>
+        <version>${igloo.commonmark.version}</version>
+      </dependency>
+      <dependency>
         <groupId>com.helger</groupId>
         <artifactId>ph-css</artifactId>
         <version>${igloo.ph-css.version}</version>
