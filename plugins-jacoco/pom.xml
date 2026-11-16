@@ -12,7 +12,10 @@
   <name>Maven - Jacoco plugin configuration</name>
   <description>This module configures jacoco plugin.</description>
   <properties>
+    <!-- agent includes: class names (e.g. basicapp.*, several patterns separated by ':' ) -->
     <igloo.jacoco.include>org.iglooproject.*</igloo.jacoco.include>
+    <!-- report includes: class file paths (e.g. basicapp/**) ; module classes are all application classes by default -->
+    <igloo.jacoco.report.include>**/*</igloo.jacoco.report.include>
   </properties>
   <build>
     <pluginManagement>
@@ -24,10 +27,7 @@
           <configuration>
             <destFile>${project.build.directory}/coverage-reports/jacoco-unit.exec</destFile>
             <dataFile>${project.build.directory}/coverage-reports/jacoco-unit.exec</dataFile>
-            <includes>
-              <!-- this allows better performance and memory usage for coverage computation -->
-              <include>${igloo.jacoco.include}</include>
-            </includes>
+            <!-- do not use <includes> here, includes are not shared: agent uses class names, report uses class file paths -->
           </configuration>
           <executions>
             <execution>
@@ -36,6 +36,12 @@
               <goals>
                 <goal>prepare-agent</goal>
               </goals>
+              <configuration>
+                <includes>
+                  <!-- this allows better performance and memory usage for coverage computation -->
+                  <include>${igloo.jacoco.include}</include>
+                </includes>
+              </configuration>
             </execution>
             <execution>
               <id>jacoco-site</id>
@@ -43,6 +49,16 @@
                 <goal>report</goal>
               </goals>
               <phase>package</phase>
+              <configuration>
+                <includes>
+                  <include>${igloo.jacoco.report.include}</include>
+                </includes>
+                <excludes>
+                  <!-- bindgen generated classes (jakarta @Generated has SOURCE retention, so jacoco cannot filter them) -->
+                  <exclude>**/*Binding.class</exclude>
+                  <exclude>**/*BindingPath.class</exclude>
+                </excludes>
+              </configuration>
             </execution>
             <execution>
               <id>jacoco-integration-site</id>
@@ -50,6 +66,16 @@
                 <goal>report-integration</goal>
               </goals>
               <phase>verify</phase>
+              <configuration>
+                <includes>
+                  <include>${igloo.jacoco.report.include}</include>
+                </includes>
+                <excludes>
+                  <!-- bindgen generated classes (jakarta @Generated has SOURCE retention, so jacoco cannot filter them) -->
+                  <exclude>**/*Binding.class</exclude>
+                  <exclude>**/*BindingPath.class</exclude>
+                </excludes>
+              </configuration>
             </execution>
           </executions>
         </plugin>
