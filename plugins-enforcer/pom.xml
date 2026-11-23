@@ -3,9 +3,9 @@
   <modelVersion>4.0.0</modelVersion>
   <parent>
     <groupId>org.iglooproject</groupId>
-    <artifactId>plugins-report</artifactId>
+    <artifactId>properties</artifactId>
     <version>${revision}</version>
-    <relativePath>../plugins-report</relativePath>
+    <relativePath>../properties</relativePath>
   </parent>
   <artifactId>plugins-enforcer</artifactId>
   <packaging>pom</packaging>

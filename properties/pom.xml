@@ -10,7 +10,9 @@
   <artifactId>properties</artifactId>
   <packaging>pom</packaging>
   <name>Maven - Dependencies' versions as properties</name>
-  <description>This module is intended to expose maven properties used as dependency versions.</description>
+  <description>This module is intended to expose maven properties used as dependency versions.
+    It is an ancestor of both dependencies-* BOMs and plugins-enforcer (hence plugins-all), so these properties
+    are inherited by igloo-parent and by every project using plugins-all as parent.</description>
   <properties>
     <igloo.bindgen.version>7.0.0</igloo.bindgen.version>
     <igloo.bindgen-java.version>4.0.0</igloo.bindgen-java.version>
