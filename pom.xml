@@ -49,6 +49,9 @@
     <igloo.maven-deploy-plugin.version>3.2.0</igloo.maven-deploy-plugin.version>
     <igloo.maven-install-plugin.version>3.2.0</igloo.maven-install-plugin.version>
     <igloo.maven-site-plugin.version>4.0.0-M16</igloo.maven-site-plugin.version>
+    <!-- ssh/scp support for maven-site-plugin -->
+    <igloo.wagon-ssh-external-plugin.version>3.4.1</igloo.wagon-ssh-external-plugin.version>
+    <igloo.maven-toolchains-plugin.version>3.3.0</igloo.maven-toolchains-plugin.version>
     <igloo.maven-project-info-reports-plugin.version>3.9.0</igloo.maven-project-info-reports-plugin.version>
     <igloo.gitflow-maven-plugin.version>1.21.0</igloo.gitflow-maven-plugin.version>
     <igloo.jsch.version>0.1.55</igloo.jsch.version>
@@ -77,6 +80,19 @@
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-site-plugin</artifactId>
           <version>${igloo.maven-site-plugin.version}</version>
+          <dependencies>
+            <dependency>
+              <!-- add support for ssh/scp -->
+              <groupId>org.apache.maven.wagon</groupId>
+              <artifactId>wagon-ssh-external</artifactId>
+              <version>${igloo.wagon-ssh-external-plugin.version}</version>
+            </dependency>
+          </dependencies>
+        </plugin>
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-toolchains-plugin</artifactId>
+          <version>${igloo.maven-toolchains-plugin.version}</version>
         </plugin>
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
