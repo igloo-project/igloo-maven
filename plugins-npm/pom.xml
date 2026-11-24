@@ -31,13 +31,14 @@
               <phase>generate-resources</phase>
             </execution>
             <execution>
+              <!-- npm ci: installs the versions locked in package-lock.json, which must be committed -->
               <id>npm-install</id>
               <goals>
                 <goal>npm</goal>
               </goals>
               <phase>generate-resources</phase>
               <configuration>
-                <arguments>install</arguments>
+                <arguments>ci</arguments>
               </configuration>
             </execution>
             <execution>

@@ -44,9 +44,23 @@ given your build generate contents in `src/main/generated-js/`, and that you cre
 
 The purpose of this fragment is :
 
-* to enable `frontend-maven-plugin` that performs node and npm bootstrap, then triggers your npm build
+* to enable `frontend-maven-plugin` that performs node and npm bootstrap, installs dependencies with `npm ci`,
+  then triggers your npm build
 * to setup arguments passed to npm command with `frontend.npm.arguments` property
 * to package `src/main/generated-js/` in webjar location
 * to trigger a custom clean task that take care of emptying `src/main/generated-js/` and `node_modules`
 
 .gitkeep file must be pushed on repository, by adding `!.gitkeep` in your `.gitignore` file.
+
+## package-lock.json
+
+Dependencies are installed with `npm ci`, which installs the exact versions locked in `package-lock.json`
+and fails if this file is missing or does not match `package.json`. This makes builds reproducible and
+prevents a newly published (possibly compromised) version of a transitive dependency from being pulled
+silently into the build.
+
+`package-lock.json` must therefore be committed, next to `package.json`:
+
+* remove `package-lock.json` from your `.gitignore` file, if present
+* run `npm install` in the module, and commit the generated `package-lock.json`
+* after any change to `package.json`, run `npm install` again and commit both files
